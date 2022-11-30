@@ -143,7 +143,7 @@ function Footer() {
 
       <Box padding={4} sx={{ backgroundColor: "#72bf44" }}>
         <Box
-          sx={{ fontSize: "14px", display: "flex", justifyContent: "center" }}
+          sx={{ fontSize: "14px", display: "flex", flexWrap:"wrap" ,justifyContent: "center" }}
         >
           <Box>2023 © All rights reserved by</Box> &nbsp;
           <Box sx={{ fontWeight: "900" }}>

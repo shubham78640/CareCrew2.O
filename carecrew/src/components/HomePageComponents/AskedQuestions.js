@@ -1,6 +1,6 @@
 import { Box, display, height } from "@mui/system";
 import React from "react";
- import image from "../../Images/KM.png";
+import image from "../../Images/KM.png";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import AccordionComponent from "../MuiComponents/AccordionComponent";
@@ -19,7 +19,7 @@ function AskedQuestions() {
         <Grid container>
           <Grid item lg={6} xs={12}>
             <Item>
-              <img width="200%" src={image} />
+              <img width="100%" src={image} />
             </Item>
           </Grid>
           <Grid item lg={6} xs={12}>
@@ -44,7 +44,7 @@ function AskedQuestions() {
                 ml={3}
                 sx={{ display: "flex", flexDirection: "column", gap: "20px" }}
               >
-                <AccordionComponent 
+                <AccordionComponent
                   Accordion_Heading="  Do you have people who can work in a 24-hour live-in
                       setting?"
                   Accordion_Content="  Yes, we provide full-time house helps in two formats:

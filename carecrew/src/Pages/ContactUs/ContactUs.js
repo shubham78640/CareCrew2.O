@@ -8,6 +8,8 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
+import Navbaar from "../../components/Headers/Navbaar";
+import Footer from "../../components/Footer/Footer";
 
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -21,9 +23,10 @@ const Item = styled(Box)(({ theme }) => ({
 function ContactUs() {
   return (
     <>
-      <Box sx={{ backgroundColor: "#F4F8FD" }}>
+    <Navbaar/>
+      <Box  sx={{ backgroundColor: "#F4F8FD",height:"auto" }}>
         <Grid container spacing={0}>
-          <Grid item lg={6} xs={12}>
+          <Grid paddingBottom="3%" mt={7} item lg={6} xs={12}>
             <Item>
               <Box
                 padding="10% 0% 0% 20%"
@@ -270,6 +273,7 @@ function ContactUs() {
           </Grid>
         </Grid>
       </Box>
+      <Footer />
     </>
   );
 }

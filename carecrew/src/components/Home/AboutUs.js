@@ -8,32 +8,30 @@ import styled from "@emotion/styled";
 import { Button } from "@mui/material";
 
 const BOX = styled(Box)({
-  display:"flex",
-  gap:"20px",
-  justifyContent:"center",
-  textAlign:"justify",
+  display: "flex",
+  gap: "20px",
+  justifyContent: "center",
+  textAlign: "justify",
   backgroundImage: `url("https://wallpapercave.com/wp/wp2561061.jpg")`,
-  objectFit:"cover",
-  padding:"40px"
+  objectFit: "cover",
+  padding: "40px",
   // flexDirection: { sm: "row", xs: "column" }
 });
 
 const BOX1 = styled(Box)({
-  display:"flex",
-  justifyContent:"center",
-  textAlign:"justify",
-  
+  display: "flex",
+  justifyContent: "center",
+  textAlign: "justify",
 });
 
 const H2 = styled("h2")({
   color: "#007a48",
-  fontWeight:"800"
-  
+  fontWeight: "800",
 });
 
 const P = styled("p")({
   color: "#3a4268",
-  lineHeight:{sm:"40px", xs:"5px"}
+  lineHeight: { sm: "40px", xs: "5px" },
 });
 
 function TabPanel(props) {
@@ -80,8 +78,8 @@ export default function AboutUs() {
     <Box sx={{ width: "80%", margin: "auto" }} pt={10}>
       <Box
         sx={{
-          margin:"auto",
-          width:"92%",
+          margin: "auto",
+          width: "92%",
           borderBottom: "1px solid #edeff5",
           borderColor: "divider",
           display: "flex",
@@ -101,8 +99,11 @@ export default function AboutUs() {
       </Box>
 
       <TabPanel value={value} index={0}>
-        <BOX1 sx={{flexDirection: { sm: "row", xs: "column-reverse" }}}>
-          <BOX flexDirection={"column"} sx={{width:{sm:"48%", xs:"100%"}}}>
+        <BOX1 sx={{ flexDirection: { sm: "row", xs: "column-reverse" } }}>
+          <BOX
+            flexDirection={"column"}
+            sx={{ width: { sm: "48%", xs: "100%" } }}
+          >
             <H2>Underpinned by equality</H2>
             <P>
               Our four key values of respect, fairness, wellbeing & inclusive
@@ -111,18 +112,29 @@ export default function AboutUs() {
               the centre of all our actions.
             </P>
 
-            <Box display={"flex"} justifyContent={"left"}><Button color="success" variant="contained"> Read More </Button></Box>
+            <Box display={"flex"} justifyContent={"left"}>
+              <Button color="success" variant="contained">
+                {" "}
+                Read More{" "}
+              </Button>
+            </Box>
           </BOX>
-
-          <Box sx={{width:{sm:"48%", xs:"100%"}}}>
-            <img width={"100%"} src="https://www.eatright.org/-/media/eatrightimages/food/nutrition/eatingasafamily/family-dinner-flash-992108418.jpg" alt="Dinner" />
+          <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
+            <img
+              width={"100%"}
+              src="https://www.eatright.org/-/media/eatrightimages/food/nutrition/eatingasafamily/family-dinner-flash-992108418.jpg"
+              alt="Dinner"
+            />
           </Box>
         </BOX1>
       </TabPanel>
 
       <TabPanel value={value} index={1}>
-      <BOX1 sx={{flexDirection: { sm: "row", xs: "column-reverse" }}}>
-          <BOX flexDirection={"column"} sx={{width:{sm:"48%", xs:"100%"}}}>
+        <BOX1 sx={{ flexDirection: { sm: "row", xs: "column-reverse" } }}>
+          <BOX
+            flexDirection={"column"}
+            sx={{ width: { sm: "48%", xs: "100%" } }}
+          >
             <H2>Underpinned by equality</H2>
             <P>
               Our four key values of respect, fairness, wellbeing & inclusive
@@ -131,18 +143,31 @@ export default function AboutUs() {
               the centre of all our actions.
             </P>
 
-            <Box display={"flex"} justifyContent={"left"}><Button color="success" variant="contained"> Read More </Button></Box>
+            <Box display={"flex"} justifyContent={"left"}>
+              <Button color="success" variant="contained">
+                {" "}
+                Read More{" "}
+              </Button>
+            </Box>
           </BOX>
 
-          <Box sx={{width:{sm:"48%", xs:"100%"}}}>
-            <img width={"100%"} height={"100%"} src="https://elmedicointeractivo.com/wp-content/uploads/2017/10/vista-ojo-700x466.jpg" alt="Dinner" />
+          <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
+            <img
+              width={"100%"}
+              height={"100%"}
+              src="https://elmedicointeractivo.com/wp-content/uploads/2017/10/vista-ojo-700x466.jpg"
+              alt="Dinner"
+            />
           </Box>
         </BOX1>
       </TabPanel>
 
       <TabPanel value={value} index={2}>
-      <BOX1 sx={{flexDirection: { sm: "row", xs: "column-reverse" }}}>
-          <BOX flexDirection={"column"} sx={{width:{sm:"48%", xs:"100%"}}}>
+        <BOX1 sx={{ flexDirection: { sm: "row", xs: "column-reverse" } }}>
+          <BOX
+            flexDirection={"column"}
+            sx={{ width: { sm: "48%", xs: "100%" } }}
+          >
             <H2>Underpinned by equality</H2>
             <P>
               Our four key values of respect, fairness, wellbeing & inclusive
@@ -151,11 +176,20 @@ export default function AboutUs() {
               the centre of all our actions.
             </P>
 
-            <Box display={"flex"} justifyContent={"left"}><Button color="success" variant="contained"> Read More </Button></Box>
+            <Box display={"flex"} justifyContent={"left"}>
+              <Button color="success" variant="contained">
+                {" "}
+                Read More{" "}
+              </Button>
+            </Box>
           </BOX>
 
-          <Box sx={{width:{sm:"48%", xs:"100%"}}}>
-            <img width={"100%"} src="https://www.juniper.net/content/dam/www/assets/images/us/en/company/juniper-value-rgb.png/jcr:content/renditions/cq5dam.web.1280.1280.png" alt="Dinner" />
+          <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
+            <img
+              width={"100%"}
+              src="https://www.juniper.net/content/dam/www/assets/images/us/en/company/juniper-value-rgb.png/jcr:content/renditions/cq5dam.web.1280.1280.png"
+              alt="Dinner"
+            />
           </Box>
         </BOX1>
       </TabPanel>

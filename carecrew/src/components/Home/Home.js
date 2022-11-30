@@ -12,6 +12,7 @@ import ContactUs from "../../Pages/ContactUs/ContactUs";
 import JobsHindi from "../../Pages/JobSection/JobsHindi";
 import JobsEnglish from "../../Pages/JobSection/JobsEnglish";
 import AboutUsPage from "../../Pages/AboutUs/AboutUsPage";
+import Footer from "../Footer/Footer";
 function Home() {
   return (
     <>
@@ -189,11 +190,7 @@ function Home() {
       <Flickity/>
       <StepsToHire/>
       <AboutUs/>
-      <AskedQuestions/>
-      <ContactUs/>
-      <JobsHindi/>
-      <JobsEnglish/>
-      <AboutUsPage/>
+    <Footer/>
       
       
     </>

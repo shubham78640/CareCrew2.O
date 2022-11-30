@@ -6,8 +6,8 @@ import { crouselData } from '../../AllData';
 
 function HomeCrousel() {
   return (
-  <Box sx={{ backgroundColor: "red", position: "relative", top:{sm:"112px", xs:"60px" }}}>
-    <Carousel  variant="dark">
+  <Box  sx={{ backgroundColor: "red", position: "relative", top:{sm:"112px", xs:"60px" }}}>
+    <Carousel variant="dark">
       {crouselData.map((items) => (
         <Carousel.Item>
           <img

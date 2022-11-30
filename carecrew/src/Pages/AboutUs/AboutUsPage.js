@@ -7,6 +7,8 @@ import imageAboutus2 from "../../Images/2-3.png";
 import nitinImage from "../../Images/10.png";
 import linkdinImage from "../../Images/linkdin.png";
 import CheckIcon from "@mui/icons-material/Check";
+import Navbaar from "../../components/Headers/Navbaar";
+import Footer from "../../components/Footer/Footer"
 
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -18,8 +20,10 @@ const Item = styled(Box)(({ theme }) => ({
 function AboutUs() {
   return (
     <>
+    
+    <Navbaar/>
       <Box padding="5% 10%">
-        <Grid container spacing={1}>
+        <Grid mt={4} container spacing={1}>
           <Grid lg={6} xs={12}>
             <Item sx={{ justifyContent: "flex-end" }}>
               <img width="100%" src={imageAboutUs1} />
@@ -282,6 +286,7 @@ function AboutUs() {
           </Grid>
         </Grid>
       </Box>
+      <Footer/>
     </>
   );
 }

@@ -3,6 +3,10 @@ import React from 'react'
 import Navbaar from './components/Headers/Navbaar'
 import Home from './components/Home/Home'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
+import AboutUsPage from "../src/Pages/AboutUs/AboutUsPage"
+import ContactUs from './Pages/ContactUs/ContactUs'
+import JobsEnglish from './Pages/JobSection/JobsEnglish'
+import JobsHindi from './Pages/JobSection/JobsHindi'
 
 function App() {
   return (
@@ -12,7 +16,11 @@ function App() {
         <Box>
           <Routes>
               <Route path="/" element={<Home/>} />
-            
+              <Route path="/aboutus" element={<AboutUsPage/>} />
+              <Route path="/contactus" element={<ContactUs/>} />
+              <Route path="/jobsenglish" element={<JobsEnglish/>} />
+              <Route path="/jobshindi" element={<JobsHindi/>} />
+ 
           </Routes>
         </Box>
       </BrowserRouter>
