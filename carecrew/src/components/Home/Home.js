@@ -7,7 +7,11 @@ import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 import Flickity from "../Crousel/Flickity";
 import StepsToHire from "./StepsToHire";
 import AboutUs from "./AboutUs";
-
+import AskedQuestions from "../HomePageComponents/AskedQuestions";
+import ContactUs from "../../Pages/ContactUs/ContactUs";
+import JobsHindi from "../../Pages/JobSection/JobsHindi";
+import JobsEnglish from "../../Pages/JobSection/JobsEnglish";
+import AboutUsPage from "../../Pages/AboutUs/AboutUsPage";
 function Home() {
   return (
     <>
@@ -185,6 +189,13 @@ function Home() {
       <Flickity/>
       <StepsToHire/>
       <AboutUs/>
+      <AskedQuestions/>
+      <ContactUs/>
+      <JobsHindi/>
+      <JobsEnglish/>
+      <AboutUsPage/>
+      
+      
     </>
   );
 }

@@ -2,9 +2,8 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-
 import TextField from "@mui/material/TextField";
-import AccordionComponent from "../MuiComponents/AccordionComponent";
+import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import { Button } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 

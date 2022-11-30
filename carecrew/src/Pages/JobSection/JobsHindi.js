@@ -1,5 +1,5 @@
 import React from "react";
-import AccordionComponent from "../MuiComponents/AccordionComponent";
+import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
