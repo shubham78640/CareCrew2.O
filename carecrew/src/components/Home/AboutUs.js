@@ -15,7 +15,6 @@ const BOX = styled(Box)({
   backgroundImage: `url("https://wallpapercave.com/wp/wp2561061.jpg")`,
   objectFit:"cover",
   padding:"40px"
-  // flexDirection: { sm: "row", xs: "column" }
 });
 
 const BOX1 = styled(Box)({
@@ -33,7 +32,8 @@ const H2 = styled("h2")({
 
 const P = styled("p")({
   color: "#3a4268",
-  lineHeight:{sm:"40px", xs:"5px"}
+  // lineHeight:{sm:"90px", xs:"5px"}
+  
 });
 
 function TabPanel(props) {
