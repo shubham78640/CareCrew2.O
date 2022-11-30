@@ -6,45 +6,19 @@ import Grid from "@mui/material/Grid";
 import AccordionComponent from "../MuiComponents/AccordionComponent";
 
 const Item = styled(Box)(({ theme }) => ({
-  flexWrap: "wrap",
   display: "flex",
-  flexDirection: "column",
-  gap: "20px",
+  backgroundImage:`url(${image})`,
+  marginTop:"70px",
+  objectFit:"cover",
+  backgroundRepeat:"no-repeat",
 }));
 
 function AskedQuestions() {
   return (
     <>
-      <Box height="auto">
-        <Grid container>
-          <Grid item lg={6} xs={12}>
-            <Item>
-              <img width="100%" src={image} />
-            </Item>
-          </Grid>
-          <Grid item lg={6} xs={12}>
-            <Item>
-              <Box ml={3} mt={6} sx={{ fontSize: "18px", color: "#72bf44" }}>
-                Know more
-              </Box>
-              <Box
-                mr={29}
-                ml={3}
-                sx={{
-                  fontSize: "34px",
-                  fontWeight: "900",
-                  color: "#007a48",
-                  lineHeight: "32px",
-                }}
-              >
-                Here are some frequently asked questions
-              </Box>
-              <Box
-                mt={5}
-                ml={3}
-                sx={{ display: "flex", flexDirection: "column", gap: "20px" }}
-              >
-                <AccordionComponent
+      <Item sx={{p:{sm:"100px", xs:"10px"}, justifyContent:{xs:"center"}, gap:"30px"}}>
+        <Box sx={{width:{sm:"50%", xs:"100%"}, ml:{sm:90}, display:"grid", gap:{sm:5, xs:1}}}>
+        <AccordionComponent
                   Accordion_Heading="  Do you have people who can work in a 24-hour live-in
                       setting?"
                   Accordion_Content="  Yes, we provide full-time house helps in two formats:
@@ -77,11 +51,8 @@ function AskedQuestions() {
                       you professionally, we do offer replacements should such
                       situations arise."
                 />
-              </Box>
-            </Item>
-          </Grid>
-        </Grid>
-      </Box>
+        </Box>
+      </Item>
     </>
   );
 }

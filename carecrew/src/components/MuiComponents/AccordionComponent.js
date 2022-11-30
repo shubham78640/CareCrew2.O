@@ -9,7 +9,7 @@ function AccordionComponent(props) {
   const { Accordion_Heading, Accordion_Content, Expend_Value } = props;
   return (
     <>
-      <Accordion sx={{ padding: "20px", width: "85%" }}>
+      <Accordion sx={{ padding: "10px", width: {sm:"100%", xs:"100%"} }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
