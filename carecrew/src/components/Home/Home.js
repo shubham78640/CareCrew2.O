@@ -8,16 +8,11 @@ import Flickity from "../Crousel/Flickity";
 import StepsToHire from "./StepsToHire";
 import AboutUs from "./AboutUs";
 import AskedQuestions from "../HomePageComponents/AskedQuestions";
-import ContactUs from "../../Pages/ContactUs/ContactUs";
-import JobsHindi from "../../Pages/JobSection/JobsHindi";
-import JobsEnglish from "../../Pages/JobSection/JobsEnglish";
-import AboutUsPage from "../../Pages/AboutUs/AboutUsPage";
 import Footer from "../Footer/Footer";
 function Home() {
   return (
     <>
       <HomeCrousel />
-
       <Box
         width={"100%"}
         display={"flex"}
@@ -49,7 +44,7 @@ function Home() {
             <Box
               sx={{
                 position: "absolute",
-                top: { sm: "85%", xs: "44%" },
+                top: { sm: "85%", xs: "50%" },
                 left: { sm: "30%", xs: "22%" },
                 display: "flex",
                 gap: "30px",
@@ -190,6 +185,7 @@ function Home() {
       <Flickity/>
       <StepsToHire/>
       <AboutUs/>
+      <AskedQuestions/>
     <Footer/>
       
       
