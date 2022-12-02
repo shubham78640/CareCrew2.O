@@ -50,7 +50,7 @@ const StyleDiv = styled("div")({
 
 function StepsToHire() {
     return (
-        <Box mt={8} sx={{ background: "#ededed" }}>
+        <Box mt={10} sx={{ background: "#ededed" }}>
             <Box p={4} pt={10}>
                 <h6 style={{color:"#73bf45"}}>Steps to hire</h6>
                 <h1 style={{color:"rgba(0,122,72)"}}>How does it work?</h1>

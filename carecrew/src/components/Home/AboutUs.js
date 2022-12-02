@@ -75,7 +75,7 @@ export default function AboutUs() {
   };
 
   return (
-    <Box sx={{ width: "80%", margin: "auto" }} pt={10}>
+    <Box sx={{ width: "80%", margin: "auto" }} pt={5}>
       <Box
         sx={{
           margin: "auto",

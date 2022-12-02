@@ -113,7 +113,14 @@ function Home() {
         </Box>
 
         <Box sx={{ width: { sm: "48%", xs: "100%" } }} padding={4}>
-          <Box display={"flex"} flexDirection={"column"} gap={2} p={1} width={"100%"} borderTop={"1px solid #edeff5"} >
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            gap={2}
+            p={1}
+            width={"100%"}
+            borderTop={"1px solid #edeff5"}
+          >
             <Typography variant="p" sx={{ color: "#72bf44" }}>
               We provide
             </Typography>
@@ -134,64 +141,115 @@ function Home() {
                 color: "#3a4268",
               }}
             >
-              We source & deploy house helps skilled in any one or more
-              types of household chores. From basic tasks like sweeping,
-              mopping, cooking to more complex tasks like laundry, child
-              care and driving, we have them all covered.
+              We source & deploy house helps skilled in any one or more types of
+              household chores. From basic tasks like sweeping, mopping, cooking
+              to more complex tasks like laundry, child care and driving, we
+              have them all covered.
             </Typography>
 
             <Box>
-              <Box display={"flex"} gap={1} >
-                <DoneOutlineIcon sx={{ color: "#72bf44", fontSize: "18px", mt: "7px" }} />
-                <Box >
-                  <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>Transparent Process</Typography>
-                  <Typography variant="p" color={"#3a4268"}>Interviews, trials & unlimited replacements</Typography>
+              <Box display={"flex"} gap={1}>
+                <DoneOutlineIcon
+                  sx={{ color: "#72bf44", fontSize: "18px", mt: "7px" }}
+                />
+                <Box>
+                  <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>
+                    Transparent Process
+                  </Typography>
+                  <Typography variant="p" color={"#3a4268"}>
+                    Interviews, trials & unlimited replacements
+                  </Typography>
                 </Box>
               </Box>
             </Box>
 
             <Box>
-              <Box display={"flex"} gap={1} >
-                <DoneOutlineIcon sx={{ color: "#72bf44", fontSize: "18px", mt: "7px" }} />
-                <Box >
-                  <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>Transparent Process</Typography>
-                  <Typography variant="p" color={"#3a4268"}>Interviews, trials & unlimited replacements</Typography>
+              <Box display={"flex"} gap={1}>
+                <DoneOutlineIcon
+                  sx={{ color: "#72bf44", fontSize: "18px", mt: "7px" }}
+                />
+                <Box>
+                  <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>
+                    Transparent Process
+                  </Typography>
+                  <Typography variant="p" color={"#3a4268"}>
+                    Interviews, trials & unlimited replacements
+                  </Typography>
                 </Box>
               </Box>
             </Box>
 
             <Box>
-              <Box display={"flex"} gap={1} >
-                <DoneOutlineIcon sx={{ color: "#72bf44", fontSize: "18px", mt: "7px" }} />
-                <Box >
-                  <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>Transparent Process</Typography>
-                  <Typography variant="p" color={"#3a4268"}>Interviews, trials & unlimited replacements</Typography>
+              <Box display={"flex"} gap={1}>
+                <DoneOutlineIcon
+                  sx={{ color: "#72bf44", fontSize: "18px", mt: "7px" }}
+                />
+                <Box>
+                  <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>
+                    Transparent Process
+                  </Typography>
+                  <Typography variant="p" color={"#3a4268"}>
+                    Interviews, trials & unlimited replacements
+                  </Typography>
                 </Box>
               </Box>
             </Box>
 
             <Box>
-              <Box display={"flex"} gap={1} >
-                <DoneOutlineIcon sx={{ color: "#72bf44", fontSize: "18px", mt: "7px" }} />
-                <Box >
-                  <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>Transparent Process</Typography>
-                  <Typography variant="p" color={"#3a4268"}>Interviews, trials & unlimited replacements</Typography>
+              <Box display={"flex"} gap={1}>
+                <DoneOutlineIcon
+                  sx={{ color: "#72bf44", fontSize: "18px", mt: "7px" }}
+                />
+                <Box>
+                  <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>
+                    Transparent Process
+                  </Typography>
+                  <Typography variant="p" color={"#3a4268"}>
+                    Interviews, trials & unlimited replacements
+                  </Typography>
                 </Box>
               </Box>
             </Box>
 
-            <Button variant="contained" color="success" sx={{width: { sm: "40%", xs: "80%", p:1 }, ml:"25px", mt:"20px"}}>
+            <Button
+              variant="contained"
+              color="success"
+              sx={{
+                width: { sm: "40%", xs: "80%", p: 1 },
+                ml: "25px",
+                mt: "20px",
+              }}
+            >
               Submit your inquiry
             </Button>
           </Box>
         </Box>
       </Box>
 
-      <Flickity/>
-      <StepsToHire/>
-      <AboutUs/>
-    <Footer/>
-      
+      <Flickity />
+      <StepsToHire />
+
+      <Box
+        mt={10}
+        sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap:"20px" }}
+      >
+        <Box sx={{ width: "540px" }} p={"30px"}>
+          <h6 style={{ color: "#72bf44" }}>About us</h6>
+          <h1 style={{color:"#007a48"}} >Transforming lives</h1>
+        </Box>
+
+        <Box sx={{ width: "540px", textAlign:"justify"}}>
+          <p style={{ color: "#3a4268", padding:"30px" }}>
+            We are a young, dynamic team out to change the landscape of the
+            domestic help ecosystem with a humane approach & transform lives of
+            both customers & helps.
+          </p>
+        </Box>
+      </Box>
+
+      <AboutUs />
+      <AskedQuestions />
+      <Footer />
       
     </>
   );

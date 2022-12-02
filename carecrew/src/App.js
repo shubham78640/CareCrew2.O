@@ -20,7 +20,6 @@ function App() {
               <Route path="/contactus" element={<ContactUs/>} />
               <Route path="/jobsenglish" element={<JobsEnglish/>} />
               <Route path="/jobshindi" element={<JobsHindi/>} />
- 
           </Routes>
         </Box>
       </BrowserRouter>
