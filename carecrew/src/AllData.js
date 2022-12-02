@@ -3,8 +3,6 @@ import banner2 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_co
 
 export const crouselData = [
     {
-
-    {
         imagePath: banner1, 
         title:"Help is not just a word it is a responsibility",
         description:"We are ready to help you. Are you?"
