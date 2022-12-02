@@ -7,7 +7,6 @@ function HomeCrousel() {
   return (
     <Box
       sx={{
-        backgroundColor: "red",
         position: "relative",
         top: { sm: "112px", xs: "60px" },
       }}

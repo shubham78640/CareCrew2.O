@@ -12,6 +12,7 @@ import { Tab } from "@mui/material";
 import { motion } from "framer-motion";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "./Drawer";
+import { NavLink } from "react-router-dom";
 
 function Navbaar() {
   return (
@@ -88,14 +89,60 @@ function Navbaar() {
             zIndex: 999,
           }}
         >
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Services</li>
-          <li>How it Works</li>
-          <li>Pricing</li>
-          <li>Contact Us</li>
-          <li>Jobs</li>
-          <li>Blogs</li>
+            <NavLink className="Navlink" to="/" style={({isActive})=>{
+                return {
+                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
+                  textDecoration: "none",
+                  color:isActive?"#ebe956":"white"
+                }}}>
+             <li>Home</li>
+            </NavLink>
+
+            <NavLink className="Navlink" to="/aboutus" style={({isActive})=>{
+              return {
+                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
+                  textDecoration: "none",
+                  color:isActive?"#ebe956":"white"
+                }}}>
+             <li>About Us</li>
+            </NavLink>
+
+            <NavLink className="Navlink" to="/contactus" style={({isActive})=>{
+              return {
+                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
+                  textDecoration: "none",
+                  color:isActive?"#ebe956":"white"
+                }}}>
+             <li>Contact Us</li>
+            </NavLink>
+
+            <NavLink className="Navlink" to="/jobsenglish" style={({isActive})=>{
+              return {
+                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
+                  textDecoration: "none",
+                  color:isActive?"#ebe956":"white"
+                }}}>
+             <li>Jobs <sup>English</sup></li>
+            </NavLink>
+
+            <NavLink className="Navlink" to="/jobshindi" style={({isActive})=>{
+              return {
+                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
+                  textDecoration: "none",
+                  color:isActive?"#ebe956":"white"
+                }}}>
+             <li>Jobs <sup>हिन्दी</sup></li>
+            </NavLink>
+
+
+            <NavLink className="Navlink" to="/blogs" style={({isActive})=>{
+              return {
+                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
+                  textDecoration: "none",
+                  color:isActive?"#ebe956":"white"
+                }}}>
+             <li>Blogs</li>
+            </NavLink>
         </Box>
 
         <Box
