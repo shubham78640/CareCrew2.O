@@ -25,7 +25,7 @@ function HomeCrousel() {
                 whileInView={{ x: 0 }}
                 style={{ color: "white" }}
               >
-                {items.title}
+                House Helps for Every Home
               </motion.h5>
               <motion.p
                 initial={{ x: "-100%" }}
