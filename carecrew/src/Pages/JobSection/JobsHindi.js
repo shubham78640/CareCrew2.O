@@ -124,8 +124,8 @@ function JobsHindi() {
                   </Box>
                   <Box>सोम-शुक्र: सुबह 10 बजे से शाम 6 बजे</Box>
                   <Box>
-                    <SPAN>फ़ोन नंबर:</SPAN>
-                    <Span>xxxxxx</Span>
+                    <SPAN>फ़ोन नंबर: </SPAN>
+                    <Span> xxxxxx</Span>
                   </Box>
                   <Box>
                     <SPAN>लैंडलाइन –</SPAN>
@@ -153,11 +153,24 @@ function JobsHindi() {
                     </a>
                   </Box>
                   <Box sx={{ display: "flex", gap: "20px" }}>
-                    <FacebookIcon sx={{ fontSize: "30px", color: "#4267B2" }} />
-                    <LinkedInIcon sx={{ fontSize: "30px", color: "#0077B7" }} />
-                    <InstagramIcon
-                      sx={{ fontSize: "30px", color: "#d84315" }}
-                    />
+                    <a href="https://www.facebook.com/carecrew.in">
+                      {" "}
+                      <FacebookIcon
+                        sx={{ fontSize: "30px", color: "#4267B2" }}
+                      />
+                    </a>
+                    <a href="https://www.linkedin.com/showcase/care-crew-in/">
+                      {" "}
+                      <LinkedInIcon
+                        sx={{ fontSize: "30px", color: "#0077B7" }}
+                      />
+                    </a>
+                    <a href="https://www.instagram.com/carecrew.in/">
+                      {" "}
+                      <InstagramIcon
+                        sx={{ fontSize: "30px", color: "#d84315" }}
+                      />
+                    </a>
                   </Box>
                 </Box>
               }
