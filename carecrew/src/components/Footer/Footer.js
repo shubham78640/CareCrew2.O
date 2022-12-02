@@ -17,6 +17,7 @@ function Footer() {
           color: "white",
           display: "flex",
           justifyContent: "center",
+          marginTop:"100px"
         }}
       >
         <Grid container spacing={0.5} sx={{}}>
