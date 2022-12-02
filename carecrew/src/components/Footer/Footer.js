@@ -198,7 +198,7 @@ function Footer() {
             justifyContent: "center",
           }}
         >
-          <Box>2023 © All rights reserved by</Box> &nbsp;
+          <Box>2023 © All rights reserved by shubham Mishra</Box> &nbsp;
           <a
             href="https://thepinchlife.com/"
             style={{ textDecoration: "none", color: "#000000" }}
@@ -213,7 +213,5 @@ function Footer() {
     </>
   );
 }
-
-
 
 export default Footer;
