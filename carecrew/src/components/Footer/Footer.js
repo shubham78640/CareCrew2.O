@@ -189,7 +189,6 @@ function Footer() {
           </Grid>
         </Grid>
       </Box>
-
       <Box padding={4} sx={{ backgroundColor: "#72bf44" }}>
         <Box
           sx={{
