@@ -8,22 +8,20 @@ import nitinImage from "../../Images/10.png";
 import linkdinImage from "../../Images/linkdin.png";
 import CheckIcon from "@mui/icons-material/Check";
 import Navbaar from "../../components/Headers/Navbaar";
-import Footer from "../../components/Footer/Footer"
+import Footer from "../../components/Footer/Footer";
 
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
   display: "flex",
   padding: "10px",
   justifyContent: "center",
-  
 }));
 function AboutUs() {
   return (
     <>
-    
-    <Navbaar/>
+      <Navbaar />
       <Box padding="5% 10%">
-        <Grid mt={4} container spacing={1}>
+        <Grid mt={10} container spacing={1}>
           <Grid lg={6} xs={12}>
             <Item sx={{ justifyContent: "flex-end" }}>
               <img width="100%" src={imageAboutUs1} />
@@ -278,15 +276,17 @@ function AboutUs() {
                   Chaayos & Stanza Living. He had also worked with large brands
                   like Idea and Vodafone in his previous roles.
                 </Box>
-                <Box mt={2}>
-                  <img width="20px" src={linkdinImage} />
-                </Box>
+                <a href="https://www.linkedin.com/in/nitin-mohan-srivastava/">
+                  <Box mt={2}>
+                    <img width="20px" src={linkdinImage} />
+                  </Box>
+                </a>
               </Box>
             </Item>
           </Grid>
         </Grid>
       </Box>
-      <Footer/>
+      <Footer />
     </>
   );
 }

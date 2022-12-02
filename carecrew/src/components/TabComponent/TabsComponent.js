@@ -44,7 +44,14 @@ function a11yProps(index) {
 }
 
 function TabsComponent(props) {
-  const { Contentfortab1,Contentfortab2,Contentfortab3,labelfortab1,labelfortab2,labelfortab3 } = props;
+  const {
+    Contentfortab1,
+    Contentfortab2,
+    Contentfortab3,
+    labelfortab1,
+    labelfortab2,
+    labelfortab3,
+  } = props;
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -53,7 +60,7 @@ function TabsComponent(props) {
 
   return (
     <>
-      <Box sx={{ width: "80%", margin: "auto",  }} pt={10}>
+      <Box sx={{ width: "82%", margin: "auto" }} pt={10}>
         <Box
           sx={{
             margin: "auto",
@@ -62,35 +69,30 @@ function TabsComponent(props) {
             borderColor: "divider",
             display: "flex",
             justifyContent: "center",
-            
           }}
         >
           <Tabs
-            indicatorColor="primary"
+            textColor="secondary"
+            indicatorColor="secondary"
             value={value}
-            textColor="primary"
             onChange={handleChange}
             aria-label="basic tabs example"
+      
+          
           >
-            <Tab color="success" label={labelfortab1} {...a11yProps(0)} />
-            <Tab label={labelfortab2} {...a11yProps(1)} />
-            <Tab label={labelfortab3} {...a11yProps(2)} />
+            <Tab   sx={{color:"#72bf44",fontWeight:"600"}} label={labelfortab1} {...a11yProps(0)} />
+            <Tab sx={{color:"#72bf44",fontWeight:"600"}}  label={labelfortab2} {...a11yProps(1)} />
+            <Tab  sx={{color:"#72bf44",fontWeight:"600"}}  label={labelfortab3} {...a11yProps(2)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <P>
-            {Contentfortab1}
-          </P>
+          <P>{Contentfortab1}</P>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <P>
-          {Contentfortab2}
-          </P>
+          <P>{Contentfortab2}</P>
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <P>
-          {Contentfortab3}
-          </P>
+          <P>{Contentfortab3}</P>
         </TabPanel>
       </Box>
     </>

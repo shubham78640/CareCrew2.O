@@ -5,6 +5,7 @@ import CallIcon from "@mui/icons-material/Call";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import Grid from "@mui/material/Unstable_Grid2";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -58,13 +59,42 @@ function Footer() {
                   lineHeight: "32px",
                 }}
               >
-                <Box>
-                  Home</Box>
-                <Box>About Us</Box>
-                <Box>Privacy Policy</Box>
-                <Box>Terms of Use</Box>
-                <Box>Age Policy</Box>
-                <Box>Contact Us</Box>
+                <Link
+                  to="/"
+                  style={{ textDecoration: "none", color: "#72bf44" }}
+                >
+                  <Box>Home</Box>
+                </Link>
+                <Link
+                  to="/aboutus"
+                  style={{ textDecoration: "none", color: "#72bf44" }}
+                >
+                  <Box>About Us</Box>
+                </Link>
+                <Link
+                  to=""
+                  style={{ textDecoration: "none", color: "#72bf44" }}
+                >
+                  <Box>Privacy Policy</Box>
+                </Link>
+                <Link
+                  to=""
+                  style={{ textDecoration: "none", color: "#72bf44" }}
+                >
+                  <Box>Terms of Use</Box>
+                </Link>
+                <Link
+                  to=""
+                  style={{ textDecoration: "none", color: "#72bf44" }}
+                >
+                  <Box>Age Policy</Box>
+                </Link>
+                <Link
+                  to="/contactus"
+                  style={{ textDecoration: "none", color: "#72bf44" }}
+                >
+                  <Box>Contact Us</Box>
+                </Link>
               </Box>
             </Box>
           </Grid>
@@ -72,29 +102,39 @@ function Footer() {
             <Box padding={5}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>Contact Us</Box>
               <Box mt={3} sx={{ fontSize: "14px", lineHeight: "42px" }}>
-                <Box sx={{ display: "flex" }}>
-                  <Box mt={0.3} sx={{ color: "yellow" }}>
-                    <LocationOnIcon sx={{ fontSize: "16px" }} />
+                <a
+                  style={{ textDecoration: "none", color: "#ffffff" }}
+                  href="https://www.google.com/maps/place/1+To+Zee+Daycare/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f7f829f982f:0x114bbd1ad15327ed!8m2!3d28.473333!4d77.091636"
+                >
+                  <Box sx={{ display: "flex" }}>
+                    <Box mt={-0.1} sx={{ color: "yellow" }}>
+                      <LocationOnIcon sx={{ fontSize: "16px" }} />
+                    </Box>
+                    &nbsp;
+                    <Box>A-55/8, DLF Phase 1, Sector 28 - 122002</Box>
                   </Box>
-                  &nbsp;
-                  <Box>A-55/8, DLF Phase 1, Sector 28 - 122002</Box>
-                </Box>
-                <Box sx={{ display: "flex" }}>
-                  <Box mt={0.3} sx={{ color: "yellow" }}>
+                </a>
+                <Box sx={{ display: "flex", cursor: "pointer" }}>
+                  <Box mt={-0.1} sx={{ color: "yellow" }}>
                     <CallIcon sx={{ fontSize: "16px" }} />
                   </Box>
                   &nbsp;
                   <Box>080-6201-2086</Box>
                 </Box>
-                <Box sx={{ display: "flex" }}>
-                  <Box mt={0.3} sx={{ color: "yellow" }}>
-                    <WhatsAppIcon sx={{ fontSize: "16px" }} />
+                <a
+                  href="https://api.whatsapp.com/send?phone=919643328358"
+                  style={{ color: "#ffffff", textDecoration: "none" }}
+                >
+                  <Box sx={{ display: "flex" }}>
+                    <Box mt={-0.1} sx={{ color: "yellow" }}>
+                      <WhatsAppIcon sx={{ fontSize: "16px" }} />
+                    </Box>
+                    &nbsp;
+                    <Box>964-332-8358</Box>
                   </Box>
-                  &nbsp;
-                  <Box>964-332-8358</Box>
-                </Box>
-                <Box sx={{ display: "flex" }}>
-                  <Box mt={0.3} sx={{ color: "yellow" }}>
+                </a>
+                <Box sx={{ display: "flex", cursor: "pointer" }}>
+                  <Box mt={-0.1} sx={{ color: "yellow" }}>
                     <EmailIcon sx={{ fontSize: "16px" }} />
                   </Box>
                   &nbsp;
@@ -107,39 +147,42 @@ function Footer() {
             <Box padding={5}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>Careers</Box>
               <Box mt={3} sx={{ lineHeight: "32px" }}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    fontWeight: "600",
-                  }}
-                >
-                  {" "}
-                  <Box sx={{ fontSize: "14px", color: "#72bf44" }}>Join Us</Box>
-                  &nbsp;&nbsp;
-                  <Box mt={-0.6} sx={{ fontSize: "10px" }}>
-                    English
-                  </Box>{" "}
-                </Box>
-                
-                <Box
-                  sx={{
-                    display: "flex",
-                    fontWeight: "600",
-                  }}
-                >
-               
-                  {" "}
-                  <Box sx={{ fontSize: "14px", color: "#72bf44" }}>
+                <Link to="/jobsenglish" style={{ textDecoration: "none" }}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      fontWeight: "600",
+                    }}
+                  >
                     {" "}
-                    हमसे जुड़ें
+                    <Box sx={{ fontSize: "14px", color: "#72bf44" }}>
+                      Join Us
+                    </Box>
+                    &nbsp;&nbsp;
+                    <Box mt={-0.6} sx={{ fontSize: "10px", color: "#ffffff" }}>
+                      English
+                    </Box>{" "}
                   </Box>
-                  &nbsp;&nbsp;
-                  <Box mt={-0.6} sx={{ fontSize: "10px" }}>
+                </Link>
+                <Link to="/jobshindi" style={{ textDecoration: "none" }}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      fontWeight: "600",
+                    }}
+                  >
                     {" "}
-                    हिन्दी
+                    <Box sx={{ fontSize: "14px", color: "#72bf44" }}>
+                      {" "}
+                      हमसे जुड़ें
+                    </Box>
+                    &nbsp;&nbsp;
+                    <Box mt={-0.6} sx={{ fontSize: "10px", color: "#ffffff" }}>
+                      {" "}
+                      हिन्दी
+                    </Box>
                   </Box>
-                </Box>
-               
+                </Link>
               </Box>
             </Box>
           </Grid>
@@ -148,13 +191,23 @@ function Footer() {
 
       <Box padding={4} sx={{ backgroundColor: "#72bf44" }}>
         <Box
-          sx={{ fontSize: "14px", display: "flex", flexWrap:"wrap" ,justifyContent: "center" }}
+          sx={{
+            fontSize: "14px",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
         >
           <Box>2023 © All rights reserved by</Box> &nbsp;
-          <Box sx={{ fontWeight: "900" }}>
-            {" "}
-            Pinch Lifestyle Services Private Limited
-          </Box>
+          <a
+            href="https://thepinchlife.com/"
+            style={{ textDecoration: "none", color: "#000000" }}
+          >
+            <Box sx={{ fontWeight: "900" }}>
+              {" "}
+              Pinch Lifestyle Services Private Limited
+            </Box>
+          </a>
         </Box>
       </Box>
     </>

@@ -10,6 +10,7 @@ import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
+import { padding } from "@mui/system";
 
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -23,53 +24,74 @@ const Item = styled(Box)(({ theme }) => ({
 function ContactUs() {
   return (
     <>
-    <Navbaar/>
-      <Box  sx={{ backgroundColor: "#F4F8FD",height:"auto" }}>
+      <Navbaar />
+      <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}>
         <Grid container spacing={0}>
           <Grid paddingBottom="3%" mt={7} item lg={6} xs={12}>
             <Item>
               <Box
-                padding="10% 0% 0% 20%"
-                sx={{ fontSize: "18px", color: "#72BF44" }}
+                sx={{
+                  fontSize: "18px",
+                  color: "#72BF44",
+                  padding: { sm: "10% 0% 0% 15%", xs: "5% 0% 0% 5%" },
+                }}
               >
                 Get in touch
               </Box>
               <Box
-                padding="0% 15% 0% 20%"
-                sx={{ fontSize: "32px", color: "#007a48", lineHeight: "45px" }}
+                sx={{
+                  fontSize: "32px",
+                  color: "#007a48",
+                  lineHeight: "45px",
+                  padding: { sm: "0% 15% 0% 15%", xs: "5% 5%" },
+                }}
               >
                 Drop us a message here or reach out to us over WhatsApp, call or
                 email.
               </Box>
               <Box
-                padding="5% 15%"
-                sx={{ display: "flex", flexDirection: "column", gap: "35px" }}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "35px",
+                  padding: { sm: "5% 15%", xs: "5% 5%" },
+                }}
               >
-                <Box
-                  padding="10% 2% 10% 5%"
-                  sx={{ backgroundColor: "white", display: "flex", gap: "4px" }}
+                <a
+                  style={{ textDecoration: "none", color: "#ffffff" }}
+                  href="https://www.google.com/maps/place/1+To+Zee+Daycare/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f7f829f982f:0x114bbd1ad15327ed!8m2!3d28.473333!4d77.091636"
                 >
-                  <Box>
-                    <LocationOnOutlinedIcon
-                      sx={{ color: "#007a48", fontSize: "50px" }}
-                    />
-                  </Box>
-                  <Box sx={{ lineHeight: "30px" }}>
-                    <Box sx={{ color: "#007a48", fontWeight: "900" }}>
-                      Office address
+                  <Box
+                    padding="10% 2% 10% 5%"
+                    sx={{
+                      backgroundColor: "white",
+                      display: "flex",
+                      gap: "4px",
+                    }}
+                  >
+                    <Box>
+                      <LocationOnOutlinedIcon
+                        sx={{ color: "#007a48", fontSize: "50px" }}
+                      />
                     </Box>
-                    <Box sx={{ fontSize: "16px", color: "#72BF44" }}>
-                      A-55/8, DLF Phase 1, Sector 28 - 122002
+                    <Box sx={{ lineHeight: "30px" }}>
+                      <Box sx={{ color: "#007a48", fontWeight: "900" }}>
+                        Office address
+                      </Box>
+                      <Box sx={{ fontSize: "16px", color: "#72BF44" }}>
+                        A-55/8, DLF Phase 1, Sector 28 - 122002
+                      </Box>
                     </Box>
                   </Box>
-                </Box>
+                </a>
 
                 <Box
-                  padding="10% 2% 10% 5%"
                   sx={{
                     backgroundColor: "white",
                     display: "flex",
                     gap: "20px",
+                    cursor: "pointer",
+                    padding: { sm: "10% 2% 10% 5%", xs: "10% 2% 10% 5%" },
                   }}
                 >
                   <Box>
@@ -86,33 +108,40 @@ function ContactUs() {
                     </Box>
                   </Box>
                 </Box>
-
-                <Box
-                  padding="10% 2% 10% 5%"
-                  sx={{
-                    backgroundColor: "white",
-                    display: "flex",
-                    gap: "25px",
-                  }}
+                <a
+                  href="https://api.whatsapp.com/send?phone=919643328358"
+                  style={{ color: "#ffffff", textDecoration: "none" }}
                 >
-                  <Box>
-                    <WhatsAppIcon sx={{ color: "#007a48", fontSize: "50px" }} />
-                  </Box>
-                  <Box sx={{ lineHeight: "30px" }}>
-                    <Box sx={{ color: "#007a48", fontWeight: "900" }}>
-                      WhatsApp number
+                  <Box
+                    padding="10% 2% 10% 5%"
+                    sx={{
+                      backgroundColor: "white",
+                      display: "flex",
+                      gap: "25px",
+                    }}
+                  >
+                    <Box>
+                      <WhatsAppIcon
+                        sx={{ color: "#007a48", fontSize: "50px" }}
+                      />
                     </Box>
-                    <Box sx={{ fontSize: "16px", color: "#72BF44" }}>
-                      964-332-8358
+                    <Box sx={{ lineHeight: "30px" }}>
+                      <Box sx={{ color: "#007a48", fontWeight: "900" }}>
+                        WhatsApp number
+                      </Box>
+                      <Box sx={{ fontSize: "16px", color: "#72BF44" }}>
+                        964-332-8358
+                      </Box>
                     </Box>
                   </Box>
-                </Box>
+                </a>
                 <Box
                   padding="10% 2% 10% 5%"
                   sx={{
                     backgroundColor: "white",
                     display: "flex",
                     gap: "20px",
+                    cursor: "pointer",
                   }}
                 >
                   <Box>
@@ -135,7 +164,13 @@ function ContactUs() {
           </Grid>
           <Grid item lg={6} xs={12}>
             <Item sx={{ color: "#007a48" }}>
-              <Box mt={20} sx={{ fontWeight: 900, fontSize: "30px" }}>
+              <Box
+                sx={{
+                  fontWeight: 900,
+                  fontSize: "30px",
+                  marginTop: { sm: "18%", xs: "10%" },
+                }}
+              >
                 Get a call back
               </Box>
               <Box sx={{ display: "flex", gap: "0px" }}>

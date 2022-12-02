@@ -9,9 +9,9 @@ import Checkbox from "@mui/material/Checkbox";
 import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
 import TabsComponent from "../../components/TabComponent/TabsComponent";
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const Item = styled(Box)(({ theme }) => ({
@@ -21,6 +21,15 @@ const Item = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   gap: "20px",
 }));
+
+const SPAN = styled("span")({
+  color: "#000000",
+  fontWeight: "900",
+});
+const Span = styled("span")({
+  color: "#72bf44",
+  cursor: "pointer",
+});
 
 const Section = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -35,51 +44,139 @@ function JobsEnglish() {
     <>
       <Navbaar />
       <Grid container>
-        <Grid mt={15} item lg={6} xs={12}>
+        <Grid mt="5%" item lg={6} xs={12}>
           <Section>
-
-          <TabsComponent  labelfortab1="हमारा लक्ष्य" labelfortab2="मूल्य" labelfortab3="संपर्क करें"  Contentfortab1={<Box>
-              <Box>केयर क्रू में हमारा लक्ष्य घरेलू सहायता क्षेत्र का परिवर्तन करना है। हम चाहते हैं कि घरेलू कार्यकर्ता उचित रूप से कमाएं और उन्हें सम्मान और गौरव के साथ एक सुरक्षित, स्थिर जीवन प्रदान करें। साथ ही, हम उन ग्राहकों की मदद करना चाहते हैं जिन्हें घर पर सहायता की आवश्यकता है।</Box>
-              <Box>हम भारत के सभी प्रमुख शहरों में घर की सफाई (हाउसकीपिंग), खाना बनाना (कुकिंग), बच्चों की देखभाल (चाइल्ड केयर), बड़ों की देखभाल (एल्डर केयर) और गाड़ी चलाना (ड्राइविंग) में नौकरियां देते हैं। हमारे पास दो तरह की नौकरियां हैं: 24 घंटे जहां आप ग्राहक के घर में ही रहेंगे, या 8-12 घंटे की नौकरी जहां आप काम के लिए रोज ग्राहक के घर जाएंगे।</Box>
-              <Box>हमारा उदेश्य घरेलू कार्यकर्ताओं के लिए सबसे भरोसेमंद रोजगार साधन बनना है। इसके लिए हम यह सुनिश्चित करते हैं कि हम अपने घरेलू कार्यकर्ताओं को प्रशिक्षण दें, उनका वेतन समय पर मिले और उनकी शिकायतों को ध्यान से सुनें और उनकी सहायता करें।</Box>
-            </Box>}
-
-Contentfortab2={
-  <Box>
-<Box>हमारे चार प्रमुख मूल्य हैं – सम्मान, निष्पक्षता, कल्याण और सामूहिक विकास जो जीवन स्तर को बढ़ाता है। वे समानता के मूल सिद्धांत पर आधारित हैं और हमारे ग्राहकों, कर्मचारी और कार्यकर्ताओं सभी को महत्व देते हैं।</Box>
-<Box> सम्मान: हम उम्मीद करते हैं कि ग्राहक और घरेलू कार्यकर्ता दोनों एक-दूसरे से सम्मान के साथ मानवीय व्यवहार करें, और समझें कि वे एक दूसरे के जीवन में क्या अंतर ला रहे हैं।</Box>
-<Box>निष्पक्षता: कोई भी मानवीय संबंध समय के साथ बढ़ता और बदलता है। इसके अपने उतार-चढ़ाव होते हैं। हम जानते हैं कि ग्राहक और घरेलू कार्यकर्ता के बीच का रिश्ता ऐसा ही होगा। और चूंकि हम इस संबंध को संभव बनाते हैं, हम हर समय दोनों पक्षों के प्रति निष्पक्ष रहने का प्रयास करेंगे।</Box>
-<Box>कल्याण: हम वास्तव में दुनिया को एक बेहतर जगह बनाना चाहते हैं। हम चाहते हैं कि हमारा प्रयास और हमारी सेवाएं ग्राहकों, घरेलू कार्यकर्ताओं और कर्मचारियों को कल्याण की स्थिति की ओर ले जाएं। खुशी एक अच्छा एहसास है, और हम इसे उनके जीवन में जितना संभव हो उतना बढ़ाना चाहते हैं।</Box>
-<Box>व्यक्तिगत विकास: परिवर्तन आवश्यक है। हर कोई बढ़ना और बेहतर बनना चाहता है। हम इसमें मदद करते हैं। हम सुनिश्चित करते हैं कि हमारी सेवाएं ग्राहकों को उनके जीवन में प्रगति के लिए सही वातावरण प्रदान करें, इस बीच हम व्यक्तिगत विकास के लिए अपने घरेलू कार्यकर्ता को लगातार प्रशिक्षित और कुशल बनाते हैं।</Box>
-<Box></Box>
-<Box></Box>
-
-  </Box>
-}
-
-Contentfortab3 ={ <Box> 
-
-<Box>कार्य समय:</Box>
-<Box>सोम-शुक्र: सुबह 10 बजे से शाम 6 बजे</Box>
-<Box>फ़ोन नंबर:</Box>
-<Box>लैंडलाइन – 080-6201-2086 </Box>
-<Box>व्हाट्सएप – 964-332-8358</Box>
-<Box>ईमेल:</Box>
-<Box>help@carecrew.in</Box>
-<Box>
-पता: ए-55/8, डीएलएफ फेज -1, सेक्टर 28, गुरुग्राम, 122 002
-</Box>
-<Box>
-<FacebookIcon sx={{ color:"#4267B2"}}/>
-<LinkedInIcon sx={{ color:"#0077B7"}}/>
-<InstagramIcon sx={{ color:"#d84315"}}/>
-</Box>
-</Box>} 
-
-/>
+            <TabsComponent
+              labelfortab1="Mission & Vision"
+              labelfortab2="Values"
+              labelfortab3="Contact Us"
+              Contentfortab1={
+                <Box>
+                  <Box sx={{ lineHeight: "30px" }} mt={2}>
+                    {" "}
+                    <SPAN>At CARE CREW, </SPAN> we are out on a mission to
+                    transform the domestic help sector for the wellbeing of both
+                    customers & house helps. We want to integrate the domestic
+                    help community into the formal economy & provide them a more
+                    secure, sustainable livelihood that also comes with respect
+                    & dignity.
+                  </Box>
+                  <Box sx={{ lineHeight: "30px" }} mt={2}>
+                    We provide jobs in housekeeping, cooking, child care, elder
+                    care & driving, across all major cities in India. There are
+                    two kinds of jobs: either 24 hour live-in jobs, or 8-12 hour
+                    live-out jobs.
+                  </Box>
+                  <Box sx={{ lineHeight: "30px" }} mt={2}>
+                    Our vision is to become the most trusted employment provider
+                    for the domestic help community. For this purpose, we ensure
+                    that we invest in training of our house helps, maintain
+                    transparency in the disbursement of their salaries and are
+                    empathetic to their grievances.
+                  </Box>
+                </Box>
+              }
+              Contentfortab2={
+                <Box>
+                  <Box mt={2} sx={{ lineHeight: "30px" }}>
+                    Our four key values of respect, fairness, wellbeing &
+                    inclusive holistic growth are based on the fundamental
+                    principle of equality & keeping the interests of both our
+                    customers & our Associates at the centre of all our actions.
+                  </Box>
+                  <Box mt={2} sx={{ lineHeight: "30px" }}>
+                    {" "}
+                    <SPAN>Respect:</SPAN> We expect both customers & house helps
+                    to treat each other humanely, with utmost respect, and value
+                    the difference they are making to each other’s lives.
+                  </Box>
+                  <Box mt={2} sx={{ lineHeight: "30px" }}>
+                    {" "}
+                    <SPAN>Fairness:</SPAN> Any human relationship evolves over
+                    time & has its own fair share of ups & downs. We expect the
+                    relationship between customers & house helps to be no
+                    different. As someone facilitating this relationship, we
+                    truly believe in being fair to both parties at all times.
+                  </Box>
+                  <Box mt={2} sx={{ lineHeight: "30px" }}>
+                    {" "}
+                    <SPAN>Wellbeing: </SPAN> We truly want to make the world a
+                    better place. Our efforts & services should ultimately lead
+                    to a state of wellbeing for our customers, house helps &
+                    employees. Happiness & joy are infectious, and we want to
+                    spread these as much as possible.
+                  </Box>
+                  <Box mt={2} sx={{ lineHeight: "30px" }}>
+                    {" "}
+                    <SPAN>Inclusive Holistic Growth:</SPAN> Change is the only
+                    constant. Everybody wants to grow & change for the better.
+                    Our efforts are attuned to this philosophy – ensuring our
+                    services provide the customers with the right environment to
+                    progress in their lives, while we continually train &
+                    upskill our house helps for their own personal growth.
+                  </Box>
+                </Box>
+              }
+              Contentfortab3={
+                <Box
+                  sx={{ display: "flex", flexDirection: "column", gap: "25px" }}
+                >
+                  <Box mt={2}>
+                    <SPAN>Open Hours:</SPAN>
+                  </Box>
+                  <Box>Mon-Fri: 10am-6pm</Box>
+                  <Box>
+                    <SPAN>Phone Number:</SPAN> <Span>xxxxxxx</Span>
+                  </Box>
+                  <Box>
+                    <SPAN>Call us at – </SPAN> <Span>080-6201-2086 </Span>
+                  </Box>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=919643328358"
+                    style={{ color: "#72bf44", textDecoration: "none" }}
+                  >
+                    <Box>
+                      <SPAN>WhatsApp us at –</SPAN> <Span>964-332-8358</Span>
+                    </Box>
+                  </a>
+                  <Box>
+                    <SPAN>Email Address:</SPAN> <Span>help@carecrew.in</Span>
+                  </Box>
+                  <Box>
+                    <SPAN>Address: </SPAN>{" "}
+                    <a
+                      style={{ textDecoration: "none", color: "#72bf44" }}
+                      href="https://www.google.com/maps/place/1+To+Zee+Daycare/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f7f829f982f:0x114bbd1ad15327ed!8m2!3d28.473333!4d77.091636"
+                    >
+                      A-55/8, DLF Phase 1, Sector 28 – 122002
+                    </a>
+                  </Box>
+                  <Box sx={{ display: "flex", gap: "20px" }}>
+                    <a href="https://www.facebook.com/carecrew.in">
+                      {" "}
+                      <FacebookIcon
+                        sx={{ fontSize: "30px", color: "#4267B2" }}
+                      />
+                    </a>
+                    <a href="https://www.linkedin.com/showcase/care-crew-in/">
+                      {" "}
+                      <LinkedInIcon
+                        sx={{ fontSize: "30px", color: "#0077B7" }}
+                      />
+                    </a>
+                    <a href="https://www.instagram.com/carecrew.in/">
+                      {" "}
+                      <InstagramIcon
+                        sx={{ fontSize: "30px", color: "#d84315" }}
+                      />
+                    </a>
+                  </Box>
+                </Box>
+              }
+            />
           </Section>
         </Grid>
-        <Grid mt={15} item lg={6} xs={12}>
+        <Grid mt="8%" item lg={6} xs={12}>
           <Section>
             <Box
               padding="5%"
@@ -191,7 +288,7 @@ Contentfortab3 ={ <Box>
         </Grid>
       </Grid>
 
-      <Grid mt={5} mb={5} container>
+      <Grid sx={{ padding: { sm: "5% 8%", xs: "2%" } }} container>
         <Grid item lg={6} xs={12}>
           <Item>
             <AccordionComponent
