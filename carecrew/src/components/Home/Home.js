@@ -8,16 +8,11 @@ import Flickity from "../Crousel/Flickity";
 import StepsToHire from "./StepsToHire";
 import AboutUs from "./AboutUs";
 import AskedQuestions from "../HomePageComponents/AskedQuestions";
-import ContactUs from "../../Pages/ContactUs/ContactUs";
-import JobsHindi from "../../Pages/JobSection/JobsHindi";
-import JobsEnglish from "../../Pages/JobSection/JobsEnglish";
-import AboutUsPage from "../../Pages/AboutUs/AboutUsPage";
 import Footer from "../Footer/Footer";
 function Home() {
   return (
     <>
       <HomeCrousel />
-
       <Box
         width={"100%"}
         display={"flex"}
@@ -49,7 +44,7 @@ function Home() {
             <Box
               sx={{
                 position: "absolute",
-                top: { sm: "85%", xs: "44%" },
+                top: { sm: "85%", xs: "50%" },
                 left: { sm: "30%", xs: "22%" },
                 display: "flex",
                 gap: "30px",
@@ -226,30 +221,12 @@ function Home() {
         </Box>
       </Box>
 
-      <Flickity />
-      <StepsToHire />
-
-      <Box
-        mt={10}
-        sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap:"20px" }}
-      >
-        <Box sx={{ width: "540px" }} p={"30px"}>
-          <h6 style={{ color: "#72bf44" }}>About us</h6>
-          <h1 style={{color:"#007a48"}} >Transforming lives</h1>
-        </Box>
-
-        <Box sx={{ width: "540px", textAlign:"justify"}}>
-          <p style={{ color: "#3a4268", padding:"30px" }}>
-            We are a young, dynamic team out to change the landscape of the
-            domestic help ecosystem with a humane approach & transform lives of
-            both customers & helps.
-          </p>
-        </Box>
-      </Box>
-
-      <AboutUs />
-      <AskedQuestions />
-      <Footer />
+      <Flickity/>
+      <StepsToHire/>
+      <AboutUs/>
+      <AskedQuestions/>
+    <Footer/>
+      
       
     </>
   );

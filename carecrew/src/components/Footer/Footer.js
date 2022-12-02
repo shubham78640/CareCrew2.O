@@ -5,6 +5,7 @@ import CallIcon from "@mui/icons-material/Call";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import Grid from "@mui/material/Unstable_Grid2";
+
 function Footer() {
   return (
     <>
@@ -58,7 +59,8 @@ function Footer() {
                   lineHeight: "32px",
                 }}
               >
-                <Box>Home</Box>
+                <Box>
+                  Home</Box>
                 <Box>About Us</Box>
                 <Box>Privacy Policy</Box>
                 <Box>Terms of Use</Box>
@@ -119,12 +121,14 @@ function Footer() {
                     English
                   </Box>{" "}
                 </Box>
+                
                 <Box
                   sx={{
                     display: "flex",
                     fontWeight: "600",
                   }}
                 >
+               
                   {" "}
                   <Box sx={{ fontSize: "14px", color: "#72bf44" }}>
                     {" "}
@@ -136,6 +140,7 @@ function Footer() {
                     हिन्दी
                   </Box>
                 </Box>
+               
               </Box>
             </Box>
           </Grid>
