@@ -9,10 +9,14 @@ import StepsToHire from "./StepsToHire";
 import AboutUs from "./AboutUs";
 import AskedQuestions from "../HomePageComponents/AskedQuestions";
 import Footer from "../Footer/Footer";
+import ScrollToTop from "react-scroll-to-top";
 function Home() {
   return (
     <>
+    
+    <ScrollToTop smooth color="green" /> 
       <HomeCrousel />
+
       <Box
         width={"100%"}
         display={"flex"}
@@ -225,9 +229,10 @@ function Home() {
       <StepsToHire/>
       <AboutUs/>
       <AskedQuestions/>
-      <Footer/>
-      
-      
+
+    <Footer/>
+    <ScrollToTop smooth color="green" />  
+ 
     </>
   );
 }
