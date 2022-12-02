@@ -1,30 +1,18 @@
+import banner1 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cleaning.png"
+import banner2 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cook.png"
+
 export const crouselData = [
     {
-        imagePath:"",
+        imagePath: banner1, 
         title:"Help is not just a word it is a responsibility",
         description:"We are ready to help you. Are you?"
     },
     {
-        imagePath:"https://wallpapercave.com/wp/wp6608522.jpg",
+        imagePath:banner2,
         title:"Help is not just a word it is a responsibility",
         description:"We are ready to help you. Are you?"
     },
-    {
-        imagePath:"https://wallpapercave.com/wp/wp6608522.jpg",
-        title:"Help is not just a word it is a responsibility",
-        description:"We are ready to help you. Are you?"
-    },
-    {
-        imagePath:"https://wallpapercave.com/wp/wp6608522.jpg",
-        title:"Help is not just a word it is a responsibility",
-        description:"We are ready to help you. Are you?"
-    },
-    {
-        imagePath:"https://wallpapercave.com/wp/wp6608522.jpg",
-        title:"Help is not just a word it is a responsibility",
-        description:"We are ready to help you. Are you?"
-    },
-]
+  ]
 
 
 export const dataDigitalBestSeller = [

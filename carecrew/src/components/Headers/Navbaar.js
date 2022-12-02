@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "./Drawer";
 import { NavLink } from "react-router-dom";
+import "./navbaar.css"
 
 function Navbaar() {
   return (
@@ -76,6 +77,7 @@ function Navbaar() {
           />
         </Box>
         <Box
+          className="link"
           padding={3}
           mt={5.4}
           sx={{
@@ -122,7 +124,7 @@ function Navbaar() {
                   textDecoration: "none",
                   color:isActive?"#ebe956":"white"
                 }}}>
-             <li>Jobs <sup>English</sup></li>
+             <li>Join Us</li>
             </NavLink>
 
             <NavLink className="Navlink" to="/jobshindi" style={({isActive})=>{
@@ -131,7 +133,7 @@ function Navbaar() {
                   textDecoration: "none",
                   color:isActive?"#ebe956":"white"
                 }}}>
-             <li>Jobs <sup>हिन्दी</sup></li>
+             <li>हमसे जुड़ें</li>
             </NavLink>
 
 
