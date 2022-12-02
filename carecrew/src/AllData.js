@@ -2,7 +2,6 @@ import banner1 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cl
 import banner2 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cook.png"
 
 export const crouselData = [
-    {
 
     {
         imagePath: banner1, 
