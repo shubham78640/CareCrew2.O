@@ -1,6 +1,6 @@
 export const crouselData = [
     {
-        imagePath:"",
+        imagePath:"https://wallpapercave.com/wp/wp6608522.jpg",
         title:"Help is not just a word it is a responsibility",
         description:"We are ready to help you. Are you?"
     },
@@ -50,7 +50,7 @@ export const dataDigitalBestSeller = [
       id: 3,
       icon:"AddHomeWorkIcon",
       title: 'Child Care',
-      paragraph: 'We provide reliable child caregivers who assure the safety and growth of your child.',
+      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
       linkImg:
         'http://carecrew.in/wp-content/uploads/2022/03/Childcare-375x172.png',
@@ -59,7 +59,7 @@ export const dataDigitalBestSeller = [
       id: 4,
       icon:"AddHomeWorkIcon",
       title: 'Elder Care',
-      paragraph: "Whether it's for your parents for grandparents, you can hire trained professionals for taking care of...",
+      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
       linkImg:
         'http://carecrew.in/wp-content/uploads/2022/03/Eldercare-375x172.png',
@@ -68,7 +68,7 @@ export const dataDigitalBestSeller = [
       id: 5,
       icon:"AddHomeWorkIcon",
       title: 'Driving',
-      paragraph: 'We provide licensed drivers with in-depth knowledge about cars and driving etiquette.',
+      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
       linkImg:
         'http://carecrew.in/wp-content/uploads/2022/03/Driving-375x172.png',
@@ -77,7 +77,7 @@ export const dataDigitalBestSeller = [
       id: 6,
       icon:"AddHomeWorkIcon",
       title: 'Others',
-      paragraph: 'Did we miss out on the service you are looking for? Submit your inquiry to us. ',
+      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
       linkImg:
         'http://carecrew.in/wp-content/uploads/2022/03/Question-375x172.png',
