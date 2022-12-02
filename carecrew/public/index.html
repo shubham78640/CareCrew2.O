@@ -17,11 +17,36 @@
       scroll-behavior: smooth;
       
     }
+    /* p:first-letter{
+      font-size: 30px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    } */
+
     li{
       font-size: 14px;
       list-style: none;
-      color: white;
     }
+
+    a{
+      position: relative;
+      text-decoration: none;
+    }
+       
+    a:after{
+      content: "";
+      position: absolute;
+      background-color: #ebe956;
+      height: 3px;
+      width: 0;
+      left: 0;
+      bottom: -10px;
+      transition:0.3s;
+    }
+
+    a:hover::after{
+      width: 100%;
+    }
+
   </style>
 </head>
 

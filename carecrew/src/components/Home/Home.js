@@ -165,10 +165,10 @@ function Home() {
                 />
                 <Box>
                   <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>
-                    Transparent Process
+                    Zero Registration Fee
                   </Typography>
                   <Typography variant="p" color={"#3a4268"}>
-                    Interviews, trials & unlimited replacements
+                    Charges only post successful trial
                   </Typography>
                 </Box>
               </Box>
@@ -181,10 +181,10 @@ function Home() {
                 />
                 <Box>
                   <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>
-                    Transparent Process
+                  Relationship Officer
                   </Typography>
                   <Typography variant="p" color={"#3a4268"}>
-                    Interviews, trials & unlimited replacements
+                    A singe point of contact for all your queries
                   </Typography>
                 </Box>
               </Box>
@@ -197,10 +197,10 @@ function Home() {
                 />
                 <Box>
                   <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>
-                    Transparent Process
+                  On-the-job Online Training
                   </Typography>
                   <Typography variant="p" color={"#3a4268"}>
-                    Interviews, trials & unlimited replacements
+                  Continual training by 5-star hotel executives
                   </Typography>
                 </Box>
               </Box>
@@ -225,7 +225,7 @@ function Home() {
       <StepsToHire/>
       <AboutUs/>
       <AskedQuestions/>
-    <Footer/>
+      <Footer/>
       
       
     </>
