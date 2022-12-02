@@ -1,6 +1,6 @@
 export const crouselData = [
     {
-        imagePath:"https://wallpapercave.com/wp/wp6608522.jpg",
+        imagePath:"",
         title:"Help is not just a word it is a responsibility",
         description:"We are ready to help you. Are you?"
     },

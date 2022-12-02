@@ -10,7 +10,7 @@ import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
-import { padding } from "@mui/system";
+import ScrollToTop from "react-scroll-to-top";
 
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -24,6 +24,7 @@ const Item = styled(Box)(({ theme }) => ({
 function ContactUs() {
   return (
     <>
+     <ScrollToTop smooth color="green" /> 
       <Navbaar />
       <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}>
         <Grid container spacing={0}>
@@ -59,7 +60,8 @@ function ContactUs() {
               >
                 <a
                   style={{ textDecoration: "none", color: "#ffffff" }}
-                  href="https://www.google.com/maps/place/1+To+Zee+Daycare/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f7f829f982f:0x114bbd1ad15327ed!8m2!3d28.473333!4d77.091636"
+                  target="_blank"
+                  href="https://www.google.com/maps/place/Pinch/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f217d84f5a9:0xdb16d79eda45c82a!8m2!3d28.473333!4d77.091636"
                 >
                   <Box
                     padding="10% 2% 10% 5%"
@@ -111,6 +113,7 @@ function ContactUs() {
                 <a
                   href="https://api.whatsapp.com/send?phone=919643328358"
                   style={{ color: "#ffffff", textDecoration: "none" }}
+                  target="_blank"
                 >
                   <Box
                     padding="10% 2% 10% 5%"
@@ -164,7 +167,7 @@ function ContactUs() {
           </Grid>
           <Grid item lg={6} xs={12}>
             <Item sx={{ color: "#007a48" }}>
-              <Box
+              <Box p={2}
                 sx={{
                   fontWeight: 900,
                   fontSize: "30px",
@@ -173,7 +176,7 @@ function ContactUs() {
               >
                 Get a call back
               </Box>
-              <Box sx={{ display: "flex", gap: "0px" }}>
+              <Box p="0% 4%" sx={{ display: "flex", gap: "0px" }}>
                 <Grid mt={2} container spacing={1}>
                   <Grid item lg={6} xs={12}>
                     <Box>
@@ -185,7 +188,7 @@ function ContactUs() {
                         color="success"
                         sx={{
                           backgroundColor: "white",
-                          width: "96%",
+                          width: { sm: "96%", xs: "96%" },
                           marginTop: "12px",
                         }}
                       />
@@ -201,15 +204,15 @@ function ContactUs() {
                         color="success"
                         sx={{
                           backgroundColor: "white",
-                          width: "96%",
                           marginTop: "12px",
+                          width: { sm: "96%", xs: "96%" },
                         }}
                       />
                     </Box>
                   </Grid>
                 </Grid>
               </Box>
-              <Box sx={{ display: "flex", gap: "30px" }}>
+              <Box p="0% 4%" sx={{ display: "flex", gap: "30px" }}>
                 <Grid mt={2} container spacing={1}>
                   <Grid item lg={6} xs={12}>
                     <Box>
@@ -221,8 +224,8 @@ function ContactUs() {
                         color="success"
                         sx={{
                           backgroundColor: "white",
-                          width: "96%",
                           marginTop: "12px",
+                          width: { sm: "96%", xs: "96%" },
                         }}
                       />
                     </Box>
@@ -237,8 +240,8 @@ function ContactUs() {
                         color="success"
                         sx={{
                           backgroundColor: "white",
-                          width: "96%",
                           marginTop: "12px",
+                          width: { sm: "96%", xs: "96%" },
                         }}
                       />
                     </Box>
@@ -246,7 +249,7 @@ function ContactUs() {
                 </Grid>
               </Box>
               <Grid item lg={12} xs={12} mt={2}>
-                <Box>
+                <Box p="0% 4%">
                   <Box sx={{ fontWeight: 500 }}>Your message*</Box>
                   <TextField
                     id="outlined-textarea"
@@ -258,12 +261,12 @@ function ContactUs() {
                     sx={{
                       backgroundColor: "white",
                       marginTop: "12px",
-                      width: "96%",
+                      width: { sm: "98%", xs: "96%" },
                     }}
                   />
                 </Box>
               </Grid>
-              <Box sx={{ display: "flex", gap: "30px" }}>
+              <Box p="0% 4%" sx={{ display: "flex", gap: "30px" }}>
                 <Grid container mt={2}>
                   <Grid item lg={6} xs={12}>
                     <Box>
@@ -275,7 +278,7 @@ function ContactUs() {
                         color="success"
                         sx={{
                           backgroundColor: "white",
-                          width: "96%",
+                          width: { sm: "96%", xs: "96%" },
                           marginTop: "12px",
                         }}
                       />
@@ -291,7 +294,7 @@ function ContactUs() {
                         color="success"
                         sx={{
                           backgroundColor: "white",
-                          width: "95%",
+                          width: { sm: "96%", xs: "96%" },
                           marginTop: "12px",
                         }}
                       />
@@ -299,7 +302,7 @@ function ContactUs() {
                   </Grid>
                 </Grid>
               </Box>
-              <Grid mt={2} item lg={6} xs={12}>
+              <Grid p="0% 4%" mt={2} mb={4} item lg={6} xs={12}>
                 <Button variant="contained" color="success">
                   Submit Your request
                 </Button>
@@ -308,6 +311,18 @@ function ContactUs() {
           </Grid>
         </Grid>
       </Box>
+
+      <Box p={5} mb={-7} sx={{ display: "flex", justifyContent: "center" }}>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2063055398394!2d77.091636!3d28.473332999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f217d84f5a9%3A0xdb16d79eda45c82a!2sPinch!5e0!3m2!1sen!2sin!4v1669972130601!5m2!1sen!2sin"
+          width="90%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+        ></iframe>
+      </Box>
+
       <Footer />
     </>
   );

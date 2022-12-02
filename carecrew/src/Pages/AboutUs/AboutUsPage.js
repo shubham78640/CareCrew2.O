@@ -9,6 +9,7 @@ import linkdinImage from "../../Images/linkdin.png";
 import CheckIcon from "@mui/icons-material/Check";
 import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
+import ScrollToTop from "react-scroll-to-top";
 
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -19,6 +20,7 @@ const Item = styled(Box)(({ theme }) => ({
 function AboutUs() {
   return (
     <>
+      <ScrollToTop smooth color="green" />
       <Navbaar />
       <Box padding="5% 10%">
         <Grid mt={10} container spacing={1}>

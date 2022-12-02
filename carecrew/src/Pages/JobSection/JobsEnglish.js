@@ -12,6 +12,7 @@ import TabsComponent from "../../components/TabComponent/TabsComponent";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import ScrollToTop from "react-scroll-to-top";
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const Item = styled(Box)(({ theme }) => ({
@@ -42,6 +43,7 @@ const Section = styled(Box)(({ theme }) => ({
 function JobsEnglish() {
   return (
     <>
+     <ScrollToTop smooth color="green" /> 
       <Navbaar />
       <Grid container>
         <Grid mt="5%" item lg={6} xs={12}>
@@ -134,6 +136,7 @@ function JobsEnglish() {
                   <a
                     href="https://api.whatsapp.com/send?phone=919643328358"
                     style={{ color: "#72bf44", textDecoration: "none" }}
+                    target="_blank"
                   >
                     <Box>
                       <SPAN>WhatsApp us at –</SPAN> <Span>964-332-8358</Span>
@@ -145,26 +148,29 @@ function JobsEnglish() {
                   <Box>
                     <SPAN>Address: </SPAN>{" "}
                     <a
-                      style={{ textDecoration: "none", color: "#72bf44" }}
-                      href="https://www.google.com/maps/place/1+To+Zee+Daycare/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f7f829f982f:0x114bbd1ad15327ed!8m2!3d28.473333!4d77.091636"
+                      style={{ textDecoration: "none", color: "#72bf44" }} target="_blank"
+                      href="https://www.google.com/maps/place/Pinch/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f217d84f5a9:0xdb16d79eda45c82a!8m2!3d28.473333!4d77.091636"
                     >
                       A-55/8, DLF Phase 1, Sector 28 – 122002
                     </a>
                   </Box>
                   <Box sx={{ display: "flex", gap: "20px" }}>
-                    <a href="https://www.facebook.com/carecrew.in">
+                    <a href="https://www.facebook.com/carecrew.in" 
+                    target="_blank">
                       {" "}
                       <FacebookIcon
                         sx={{ fontSize: "30px", color: "#4267B2" }}
                       />
                     </a>
-                    <a href="https://www.linkedin.com/showcase/care-crew-in/">
+                    <a href="https://www.linkedin.com/showcase/care-crew-in/"
+                    target="_blank">
                       {" "}
                       <LinkedInIcon
                         sx={{ fontSize: "30px", color: "#0077B7" }}
                       />
                     </a>
-                    <a href="https://www.instagram.com/carecrew.in/">
+                    <a href="https://www.instagram.com/carecrew.in/"
+                    target="_blank">
                       {" "}
                       <InstagramIcon
                         sx={{ fontSize: "30px", color: "#d84315" }}
@@ -288,7 +294,7 @@ function JobsEnglish() {
         </Grid>
       </Grid>
 
-      <Grid sx={{ padding: { sm: "5% 8%", xs: "2%" } }} container>
+      <Grid sx={{ padding: { sm: "5% 8%", xs: "2%" } }} container spacing={2}>
         <Grid item lg={6} xs={12}>
           <Item>
             <AccordionComponent

@@ -6,6 +6,9 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Link } from "react-router-dom";
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Footer() {
   return (
@@ -17,7 +20,7 @@ function Footer() {
           color: "white",
           display: "flex",
           justifyContent: "center",
-          marginTop:"100px"
+          marginTop: "100px",
         }}
       >
         <Grid container spacing={0.5} sx={{}}>
@@ -28,7 +31,7 @@ function Footer() {
               </Box>
               <Box
                 mt={3}
-                sx={{ fontSize: "16px", lineHeight: "32px", color: "#BDBDBD" }}
+                sx={{ fontSize: "16px", lineHeight: "30px", color: "#BDBDBD" }}
               >
                 <Box>
                   We source, train & deploy house helps skilled in any one or
@@ -40,7 +43,7 @@ function Footer() {
               </Box>
               <Box
                 mt={1.5}
-                sx={{ fontSize: "16px", color: "#BDBDBD", lineHeight: "32px" }}
+                sx={{ fontSize: "16px", color: "#BDBDBD", lineHeight: "22px" }}
               >
                 <p>Mon – Fri: 10 am – 6 pm,</p> <p>Sat & Sun: Closed</p>
               </Box>
@@ -102,44 +105,74 @@ function Footer() {
           <Grid xs={12} lg={3}>
             <Box padding={5}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>Contact Us</Box>
-              <Box mt={3} sx={{ fontSize: "14px", lineHeight: "42px" }}>
+              <Box mt={3} sx={{ fontSize: "14px", lineHeight: "37px" }}>
                 <a
                   style={{ textDecoration: "none", color: "#ffffff" }}
-                  href="https://www.google.com/maps/place/1+To+Zee+Daycare/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f7f829f982f:0x114bbd1ad15327ed!8m2!3d28.473333!4d77.091636"
+                  href="https://www.google.com/maps/place/Pinch/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f217d84f5a9:0xdb16d79eda45c82a!8m2!3d28.473333!4d77.091636"
+                  target="_blank"
                 >
                   <Box sx={{ display: "flex" }}>
-                    <Box mt={-0.1} sx={{ color: "yellow" }}>
+                    <Box mt={-0.1} sx={{ color: "#ebe956" }}>
                       <LocationOnIcon sx={{ fontSize: "16px" }} />
                     </Box>
-                    &nbsp;
+                    &nbsp;  &nbsp;
                     <Box>A-55/8, DLF Phase 1, Sector 28 - 122002</Box>
                   </Box>
                 </a>
                 <Box sx={{ display: "flex", cursor: "pointer" }}>
-                  <Box mt={-0.1} sx={{ color: "yellow" }}>
+                  <Box mt={-0.1} sx={{ color: "#ebe956" }}>
                     <CallIcon sx={{ fontSize: "16px" }} />
                   </Box>
-                  &nbsp;
+                  &nbsp;  &nbsp;
                   <Box>080-6201-2086</Box>
                 </Box>
                 <a
                   href="https://api.whatsapp.com/send?phone=919643328358"
                   style={{ color: "#ffffff", textDecoration: "none" }}
+                  target="_blank"
                 >
                   <Box sx={{ display: "flex" }}>
-                    <Box mt={-0.1} sx={{ color: "yellow" }}>
+                    <Box mt={-0.1} sx={{ color: "#ebe956" }}>
                       <WhatsAppIcon sx={{ fontSize: "16px" }} />
                     </Box>
-                    &nbsp;
+                    &nbsp;  &nbsp;
                     <Box>964-332-8358</Box>
                   </Box>
                 </a>
                 <Box sx={{ display: "flex", cursor: "pointer" }}>
-                  <Box mt={-0.1} sx={{ color: "yellow" }}>
+                  <Box mt={-0.1} sx={{ color: "#ebe956" }}>
                     <EmailIcon sx={{ fontSize: "16px" }} />
                   </Box>
-                  &nbsp;
+                  &nbsp;  &nbsp;
                   <Box>help@carecrew.in</Box>
+                </Box>
+                <Box ml="2%" sx={{ display: "flex", gap: "10px" }}>
+                  <Box>
+                    <a href="https://www.facebook.com/carecrew.in"
+                    target="_blank"
+                    > {" "}
+
+                      <FacebookRoundedIcon
+                        sx={{ fontSize: "22px", color: "#ebe956" }}
+                      />
+                    </a>
+                  </Box>
+                  <Box>
+                    <a href="https://www.linkedin.com/showcase/care-crew-in/" target="_blank">
+                      {" "}
+                      <LinkedInIcon
+                        sx={{ fontSize: "22px", color: "#ebe956" }}
+                      />
+                    </a>
+                  </Box>
+                  <Box>
+                    <a href="https://www.instagram.com/carecrew.in/" target="_blank">
+                      {" "}
+                      <InstagramIcon
+                        sx={{ fontSize: "22px", color: "#ebe956" }}
+                      />
+                    </a>
+                  </Box>
                 </Box>
               </Box>
             </Box>
@@ -198,10 +231,10 @@ function Footer() {
             justifyContent: "center",
           }}
         >
-          <Box>2023 © All rights reserved by shubham Mishra</Box> &nbsp;
+          <Box>2023 © All rights reserved by </Box> &nbsp;
           <a
             href="https://thepinchlife.com/"
-            style={{ textDecoration: "none", color: "#000000" }}
+            style={{ textDecoration: "none", color: "#000000" }} target="_blank"
           >
             <Box sx={{ fontWeight: "900" }}>
               {" "}
