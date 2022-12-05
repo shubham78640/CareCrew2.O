@@ -1,6 +1,11 @@
-import banner1 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cleaning.png"
-import banner2 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cook.png"
-
+import banner1 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cleaning.jpg"
+import banner2 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cook.jpg"
+import imgcooking from "../../carecrew/src/Images/Cooking.jpg"
+import imgHK from "../../carecrew/src/Images/HK.jpeg"
+import imgCC from "../../carecrew/src/Images/Childcare.jpg"
+import imgEC from "../../carecrew/src/Images/eldercare_service.jpg"
+import imgDriver from "../../carecrew/src/Images/driving_service.jpg"
+import imgOthers from "../../carecrew/src/Images/Question.jpg"
 export const crouselData = [
 
     {
@@ -23,8 +28,7 @@ export const dataDigitalBestSeller = [
       title: 'HouseKeeping',
       paragraph: 'Our housekeepers are trained to keep your homes in order by performing multiple household chores with...',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Housekeeping-375x172.png',
+      linkImg:imgHK,
     },
     {
       id: 2,
@@ -32,8 +36,7 @@ export const dataDigitalBestSeller = [
       title: 'Cooking',
       paragraph: 'Our home cooks are professionally trained to prepare wholesome home-style meals for the families to enjoy',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Cooking-375x172.png',
+      linkImg:imgcooking,
     },
     {
       id: 3,
@@ -41,8 +44,7 @@ export const dataDigitalBestSeller = [
       title: 'Child Care',
       paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Childcare-375x172.png',
+      linkImg:imgCC,
     },
     {
       id: 4,
@@ -50,8 +52,7 @@ export const dataDigitalBestSeller = [
       title: 'Elder Care',
       paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Eldercare-375x172.png',
+      linkImg:imgEC,
     },
     {
       id: 5,
@@ -59,8 +60,7 @@ export const dataDigitalBestSeller = [
       title: 'Driving',
       paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Driving-375x172.png',
+      linkImg:imgDriver,
     },
     {
       id: 6,
@@ -68,8 +68,7 @@ export const dataDigitalBestSeller = [
       title: 'Others',
       paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Question-375x172.png',
+      linkImg:imgOthers,
     }
 
   ];
