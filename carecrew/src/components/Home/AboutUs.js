@@ -6,13 +6,17 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
+import imgaboutus from "../../Images/bg-tab-section.png";
+import imageAboutUs1 from "../../Images/1-4.jpg";
+import imageAboutUs2 from "../../Images/mission-scaled.jpeg";
+import imageAboutUs3 from "../../Images/values-scaled.jpeg";
 
 const BOX = styled(Box)({
   display: "flex",
   gap: "20px",
   justifyContent: "center",
   textAlign: "justify",
-  backgroundImage: `url("https://wallpapercave.com/wp/wp2561061.jpg")`,
+  backgroundImage: `url(${imgaboutus})`,
   objectFit:"cover",
   padding:"40px"
 });
@@ -124,7 +128,7 @@ export default function AboutUs() {
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
             <img
               width={"100%"}
-              src="https://www.eatright.org/-/media/eatrightimages/food/nutrition/eatingasafamily/family-dinner-flash-992108418.jpg"
+              src={imageAboutUs1}
               alt="Dinner"
             />
           </Box>
@@ -157,7 +161,7 @@ export default function AboutUs() {
             <img
               width={"100%"}
               height={"100%"}
-              src="https://elmedicointeractivo.com/wp-content/uploads/2017/10/vista-ojo-700x466.jpg"
+              src={imageAboutUs2}
               alt="Dinner"
             />
           </Box>
@@ -189,7 +193,7 @@ export default function AboutUs() {
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
             <img
               width={"100%"}
-              src="https://www.juniper.net/content/dam/www/assets/images/us/en/company/juniper-value-rgb.png/jcr:content/renditions/cq5dam.web.1280.1280.png"
+              src={imageAboutUs3}
               alt="Dinner"
             />
           </Box>

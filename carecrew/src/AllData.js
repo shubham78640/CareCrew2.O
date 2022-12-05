@@ -1,7 +1,13 @@
-import banner1 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cleaning.png"
-import banner2 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cook.png"
-
+import banner1 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cleaning.jpg"
+import banner2 from "../../../CareCrew2.O/carecrew/src/Images/carecrew_banner_cook.jpg"
+import imgcooking from "../../carecrew/src/Images/Cooking.jpg"
+import imgHK from "../../carecrew/src/Images/HK.jpeg"
+import imgCC from "../../carecrew/src/Images/Childcare.jpg"
+import imgEC from "../../carecrew/src/Images/eldercare_service.jpg"
+import imgDriver from "../../carecrew/src/Images/driving_service.jpg"
+import imgOthers from "../../carecrew/src/Images/Question.jpg"
 export const crouselData = [
+
     {
         imagePath: banner1, 
         title:"Help is not just a word it is a responsibility",
@@ -22,8 +28,7 @@ export const dataDigitalBestSeller = [
       title: 'HouseKeeping',
       paragraph: 'Our housekeepers are trained to keep your homes in order by performing multiple household chores with...',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Housekeeping-375x172.png',
+      linkImg:imgHK,
     },
     {
       id: 2,
@@ -31,68 +36,39 @@ export const dataDigitalBestSeller = [
       title: 'Cooking',
       paragraph: 'Our home cooks are professionally trained to prepare wholesome home-style meals for the families to enjoy',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Cooking-375x172.png',
+      linkImg:imgcooking,
     },
     {
       id: 3,
       icon:"AddHomeWorkIcon",
       title: 'Child Care',
-      paragraph: 'We provide reliable child caregivers who assure the safety and growth of your child.',
+      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Childcare-375x172.png',
+      linkImg:imgCC,
     },
     {
       id: 4,
       icon:"AddHomeWorkIcon",
       title: 'Elder Care',
-      paragraph: "Whether it's for your parents for grandparents, you can hire trained professionals for taking care of...",
+      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Eldercare-375x172.png',
+      linkImg:imgEC,
     },
     {
       id: 5,
       icon:"AddHomeWorkIcon",
       title: 'Driving',
-      paragraph: 'We provide licensed drivers with in-depth knowledge about cars and driving etiquette.',
+      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Driving-375x172.png',
+      linkImg:imgDriver,
     },
     {
       id: 6,
       icon:"AddHomeWorkIcon",
       title: 'Others',
-      paragraph: 'Did we miss out on the service you are looking for? Submit your inquiry to us. ',
+      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
-      linkImg:
-        'http://carecrew.in/wp-content/uploads/2022/03/Question-375x172.png',
+      linkImg:imgOthers,
     }
 
-  ];
-
-
-  export const MenuItems = [
-    {
-      title: 'Marketing',
-      path: '/marketing',
-      cName: 'dropdown-link'
-    },
-    {
-      title: 'Consulting',
-      path: '/consulting',
-      cName: 'dropdown-link'
-    },
-    {
-      title: 'Design',
-      path: '/design',
-      cName: 'dropdown-link'
-    },
-    {
-      title: 'Development',
-      path: '/development',
-      cName: 'dropdown-link'
-    }
   ];

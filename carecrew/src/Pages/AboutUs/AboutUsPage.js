@@ -2,9 +2,9 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
-import imageAboutUs1 from "../../Images/1-3.png";
-import imageAboutus2 from "../../Images/2-3.png";
-import nitinImage from "../../Images/10.png";
+import imageAboutUs1 from "../../Images/1-3.jpg";
+import imageAboutus2 from "../../Images/2-3.jpg";
+import nitinImage from "../../Images/10.jpg";
 import linkdinImage from "../../Images/linkdin.png";
 import CheckIcon from "@mui/icons-material/Check";
 import Navbaar from "../../components/Headers/Navbaar";
@@ -288,7 +288,7 @@ function AboutUs() {
           </Grid>
         </Grid>
       </Box>
-      <Footer />
+      <Footer/>
     </>
   );
 }
