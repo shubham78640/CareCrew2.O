@@ -18,8 +18,8 @@ function App() {
               <Route path="/" element={<Home/>} />
               <Route path="/aboutus" element={<AboutUsPage/>} />
               <Route path="/contactus" element={<ContactUs/>} />
-              <Route path="/jobsenglish" element={<JobsEnglish/>} />
-              <Route path="/jobshindi" element={<JobsHindi/>} />
+              <Route path="/jobs/:jobsenglish" element={<JobsEnglish/>} />
+              <Route path="/jobs/jobshindi" element={<JobsHindi/>} />
           </Routes>
         </Box>
       </BrowserRouter>

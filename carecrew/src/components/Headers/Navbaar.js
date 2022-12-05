@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
@@ -12,10 +12,23 @@ import { Tab } from "@mui/material";
 import { motion } from "framer-motion";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "./Drawer";
-import { NavLink } from "react-router-dom";
-import "./navbaar.css"
+import { NavLink, Link, useParams } from "react-router-dom";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import "./navbaar.css";
 
 function Navbaar() {
+  const [dropdown, setDropdown] = useState(false);
+
+  let { jobsenglish } = useParams();
+
+  const handleDropdown = () => {
+    setDropdown(true);
+  };
+
+  const handleDropdownclose = () => {
+    setDropdown(false);
+  };
+
   return (
     <Box>
       <Box sx={{ display: { xs: "none", sm: "block" } }}>
@@ -34,7 +47,7 @@ function Navbaar() {
             sx={{ color: "#ebe956", marginLeft: "25%" }}
           />{" "}
           &nbsp;
-          <Box sx={{ color: "#ebe956", fontSize: "12px", fontWeight: "400" }}>
+          <Box sx={{ color: "#ebe956", fontSize: "12px", fontWeight: "400"}}>
             <span
               style={{ color: "white", fontSize: "12px", fontWeight: "600" }}
             >
@@ -50,10 +63,12 @@ function Navbaar() {
               width: "0.5px",
             }}
           />
-          <EmailIcon
-            fontSize="6px"
-            sx={{ color: "#ebe956", marginLeft: "30px" }}
-          />{" "}
+          <a href="mailto:help@carecrew.in" target="_blank" rel="noreferrer">
+            <EmailIcon
+              fontSize="10px"
+              sx={{ color: "#ebe956", marginLeft: "30px", marginBottom: "3px" }}
+            />
+          </a>{" "}
           &nbsp;
           <Box sx={{ color: "#ebe956", fontSize: "12px", fontWeight: "400" }}>
             <span
@@ -63,19 +78,26 @@ function Navbaar() {
             </span>
             &nbsp;help@carecrew.in
           </Box>
-          <InstagramIcon
-            fontSize="6px"
-            sx={{ color: "#ebe956", marginLeft: "35%" }}
-          />
-          <LinkedInIcon
-            fontSize="6px"
-            sx={{ color: "#ebe956", marginLeft: "10px" }}
-          />
-          <FacebookIcon
-            fontSize="6px"
-            sx={{ color: "#ebe956", marginLeft: "10px" }}
-          />
+          <a href="" style={{ marginLeft: "35%" }}>
+            <InstagramIcon
+              fontSize="6px"
+              sx={{ color: "#ebe956", marginLeft: "35%" }}
+            />
+          </a>
+          <a href="">
+            <LinkedInIcon
+              fontSize="6px"
+              sx={{ color: "#ebe956", marginLeft: "10px" }}
+            />
+          </a>
+          <a href="">
+            <FacebookIcon
+              fontSize="6px"
+              sx={{ color: "#ebe956", marginLeft: "10px" }}
+            />
+          </a>
         </Box>
+
         <Box
           className="link"
           padding={3}
@@ -91,60 +113,111 @@ function Navbaar() {
             zIndex: 999,
           }}
         >
-            <NavLink className="Navlink" to="/" style={({isActive})=>{
-                return {
-                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
-                  textDecoration: "none",
-                  color:isActive?"#ebe956":"white"
-                }}}>
-             <li>Home</li>
-            </NavLink>
-
-            <NavLink className="Navlink" to="/aboutus" style={({isActive})=>{
+          <NavLink
+            className="Navlink"
+            to="/"
+            style={({ isActive }) => {
               return {
-                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
-                  textDecoration: "none",
-                  color:isActive?"#ebe956":"white"
-                }}}>
-             <li>About Us</li>
-            </NavLink>
+                // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
+                textDecoration: "none",
+                color: isActive ? "#ebe956" : "white",
+              };
+            }}
+          >
+            <li onClick={handleDropdownclose}>Home</li>
+          </NavLink>
 
-            <NavLink className="Navlink" to="/contactus" style={({isActive})=>{
+          <NavLink
+            className="Navlink"
+            to="/aboutus"
+            style={({ isActive }) => {
               return {
-                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
-                  textDecoration: "none",
-                  color:isActive?"#ebe956":"white"
-                }}}>
-             <li>Contact Us</li>
-            </NavLink>
+                color: isActive ? "#ebe956" : "white",
+              };
+            }}
+          >
+            <li onClick={handleDropdownclose}>About Us</li>
+          </NavLink>
 
-            <NavLink className="Navlink" to="/jobsenglish" style={({isActive})=>{
+          <NavLink
+            className="Navlink"
+            to="/contactus"
+            style={({ isActive }) => {
               return {
-                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
-                  textDecoration: "none",
-                  color:isActive?"#ebe956":"white"
-                }}}>
-             <li>Join Us</li>
-            </NavLink>
+                color: isActive ? "#ebe956" : "white",
+              };
+            }}
+          >
+            <li onMouseOver={handleDropdownclose}>Contact Us</li>
+          </NavLink>
 
-            <NavLink className="Navlink" to="/jobshindi" style={({isActive})=>{
+          {/* Dropdown menu */}
+          <div onMouseEnter={handleDropdown} className="link" style={{ position: "relative" }}>
+            <NavLink
+              className="Navlink"
+              style={{ color: jobsenglish ? "#ebe956" : "white" }}
+            >
+              <li  >
+                Jobs <ArrowDropDownIcon sx={{ mt: "-2px" }} />
+              </li>
+            </NavLink>
+            <div
+             onMouseLeave={handleDropdownclose}
+              style={{
+                position: "absolute",
+                margin: "24px 0px 0px -45px",
+                width: "150px",
+                background: "#007a48",
+                padding: "10px",
+                display: dropdown ? "block" : "none",
+              }}
+            >
+              <NavLink
+                className="Navlink"
+                to="/jobs/jobsenglish"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#ebe956" : "white",
+                  };
+                }}
+              >
+                <li
+                  style={{ borderBottom: "1px solid black", padding: "10px" }}
+                 
+                >
+                  Join Us{" "}
+                </li>
+              </NavLink>
+
+              <NavLink
+                className="Navlink"
+                to="/jobs/jobshindi"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#ebe956" : "white",
+                  };
+                }}
+              >
+                <li  style={{ padding: "10px" }}>
+                  हमसे जुड़ें
+                </li>
+              </NavLink>
+            </div>
+          </div>
+          {/* Dropdown menu */}
+
+          <NavLink
+            className="Navlink"
+            to="/blogs"
+            style={({ isActive }) => {
               return {
-                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
-                  textDecoration: "none",
-                  color:isActive?"#ebe956":"white"
-                }}}>
-             <li>हमसे जुड़ें</li>
-            </NavLink>
-
-
-            <NavLink className="Navlink" to="/blogs" style={({isActive})=>{
-              return {
-                  // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
-                  textDecoration: "none",
-                  color:isActive?"#ebe956":"white"
-                }}}>
-             <li>Blogs</li>
-            </NavLink>
+                // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
+                color: isActive ? "#ebe956" : "white",
+              };
+            }}
+          >
+            <li onMouseOver={handleDropdownclose}>Blogs</li>
+          </NavLink>
         </Box>
 
         <Box
@@ -195,8 +268,13 @@ function Navbaar() {
             width={"30%"}
             src={CCHorizontal}
           />
-          <MenuIcon  fontSize="large" sx={{ mr: 1 }} data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"/>
-          <Drawer/>
+          <MenuIcon
+            fontSize="large"
+            sx={{ mr: 1 }}
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+          />
+          <Drawer />
         </Box>
       </Box>
     </Box>

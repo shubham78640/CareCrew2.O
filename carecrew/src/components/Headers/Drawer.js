@@ -7,6 +7,9 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
+import { NavLink } from 'react-router-dom';
+
+
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -24,8 +27,14 @@ const Accordion = styled((props) => (
 const BOX = styled(Box)({
  display:"flex",
  flexDirection:"column",
- gap:"10px"
+ gap:"10px",
+ padding:"5px",
 })
+
+const BOX1 = styled(Box)({
+  padding:"15px",
+  background:"#f4f4f4"
+ })
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
@@ -69,39 +78,42 @@ export default function Drawer() {
   </div>
   <div class="offcanvas-body">
     {/* containt writing */}
-  <div>
-        <AccordionSummary>
-          <Typography>Home</Typography>
-        </AccordionSummary>
- 
-      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          About Us
-        </AccordionSummary>
-        <AccordionDetails>
-        <BOX>
-            <div>Mission</div>
-            <div>Vision</div>
-            <div>Values</div>
-            <div>Team</div>
-        </BOX>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>How It Works</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-         <BOX>
-            <div>Process</div>
-            <div>FAQs</div>
-         </BOX>
-        </AccordionDetails>
-      </Accordion>
+  <div style={{display:"flex",flexDirection:"column", rowGap:"1px"}}>
+  <NavLink className="Navlink"
+            to="/"
+            style={({ isActive }) => {
+              return {
+                textDecoration: "none",
+                color: isActive ? "green" : "Black",
+              };
+            }}
+          >
+      <BOX1 >Home</BOX1>
+      </NavLink>
 
-      <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          Contact Us
-     </AccordionSummary>
+      <NavLink className="Navlink"
+            to="/aboutus"
+            style={({ isActive }) => {
+              return {
+                textDecoration: "none",
+                color: isActive ? "green" : "Black",
+              };
+            }}
+          >
+      <BOX1 >About Us</BOX1>
+      </NavLink>
+
+      <NavLink className="Navlink"
+            to="/contactus"
+            style={({ isActive }) => {
+              return {
+                textDecoration: "none",
+                color: isActive ? "green" : "Black",
+              };
+            }}
+          >
+      <BOX1 >Contact Us</BOX1>
+      </NavLink>
 
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
@@ -109,15 +121,51 @@ export default function Drawer() {
         </AccordionSummary>
         <AccordionDetails>
          <BOX>
-            <div>Join Us</div>
-            <div>हमसे जुड़े</div>
+         <NavLink
+                className="Navlink"
+                to="/jobs/jobsenglish"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "green" : "black",
+                  };
+                }}
+              >
+                <li
+                  style={{ borderBottom: "1px solid black", padding: "10px" }}
+                 
+                >
+                  Join Us{" "}
+                </li>
+              </NavLink>
+
+              <NavLink
+                className="Navlink"
+                to="/jobs/jobshindi"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "green" : "black",
+                  };
+                }}
+              >
+                <li  style={{ padding: "10px" }}>
+                  हमसे जुड़ें
+                </li>
+              </NavLink>
          </BOX>
         </AccordionDetails>
       </Accordion>
 
-      <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          Blogs
-      </AccordionSummary>
+      <NavLink className="Navlink"
+            to="/blogs"
+            style={({ isActive }) => {
+              return {
+                textDecoration: "none",
+                color: isActive ? "green" : "Black",
+              };
+            }}
+          >
+      <BOX1>Blogs</BOX1>
+      </NavLink> 
          
      
     </div>
