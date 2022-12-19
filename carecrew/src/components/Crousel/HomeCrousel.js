@@ -23,6 +23,7 @@ function HomeCrousel() {
               className="d-block w-100"
               src={items.imagePath}
               alt="First slide"
+              style={{maxHeight:"600px"}}
             />
             <Carousel.Caption style={{display:"grid", alignItems:"center", gap:"10px"}}>
               <Typography variant="h3"
