@@ -187,10 +187,11 @@ function Navbaar() {
               style={{  
               position: "absolute",
               margin: "24px 0px 0px -45px",
-              width: "150px",
-              background: "#007a48",
+              width: "170px",
+              background: "white",
               padding: "10px",
               display: dropdown1 ? "block" : "none",
+              boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
               }}
             >
             <Dropdown name="Housekeeping" path="/jobs/jobsenglish"/>
@@ -234,10 +235,11 @@ function Navbaar() {
               style={{  
               position: "absolute",
               margin: "24px 0px 0px -45px",
-              width: "150px",
-              background: "#007a48",
+              width: "170px",
+              background: "white",
               padding: "10px",
               display: dropdown ? "block" : "none",
+              boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
               }}
             >
             <Dropdown name="Join Us" dropdown={dropdown} setDropdown={setDropdown} path="/jobs/jobsenglish"/>

@@ -16,12 +16,12 @@ function Dropdown(props) {
                 to={path}
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? "#ebe956" : "white",
+                    color: isActive ? "#007a48" : "#504f6b",
                   };
                 }}
               >
                 <li
-                  style={{ borderBottom: "1px solid black", padding: "10px" }}
+                  style={{ borderTop: "1px solid #eff1f6", padding: "10px" }}
                 >
                   {name}{" "}
                 </li>
