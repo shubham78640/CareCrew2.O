@@ -1,6 +1,6 @@
 import { Box, styled, Typography } from "@mui/material";
 import Carousel from "react-bootstrap/Carousel";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { crouselData } from "../../AllData";
 
 const P = styled('p')({

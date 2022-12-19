@@ -10,6 +10,8 @@ import AboutUs from "./AboutUs";
 import AskedQuestions from "../HomePageComponents/AskedQuestions";
 import Footer from "../Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
+
+
 function Home() {
   return (
     <>

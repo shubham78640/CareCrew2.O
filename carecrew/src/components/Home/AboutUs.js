@@ -52,7 +52,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 2 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -81,11 +81,11 @@ export default function AboutUs() {
   };
 
   return (
-    <Box sx={{ width: "80%", margin: "auto" }} pt={5}>
+    <Box sx={{ width:{sm:"80%", xs:"100%"} , margin: "auto" }} pt={5}>
       <Box
         sx={{
           margin: "auto",
-          width: "92%",
+          width: { sm: "93%", xs: "92%" },
           borderBottom: "1px solid #edeff5",
           borderColor: "divider",
           display: "flex",
@@ -160,7 +160,7 @@ export default function AboutUs() {
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
             <img
               width={"100%"}
-              height={"100%"}
+              // height={"100%"}
               src={imageAboutUs2}
               alt="Dinner"
             />

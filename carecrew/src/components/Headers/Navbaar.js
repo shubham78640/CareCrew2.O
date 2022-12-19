@@ -5,19 +5,35 @@ import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import Home from "../Home/Home";
 import CCLogo from "../../Images/CCLogo.png";
 import CCHorizontal from "../../Images/CCHorizontal.png";
-import { Tab } from "@mui/material";
 import { motion } from "framer-motion";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "./Drawer";
-import { NavLink, Link, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
 import "./navbaar.css";
+import { Button, styled, TextField } from "@mui/material";
+import GetACallBackForm from "../Home/GetACallBackForm";
+import CancelIcon from "@mui/icons-material/Cancel";
+import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
+import Dropdown from "../Dropdown/Dropdown";
+
+const styleDiv = styled('div')({
+  position: "absolute",
+  margin: "24px 0px 0px -45px",
+  width: "150px",
+  background: "#007a48",
+  padding: "10px",
+  
+})
 
 function Navbaar() {
   const [dropdown, setDropdown] = useState(false);
+  const [dropdown1, setDropdown1] = useState(false);
+
+  const [closeForm, setCloseForm] = useState(true);
 
   let { jobsenglish } = useParams();
 
@@ -29,10 +45,23 @@ function Navbaar() {
     setDropdown(false);
   };
 
+  const handleDropdown1 = () => {
+    setDropdown1(true);
+  };
+
+  const handleDropdownclose1 = () => {
+    setDropdown1(false);
+  };
+
+  const handleCloseForm = () => {
+    setCloseForm(false);
+  };
+
   return (
     <Box>
       <Box sx={{ display: { xs: "none", sm: "block" } }}>
         <Box
+          onMouseLeave={()=>{handleDropdownclose1(); handleDropdownclose()}}
           sx={{
             backgroundColor: "#72bf44",
             display: "flex",
@@ -47,7 +76,7 @@ function Navbaar() {
             sx={{ color: "#ebe956", marginLeft: "25%" }}
           />{" "}
           &nbsp;
-          <Box sx={{ color: "#ebe956", fontSize: "12px", fontWeight: "400"}}>
+          <Box sx={{ color: "#ebe956", fontSize: "12px", fontWeight: "400" }}>
             <span
               style={{ color: "white", fontSize: "12px", fontWeight: "600" }}
             >
@@ -114,6 +143,7 @@ function Navbaar() {
           }}
         >
           <NavLink
+           onMouseLeave={()=>{handleDropdownclose1(); handleDropdownclose()}}
             className="Navlink"
             to="/"
             style={({ isActive }) => {
@@ -136,8 +166,42 @@ function Navbaar() {
               };
             }}
           >
-            <li onClick={handleDropdownclose}>About Us</li>
+            <li onMouseOver={()=>{handleDropdownclose1(); handleDropdownclose()}} onClick={handleDropdownclose}>About Us</li>
           </NavLink>
+       {/* Dropdown menu1 */}
+          <div
+            onMouseEnter={handleDropdown1}
+            className="link"
+            style={{ position: "relative" }}
+          >
+            <NavLink
+              className="Navlink"
+              style={{ color: jobsenglish ? "#ebe956" : "white" }}
+            >
+              <li>
+                Services <ArrowDropDownIcon sx={{ mt: "-2px" }} />
+              </li>
+            </NavLink>
+            <div
+              onMouseLeave={()=>{handleDropdownclose1(); handleDropdownclose()}}
+              style={{  
+              position: "absolute",
+              margin: "24px 0px 0px -45px",
+              width: "150px",
+              background: "#007a48",
+              padding: "10px",
+              display: dropdown1 ? "block" : "none",
+              }}
+            >
+            <Dropdown name="Housekeeping" path="/jobs/jobsenglish"/>
+            <Dropdown name="Cooking" path="/jobs/jobshindi"/>
+            <Dropdown name="Child Care" path="/jobs/jobshindi"/>
+            <Dropdown name="Elder Care" path="/jobs/jobshindi"/>
+            <Dropdown name="Driving" path="/jobs/jobshindi"/>
+            <Dropdown name="Others" path="/jobs/jobshindi"/>
+          </div>
+          </div>
+          {/* Dropdown menu1 */}
 
           <NavLink
             className="Navlink"
@@ -148,63 +212,39 @@ function Navbaar() {
               };
             }}
           >
-            <li onMouseOver={handleDropdownclose}>Contact Us</li>
+            <li onMouseOver={()=>{handleDropdownclose1(); handleDropdownclose()}}>Contact Us</li>
           </NavLink>
 
-          {/* Dropdown menu */}
-          <div onMouseEnter={handleDropdown} className="link" style={{ position: "relative" }}>
+          {/* Dropdown menu2 */}
+          <div
+            onMouseEnter={handleDropdown}
+            className="link"
+            style={{ position: "relative" }}
+          >
             <NavLink
               className="Navlink"
               style={{ color: jobsenglish ? "#ebe956" : "white" }}
             >
-              <li  >
+              <li>
                 Jobs <ArrowDropDownIcon sx={{ mt: "-2px" }} />
               </li>
             </NavLink>
             <div
-             onMouseLeave={handleDropdownclose}
-              style={{
-                position: "absolute",
-                margin: "24px 0px 0px -45px",
-                width: "150px",
-                background: "#007a48",
-                padding: "10px",
-                display: dropdown ? "block" : "none",
+              onMouseLeave={()=>{handleDropdownclose1(); handleDropdownclose()}}
+              style={{  
+              position: "absolute",
+              margin: "24px 0px 0px -45px",
+              width: "150px",
+              background: "#007a48",
+              padding: "10px",
+              display: dropdown ? "block" : "none",
               }}
             >
-              <NavLink
-                className="Navlink"
-                to="/jobs/jobsenglish"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#ebe956" : "white",
-                  };
-                }}
-              >
-                <li
-                  style={{ borderBottom: "1px solid black", padding: "10px" }}
-                 
-                >
-                  Join Us{" "}
-                </li>
-              </NavLink>
-
-              <NavLink
-                className="Navlink"
-                to="/jobs/jobshindi"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#ebe956" : "white",
-                  };
-                }}
-              >
-                <li  style={{ padding: "10px" }}>
-                  हमसे जुड़ें
-                </li>
-              </NavLink>
-            </div>
+            <Dropdown name="Join Us" dropdown={dropdown} setDropdown={setDropdown} path="/jobs/jobsenglish"/>
+            <Dropdown name="हमसे जुड़ें" dropdown={dropdown} setDropdown={setDropdown} path="/jobs/jobshindi"/>
           </div>
-          {/* Dropdown menu */}
+          </div>
+          {/* Dropdown menu2 */}
 
           <NavLink
             className="Navlink"
@@ -216,7 +256,7 @@ function Navbaar() {
               };
             }}
           >
-            <li onMouseOver={handleDropdownclose}>Blogs</li>
+            <li onMouseOver={()=>{handleDropdownclose1(); handleDropdownclose()}}>Blogs</li>
           </NavLink>
         </Box>
 
@@ -243,6 +283,86 @@ function Navbaar() {
             src={CCLogo}
           />
         </Box>
+
+        {/* registration form */}
+        <Box sx={{ display: closeForm ? "block" : "none" }}>
+          <Box
+            className="link"
+            pt={4}
+            pb={1}
+            mt={5.4}
+            sx={{
+              backgroundColor: "#ebe956",
+              display: "grid",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "fixed",
+              width: "23%",
+              zIndex: 999,
+              borderRadius: "10px",
+              minHeight: "555px",
+              top: "80px",
+              right: "12px",
+              boxShadow:
+                "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;",
+            }}
+          >
+            <GetACallBackForm />
+            <CancelIcon
+              onClick={handleCloseForm}
+              sx={{
+                position: "absolute",
+                top: "5px",
+                right: "10px",
+                color: "#007a48",
+                cursor: "pointer",
+                "&:hover": {
+                  color: "#73bf45",
+                  padding: "1px",
+                },
+              }}
+            />
+            <Box
+              sx={{
+                position: "absolute",
+                top: "5px",
+                left: "10px",
+                color: "#007a48",
+                cursor: "pointer",
+                fontWeight: "999",
+              }}
+            >
+              Get A Call Back
+            </Box>
+          </Box>
+        </Box>
+
+        <Box
+          className="link"
+          padding={1}
+          mt={5.4}
+          sx={{
+            position: "fixed",
+            zIndex: 999,
+            borderRadius: "0px 0px 12px 12px",
+            top: "71px",
+            right: "1px",
+            display: closeForm ? "none" : "block",
+            backgroundColor: "#ebe956",
+          }}
+        >
+          <Button
+            size="small"
+            sx={{ color: "#007a48", fontWeight: "900" }}
+            onClick={() => {
+              setCloseForm(true);
+            }}
+            startIcon={<ArrowCircleDownIcon />}
+          >
+            Get a call back
+          </Button>
+        </Box>
+        {/* registration form */}
       </Box>
 
       {/* Responsive */}
