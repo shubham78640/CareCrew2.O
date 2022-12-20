@@ -122,8 +122,8 @@ function StepsToHire() {
         </BOX>
       </Box>
       <Box mt={5} pb={5} display={"flex"} justifyContent={"center"}>
-        <Button variant="contained" color="success">
-          Submit your inquiry
+        <Button sx={{textTransform:"none"}} variant="contained" color="success">
+          Submit Your Enquiry
         </Button>
       </Box>
     </Box>

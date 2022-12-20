@@ -226,7 +226,7 @@ function Navbaar() {
               className="Navlink"
               style={{ color: jobsenglish ? "#ebe956" : "white" }}
             >
-              <li>
+              <li onMouseOver={()=>{handleDropdownclose1()}}>
                 Jobs <ArrowDropDownIcon sx={{ mt: "-2px" }} />
               </li>
             </NavLink>
@@ -332,6 +332,7 @@ function Navbaar() {
                 color: "#007a48",
                 cursor: "pointer",
                 fontWeight: "999",
+                fontSize:"20px"
               }}
             >
               Get A Call Back

@@ -179,8 +179,8 @@ function GetACallBackForm() {
       />
 
       <div style={{ marginTop: "20px", display: "flex", justifyContent: "center" }}>
-        <Button sx={{ fontSize: "12px" }} variant="contained" color="success">
-          Submit your request
+        <Button sx={{ fontSize: "14px", textTransform:"none" }} variant="contained" color="success">
+          Submit Your Request
         </Button>
       </div>
     </Box>
