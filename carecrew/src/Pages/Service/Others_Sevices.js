@@ -7,7 +7,6 @@ import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
-import Table from "../../components/Table/Table";
 
 function Others_Sevices() {
   return (
@@ -91,14 +90,6 @@ function Others_Sevices() {
       </Box>
       <Contact />
       <Footer />
-{/* ==============================testing-==================== */}
-
-      <Box mt={50}>
-
-        <Table/>
-      </Box>
-
-      {/* =============================testing-==================== */}
     </>
   );
 }
