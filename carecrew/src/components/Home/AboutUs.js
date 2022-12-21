@@ -17,8 +17,8 @@ const BOX = styled(Box)({
   justifyContent: "center",
   textAlign: "justify",
   backgroundImage: `url(${imgaboutus})`,
-  objectFit:"cover",
-  padding:"40px"
+  objectFit: "cover",
+  padding: "40px",
 });
 
 const BOX1 = styled(Box)({
@@ -35,10 +35,7 @@ const H2 = styled("h2")({
 const P = styled("p")({
   color: "#3a4268",
   // lineHeight:{sm:"90px", xs:"5px"}
-  
 });
-
-
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -81,7 +78,7 @@ export default function AboutUs() {
   };
 
   return (
-    <Box sx={{ width:{sm:"80%", xs:"100%"} , margin: "auto" }} pt={5}>
+    <Box sx={{ width: { sm: "80%", xs: "100%" }, margin: "auto" }} pt={5}>
       <Box
         sx={{
           margin: "auto",
@@ -98,9 +95,9 @@ export default function AboutUs() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab sx={{color: "#72bf44"}} label="Mission" {...a11yProps(0)} />
-          <Tab sx={{color: "#72bf44"}} label="Vision" {...a11yProps(1)} />
-          <Tab sx={{color: "#72bf44"}} label="Values" {...a11yProps(2)} />
+          <Tab sx={{ color: "#72bf44" }} label="Mission" {...a11yProps(0)} />
+          <Tab sx={{ color: "#72bf44" }} label="Vision" {...a11yProps(1)} />
+          <Tab sx={{ color: "#72bf44" }} label="Values" {...a11yProps(2)} />
         </Tabs>
       </Box>
 
@@ -110,12 +107,12 @@ export default function AboutUs() {
             flexDirection={"column"}
             sx={{ width: { sm: "48%", xs: "100%" } }}
           >
-            <H2>Underpinned by equality</H2>
+            <H2>Enhance well-being</H2>
             <P>
-              Our four key values of respect, fairness, wellbeing & inclusive
-              holistic growth are based on the fundamental principle of equality
-              & keeping the interests of both our customers & our house helps at
-              the centre of all our actions.
+              Not only do we want to simplify the daily routines of our
+              customers by bringing about greater comfort & convenience to them
+              at their homes, we also want to integrate the domestic help
+              community into the formal economy & enhance their well-being.
             </P>
 
             <Box display={"flex"} justifyContent={"left"}>
@@ -128,6 +125,7 @@ export default function AboutUs() {
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
             <img
               width={"100%"}
+              style={{ maxHeight: "360px" }}
               src={imageAboutUs1}
               alt="Dinner"
             />
@@ -141,12 +139,11 @@ export default function AboutUs() {
             flexDirection={"column"}
             sx={{ width: { sm: "48%", xs: "100%" } }}
           >
-            <H2>Underpinned by equality</H2>
+            <H2>Be the most trusted</H2>
             <P>
-              Our four key values of respect, fairness, wellbeing & inclusive
-              holistic growth are based on the fundamental principle of equality
-              & keeping the interests of both our customers & our house helps at
-              the centre of all our actions.
+              We want to become the most trusted source of reliable house helps
+              for customers. At the same time, we also want to be seen as the
+              most trusted employment provider by the domestic help community.
             </P>
 
             <Box display={"flex"} justifyContent={"left"}>
@@ -160,7 +157,6 @@ export default function AboutUs() {
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
             <img
               width={"100%"}
-              // height={"100%"}
               src={imageAboutUs2}
               alt="Dinner"
             />
