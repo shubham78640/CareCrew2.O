@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <Navbaar /> */}
+        <Navbaar />
         <Box>
           <Routes>
               <Route path="/" element={<Home/>} />
