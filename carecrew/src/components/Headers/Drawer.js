@@ -1,175 +1,194 @@
-import React from 'react'
-import CCHorizontal from "../../Images/CCHorizontal.png"
-import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import { Box } from '@mui/system';
-import { NavLink } from 'react-router-dom';
-
-
+import React from "react";
+import CCHorizontal from "../../Images/CCHorizontal.png";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import { Box } from "@mui/system";
+import { NavLink } from "react-router-dom";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
-  '&:not(:last-child)': {
+  "&:not(:last-child)": {
     borderBottom: 0,
   },
-  '&:before': {
-    display: 'none',
+  "&:before": {
+    display: "none",
   },
 }));
 
-
 const BOX = styled(Box)({
- display:"flex",
- flexDirection:"column",
- gap:"10px",
- padding:"5px",
-})
+  display: "flex",
+  flexDirection: "column",
+  gap: "10px",
+  padding: "5px",
+});
 
 const BOX1 = styled(Box)({
-  padding:"15px",
-  background:"#f4f4f4"
- })
+  padding: "15px",
+  background: "#f4f4f4",
+});
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
     {...props}
   />
 ))(({ theme }) => ({
   backgroundColor:
-    theme.palette.mode === 'dark'
-      ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(0, 0, 0, .03)',
-  flexDirection: 'row-reverse',
-  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    transform: 'rotate(90deg)',
+    theme.palette.mode === "dark"
+      ? "rgba(255, 255, 255, .05)"
+      : "rgba(0, 0, 0, .03)",
+  flexDirection: "row-reverse",
+  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+    transform: "rotate(90deg)",
   },
-  '& .MuiAccordionSummary-content': {
+  "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),
   },
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
+  borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-
 export default function Drawer() {
-    const [expanded, setExpanded] = React.useState('panel1');
+  const [expanded, setExpanded] = React.useState("panel1");
 
-    const handleChange = (panel) => (event, newExpanded) => {
-      setExpanded(newExpanded ? panel : false);
-    }
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
   return (
     <>
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <div id="offcanvasRightLabel">
-        <img width={"30%"} src={CCHorizontal} alt="" />
-    </div>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    {/* containt writing */}
-  <div style={{display:"flex",flexDirection:"column", rowGap:"1px"}}>
-  <NavLink className="Navlink"
-            to="/"
-            style={({ isActive }) => {
-              return {
-                textDecoration: "none",
-                color: isActive ? "green" : "Black",
-              };
-            }}
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <div id="offcanvasRightLabel">
+            <img width={"30%"} src={CCHorizontal} alt="" />
+          </div>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          {/* containt writing */}
+          <div
+            style={{ display: "flex", flexDirection: "column", rowGap: "1px" }}
           >
-      <BOX1 >Home</BOX1>
-      </NavLink>
+            <NavLink
+              className="Navlink"
+              to="/"
+              style={({ isActive }) => {
+                return {
+                  textDecoration: "none",
+                  color: isActive ? "green" : "Black",
+                };
+              }}
+            >
+              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                Home
+              </BOX1>
+            </NavLink>
 
-      <NavLink className="Navlink"
-            to="/aboutus"
-            style={({ isActive }) => {
-              return {
-                textDecoration: "none",
-                color: isActive ? "green" : "Black",
-              };
-            }}
-          >
-      <BOX1 >About Us</BOX1>
-      </NavLink>
+            <NavLink
+              className="Navlink"
+              to="/aboutus"
+              style={({ isActive }) => {
+                return {
+                  textDecoration: "none",
+                  color: isActive ? "green" : "Black",
+                };
+              }}
+            >
+              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">About Us</BOX1>
+            </NavLink>
 
-      <NavLink className="Navlink"
-            to="/contactus"
-            style={({ isActive }) => {
-              return {
-                textDecoration: "none",
-                color: isActive ? "green" : "Black",
-              };
-            }}
-          >
-      <BOX1 >Contact Us</BOX1>
-      </NavLink>
+            <NavLink
+              className="Navlink"
+              to="/contactus"
+              style={({ isActive }) => {
+                return {
+                  textDecoration: "none",
+                  color: isActive ? "green" : "Black",
+                };
+              }}
+            >
+              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Contact Us</BOX1>
+            </NavLink>
 
-      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-        <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-          <Typography>Jobs</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-         <BOX>
-         <NavLink
-                className="Navlink"
-                to="/jobs/jobsenglish"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "green" : "black",
-                  };
-                }}
+            <Accordion
+              expanded={expanded === "panel4"}
+              onChange={handleChange("panel4")}
+            >
+              <AccordionSummary
+                aria-controls="panel4d-content"
+                id="panel4d-header"
               >
-                <li
-                  style={{ borderBottom: "1px solid black", padding: "10px" }}
-                 
-                >
-                  Join Us{" "}
-                </li>
-              </NavLink>
+                <Typography>Jobs</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <BOX>
+                  <NavLink
+                    className="Navlink"
+                    to="/jobs/jobsenglish"
+                    style={({ isActive }) => {
+                      return {
+                        color: isActive ? "green" : "black",
+                      };
+                    }}
+                  >
+                    <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                      style={{
+                        borderBottom: "1px solid black",
+                        padding: "10px",
+                      }}
+                    >
+                      Join Us{" "}
+                    </li>
+                  </NavLink>
 
-              <NavLink
-                className="Navlink"
-                to="/jobs/jobshindi"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "green" : "black",
-                  };
-                }}
-              >
-                <li  style={{ padding: "10px" }}>
-                  हमसे जुड़ें
-                </li>
-              </NavLink>
-         </BOX>
-        </AccordionDetails>
-      </Accordion>
+                  <NavLink
+                    className="Navlink"
+                    to="/jobs/jobshindi"
+                    style={({ isActive }) => {
+                      return {
+                        color: isActive ? "green" : "black",
+                      };
+                    }}
+                  >
+                    <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" style={{ padding: "10px" }}>हमसे जुड़ें</li>
+                  </NavLink>
+                </BOX>
+              </AccordionDetails>
+            </Accordion>
 
-      <NavLink className="Navlink"
-            to="/blogs"
-            style={({ isActive }) => {
-              return {
-                textDecoration: "none",
-                color: isActive ? "green" : "Black",
-              };
-            }}
-          >
-      <BOX1>Blogs</BOX1>
-      </NavLink> 
-         
-     
-    </div>
-  </div>
-</div>
+            <NavLink
+              className="Navlink"
+              to="/blogs"
+              style={({ isActive }) => {
+                return {
+                  textDecoration: "none",
+                  color: isActive ? "green" : "Black",
+                };
+              }}
+            >
+              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Blogs</BOX1>
+            </NavLink>
+          </div>
+        </div>
+      </div>
     </>
-    )}
+  );
+}

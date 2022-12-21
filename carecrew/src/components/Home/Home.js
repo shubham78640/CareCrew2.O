@@ -10,6 +10,8 @@ import AboutUs from "./AboutUs";
 import AskedQuestions from "../HomePageComponents/AskedQuestions";
 import Footer from "../Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
+
+
 function Home() {
   return (
     <>
@@ -217,9 +219,10 @@ function Home() {
                 width: { sm: "40%", xs: "80%", p: 1 },
                 ml: "25px",
                 mt: "20px",
+                textTransform:"none"
               }}
             >
-              Submit your inquiry
+              Submit Your Enquiry
             </Button>
           </Box>
         </Box>

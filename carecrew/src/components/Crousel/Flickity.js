@@ -4,12 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Flickity.css";
 import { dataDigitalBestSeller } from "../../AllData";
-import AddHomeWorkIcon from "@mui/icons-material/AddHomeWork";
-import OutdoorGrillIcon from "@mui/icons-material/OutdoorGrill";
-import ChildCareIcon from "@mui/icons-material/ChildCare";
-import ElderlyIcon from "@mui/icons-material/Elderly";
-import DriveEtaIcon from "@mui/icons-material/DriveEta";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
+// import AddHomeWorkIcon from "@mui/icons-material/AddHomeWork";
+// import OutdoorGrillIcon from "@mui/icons-material/OutdoorGrill";
+// import ChildCareIcon from "@mui/icons-material/ChildCare";
+// import ElderlyIcon from "@mui/icons-material/Elderly";
+// import DriveEtaIcon from "@mui/icons-material/DriveEta";
+// import AddCircleIcon from "@mui/icons-material/AddCircle";
 
 function Flickity() {
   const [defaultImage, setDefaultImage] = useState({});

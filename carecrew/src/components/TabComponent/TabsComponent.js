@@ -72,8 +72,7 @@ function TabsComponent(props) {
           }}
         >
           <Tabs
-            textColor="secondary"
-            indicatorColor="secondary"
+            indicatorColor="primary"
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"

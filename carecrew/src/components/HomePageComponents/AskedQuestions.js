@@ -1,8 +1,7 @@
-import { Box, display, height } from "@mui/system";
+import { Box } from "@mui/system";
 import React from "react";
 import image from "../../Images/KM.jpg";
 import { styled } from "@mui/material/styles";
-import Grid from "@mui/material/Grid";
 import AccordionComponent from "../MuiComponents/AccordionComponent";
 
 const Item = styled(Box)(({ theme }) => ({

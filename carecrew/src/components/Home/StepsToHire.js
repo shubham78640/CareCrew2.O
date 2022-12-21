@@ -5,7 +5,6 @@ import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import SocialDistanceIcon from '@mui/icons-material/SocialDistance';
 import React from "react";
-import { boxSizing, color, lineHeight, margin } from "@mui/system";
 
 const BOX = styled(Box)({
   display: "flex",
@@ -123,8 +122,8 @@ function StepsToHire() {
         </BOX>
       </Box>
       <Box mt={5} pb={5} display={"flex"} justifyContent={"center"}>
-        <Button variant="contained" color="success">
-          Submit your inquiry
+        <Button sx={{textTransform:"none"}} variant="contained" color="success">
+          Submit Your Enquiry
         </Button>
       </Box>
     </Box>
