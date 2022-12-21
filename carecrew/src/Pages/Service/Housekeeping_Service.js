@@ -80,11 +80,11 @@ function Housekeeping_Service() {
             />
             <AccordionComponent
               Accordion_Heading="Can one opt for a trial?"
-              Accordion_Content="How many leaves do I need to give to the house help every month?"
+              Accordion_Content="Yes, we offer a paid trial period of three days, where you can see & evaluate the work of the Associate & can then decide if you wish to commit to our services."
             />
             <AccordionComponent
               Accordion_Heading="How many leaves do I need to give to the house help every month?"
-              Accordion_Content="Yes, we offer a paid trial period of three days, where you can see & evaluate the work of the Associate & can then decide if you wish to commit to our services."
+              Accordion_Content="The number of paid leaves & the mechanism for availing them is left to the mutual agreement between the customer & the Associate. However, the Associate would be entitled to a minimum of 2 paid leaves per month"
             />
           </Box>
         </Box>
