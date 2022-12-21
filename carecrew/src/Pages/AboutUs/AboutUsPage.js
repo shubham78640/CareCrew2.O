@@ -288,7 +288,7 @@ function AboutUs() {
           </Grid>
         </Grid>
       </Box>
-      <Footer/>
+      <Footer />
     </>
   );
 }

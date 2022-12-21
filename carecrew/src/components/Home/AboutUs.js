@@ -17,8 +17,8 @@ const BOX = styled(Box)({
   justifyContent: "center",
   textAlign: "justify",
   backgroundImage: `url(${imgaboutus})`,
-  objectFit:"cover",
-  padding:"40px"
+  objectFit: "cover",
+  padding: "40px",
 });
 
 const BOX1 = styled(Box)({
@@ -35,10 +35,7 @@ const H2 = styled("h2")({
 const P = styled("p")({
   color: "#3a4268",
   // lineHeight:{sm:"90px", xs:"5px"}
-  
 });
-
-
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -75,7 +72,6 @@ function a11yProps(index) {
 
 export default function AboutUs() {
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -126,11 +122,7 @@ export default function AboutUs() {
             </Box>
           </BOX>
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
-            <img
-              width={"100%"}
-              src={imageAboutUs1}
-              alt="Dinner"
-            />
+            <img width={"100%"} src={imageAboutUs1} alt="Dinner" />
           </Box>
         </BOX1>
       </TabPanel>
@@ -191,11 +183,7 @@ export default function AboutUs() {
           </BOX>
 
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
-            <img
-              width={"100%"}
-              src={imageAboutUs3}
-              alt="Dinner"
-            />
+            <img width={"100%"} src={imageAboutUs3} alt="Dinner" />
           </Box>
         </BOX1>
       </TabPanel>

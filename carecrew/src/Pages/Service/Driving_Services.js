@@ -1,0 +1,84 @@
+import React from 'react'
+import Contact from '../../components/Contact/Contact'
+import Box from "@mui/material/Box";
+import DividerComponent from '../../components/DividerComponent/DividerComponent';
+import Servies from '../../components/Services/Servies';
+import Navbaar from '../../components/Headers/Navbaar';
+import Footer from '../../components/Footer/Footer';
+import Imagedriving from "../../Images/driving2.jpg";
+import AccordionComponent from '../../components/MuiComponents/AccordionComponent';
+import Typography from "@mui/material/Typography";
+
+function Driving_Services() {
+  return (
+    <>
+    
+    
+    <Navbaar />
+       <Box mb="5%" sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }} >
+        <Box
+         sx={{ 
+            width: { sm: "30%", xs: "100%",  }
+        }}
+          ><DividerComponent  sx={{marginLeft:"20%",}}   /></Box>
+        <Box mt="12%" sx={{ width: { sm: "62%", xs: "100%" } }}>
+          <Servies
+            Service_Heading="Drivers for your cars"
+            Service_Content="We source licensed drivers for you, who combine good driving skills with proper driving etiquette. Whether it’s to drive your child to school or take your parents for a doctor’s appointment, you can relax with a family driver at your disposal."
+            Service_image={Imagedriving}
+            Training_Heading="Training"
+            Training_Content={<Box sx={{lineHeight:"30px"}}>The drivers, once deployed with you, undergo behavioural training with us where they’re taught the significance of personal grooming & hygiene. In addition to the basics of driving, we also reiterate the importance of traffic rules and regulations, following the road signs, the differences between driving a manual and automatic car, the importance of personal safety and lots more. We also train them on the importance of timely car maintenance and ensuring the cleanliness of the car as much on the inside as the outside.</Box>}
+            Training_Heading1=""
+            Training_Content1=""
+            Training_Heading2=""
+            Training_Content2=""
+            Training_Heading3=""
+            Training_Content3=""
+            Values_Heading="Values"
+            Values_Content="We intend to develop a fleet of drivers who are punctual, polite and value your time. They ought to understand boundaries and should not intrude in any manner while driving you around. "
+            Stories_Heading="Stories"
+            Stories_Content="Be it receiving your guests from the airport, taking your kids to school or picking you up from the office, our drivers are people you can rely upon."
+          />
+<Box p="5%" sx={{display:"flex", flexDirection:"column", gap:"30px"}} > 
+<Typography
+          variant="h4"
+          gutterBottom
+          sx={{ color: "#007a48", fontWeight: 600 }}
+        >
+        Frequently asked questions
+        </Typography>
+              <AccordionComponent 
+           Accordion_Heading="Would the driver be comfortable in travelling with us out of town?"
+           Accordion_Content=""
+          />
+              <AccordionComponent 
+           Accordion_Heading="I have to travel a lot and need someone who can drive for 6 hours on a daily basis. Would your drivers be able to do that?"
+           Accordion_Content=""
+          />
+               <AccordionComponent 
+           Accordion_Heading="Can the driver also help around with running errands & buying groceries?"
+           Accordion_Content=""
+          />
+              <AccordionComponent 
+           Accordion_Heading="Do you offer replacements if the driver quits the job?"
+           Accordion_Content=""
+          />
+               <AccordionComponent 
+           Accordion_Heading="Can one opt for a trial?"
+           Accordion_Content=""
+          />
+              <AccordionComponent 
+           Accordion_Heading="How many leaves do I need to give to the driver every month?"
+           Accordion_Content=""
+          />
+          </Box>
+        </Box>
+      </Box>
+      <Contact/>
+      <Footer />
+
+    </>
+  )
+}
+
+export default Driving_Services
