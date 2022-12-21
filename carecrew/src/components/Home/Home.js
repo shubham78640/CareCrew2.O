@@ -15,7 +15,6 @@ import ScrollToTop from "react-scroll-to-top";
 function Home() {
   return (
     <>
-    
     <ScrollToTop smooth color="green" /> 
       <HomeCrousel />
 
