@@ -11,73 +11,30 @@ import { Button } from "@mui/material";
 import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
-import axios from "axios";
-import Servies from "../../components/Services/Servies";
-import ImageCooking from "../../Images/HK2.jpg";
-import DividerComponent from "../../components/DividerComponent/DividerComponent";
+
 
 const Item = styled(Box)(({ theme }) => ({
-  flexWrap: "wrap",
-  display: "flex",
-  padding: "10px",
-  justifyContent: "center",
-  gap: "20px",
-  flexDirection: "column",
-}));
+    flexWrap: "wrap",
+    display: "flex",
+    padding: "10px",
+    justifyContent: "center",
+    gap: "20px",
+    flexDirection: "column",
+  }));
+  
+function Contact() {
 
-function ContactUs() {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [city, setCity] = useState("");
-  const [message, setMessage] = useState("");
-  const [address, setAddress] = useState("");
-  const [workinghr, setworkingHr] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(
-      "Details=",
-      name,
-      phone,
-      email,
-      city,
-      message,
-      address,
-      workinghr
-    );
-
-    const data = {
-      Name: name,
-      Phone: phone,
-      Email: email,
-      City: city,
-      Message: message,
-      Address: address,
-      Working_HR: workinghr,
-    };
-    axios
-      .post(
-        "https://sheet.best/api/sheets/562c7b35-218c-441b-84ae-f9258f9f0ca7",
-        data
-      )
-      .then((response) => {
-        console.log(response);
-        setAddress("");
-        setCity("");
-        setEmail("");
-        setName("");
-        setPhone("");
-        setworkingHr("");
-        setMessage("");
-      });
-  };
-
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [city, setCity] = useState("");
+    const [message, setMessage] = useState("");
+    const [address, setAddress] = useState("");
+    const [workinghr, setworkingHr] = useState("");
   return (
     <>
-      <ScrollToTop smooth color="green" />
-      <Navbaar />
-      <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}>
+    
+    <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}>
         <Grid container spacing={0}>
           <Grid paddingBottom="3%" mt={7} item lg={6} xs={12}>
             <Item>
@@ -372,7 +329,7 @@ function ContactUs() {
                 <Button
                   variant="contained"
                   color="success"
-                  onClick={handleSubmit}
+                //   onClick={handleSubmit}
                 >
                   Submit Your request
                 </Button>
@@ -382,45 +339,9 @@ function ContactUs() {
           </Grid>
         </Grid>
       </Box>
-
-      <Box p={5} mb={-7} sx={{ display: "flex", justifyContent: "center" }}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2063055398394!2d77.091636!3d28.473332999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f217d84f5a9%3A0xdb16d79eda45c82a!2sPinch!5e0!3m2!1sen!2sin!4v1669972130601!5m2!1sen!2sin"
-          width="90%"
-          height="450"
-          style={{ border: 0 , marginBottom:"70px"}}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
-      </Box>
-
-      <Footer />
-      {/* ================================Services Section For Teasting====================================== */}
-      {/* <Box sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }}>
-        <Box sx={{ width: { sm: "30%", xs: "100%",  } , marginLeft:{sm: "0%", xs: "0%"}, justifyContent:"flex-end"}} ><DividerComponent  sx={{marginLeft:"20%"}} /></Box>
-        <Box sx={{ width: { sm: "62%", xs: "100%" } }}>
-          <Servies
-            Service_Heading="Housekeepers for your home "
-            Service_Content="We source housekeepers who can keep your homes in order by performing multiple household chores including sweeping, mopping & dusting. We train them to operate with professionalism and precision. We also teach them how to do the laundry & keep the home equipment in good condition."
-            Service_image={ImageCooking}
-            Training_Heading="Training"
-            Training_Content="The housekeepers, once deployed with you, will receive training in three areas:"
-            Training_Heading1="Basics Of Housekeeping"
-            Training_Content1="The fundamentals include making a bed, dusting different kinds of surfaces, washing and organizing utensils in the kitchen, sweeping, brooming & mopping of common areas in the house."
-            Training_Heading2="Laundry Management"
-            Training_Content2="This includes knowledge about the different types of laundry chemicals and their usage, washing and drying of clothes, their ironing, folding and storage."
-            Training_Heading3="Equipment Management"
-            Training_Content3="The housekeepers not only learn the operational know-how of cleaning equipment but also an understanding of how to maintain them with care."
-            Values_Heading="Values"
-            Values_Content="We intend to make our housekeepers diligent in their approach & efficient at managing the household chores. We try to inculcate in them an attention to detail that helps keep your home organized at all times. We expect them to be non-intrusive & discrete while at work, in line with our principle of respecting your privacy."
-            Stories_Heading="Stories"
-            Stories_Content="Let’s say you require somebody to help you reorganize your living area or set up an indoor garden – the housekeepers will help you do it."
-          />
-        </Box>
-      </Box> */}
-      {/* ================================Services Section For Teasting====================================== */}
+    
     </>
-  );
+  )
 }
 
-export default ContactUs;
+export default Contact

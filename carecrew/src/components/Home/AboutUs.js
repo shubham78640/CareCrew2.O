@@ -72,7 +72,6 @@ function a11yProps(index) {
 
 export default function AboutUs() {
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -123,12 +122,7 @@ export default function AboutUs() {
             </Box>
           </BOX>
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
-            <img
-              width={"100%"}
-              style={{ maxHeight: "360px" }}
-              src={imageAboutUs1}
-              alt="Dinner"
-            />
+            <img width={"100%"} src={imageAboutUs1} alt="Dinner" />
           </Box>
         </BOX1>
       </TabPanel>
@@ -187,11 +181,7 @@ export default function AboutUs() {
           </BOX>
 
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
-            <img
-              width={"100%"}
-              src={imageAboutUs3}
-              alt="Dinner"
-            />
+            <img width={"100%"} src={imageAboutUs3} alt="Dinner" />
           </Box>
         </BOX1>
       </TabPanel>
