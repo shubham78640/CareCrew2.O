@@ -75,7 +75,7 @@ function ContactUs() {
 
   return (
     <>
-      <ScrollToTop smooth color="green" />
+      <ScrollToTop smooth color="#007a47" />
       <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}>
         <Grid container spacing={0}>
           <Grid paddingBottom="3%" mt={7} item lg={6} xs={12}>

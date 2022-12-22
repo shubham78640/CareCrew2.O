@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
-import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
 import TabsComponent from "../../components/TabComponent/TabsComponent";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -40,7 +39,7 @@ const SPAN = styled("span")({
 function JobsHindi() {
   return (
     <>
-      <ScrollToTop smooth color="green" />
+      <ScrollToTop smooth color="#007a47" />
       <Grid container>
         <Grid mt="5%" item lg={6} xs={12}>
           <Section>
@@ -126,7 +125,7 @@ function JobsHindi() {
                   <Box>सोम-शुक्र: सुबह 10 बजे से शाम 6 बजे</Box>
                   <Box>
                     <SPAN>फ़ोन नंबर: </SPAN>
-                    <Span> xxxxxx</Span>
+                    <Span> </Span>
                   </Box>
                   <Box>
                     <SPAN>लैंडलाइन –</SPAN>

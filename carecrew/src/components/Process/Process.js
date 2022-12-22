@@ -38,7 +38,7 @@ function Process(props) {
           p="3% 5%"
           sx={{ marginLeft: { sm: "0", xs: "-19%" } }}
         >
-          <Box sx={{ fontSize: "19px", color: "green", fontWeight: "500" }}>
+          <Box sx={{ fontSize: "19px", color: "#007a47", fontWeight: "500" }}>
             {Process_Heading}
           </Box>
           <Box sx={{ color: "#72BF44" }}>{Process_Content}</Box>
