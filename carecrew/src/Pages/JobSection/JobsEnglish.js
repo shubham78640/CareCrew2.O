@@ -6,7 +6,6 @@ import TextField from "@mui/material/TextField";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import { Button } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
-import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
 import TabsComponent from "../../components/TabComponent/TabsComponent";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -43,7 +42,7 @@ const Section = styled(Box)(({ theme }) => ({
 function JobsEnglish() {
   return (
     <>
-     <ScrollToTop smooth color="green" /> 
+     <ScrollToTop smooth color="#007a47" /> 
       <Grid container>
         <Grid mt="5%" item lg={6} xs={12}>
           <Section>

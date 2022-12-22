@@ -45,7 +45,7 @@ function DividerComponent() {
             <NavLink
               to="/services/housekeeping"
               style={({ isActive }) => ({
-                color: isActive ? "green" : "#007a48",
+                color: isActive ? "#007a47" : "#007a48",
               })}
             >
               <ListItem button divider>
@@ -56,7 +56,7 @@ function DividerComponent() {
             <NavLink
               to="/services/cooking"
               style={({ isActive }) => ({
-                color: isActive ? "green" : "#007a48",
+                color: isActive ? "#007a47" : "#007a48",
               })}
             >
               <ListItem button divider>
@@ -66,7 +66,7 @@ function DividerComponent() {
             <NavLink
               to="/services/childcare"
               style={({ isActive }) => ({
-                color: isActive ? "green" : "#007a48",
+                color: isActive ? "#007a47" : "#007a48",
               })}
             >
               <ListItem button divider>
@@ -77,7 +77,7 @@ function DividerComponent() {
             <NavLink
               to="/services/eldercare"
               style={({ isActive }) => ({
-                color: isActive ? "green" : "#007a48",
+                color: isActive ? "#007a47" : "#007a48",
               })}
             >
               <ListItem button divider>
@@ -88,7 +88,7 @@ function DividerComponent() {
             <NavLink
               to="/services/driver"
               style={({ isActive }) => ({
-                color: isActive ? "green" : "#007a48",
+                color: isActive ? "#007a47" : "#007a48",
               })}
             >
               <ListItem button divider>
@@ -99,7 +99,7 @@ function DividerComponent() {
             <NavLink
               to="/services/others"
               style={({ isActive }) => ({
-                color: isActive ? "green" : "#007a48",
+                color: isActive ? "#007a47" : "#007a48",
               })}
             >
               <ListItem button divider>

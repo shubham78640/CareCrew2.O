@@ -22,12 +22,10 @@ import AdminTable from './Pages/AdminTable/AdminTable'
 function App() {
   const [allPostsData, setAllPosts] = useState(null);
 
-
-
   return (
     <div>
       <BrowserRouter>
-        <Navbaar />
+     <Navbaar />
         <Box>
           <Routes>
               <Route path="/" element={<Home/>} />
