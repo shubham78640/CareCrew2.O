@@ -283,7 +283,7 @@ function JobsEnglish() {
               <Button
                 variant="contained"
                 color="success"
-                sx={{ marginTop: "30px" }}
+                sx={{ marginTop: "30px" , textTransform:"none"}}
               >
                 Submit Your Inquery
               </Button>

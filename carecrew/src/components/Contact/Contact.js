@@ -325,13 +325,14 @@ function Contact() {
                   </Grid>
                 </Grid>
               </Box>
-              <Grid p="0% 4%" mt={2} mb={4} item lg={6} xs={12}>
+              <Grid p="0% 4%" mt={2} mb={4} item lg={6} xs={12} >
                 <Button
+                sx={{ marginTop:"0px" , textTransform:"none" }}
                   variant="contained"
                   color="success"
                 //   onClick={handleSubmit}
                 >
-                  Submit Your request
+                  Submit Your Request
                 </Button>
               </Grid>
               {/* </form> */}
