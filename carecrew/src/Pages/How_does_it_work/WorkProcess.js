@@ -15,7 +15,7 @@ import Pricing from "../../components/Price/Pricing";
 function WorkProcess() {
   return (
     <>
-      <Navbaar />
+      {/* <Navbaar /> */}
       <Box sx={{}}>
         <Box sx={{ padding: { sm: "12% 8%", xs: "24% 2%" } }}>
           <Box
