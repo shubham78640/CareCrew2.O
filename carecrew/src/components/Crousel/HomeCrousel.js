@@ -34,8 +34,8 @@ function HomeCrousel() {
 
               <Box sx={{display:"flex", flexDirection:"column", lineHeight:{ sm: "20px", xs: "10px" }, marginBottom:{sm:31, xs:0}}} >
                 <P sx={{fontWeight:{ sm: "800", xs: "500" }, fontSize:{ sm: "20px", xs: "14px" }}}>&#x2714;  Professional Training.</P>
-                <P sx={{fontWeight:{ sm: "800", xs: "500" }, fontSize:{ sm: "20px", xs: "14px" }}}>&#x2714;  Professional Training.</P>
-                <P sx={{fontWeight:{ sm: "800", xs: "500" }, fontSize:{ sm: "20px", xs: "14px" }}}>&#x2714;  Professional Training.</P>
+                <P sx={{fontWeight:{ sm: "800", xs: "500" }, fontSize:{ sm: "20px", xs: "14px" }}}>&#x2714;  Unlimited Replacements.</P>
+                <P sx={{fontWeight:{ sm: "800", xs: "500" }, fontSize:{ sm: "20px", xs: "14px" }}}>&#x2714;  Zero Registration Fee.</P>
               </Box>
             </Carousel.Caption>
           </Carousel.Item>

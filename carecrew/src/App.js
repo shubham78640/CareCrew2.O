@@ -19,10 +19,7 @@ import Driving_Services from './Pages/Service/Driving_Services'
 import WorkProcess from './Pages/How_does_it_work/WorkProcess'
 
 function App() {
-  const [allPostsData, setAllPosts] = useState(null);
-
-
-
+  
   return (
     <div>
       <BrowserRouter>

@@ -5,6 +5,9 @@ import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from '@sanity/block-content-to-react'
 import "./singlePost.css";
 import moment from "moment"
+import { CircularProgress } from '@mui/material'
+
+
 
 const builder = imageUrlBuilder(sanityClient)
 
@@ -44,7 +47,18 @@ export default function SinglePost() {
 
   console.log("singlePost data = ", postData)
 
-  if (!postData) return <div>Loading...</div>
+  if (!postData) return <div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height:"80vh",
+    
+  }}
+  className="allPost"
+>
+  <CircularProgress color="success" />
+</div>
 
 
   return (
@@ -82,3 +96,4 @@ export default function SinglePost() {
     </div>
   );
 }
+

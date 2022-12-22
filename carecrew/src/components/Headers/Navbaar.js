@@ -69,6 +69,7 @@ function Navbaar() {
             width: "100%",
             position: "fixed",
             zIndex: 999,
+            gap:"10px"
           }}
         >
           <CallIcon
@@ -128,6 +129,7 @@ function Navbaar() {
         </Box>
 
         <Box
+          onMouseLeave={()=>{handleDropdownclose1(); handleDropdownclose()}}
           className="link"
           padding={3}
           mt={5.4}
