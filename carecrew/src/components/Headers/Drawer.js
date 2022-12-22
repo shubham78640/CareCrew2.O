@@ -143,11 +143,22 @@ export default function Drawer() {
                   <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" style={{ padding: "10px" }}>{item.name}</li>
                 </NavLink>
              ))}
-
-              
-                </BOX>
+             </BOX>
               </AccordionDetails>
             </Accordion>
+
+            <NavLink
+              className="Navlink"
+              to="/process"
+              style={({ isActive }) => {
+                return {
+                  textDecoration: "none",
+                  color: isActive ? "green" : "Black",
+                };
+              }}
+            >
+              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><li style={{marginLeft:"25px"}}>How It Works</li></BOX1>
+            </NavLink>
 
             <NavLink
               className="Navlink"

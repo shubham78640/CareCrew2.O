@@ -206,6 +206,18 @@ function Navbaar() {
 
           <NavLink
             className="Navlink"
+            to="/process"
+            style={({ isActive }) => {
+              return {
+                color: isActive ? "#ebe956" : "white",
+              };
+            }}
+          >
+            <li onMouseOver={()=>{handleDropdownclose1(); handleDropdownclose()}}>How It Works</li>
+          </NavLink>
+
+          <NavLink
+            className="Navlink"
             to="/contactus"
             style={({ isActive }) => {
               return {
@@ -367,6 +379,10 @@ function Navbaar() {
         </Box>
         {/* registration form */}
       </Box>
+
+
+
+
 
       {/* Responsive */}
       <Box sx={{ display: { xs: "block", sm: "none" } }}>
