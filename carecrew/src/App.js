@@ -2,7 +2,7 @@ import { Box } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import Navbaar from './components/Headers/Navbaar'
 import Home from './components/Home/Home'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom"
 import AboutUsPage from "../src/Pages/AboutUs/AboutUsPage"
 import ContactUs from './Pages/ContactUs/ContactUs'
 import JobsEnglish from './Pages/JobSection/JobsEnglish'
@@ -18,13 +18,14 @@ import ElderCare_Servies from './Pages/Service/ElderCare_Servies'
 import Driving_Services from './Pages/Service/Driving_Services'
 import WorkProcess from './Pages/How_does_it_work/WorkProcess'
 import AdminTable from './Pages/AdminTable/AdminTable'
+import AdminNavbaar from './components/Headers/AdminNavbaar'
 
 function App() {
   
   return (
     <div>
       <BrowserRouter>
-     <Navbaar />
+      <div style={{}}><Navbaar /></div>
         <Box>
           <Routes>
               <Route path="/" element={<Home/>} />
@@ -42,6 +43,7 @@ function App() {
               <Route path="/services/others" element={<Others_Sevices />} />
               <Route path="/process" element={<WorkProcess/> } />
               <Route path="/admin" element={<AdminTable/> } />
+              
           </Routes>
         </Box>
       </BrowserRouter>
