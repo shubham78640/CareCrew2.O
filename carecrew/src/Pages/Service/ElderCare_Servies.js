@@ -56,27 +56,27 @@ function ElderCare_Servies() {
         </Typography>
               <AccordionComponent 
            Accordion_Heading="Are your elder caregivers equipped to give medical advice or medical care?"
-           Accordion_Content=""
+           Accordion_Content="We provide caregivers for general care & not medical care. Our caregivers are not nurses, but rather attendants who can help around the elders in their day-to-day routines."
           />
               <AccordionComponent 
            Accordion_Heading="Will the caregiver be able to drive my parents to the hospital?"
-           Accordion_Content=""
+           Accordion_Content="A caregiver may not necessarily be proficient at driving. If your parents need to visit the hospital frequently and you need someone who can drive as well, do let us know and we will try & source someone accordingly."
           />
                <AccordionComponent 
            Accordion_Heading="Will the caregiver be comfortable in bathing & massaging the elder?"
-           Accordion_Content=""
+           Accordion_Content="The scope of work in any deployment is not standard, rather it varies as per the needs of the customer and the agreement with the candidate. Basis your exact requirement, we will source & deploy a caregiver accordingly."
           />
               <AccordionComponent 
            Accordion_Heading="Do you offer replacements if the caregiver quits the job?"
-           Accordion_Content=""
+           Accordion_Content="Yes, we do. While we wish for everything to be frictionless & continually train our Associates in a manner that they serve you professionally, we do offer replacements should such situations arise."
           />
                <AccordionComponent 
            Accordion_Heading="Can one opt for a trial?"
-           Accordion_Content=""
+           Accordion_Content="Yes, we offer a paid trial of maximum three days, where you can see & evaluate the work of the Associate & can then decide if you wish to commit to our services."
           />
               <AccordionComponent 
            Accordion_Heading="How many leaves do I need to give to the house help every month?"
-           Accordion_Content=""
+           Accordion_Content="The number of paid leaves & the mechanism for availing them is left to the mutual agreement between the customer & the Associate. However, the Associate would be entitled to a minimum of 2 paid leaves per month."
           />
           </Box>
         </Box>
