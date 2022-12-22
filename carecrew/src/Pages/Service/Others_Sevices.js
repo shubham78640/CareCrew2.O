@@ -11,7 +11,6 @@ import Typography from "@mui/material/Typography";
 function Others_Sevices() {
   return (
     <>
-      <Navbaar />
       <Box
         mb="5%"
         sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }}

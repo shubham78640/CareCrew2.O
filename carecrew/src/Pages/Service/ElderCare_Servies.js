@@ -12,7 +12,6 @@ import Typography from "@mui/material/Typography";
 function ElderCare_Servies() {
   return (
     <>
-    <Navbaar />
        <Box mb="5%" sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }} >
         <Box
          sx={{ 

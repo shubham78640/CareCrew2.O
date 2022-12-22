@@ -41,7 +41,6 @@ function JobsHindi() {
   return (
     <>
       <ScrollToTop smooth color="green" />
-      <Navbaar />
       <Grid container>
         <Grid mt="5%" item lg={6} xs={12}>
           <Section>
