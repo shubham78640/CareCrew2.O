@@ -15,7 +15,6 @@ import Pricing from "../../components/Price/Pricing";
 function WorkProcess() {
   return (
     <>
-      {/* <Navbaar /> */}
       <Box sx={{}}>
         <Box sx={{ padding: { sm: "12% 8%", xs: "24% 2%" } }}>
           <Box
@@ -46,7 +45,7 @@ function WorkProcess() {
               <Box>
                 Submit your inquiry on the website, WhatsApp us on{" "}
                 <a
-                  href=""
+                  href="https://api.whatsapp.com/send?phone=919643328358"
                   style={{
                     fontWeight: 600,
                     textDecoration: "none",

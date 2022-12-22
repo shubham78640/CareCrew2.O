@@ -127,7 +127,7 @@ function JobsEnglish() {
                   </Box>
                   <Box>Mon-Fri: 10am-6pm</Box>
                   <Box>
-                    <SPAN>Phone Number:</SPAN> <Span>xxxxxxx</Span>
+                    <SPAN>Phone Number:</SPAN> <Span></Span>
                   </Box>
                   <Box>
                     <SPAN>Call us at – </SPAN> <Span>080-6201-2086 </Span>

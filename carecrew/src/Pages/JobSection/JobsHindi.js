@@ -126,7 +126,7 @@ function JobsHindi() {
                   <Box>सोम-शुक्र: सुबह 10 बजे से शाम 6 बजे</Box>
                   <Box>
                     <SPAN>फ़ोन नंबर: </SPAN>
-                    <Span> xxxxxx</Span>
+                    <Span> </Span>
                   </Box>
                   <Box>
                     <SPAN>लैंडलाइन –</SPAN>
