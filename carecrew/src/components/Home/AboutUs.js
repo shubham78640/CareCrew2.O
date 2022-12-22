@@ -34,7 +34,7 @@ const H2 = styled("h2")({
 
 const P = styled("p")({
   color: "#3a4268",
-  // lineHeight:{sm:"90px", xs:"5px"}
+  lineHeight:"30px"
 });
 
 function TabPanel(props) {
@@ -122,7 +122,7 @@ export default function AboutUs() {
             </Box>
           </BOX>
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
-            <img width={"100%"} src={imageAboutUs1} alt="Dinner" />
+            <img width={"100%"} style={{maxHeight:"360px"}} src={imageAboutUs1} alt="Dinner" />
           </Box>
         </BOX1>
       </TabPanel>

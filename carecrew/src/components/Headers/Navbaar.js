@@ -178,7 +178,7 @@ function Navbaar() {
               className="Navlink"
               style={{ color: jobsenglish ? "#ebe956" : "white" }}
             >
-              <li>
+              <li onMouseOver={()=>{handleDropdownclose()}}>
                 Services <ArrowDropDownIcon sx={{ mt: "-2px" }} />
               </li>
             </NavLink>
@@ -194,12 +194,12 @@ function Navbaar() {
               boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
               }}
             >
-            <Dropdown name="Housekeeping" path="/jobs/jobsenglish"/>
-            <Dropdown name="Cooking" path="/jobs/jobshindi"/>
-            <Dropdown name="Child Care" path="/jobs/jobshindi"/>
-            <Dropdown name="Elder Care" path="/jobs/jobshindi"/>
-            <Dropdown name="Driving" path="/jobs/jobshindi"/>
-            <Dropdown name="Others" path="/jobs/jobshindi"/>
+            <Dropdown name="Housekeeping" path="/services/housekeeping"/>
+            <Dropdown name="Cooking" path="/services/cooking"/>
+            <Dropdown name="Child Care" path="/services/childcare"/>
+            <Dropdown name="Elder Care" path="/services/eldercare"/>
+            <Dropdown name="Driving" path="/services/driver"/>
+            <Dropdown name="Others" path="/services/others"/>
           </div>
           </div>
           {/* Dropdown menu1 */}
@@ -350,7 +350,7 @@ function Navbaar() {
             borderRadius: "0px 0px 12px 12px",
             top: "71px",
             right: "1px",
-            display: closeForm ? "none" : "block",
+            display: !closeForm ? "block" : "none ",
             backgroundColor: "#ebe956",
           }}
         >
@@ -399,7 +399,86 @@ function Navbaar() {
           />
           <Drawer />
         </Box>
+         {/* registration form */}
+         {/* <Box sx={{ display: closeForm ? "block" : "none" }}>
+          <Box
+            className="link"
+            pt={4}
+            pb={1}
+            sx={{
+              backgroundColor: "#ebe956",
+              display: "grid",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "fixed",
+              width: "85%",
+              zIndex: 999,
+              borderRadius: "10px",
+              minHeight: "555px",
+              top: "80px",
+              right:"1px",
+              boxShadow:
+                "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;",
+            }}
+          >
+            <GetACallBackForm />
+            <CancelIcon
+              onClick={handleCloseForm}
+              sx={{
+                position: "absolute",
+                top: "5px",
+                right: "10px",
+                color: "#007a48",
+                cursor: "pointer",
+                "&:hover": {
+                  color: "#73bf45",
+                  padding: "1px",
+                },
+              }}
+            />
+            <Box
+              sx={{
+                position: "absolute",
+                top: "5px",
+                left: "10px",
+                color: "#007a48",
+                cursor: "pointer",
+                fontWeight: "999",
+                fontSize:"20px"
+              }}
+            >
+              Get A Call Back
+            </Box>
+          </Box>
+        </Box>
+
+        <Box
+          className="link"
+          padding={1}
+          mt={5.4}
+          sx={{
+            position: "fixed",
+            zIndex: 999,
+            borderRadius: "0px 0px 12px 12px",
+            top: "17px",
+            right: "1px",
+            display: !closeForm ? "block" : "none ",
+            backgroundColor: "#ebe956",
+          }}
+        >
+          <Button
+            size="small"
+            sx={{ color: "#007a48", fontWeight: "900" }}
+            onClick={() => {
+              setCloseForm(true);
+            }}
+            startIcon={<ArrowCircleDownIcon />}
+          >
+            Get a call back
+          </Button>
+        </Box> */}
       </Box>
+      
     </Box>
   );
 }

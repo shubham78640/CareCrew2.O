@@ -13,7 +13,6 @@ import Process from '../../components/Process/Process';
 function Cooking_Services() {
   return (
     <> 
-     <Navbaar />
        <Box mb="5%" sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }} >
         <Box
          sx={{ 

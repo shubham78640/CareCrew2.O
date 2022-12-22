@@ -12,7 +12,6 @@ import Contact from "../../components/Contact/Contact";
 function Housekeeping_Service() {
   return (
     <>
-      <Navbaar />
       <Box mb="5%" sx={{ display: "flex", flexDirection: {  sm: "row", xs: "column" } }}>
         <Box
           sx={{

@@ -31,6 +31,9 @@ const BOX = styled(Box)({
 const BOX1 = styled(Box)({
   padding: "15px",
   background: "#f4f4f4",
+
+
+  
 });
 
 const AccordionSummary = styled((props) => (
@@ -98,7 +101,7 @@ export default function Drawer() {
               }}
             >
               <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
-                Home
+                <li style={{marginLeft:"25px"}}>Home</li>
               </BOX1>
             </NavLink>
 
@@ -112,8 +115,39 @@ export default function Drawer() {
                 };
               }}
             >
-              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">About Us</BOX1>
+              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><li style={{marginLeft:"25px"}}>About Us</li></BOX1>
             </NavLink>
+
+            <Accordion
+              expanded={expanded === "panel2"}
+              onChange={handleChange("panel2")}
+            >
+              <AccordionSummary
+                aria-controls="panel4d-content"
+                id="panel4d-header"
+              >
+                <Typography>Services</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <BOX>
+             {Data.map((item)=>(
+                  <NavLink
+                  className="Navlink"
+                  to={item.link}
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "green" : "black",
+                    };
+                  }}
+                >
+                  <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" style={{ padding: "10px" }}>{item.name}</li>
+                </NavLink>
+             ))}
+
+              
+                </BOX>
+              </AccordionDetails>
+            </Accordion>
 
             <NavLink
               className="Navlink"
@@ -125,7 +159,7 @@ export default function Drawer() {
                 };
               }}
             >
-              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Contact Us</BOX1>
+              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><li style={{marginLeft:"25px"}}>Contact Us</li></BOX1>
             </NavLink>
 
             <Accordion
@@ -151,7 +185,6 @@ export default function Drawer() {
                   >
                     <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                       style={{
-                        borderBottom: "1px solid black",
                         padding: "10px",
                       }}
                     >
@@ -184,7 +217,7 @@ export default function Drawer() {
                 };
               }}
             >
-              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Blogs</BOX1>
+              <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><li style={{marginLeft:"25px"}}>Blogs</li></BOX1>
             </NavLink>
           </div>
         </div>
@@ -192,3 +225,26 @@ export default function Drawer() {
     </>
   );
 }
+
+const Data = [
+  {
+    link:"/services/housekeeping",
+    name:"Housekeeping"
+  },
+  {
+    link:"/services/cooking",
+    name:"Cooking"
+  },
+  {
+    link:"/services/childcare",
+    name:"Child Care"
+  },
+  {
+    link:"/services/eldercare",
+    name:"Elder Care"
+  },
+  {
+    link:"/services/others",
+    name:"Others"
+  },
+]

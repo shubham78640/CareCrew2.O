@@ -21,7 +21,6 @@ function AboutUs() {
   return (
     <>
       <ScrollToTop smooth color="green" />
-      <Navbaar />
       <Box padding="5% 10%">
         <Grid mt={10} container spacing={1}>
           <Grid lg={6} xs={12}>
