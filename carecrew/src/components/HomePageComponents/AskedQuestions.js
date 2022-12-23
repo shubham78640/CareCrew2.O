@@ -22,7 +22,7 @@ function AskedQuestions() {
                       setting?"
                   Accordion_Content="  Yes, we provide full-time house helps in two formats:
                       either for 24 hour live-in jobs, or for 8-12 hour day
-                      jobs."
+                      jobs. We also provide part-time house helps."
                 />
                 <AccordionComponent
                   Accordion_Heading="   Where is CARE CREW based? Are the services offered

@@ -25,7 +25,7 @@ export const dataDigitalBestSeller = [
     {
       id: 1,
       icon:"AddHomeWorkIcon",
-      title: 'HouseKeeping',
+      title: 'Housekeeping',
       paragraph: 'Our housekeepers are trained to keep your homes in order by performing multiple household chores with...',
       category: 'Know More',
       linkImg:imgHK,

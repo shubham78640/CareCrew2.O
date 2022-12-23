@@ -54,7 +54,7 @@ function JobsEnglish() {
                 <Box>
                   <Box sx={{ lineHeight: "30px" }} mt={2}>
                     {" "}
-                    <SPAN>At CARE CREW, </SPAN> we are out on a mission to
+                  At CARE CREW,  we are out on a mission to
                     transform the domestic help sector for the wellbeing of both
                     customers & house helps. We want to integrate the domestic
                     help community into the formal economy & provide them a more
@@ -297,11 +297,11 @@ function JobsEnglish() {
           <Item>
             <AccordionComponent
               Accordion_Heading="What kind of jobs do you provide?"
-              Accordion_Content="We provide household jobs such as those in housekeeping, cooking, child care, elder care & driving. There are two kinds of jobs: either 24 hour live-in jobs, or 8-12 hour live-out jobs."
+              Accordion_Content="We provide household jobs such as those in housekeeping, cooking, child care, elder care & driving. We provide part-time, 8-12 hours live-out and 24 hours live-in jobs."
             />
             <AccordionComponent
               Accordion_Heading="Where is CARE CREW based?"
-              Accordion_Content="Are the services offered pan-India?We are headquartered at Gurugram, Haryana. We offer services pan-India when it comes to 24 hour live-in helpers. In case of live-out helpers, we have restricted our services to tier-I cities for now: Delhi NCR, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Surat, Jaipur, Lucknow, Kochi & Chandigarh."
+              Accordion_Content="We are headquartered at Gurugram, Haryana and offer services primarily in Delhi NCR. This includes the areas of Delhi, Gurugram, Noida, Faridabad, Ghaziabad & Greater Noida."
             />
             <AccordionComponent
               Accordion_Heading="Do I need to pay any commission or charges to CARE CREW?"
@@ -313,7 +313,7 @@ function JobsEnglish() {
             />
             <AccordionComponent
               Accordion_Heading="Who will pay my monthly salary - the company or the customer?"
-              Accordion_Content="Your monthly salary will be paid directly by the customer to you at the end of each month. In case there is any unreasonable delay, you can reach out to your CARE CREW Relationship Officer to help you out."
+              Accordion_Content="Your monthly salary will be paid directly by CARE CREW to you at the end of each month. In case there is any unreasonable delay, you can reach out to your CARE CREW Relationship Officer to help you out."
             />
             <AccordionComponent
               Accordion_Heading="How many leaves will I be allowed in a month?"
