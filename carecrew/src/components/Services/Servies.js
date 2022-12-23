@@ -31,19 +31,16 @@ function Servies(props) {
   } = props;
   return (
     <>
-      <Box p="5% 5%"
-      >
+      <Box p="0% 5%">
         <Typography
+          ml={-0.5}
           variant="h4"
           gutterBottom
           sx={{ color: "#007a48", fontWeight: 600 }}
         >
           {Service_Heading}{" "}
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          {" "}
-          {Service_Content}{" "}
-        </Typography>
+        <Box> {Service_Content} </Box>
         <Box ml={0}>
           <Grid mt={4} container spacing={2}>
             <Grid lg={6} xs={12}>
@@ -58,48 +55,19 @@ function Servies(props) {
                 >
                   {Training_Heading}{" "}
                 </Typography>
-                <Typography variant="subtitle1" gutterBottom>
-                  {" "}
-                  {Training_Content}{" "}
-                </Typography>
-                <Typography
-                  variant="subtitle1"
-                  gutterBottom
-                  mt={1}
-                  sx={{ fontWeight: 600 }}
-                >
+                <Box> {Training_Content} </Box>
+                <Box mt={1} sx={{ fontWeight: 600 }}>
                   {Training_Heading1}{" "}
-                </Typography>
-                <Typography variant="body1" gutterBottom ml={2.5}>
-                  {" "}
-                  {Training_Content1}{" "}
-                </Typography>
-                <Typography
-                  variant="subtitle1"
-                  gutterBottom
-                  mt={1}
-                  sx={{ fontWeight: 600 }}
-                >
-                 
+                </Box>
+                <Box ml={2.5}> {Training_Content1} </Box>
+                <Box mt={1} sx={{ fontWeight: 600 }}>
                   {Training_Heading2}{" "}
-                </Typography>
-                <Typography variant="body1" gutterBottom ml={2.5}>
-                  {" "}
-                  {Training_Content2}{" "}
-                </Typography>
-                <Typography
-                  variant="subtitle1"
-                  gutterBottom
-                  mt={1}
-                  sx={{ fontWeight: 600 }}
-                >
-                 
+                </Box>
+                <Box ml={2.5}> {Training_Content2} </Box>
+                <Box mt={1} sx={{ fontWeight: 600 }}>
                   {Training_Heading3}{" "}
-                </Typography>
-                <Typography variant="body1" gutterBottom ml={2.5}>
-                  {" "}
-                  {Training_Content3}{" "}
-                </Typography>
+                </Box>
+                <Box ml={2.5}> {Training_Content3} </Box>
               </Item>
             </Grid>
             <Grid lg={6} xs={12}>
@@ -117,10 +85,7 @@ function Servies(props) {
         >
           {Values_Heading}{" "}
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          {" "}
-          {Values_Content}{" "}
-        </Typography>
+        <Box> {Values_Content} </Box>
         <Typography
           variant="h5"
           gutterBottom
@@ -129,10 +94,7 @@ function Servies(props) {
         >
           {Stories_Heading}{" "}
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          {" "}
-          {Stories_Content}{" "}
-        </Typography>
+        <Box> {Stories_Content} </Box>
       </Box>
     </>
   );

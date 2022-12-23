@@ -121,25 +121,40 @@ function AboutUs() {
           </Grid>
         </Grid>
       </Box>
-      <Box padding="5% 15%" sx={{ backgroundColor: "#E9E6E6" }}>
+      <Box
+        sx={{ backgroundColor: "#E9E6E6", padding: { sm: "5% 10%", xs: "5%" } }}
+      >
         <Grid container sx={{ justifyContent: "center" }}>
           <Grid xs={12} lg={12}>
             <Item>
               <Box>
-                <Box ml={4} sx={{ fontSize: "18px", color: "#72bf44" }}>
+                <Box
+                  sx={{
+                    fontSize: "18px",
+                    color: "#72bf44",
+                    ml: { sm: "2.6%", xs: "1%" },
+                  }}
+                >
                   Our Values
                 </Box>
                 <Box
                   mt={3}
-                  ml={4}
-                  sx={{ fontSize: "34px", fontWeight: "900", color: "#007a48" }}
+                  sx={{
+                    fontSize: "34px",
+                    fontWeight: "900",
+                    color: "#007a48",
+                    ml: { sm: "2.3%", xs: "0%" },
+                  }}
                 >
                   What do we believe in?
                 </Box>
                 <Box
-                  ml={4}
                   mt={3}
-                  sx={{ lineHeight: "23px", fontSize: "15px" }}
+                  sx={{
+                    lineHeight: "23px",
+                    fontSize: "15px",
+                    ml: { sm: "2.6%", xs: "1%" },
+                  }}
                 >
                   Our four key values of respect, fairness, wellbeing &
                   inclusive holistic growth are based on the fundamental
@@ -152,7 +167,13 @@ function AboutUs() {
                   <Box sx={{ color: "#72bf44" }}>
                     <CheckIcon />
                   </Box>{" "}
-                  <Box ml={1} sx={{ color: "", fontWeight: "900" }}>
+                  <Box
+                    sx={{
+                      color: "",
+                      fontWeight: "900",
+                      ml: { sm: "1%", xs: "1%" },
+                    }}
+                  >
                     Respect:
                   </Box>
                 </Box>
@@ -231,7 +252,7 @@ function AboutUs() {
         </Grid>
       </Box>
 
-      <Box padding="4% 8%">
+      <Box padding="4%">
         <Grid container spacing={0}>
           <Grid xs={12} lg={4}>
             <Item>
@@ -249,8 +270,8 @@ function AboutUs() {
             </Item>
           </Grid>
           <Grid xs={12} lg={8}>
-            <Item>
-              <Box padding={4} mt="13%">
+            <Item mb={3}>
+              <Box mt="13%" sx={{ padding: { sm: "4%", xs: "2%" } }}>
                 <Box
                   mt={1}
                   sx={{ color: "#007a48", fontSize: "22px", fontWeight: "900" }}

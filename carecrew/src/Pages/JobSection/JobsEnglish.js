@@ -285,7 +285,7 @@ function JobsEnglish() {
                 color="success"
                 sx={{ marginTop: "30px" , textTransform:"none"}}
               >
-                Submit Your Inquery
+                Submit Your Enquiry
               </Button>
             </Box>
           </Section>
@@ -341,7 +341,7 @@ function JobsEnglish() {
             />
             <AccordionComponent
               Accordion_Heading="Do I have to undergo any background check before being placed in a job?"
-              Accordion_Content="Yes, CareCrew does a thorough background check for its Associates. You would have to submit to us the required documents at appropriate stages of the deployment process."
+              Accordion_Content="Yes, CARE CREW does a thorough background check for its Associates. You would have to submit to us the required documents at appropriate stages of the deployment process."
             />
           </Item>
         </Grid>

@@ -42,8 +42,7 @@ function App() {
               <Route path="/services/eldercare" element={<ElderCare_Servies />} />
               <Route path="/services/others" element={<Others_Sevices />} />
               <Route path="/process" element={<WorkProcess/> } />
-              <Route path="/admin" element={<AdminTable/> } />
-              
+              <Route path="/admin" element={<AdminTable /> } />
           </Routes>
         </Box>
       </BrowserRouter>

@@ -2,7 +2,6 @@ import React from "react";
 import Box from "@mui/material/Box";
 import DividerComponent from "../../components/DividerComponent/DividerComponent";
 import Servies from "../../components/Services/Servies";
-import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
 import ImageCooking from "../../Images/HK2.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
@@ -12,7 +11,10 @@ import Contact from "../../components/Contact/Contact";
 function Housekeeping_Service() {
   return (
     <>
-      <Box mb="5%" sx={{ display: "flex", flexDirection: {  sm: "row", xs: "column" } }}>
+      <Box
+        mb="5%"
+        sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }}
+      >
         <Box
           sx={{
             width: { sm: "30%", xs: "100%" },
@@ -52,7 +54,12 @@ function Housekeeping_Service() {
           />
           <Box
             p="5%"
-            sx={{ display: "flex", flexDirection: "column", gap: "30px" }}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "30px",
+              mt: { sm: "0%", xs: "5%" },
+            }}
           >
             <Typography
               variant="h4"

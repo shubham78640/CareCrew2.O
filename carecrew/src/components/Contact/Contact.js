@@ -11,30 +11,68 @@ import { Button } from "@mui/material";
 import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
-
+import axios from "axios";
+import Autocomplete from "@mui/material/Autocomplete";
 
 const Item = styled(Box)(({ theme }) => ({
-    flexWrap: "wrap",
-    display: "flex",
-    padding: "10px",
-    justifyContent: "center",
-    gap: "20px",
-    flexDirection: "column",
-  }));
-  
-function Contact() {
+  flexWrap: "wrap",
+  display: "flex",
+  padding: "10px",
+  justifyContent: "center",
+  gap: "20px",
+  flexDirection: "column",
+}));
 
-    const [name, setName] = useState("");
-    const [phone, setPhone] = useState("");
-    const [email, setEmail] = useState("");
-    const [city, setCity] = useState("");
-    const [message, setMessage] = useState("");
-    const [address, setAddress] = useState("");
-    const [workinghr, setworkingHr] = useState("");
+function Contact() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [city, setCity] = useState("");
+  const [message, setMessage] = useState("");
+  const [address, setAddress] = useState("");
+  const [workinghr, setworkingHr] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(
+      "Details=",
+      name,
+      phone,
+      email,
+      city,
+      message,
+      address,
+      workinghr
+    );
+
+    const data = {
+      Name: name,
+      Phone: phone,
+      Email: email,
+      City: city,
+      Message: message,
+      Address: address,
+      Working_HR: workinghr,
+    };
+    axios
+      .post(
+        "https://sheet.best/api/sheets/562c7b35-218c-441b-84ae-f9258f9f0ca7",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+        setAddress("");
+        setCity("");
+        setEmail("");
+        setName("");
+        setPhone("");
+        setworkingHr("");
+        setMessage("");
+      });
+  };
   return (
     <>
-    
-    <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}>
+      <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}>
         <Grid container spacing={0}>
           <Grid paddingBottom="3%" mt={7} item lg={6} xs={12}>
             <Item>
@@ -76,7 +114,7 @@ function Contact() {
                     sx={{
                       backgroundColor: "white",
                       display: "flex",
-                      gap: "4px",
+                      gap: "20px",
                     }}
                   >
                     <Box>
@@ -127,7 +165,7 @@ function Contact() {
                     sx={{
                       backgroundColor: "white",
                       display: "flex",
-                      gap: "25px",
+                      gap: "20px",
                     }}
                   >
                     <Box>
@@ -184,7 +222,6 @@ function Contact() {
               >
                 Get a call back
               </Box>
-              {/* <form > */}
               <Box p="0% 4%" sx={{ display: "flex", gap: "0px" }}>
                 <Grid mt={2} container spacing={1}>
                   <Grid item lg={6} xs={12}>
@@ -206,7 +243,7 @@ function Contact() {
                     </Box>
                   </Grid>
                   <Grid item lg={6} xs={12}>
-                    <Box>
+                    <Box sx={{ mt: { sm: "0%", xs: "20px" } }}>
                       <Box sx={{ fontWeight: 500 }}>Email</Box>
                       <TextField
                         id="outlined-basic"
@@ -246,20 +283,30 @@ function Contact() {
                     </Box>
                   </Grid>
                   <Grid item lg={6} xs={12}>
-                    <Box>
+                    <Box sx={{ mt: { sm: "0%", xs: "20px" } }}>
                       <Box sx={{ fontWeight: 500 }}>City*</Box>
-                      <TextField
-                        id="outlined-basic"
-                        label="City*"
-                        variant="outlined"
-                        color="success"
-                        sx={{
-                          backgroundColor: "white",
-                          marginTop: "12px",
-                          width: { sm: "96%", xs: "96%" },
+                      <Autocomplete
+                        disablePortal
+                        id="combo-box-demo"
+                        size="medium"
+                        color="primary"
+                        sx={{ width: "300px" }}
+                        options={cityList}
+                        getOptionLabel={(option) => option.city}
+                        onChange={(event, newValue) => {
+                          setCity(newValue.city);
                         }}
-                        onChange={(e) => setCity(e.target.value)}
-                        value={city}
+                        renderInput={(params) => (
+                          <TextField
+                            {...params}
+                            placeholder="City"
+                            sx={{
+                              backgroundColor: "white",
+                              marginTop: "12px",
+                              width: { sm: "100%", xs: "325px" },
+                            }}
+                          />
+                        )}
                       />
                     </Box>
                   </Grid>
@@ -306,7 +353,7 @@ function Contact() {
                     </Box>
                   </Grid>
                   <Grid item lg={6} xs={12}>
-                    <Box>
+                    <Box sx={{ mt: { sm: "0%", xs: "20px" } }}>
                       <Box sx={{ fontWeight: 500 }}>Address*</Box>
                       <TextField
                         id="outlined-basic"
@@ -325,24 +372,24 @@ function Contact() {
                   </Grid>
                 </Grid>
               </Box>
-              <Grid p="0% 4%" mt={2} mb={4} item lg={6} xs={12} >
+              <Grid p="0% 4%" mt={2} mb={4} item lg={6} xs={12}>
                 <Button
-                sx={{ marginTop:"0px" , textTransform:"none" }}
+                  sx={{ marginTop: "0px", textTransform: "none" }}
                   variant="contained"
                   color="success"
-                //   onClick={handleSubmit}
+                  onClick={handleSubmit}
                 >
                   Submit Your Request
                 </Button>
               </Grid>
-              {/* </form> */}
             </Item>
           </Grid>
         </Grid>
       </Box>
-    
     </>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
+
+const cityList = [{ city: "Gurugram" }, { city: "Others" }];

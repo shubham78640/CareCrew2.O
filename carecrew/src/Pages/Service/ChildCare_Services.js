@@ -3,7 +3,6 @@ import Contact from "../../components/Contact/Contact";
 import Box from "@mui/material/Box";
 import DividerComponent from "../../components/DividerComponent/DividerComponent";
 import Servies from "../../components/Services/Servies";
-import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
 import ImageChildCare from "../../Images/CC2.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
@@ -12,7 +11,10 @@ import Typography from "@mui/material/Typography";
 function ChildCare_Services() {
   return (
     <>
-      <Box mb="5%" sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }}>
+      <Box
+        mb="5%"
+        sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }}
+      >
         <Box
           sx={{
             width: { sm: "30%", xs: "100%" },
@@ -34,7 +36,7 @@ function ChildCare_Services() {
                   {" "}
                   &#x2713;{" "}
                 </Box>
-                <Box sx={{lineHeight:"30px"}}>
+                <Box sx={{ lineHeight: "30px" }}>
                   From bathing to feeding to pram walking, our nannies are
                   trained on all basic tasks - big or small. We have different
                   training modules for different stages of a child’s
@@ -49,7 +51,7 @@ function ChildCare_Services() {
                   {" "}
                   &#x2713;{" "}
                 </Box>
-                <Box sx={{lineHeight:"32px"}}>
+                <Box sx={{ lineHeight: "32px" }}>
                   Apart from physiological needs & hygiene, our training covers
                   aspects of food and nutrition, socio-emotional wellbeing,
                   safety and first-aid & cognitive development of a child.
@@ -65,7 +67,12 @@ function ChildCare_Services() {
           />
           <Box
             p="5%"
-            sx={{ display: "flex", flexDirection: "column", gap: "30px" }}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "30px",
+              mt: { sm: "0%", xs: "5%" },
+            }}
           >
             <Typography
               variant="h4"

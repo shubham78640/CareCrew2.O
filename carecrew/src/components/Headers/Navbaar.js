@@ -20,14 +20,13 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import Dropdown from "../Dropdown/Dropdown";
 
-const styleDiv = styled('div')({
+const styleDiv = styled("div")({
   position: "absolute",
   margin: "24px 0px 0px -45px",
   width: "150px",
   background: "#007a48",
   padding: "10px",
-  
-})
+});
 
 function Navbaar() {
   const [dropdown, setDropdown] = useState(false);
@@ -61,7 +60,10 @@ function Navbaar() {
     <Box>
       <Box sx={{ display: { xs: "none", sm: "block" } }}>
         <Box
-          onMouseLeave={()=>{handleDropdownclose1(); handleDropdownclose()}}
+          onMouseLeave={() => {
+            handleDropdownclose1();
+            handleDropdownclose();
+          }}
           sx={{
             backgroundColor: "#72bf44",
             display: "flex",
@@ -69,7 +71,7 @@ function Navbaar() {
             width: "100%",
             position: "fixed",
             zIndex: 999,
-            gap:"10px"
+            gap: "10px",
           }}
         >
           <CallIcon
@@ -129,7 +131,10 @@ function Navbaar() {
         </Box>
 
         <Box
-          onMouseLeave={()=>{handleDropdownclose1(); handleDropdownclose()}}
+          onMouseLeave={() => {
+            handleDropdownclose1();
+            handleDropdownclose();
+          }}
           className="link"
           padding={3}
           mt={5.4}
@@ -145,7 +150,10 @@ function Navbaar() {
           }}
         >
           <NavLink
-           onMouseLeave={()=>{handleDropdownclose1(); handleDropdownclose()}}
+            onMouseLeave={() => {
+              handleDropdownclose1();
+              handleDropdownclose();
+            }}
             className="Navlink"
             to="/"
             style={({ isActive }) => {
@@ -168,9 +176,17 @@ function Navbaar() {
               };
             }}
           >
-            <li onMouseOver={()=>{handleDropdownclose1(); handleDropdownclose()}} onClick={handleDropdownclose}>About Us</li>
+            <li
+              onMouseOver={() => {
+                handleDropdownclose1();
+                handleDropdownclose();
+              }}
+              onClick={handleDropdownclose}
+            >
+              About Us
+            </li>
           </NavLink>
-       {/* Dropdown menu1 */}
+          {/* Dropdown menu1 */}
           <div
             onMouseEnter={handleDropdown1}
             className="link"
@@ -180,29 +196,36 @@ function Navbaar() {
               className="Navlink"
               style={{ color: jobsenglish ? "#ebe956" : "white" }}
             >
-              <li onMouseOver={()=>{handleDropdownclose()}}>
+              <li
+                onMouseOver={() => {
+                  handleDropdownclose();
+                }}
+              >
                 Services <ArrowDropDownIcon sx={{ mt: "-2px" }} />
               </li>
             </NavLink>
             <div
-              onMouseLeave={()=>{handleDropdownclose1(); handleDropdownclose()}}
-              style={{  
-              position: "absolute",
-              margin: "24px 0px 0px -45px",
-              width: "170px",
-              background: "white",
-              padding: "10px",
-              display: dropdown1 ? "block" : "none",
-              boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+              onMouseLeave={() => {
+                handleDropdownclose1();
+                handleDropdownclose();
+              }}
+              style={{
+                position: "absolute",
+                margin: "24px 0px 0px -45px",
+                width: "170px",
+                background: "white",
+                padding: "10px",
+                display: dropdown1 ? "block" : "none",
+                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
               }}
             >
-            <Dropdown name="Housekeeping" path="/services/housekeeping"/>
-            <Dropdown name="Cooking" path="/services/cooking"/>
-            <Dropdown name="Child Care" path="/services/childcare"/>
-            <Dropdown name="Elder Care" path="/services/eldercare"/>
-            <Dropdown name="Driving" path="/services/driver"/>
-            <Dropdown name="Others" path="/services/others"/>
-          </div>
+              <Dropdown name="Housekeeping" path="/services/housekeeping" />
+              <Dropdown name="Cooking" path="/services/cooking" />
+              <Dropdown name="Child Care" path="/services/childcare" />
+              <Dropdown name="Elder Care" path="/services/eldercare" />
+              <Dropdown name="Driving" path="/services/driver" />
+              <Dropdown name="Others" path="/services/others" />
+            </div>
           </div>
           {/* Dropdown menu1 */}
 
@@ -215,7 +238,14 @@ function Navbaar() {
               };
             }}
           >
-            <li onMouseOver={()=>{handleDropdownclose1(); handleDropdownclose()}}>How It Works</li>
+            <li
+              onMouseOver={() => {
+                handleDropdownclose1();
+                handleDropdownclose();
+              }}
+            >
+              How It Works
+            </li>
           </NavLink>
 
           <NavLink
@@ -227,7 +257,14 @@ function Navbaar() {
               };
             }}
           >
-            <li onMouseOver={()=>{handleDropdownclose1(); handleDropdownclose()}}>Contact Us</li>
+            <li
+              onMouseOver={() => {
+                handleDropdownclose1();
+                handleDropdownclose();
+              }}
+            >
+              Contact Us
+            </li>
           </NavLink>
 
           {/* Dropdown menu2 */}
@@ -240,25 +277,42 @@ function Navbaar() {
               className="Navlink"
               style={{ color: jobsenglish ? "#ebe956" : "white" }}
             >
-              <li onMouseOver={()=>{handleDropdownclose1()}}>
+              <li
+                onMouseOver={() => {
+                  handleDropdownclose1();
+                }}
+              >
                 Jobs <ArrowDropDownIcon sx={{ mt: "-2px" }} />
               </li>
             </NavLink>
             <div
-              onMouseLeave={()=>{handleDropdownclose1(); handleDropdownclose()}}
-              style={{  
-              position: "absolute",
-              margin: "24px 0px 0px -45px",
-              width: "170px",
-              background: "white",
-              padding: "10px",
-              display: dropdown ? "block" : "none",
-              boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+              onMouseLeave={() => {
+                handleDropdownclose1();
+                handleDropdownclose();
+              }}
+              style={{
+                position: "absolute",
+                margin: "24px 0px 0px -45px",
+                width: "170px",
+                background: "white",
+                padding: "10px",
+                display: dropdown ? "block" : "none",
+                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
               }}
             >
-            <Dropdown name="Join Us" dropdown={dropdown} setDropdown={setDropdown} path="/jobs/jobsenglish"/>
-            <Dropdown name="हमसे जुड़ें" dropdown={dropdown} setDropdown={setDropdown} path="/jobs/jobshindi"/>
-          </div>
+              <Dropdown
+                name="Join Us"
+                dropdown={dropdown}
+                setDropdown={setDropdown}
+                path="/jobs/jobsenglish"
+              />
+              <Dropdown
+                name="हमसे जुड़ें"
+                dropdown={dropdown}
+                setDropdown={setDropdown}
+                path="/jobs/jobshindi"
+              />
+            </div>
           </div>
           {/* Dropdown menu2 */}
 
@@ -272,7 +326,14 @@ function Navbaar() {
               };
             }}
           >
-            <li onMouseOver={()=>{handleDropdownclose1(); handleDropdownclose()}}>Blogs</li>
+            <li
+              onMouseOver={() => {
+                handleDropdownclose1();
+                handleDropdownclose();
+              }}
+            >
+              Blogs
+            </li>
           </NavLink>
         </Box>
 
@@ -346,7 +407,7 @@ function Navbaar() {
                 color: "#007a48",
                 cursor: "pointer",
                 fontWeight: "999",
-                fontSize:"20px"
+                fontSize: "20px",
               }}
             >
               Get A Call Back
@@ -382,10 +443,6 @@ function Navbaar() {
         {/* registration form */}
       </Box>
 
-
-
-
-
       {/* Responsive */}
       <Box sx={{ display: { xs: "block", sm: "none" } }}>
         <Box
@@ -417,8 +474,8 @@ function Navbaar() {
           />
           <Drawer />
         </Box>
-         {/* registration form */}
-         {/* <Box sx={{ display: closeForm ? "block" : "none" }}>
+        {/* registration form */}
+        {/* <Box sx={{ display: closeForm ? "block" : "none" }}>
           <Box
             className="link"
             pt={4}
@@ -496,7 +553,6 @@ function Navbaar() {
           </Button>
         </Box> */}
       </Box>
-      
     </Box>
   );
 }
