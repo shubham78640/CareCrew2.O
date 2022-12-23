@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Flickity.css";
 import { dataDigitalBestSeller } from "../../AllData";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { NavLink } from "react-router-dom";
 // import AddHomeWorkIcon from "@mui/icons-material/AddHomeWork";
 // import OutdoorGrillIcon from "@mui/icons-material/OutdoorGrill";
 // import ChildCareIcon from "@mui/icons-material/ChildCare";
@@ -76,22 +78,27 @@ function Flickity() {
             </div>
             <div className="card-bottom">
               <p>{item.paragraph}</p>
+              <NavLink style={{textDecoration:"none"}} to={item.link}>
               <span className="category">
-                {" "}
                 <span
                   style={{
-                    padding: "5px 10px 7px 10px",
+                    width:"25px",
+                    height:"25px",
+                    display:"flex",
+                    padding:"4px",
+                    alignItems:"center",
+                    justifyContent:"center",
                     background: "#007a48",
                     borderRadius: "50%",
                     color: "white",
                     fontWeight: "999",
-                    marginRight: "10px",
                   }}
                 >
-                  >
+                  <ArrowForwardIosIcon fontSize="6px"/>
                 </span>
                 {item.category}
               </span>
+              </NavLink>
             </div>
           </div>
         ))}

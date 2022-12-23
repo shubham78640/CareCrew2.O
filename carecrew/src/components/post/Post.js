@@ -29,21 +29,18 @@ export default function Post() {
       .catch((err) => console.error(err));
   }, []);
 
-  if (!allPostsData)
-    return (
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          height:"80vh",
-        }}
-        className="allPost"
-      >
-        <CircularProgress variant="plain" />
-
-      </div>
-    );
+  if (!allPostsData) return <div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height:"80vh",
+    
+  }}
+  className="allPost"
+>
+  <CircularProgress color="success" />
+</div>
 
   return (
     <Box className="allPost" sx={{}}>

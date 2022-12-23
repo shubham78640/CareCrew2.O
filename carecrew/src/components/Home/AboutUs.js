@@ -10,6 +10,7 @@ import imgaboutus from "../../Images/bg-tab-section.png";
 import imageAboutUs1 from "../../Images/1-4.jpg";
 import imageAboutUs2 from "../../Images/mission-scaled.jpeg";
 import imageAboutUs3 from "../../Images/values-scaled.jpeg";
+import { Link } from "react-router-dom";
 
 const BOX = styled(Box)({
   display: "flex",
@@ -115,10 +116,12 @@ export default function AboutUs() {
             </P>
 
             <Box display={"flex"} justifyContent={"left"}>
-              <Button color="success" variant="contained">
+            <Link to="/aboutus">
+              <Button sx={{textTransform:"none"}} color="success" variant="contained">
                 {" "}
                 Read More{" "}
               </Button>
+              </Link>
             </Box>
           </BOX>
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
@@ -141,10 +144,12 @@ export default function AboutUs() {
             </P>
 
             <Box display={"flex"} justifyContent={"left"}>
-              <Button color="success" variant="contained">
+            <Link to="/aboutus">
+              <Button sx={{textTransform:"none"}} color="success" variant="contained">
                 {" "}
                 Read More{" "}
               </Button>
+              </Link>
             </Box>
           </BOX>
 
@@ -173,10 +178,12 @@ export default function AboutUs() {
             </P>
 
             <Box display={"flex"} justifyContent={"left"}>
-              <Button color="success" variant="contained">
+            <Link to="/aboutus">
+              <Button sx={{textTransform:"none"}} color="success" variant="contained">
                 {" "}
                 Read More{" "}
               </Button>
+              </Link>
             </Box>
           </BOX>
 

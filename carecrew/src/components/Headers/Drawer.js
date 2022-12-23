@@ -126,7 +126,7 @@ export default function Drawer() {
                 aria-controls="panel4d-content"
                 id="panel4d-header"
               >
-                <Typography>Services</Typography>
+                <Typography sx={{color:"black", fontWeight:"450", fontSize:"15px"}}>Services</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <BOX>
@@ -181,7 +181,7 @@ export default function Drawer() {
                 aria-controls="panel4d-content"
                 id="panel4d-header"
               >
-                <Typography>Jobs</Typography>
+                <Typography sx={{color:"black", fontWeight:"450", fontSize:"15px"}}>Jobs</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <BOX>

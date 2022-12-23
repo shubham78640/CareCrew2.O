@@ -49,9 +49,18 @@
   }
   
   .category {
-    position: relative;
+    /* position: relative; */
+    color: #007a48;
     font-size: 20px;
     font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap:10px
+  }
+
+  .category:hover{
+    color:#72bf44;
   }
   /* .category::before {
     content: '';
