@@ -6,7 +6,7 @@ function AdminTable() {
     <>
     <Box  >
 
-        <Box mb={5} p={3} mt={23} sx={{backgroundColor:"#007a47", color:"white", display:"flex", justifyContent:"space-between"}}>
+        <Box mb={5} p={3} sx={{backgroundColor:"#007a47", color:"white", display:"flex", justifyContent:"space-between"}}>
             <Box sx={{color:"yellow" , fontWeight:"900", fontSize:"20px"}}>CARE CREW</Box>
             <Box>Admin </Box>
         </Box>

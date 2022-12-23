@@ -166,7 +166,7 @@ function GetACallBackForm() {
       <TextareaAutosize
         aria-label="minimum height"
         minRows={2}
-        placeholder="Mentioned your detailed requirement here"
+        placeholder="Mention your detailed requirement here"
         style={{
             backgroundColor: "#007a48",
             borderRadius: "5px",

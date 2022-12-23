@@ -29,6 +29,7 @@ export const dataDigitalBestSeller = [
       paragraph: 'Our housekeepers are trained to keep your homes in order by performing multiple household chores with...',
       category: 'Know More',
       linkImg:imgHK,
+      link:"/services/housekeeping"
     },
     {
       id: 2,
@@ -37,6 +38,7 @@ export const dataDigitalBestSeller = [
       paragraph: 'Our home cooks are professionally trained to prepare wholesome home-style meals for the families to enjoy',
       category: 'Know More',
       linkImg:imgcooking,
+      link:"/services/cooking"
     },
     {
       id: 3,
@@ -45,30 +47,34 @@ export const dataDigitalBestSeller = [
       paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
       category: 'Know More',
       linkImg:imgCC,
+      link:"/services/childcare"
     },
     {
       id: 4,
       icon:"AddHomeWorkIcon",
       title: 'Elder Care',
-      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
+      paragraph: "Whether it's for your parents or grandparents, you can hire trained professionals for taking care of...",
       category: 'Know More',
       linkImg:imgEC,
+      link:"/services/eldercare"
     },
     {
       id: 5,
       icon:"AddHomeWorkIcon",
       title: 'Driving',
-      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
+      paragraph: 'We provide licensed drivers with in-depth knowledge about cars and driving etiquette.',
       category: 'Know More',
       linkImg:imgDriver,
+      link:"/services/driver"
     },
     {
       id: 6,
       icon:"AddHomeWorkIcon",
       title: 'Others',
-      paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
+      paragraph: 'Did we miss out on the service you are looking for? Submit your inquiry to us.',
       category: 'Know More',
       linkImg:imgOthers,
+      link:"/services/others"
     }
 
   ];

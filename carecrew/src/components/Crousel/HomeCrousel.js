@@ -5,6 +5,9 @@ import { crouselData } from "../../AllData";
 
 const P = styled('p')({
   color:"white",
+  display:"grid",
+  justifyContent:"left"
+
 })
 
 function HomeCrousel() {
@@ -25,17 +28,17 @@ function HomeCrousel() {
               alt="First slide"
               style={{maxHeight:"600px"}}
             />
-            <Carousel.Caption style={{display:"grid", alignItems:"center", gap:"10px"}}>
+            <Carousel.Caption style={{display:"grid", justifyContent:"left", alignItems:"center", gap:"10px"}}>
               <Typography variant="h3"
-                sx={{ color: "white", fontWeight:{ sm: "800", xs: "400" } , fontSize: { sm: "40px", xs: "20px" },}}
+                sx={{ color: "white", fontWeight:{ sm: "800", xs: "500" } , fontSize: { sm: "45px", xs: "20px" },}}
               >
                 House Helps for Every Home
               </Typography>
 
-              <Box sx={{display:"flex", flexDirection:"column", lineHeight:{ sm: "20px", xs: "10px" }, marginBottom:{sm:31, xs:0}}} >
-                <P sx={{fontWeight:{ sm: "800", xs: "500" }, fontSize:{ sm: "20px", xs: "14px" }}}>&#x2714;  Professional Training.</P>
-                <P sx={{fontWeight:{ sm: "800", xs: "500" }, fontSize:{ sm: "20px", xs: "14px" }}}>&#x2714;  Unlimited Replacements.</P>
-                <P sx={{fontWeight:{ sm: "800", xs: "500" }, fontSize:{ sm: "20px", xs: "14px" }}}>&#x2714;  Zero Registration Fee.</P>
+              <Box mt={1} sx={{display:"grid", justifyContent:"left",alignItems:"center", lineHeight:{ sm: "20px", xs: "10px" }, marginBottom:{sm:31, xs:0}}} >
+                <P sx={{fontWeight:{ sm: "600", xs: "500" },width:"100%", fontSize:{ sm: "23px", xs: "14px" }}}>&#x2714; Professional Training.</P>
+                <P sx={{fontWeight:{ sm: "600", xs: "500" },width:"100%", fontSize:{ sm: "23px", xs: "14px" }}}>&#x2714; Unlimited Replacements.</P>
+                <P sx={{fontWeight:{ sm: "600", xs: "500" },width:"100%", fontSize:{ sm: "23px", xs: "14px" }}}>&#x2714; Zero Registration Fee.</P>
               </Box>
             </Carousel.Caption>
           </Carousel.Item>

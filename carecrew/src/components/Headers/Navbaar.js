@@ -108,19 +108,19 @@ function Navbaar() {
             </span>
             &nbsp;help@carecrew.in
           </Box>
-          <a href="" style={{ marginLeft: "35%" }}>
+          <a href="https://www.instagram.com/carecrew.in/" style={{ marginLeft: "35%" }} target="_blank">
             <InstagramIcon
               fontSize="6px"
               sx={{ color: "#ebe956", marginLeft: "35%" }}
             />
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/showcase/care-crew-in/" target="_blank">
             <LinkedInIcon
               fontSize="6px"
               sx={{ color: "#ebe956", marginLeft: "10px" }}
             />
           </a>
-          <a href="">
+          <a href="https://www.facebook.com/carecrew.in" target="_blank">
             <FacebookIcon
               fontSize="6px"
               sx={{ color: "#ebe956", marginLeft: "10px" }}
