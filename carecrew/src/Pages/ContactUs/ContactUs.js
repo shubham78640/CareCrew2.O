@@ -371,6 +371,7 @@ function ContactUs() {
                 <Button
                   variant="contained"
                   color="success"
+                  sx={{textTransform:"none"}}
                   onClick={handleSubmit}
                 >
                   Submit Your request
@@ -394,30 +395,7 @@ function ContactUs() {
       </Box>
 
       <Footer />
-      {/* ================================Services Section For Teasting====================================== */}
-      {/* <Box sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }}>
-        <Box sx={{ width: { sm: "30%", xs: "100%",  } , marginLeft:{sm: "0%", xs: "0%"}, justifyContent:"flex-end"}} ><DividerComponent  sx={{marginLeft:"20%"}} /></Box>
-        <Box sx={{ width: { sm: "62%", xs: "100%" } }}>
-          <Servies
-            Service_Heading="Housekeepers for your home "
-            Service_Content="We source housekeepers who can keep your homes in order by performing multiple household chores including sweeping, mopping & dusting. We train them to operate with professionalism and precision. We also teach them how to do the laundry & keep the home equipment in good condition."
-            Service_image={ImageCooking}
-            Training_Heading="Training"
-            Training_Content="The housekeepers, once deployed with you, will receive training in three areas:"
-            Training_Heading1="Basics Of Housekeeping"
-            Training_Content1="The fundamentals include making a bed, dusting different kinds of surfaces, washing and organizing utensils in the kitchen, sweeping, brooming & mopping of common areas in the house."
-            Training_Heading2="Laundry Management"
-            Training_Content2="This includes knowledge about the different types of laundry chemicals and their usage, washing and drying of clothes, their ironing, folding and storage."
-            Training_Heading3="Equipment Management"
-            Training_Content3="The housekeepers not only learn the operational know-how of cleaning equipment but also an understanding of how to maintain them with care."
-            Values_Heading="Values"
-            Values_Content="We intend to make our housekeepers diligent in their approach & efficient at managing the household chores. We try to inculcate in them an attention to detail that helps keep your home organized at all times. We expect them to be non-intrusive & discrete while at work, in line with our principle of respecting your privacy."
-            Stories_Heading="Stories"
-            Stories_Content="Let’s say you require somebody to help you reorganize your living area or set up an indoor garden – the housekeepers will help you do it."
-          />
-        </Box>
-      </Box> */}
-      {/* ================================Services Section For Teasting====================================== */}
+    
     </>
   );
 }
