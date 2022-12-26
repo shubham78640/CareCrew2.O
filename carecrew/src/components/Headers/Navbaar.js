@@ -35,6 +35,10 @@ function Navbaar() {
 
   const [closeForm, setCloseForm] = useState(true);
 
+  let user = localStorage.getItem('user')
+
+  console.log(user)
+
   let { jobsenglish } = useParams();
 
   const handleDropdown = () => {
@@ -274,6 +278,20 @@ function Navbaar() {
           >
             <li onMouseOver={()=>{handleDropdownclose1(); handleDropdownclose()}}>Blogs</li>
           </NavLink>
+
+          
+         {user && <NavLink
+            className="Navlink"
+            to="/admin"
+            style={({ isActive }) => {
+              return {
+                // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
+                color: isActive ? "#ebe956" : "white",
+              };
+            }}
+          >
+            <li onMouseOver={()=>{handleDropdownclose1(); handleDropdownclose()}}>Admin</li>
+          </NavLink>}
         </Box>
 
         <Box
