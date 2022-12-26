@@ -35,7 +35,14 @@ function Pricing(props) {
             <Box sx={{ fontSize: "18px", fontWeight: "500" }}>
               {pricing_Heading}
             </Box>
-            <Box mt={1} sx={{ fontSize: "15px", color: "#72BF44" }}>
+            <Box
+              mt={1}
+              sx={{
+                fontSize: "15px",
+                color: "#72BF44",
+                textAlign: { sm: "", xs: "center" },
+              }}
+            >
               {pricing_Content}
             </Box>
           </Box>

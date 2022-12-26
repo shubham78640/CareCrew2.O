@@ -1,8 +1,6 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
-import Navbaar from "../../components/Headers/Navbaar";
 import Process from "../../components/Process/Process";
-import { display } from "@mui/system";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import { Box, Button, styled } from "@mui/material";
 import CallIcon from "@mui/icons-material/Call";
@@ -45,7 +43,7 @@ function WorkProcess() {
               <Box>
                 Submit your inquiry on the website, WhatsApp us on{" "}
                 <a
-                target="blank"
+                  target="blank"
                   href="https://api.whatsapp.com/send?phone=919643328358"
                   style={{
                     fontWeight: 600,
@@ -130,7 +128,7 @@ function WorkProcess() {
         <Box
           mt={-10}
           mb={6}
-          sx={{ display: "flex", flexDirection: "column", gap: "30px",  }}
+          sx={{ display: "flex", flexDirection: "column", gap: "30px" }}
         >
           <Box
             sx={{
@@ -146,32 +144,41 @@ function WorkProcess() {
           <Pricing
             price="0"
             pricing_Heading={
-              <Box sx={{ marginLeft: { sm: "19%", xs: "25%" } }}>Registration Fee
+              <Box sx={{ marginLeft: { sm: "19%", xs: "25%" } }}>
+                Registration Fee
               </Box>
             }
             pricing_Content={
-              <Box sx={{ marginLeft: { sm: "19%", xs: "0%" }, width:"100%" }}>
-                No charges for registration. Submit your request for a Help without paying any fee upfront.
+              <Box sx={{ marginLeft: { sm: "19%", xs: "0%" }, width: "100%" }}>
+                No charges for registration. Submit your request for a Help
+                without paying any fee upfront.
               </Box>
             }
           />
           <Pricing
             price="1999"
             pricing_Heading={
-              <Box ml={0} sx={{ marginLeft: { sm: "0%", xs: "16%" }, width:"100%" }}>Contract Signing Fee</Box>
+              <Box
+                ml={0}
+                sx={{ marginLeft: { sm: "0%", xs: "16%" }, width: "100%" }}
+              >
+                Contract Signing Fee
+              </Box>
             }
             pricing_Content=" One-time fee applicable on signing the contract to deploy a preferred Help after interview and trial."
           />
           <Pricing
             price="999"
             pricing_Heading={
-              <Box sx={{ marginLeft: { sm: "7%", xs: "9%" } }}>Monthly Subscription Fee
+              <Box sx={{ marginLeft: { sm: "7%", xs: "9%" } }}>
+                Monthly Subscription Fee
               </Box>
             }
             pricing_Content={
-              <Box sx={{ marginLeft: { sm: "7%", xs: "0%" } ,width:"100%" }}>
+              <Box sx={{ marginLeft: { sm: "7%", xs: "0%" }, width: "100%" }}>
                 {" "}
-                Recurring fee to be paid at the end of each month over the tenure of the Associate's deployment.{" "}
+                Recurring fee to be paid at the end of each month over the
+                tenure of the Associate's deployment.{" "}
               </Box>
             }
           />
@@ -184,7 +191,7 @@ function WorkProcess() {
             fontSize: "15px",
           }}
         >
-       GST of 18% will be applicable on the above charges.
+          GST of 18% will be applicable on the above charges.
         </Box>
         <Box>
           <Box
@@ -207,7 +214,14 @@ function WorkProcess() {
               justifyContent: "center",
             }}
           >
-            <Box sx={{ display: "flex", flexDirection: "column", gap: "20px", flexBasis:"100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+                flexBasis: "100%",
+              }}
+            >
               <AccordionComponent
                 Accordion_Heading="Do I need to pay any upfront charges?"
                 Accordion_Content="No, we don’t charge any registration fee or commission upfront. Once we find a candidate for you, you can take a 3 day trial. Post the trial, you pay a non-refundable one-time fee of Rs.1999 + GST to sign a contract with us & get the candidate deployed. Subsequent monthly billing shall comprise of the help's salary & our monthly subscription fee of Rs.999 + GST."
@@ -245,7 +259,14 @@ function WorkProcess() {
                 Accordion_Content="We would need your company’s PAN card & GST registration number to verify your institutional status."
               />
             </Box>
-            <Box  sx={{ display: "flex", flexDirection: "column", gap: "20px", flexBasis:"100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+                flexBasis: "100%",
+              }}
+            >
               <AccordionComponent
                 Accordion_Heading="Who do I pay the monthly salary of the house help to?"
                 Accordion_Content="You need to pay the monthly salary of the Associate along with CARE CREW's monthly subscription fee to us at the end of each month."

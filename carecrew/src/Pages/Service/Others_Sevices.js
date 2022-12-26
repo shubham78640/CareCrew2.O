@@ -3,7 +3,6 @@ import Contact from "../../components/Contact/Contact";
 import Box from "@mui/material/Box";
 import DividerComponent from "../../components/DividerComponent/DividerComponent";
 import Servies from "../../components/Services/Servies";
-import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
@@ -57,9 +56,13 @@ function Others_Sevices() {
             Stories_Content=""
           />
           <Box
-            mt="-20%"
             p="5%"
-            sx={{ display: "flex", flexDirection: "column", gap: "30px" }}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "30px",
+              mt: { sm: "-15%", xs: "-26%" },
+            }}
           >
             <Typography
               variant="h4"
@@ -93,4 +96,4 @@ function Others_Sevices() {
   );
 }
 
-export default Others_Sevices;    
+export default Others_Sevices;

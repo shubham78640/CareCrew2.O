@@ -75,19 +75,19 @@ function Footer() {
                   <Box>About Us</Box>
                 </Link>
                 <Link
-                  to=""
+                  to="/privacypolicy"
                   style={{ textDecoration: "none", color: "#72bf44" }}
                 >
                   <Box>Privacy Policy</Box>
                 </Link>
                 <Link
-                  to=""
+                  to="/termsofuse"
                   style={{ textDecoration: "none", color: "#72bf44" }}
                 >
                   <Box>Terms of Use</Box>
                 </Link>
                 <Link
-                  to=""
+                  to="/agepolicy"
                   style={{ textDecoration: "none", color: "#72bf44" }}
                 >
                   <Box>Age Policy</Box>
@@ -114,7 +114,7 @@ function Footer() {
                     <Box mt={-0.1} sx={{ color: "#ebe956" }}>
                       <LocationOnIcon sx={{ fontSize: "16px" }} />
                     </Box>
-                    &nbsp;  &nbsp;
+                    &nbsp; &nbsp;
                     <Box>A-55/8, DLF Phase 1, Sector 28 - 122002</Box>
                   </Box>
                 </a>
@@ -122,7 +122,7 @@ function Footer() {
                   <Box mt={-0.1} sx={{ color: "#ebe956" }}>
                     <CallIcon sx={{ fontSize: "16px" }} />
                   </Box>
-                  &nbsp;  &nbsp;
+                  &nbsp; &nbsp;
                   <Box>080-6201-2086</Box>
                 </Box>
                 <a
@@ -134,7 +134,7 @@ function Footer() {
                     <Box mt={-0.1} sx={{ color: "#ebe956" }}>
                       <WhatsAppIcon sx={{ fontSize: "16px" }} />
                     </Box>
-                    &nbsp;  &nbsp;
+                    &nbsp; &nbsp;
                     <Box>964-332-8358</Box>
                   </Box>
                 </a>
@@ -142,22 +142,26 @@ function Footer() {
                   <Box mt={-0.1} sx={{ color: "#ebe956" }}>
                     <EmailIcon sx={{ fontSize: "16px" }} />
                   </Box>
-                  &nbsp;  &nbsp;
+                  &nbsp; &nbsp;
                   <Box>help@carecrew.in</Box>
                 </Box>
                 <Box ml="2%" sx={{ display: "flex", gap: "10px" }}>
                   <Box>
-                    <a href="https://www.facebook.com/carecrew.in"
-                    target="_blank"
-                    > {" "}
-
+                    <a
+                      href="https://www.facebook.com/carecrew.in"
+                      target="_blank"
+                    >
+                      {" "}
                       <FacebookRoundedIcon
                         sx={{ fontSize: "22px", color: "#ebe956" }}
                       />
                     </a>
                   </Box>
                   <Box>
-                    <a href="https://www.linkedin.com/showcase/care-crew-in/" target="_blank">
+                    <a
+                      href="https://www.linkedin.com/showcase/care-crew-in/"
+                      target="_blank"
+                    >
                       {" "}
                       <LinkedInIcon
                         sx={{ fontSize: "22px", color: "#ebe956" }}
@@ -165,7 +169,10 @@ function Footer() {
                     </a>
                   </Box>
                   <Box>
-                    <a href="https://www.instagram.com/carecrew.in/" target="_blank">
+                    <a
+                      href="https://www.instagram.com/carecrew.in/"
+                      target="_blank"
+                    >
                       {" "}
                       <InstagramIcon
                         sx={{ fontSize: "22px", color: "#ebe956" }}
@@ -180,7 +187,7 @@ function Footer() {
             <Box padding={5}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>Careers</Box>
               <Box mt={3} sx={{ lineHeight: "32px" }}>
-                <Link to="/jobsenglish" style={{ textDecoration: "none" }}>
+                <Link to="/jobs/jobsenglish" style={{ textDecoration: "none" }}>
                   <Box
                     sx={{
                       display: "flex",
@@ -197,7 +204,7 @@ function Footer() {
                     </Box>{" "}
                   </Box>
                 </Link>
-                <Link to="/jobshindi" style={{ textDecoration: "none" }}>
+                <Link to="/jobs/jobshindi" style={{ textDecoration: "none" }}>
                   <Box
                     sx={{
                       display: "flex",
@@ -233,7 +240,8 @@ function Footer() {
           <Box>2023 © All rights reserved by </Box> &nbsp;
           <a
             href="https://thepinchlife.com/"
-            style={{ textDecoration: "none", color: "#000000" }} target="_blank"
+            style={{ textDecoration: "none", color: "#000000" }}
+            target="_blank"
           >
             <Box sx={{ fontWeight: "900" }}>
               {" "}

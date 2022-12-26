@@ -1,6 +1,6 @@
-import React from 'react'
-import { Box } from '@mui/material'
-import Table from '../../components/Table/Table'
+import React from "react";
+import { Box } from "@mui/material";
+import Table from "../../components/Table/Table";
 function AdminTable() {
   return (
     <>
@@ -8,7 +8,7 @@ function AdminTable() {
         <Table/>
     </Box>
     </>
-  )
+  );
 }
 
-export default AdminTable
+export default AdminTable;

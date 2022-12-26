@@ -14,8 +14,7 @@ const BOX2 = styled(Box)({
   top: 20,
   boxShadow:
     "rgba(0,122,72) 0px 5px, rgba(0,122,72) 0px 10px, rgba(0,122,72) 0px 15px",
-  "&:hover": {
-  },
+  "&:hover": {},
 });
 const BOX1 = styled(Box)({
   background: "white",

@@ -1,24 +1,29 @@
-import { Box } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import Navbaar from "./components/Headers/Navbaar";
-import Home from "./components/Home/Home";
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
-import AboutUsPage from "../src/Pages/AboutUs/AboutUsPage";
-import ContactUs from "./Pages/ContactUs/ContactUs";
-import JobsEnglish from "./Pages/JobSection/JobsEnglish";
-import JobsHindi from "./Pages/JobSection/JobsHindi";
-import sanityClient from "../src/libs/client";
-import Blog from "./Pages/Blog/Blog";
-import Single from "./Pages/single/Single";
-import Housekeeping_Service from "./Pages/Service/Housekeeping_Service";
-import Cooking_Services from "./Pages/Service/Cooking_Services";
-import Others_Sevices from "./Pages/Service/Others_Sevices";
-import ChildCare_Services from "./Pages/Service/ChildCare_Services";
-import ElderCare_Servies from "./Pages/Service/ElderCare_Servies";
-import Driving_Services from "./Pages/Service/Driving_Services";
-import WorkProcess from "./Pages/How_does_it_work/WorkProcess";
-import AdminTable from "./Pages/AdminTable/AdminTable";
 import Login from "./Pages/Authentication/Login";
+import { Box } from '@mui/material'
+import React, { useEffect, useState } from 'react'
+import Navbaar from './components/Headers/Navbaar'
+import Home from './components/Home/Home'
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom"
+import AboutUsPage from "../src/Pages/AboutUs/AboutUsPage"
+import ContactUs from './Pages/ContactUs/ContactUs'
+import JobsEnglish from './Pages/JobSection/JobsEnglish'
+import JobsHindi from './Pages/JobSection/JobsHindi'
+import sanityClient from '../src/libs/client'
+import Blog from './Pages/Blog/Blog'
+import Single from './Pages/single/Single'
+import Housekeeping_Service from './Pages/Service/Housekeeping_Service'
+import Cooking_Services from './Pages/Service/Cooking_Services'
+import Others_Sevices from './Pages/Service/Others_Sevices'
+import ChildCare_Services from './Pages/Service/ChildCare_Services'
+import ElderCare_Servies from './Pages/Service/ElderCare_Servies'
+import Driving_Services from './Pages/Service/Driving_Services'
+import WorkProcess from './Pages/How_does_it_work/WorkProcess'
+import AdminTable from './Pages/AdminTable/AdminTable'
+import AdminNavbaar from './components/Headers/AdminNavbaar'
+import PrivacyPolicy from './Pages/Privacy Policy/PrivacyPolicy'
+import TermsofUse from './Pages/Privacy Policy/TermsofUse'
+import AgePolicy from './Pages/Privacy Policy/AgePolicy'
+
 
 function App() {
   let user = localStorage.getItem('user')
@@ -43,6 +48,9 @@ function App() {
               <Route path="/process" element={<WorkProcess />} />
               <Route path="/admin" element={user?<AdminTable/>:<Login/>} />
               <Route path="/login" element={<Login/>} />
+              <Route path="/privacypolicy" element={<PrivacyPolicy/> } />
+              <Route path="/termsofuse" element={<TermsofUse/> } />
+              <Route path="/agepolicy" element={<AgePolicy/> } />
             </Routes>
          
         </BrowserRouter>
