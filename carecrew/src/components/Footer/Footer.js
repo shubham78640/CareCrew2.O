@@ -75,19 +75,19 @@ function Footer() {
                   <Box>About Us</Box>
                 </Link>
                 <Link
-                  to=""
+                  to="/privacypolicy"
                   style={{ textDecoration: "none", color: "#72bf44" }}
                 >
                   <Box>Privacy Policy</Box>
                 </Link>
                 <Link
-                  to=""
+                  to="/termsofuse"
                   style={{ textDecoration: "none", color: "#72bf44" }}
                 >
                   <Box>Terms of Use</Box>
                 </Link>
                 <Link
-                  to=""
+                  to="/agepolicy"
                   style={{ textDecoration: "none", color: "#72bf44" }}
                 >
                   <Box>Age Policy</Box>

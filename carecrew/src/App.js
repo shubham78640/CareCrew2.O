@@ -19,6 +19,9 @@ import Driving_Services from './Pages/Service/Driving_Services'
 import WorkProcess from './Pages/How_does_it_work/WorkProcess'
 import AdminTable from './Pages/AdminTable/AdminTable'
 import AdminNavbaar from './components/Headers/AdminNavbaar'
+import PrivacyPolicy from './Pages/Privacy Policy/PrivacyPolicy'
+import TermsofUse from './Pages/Privacy Policy/TermsofUse'
+import AgePolicy from './Pages/Privacy Policy/AgePolicy'
 
 function App() {
   
@@ -42,6 +45,9 @@ function App() {
               <Route path="/services/eldercare" element={<ElderCare_Servies />} />
               <Route path="/services/others" element={<Others_Sevices />} />
               <Route path="/process" element={<WorkProcess/> } />
+              <Route path="/privacypolicy" element={<PrivacyPolicy/> } />
+              <Route path="/termsofuse" element={<TermsofUse/> } />
+              <Route path="/agepolicy" element={<AgePolicy/> } />
               <Route path="/admin" element={<AdminTable /> } />
           </Routes>
         </Box>
