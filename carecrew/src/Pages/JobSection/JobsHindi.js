@@ -1,10 +1,7 @@
-import React from "react";
+import React, { useState }  from "react";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import { styled } from "@mui/material/styles";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import { Button } from "@mui/material";
+import { Button ,Autocomplete,TextField,Box,Grid} from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 import Footer from "../../components/Footer/Footer";
 import TabsComponent from "../../components/TabComponent/TabsComponent";
@@ -12,6 +9,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ScrollToTop from "react-scroll-to-top";
+import { servicesDatainHindi } from "../../AllData";
+
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -37,6 +36,23 @@ const SPAN = styled("span")({
   fontWeight: "900",
 });
 function JobsHindi() {
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [city, setCity] = useState("");
+  const [skill,setSkill]=useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(
+      "Details=",
+      name,
+      phone,
+      city,
+      skill,
+    );
+  }
+
   return (
     <>
       <ScrollToTop smooth color="#007a47" />
@@ -218,6 +234,8 @@ function JobsHindi() {
                   width: "96%",
                   marginTop: "20px",
                 }}
+                onChange={(e) => setName(e.target.value)}
+                value={name}
               />
               <TextField
                 id="outlined-basic"
@@ -229,8 +247,10 @@ function JobsHindi() {
                   width: "96%",
                   marginTop: "20px",
                 }}
+                onChange={(e) => setPhone(e.target.value)}
+                value={phone}
               />
-              <Box>
+              {/* <Box>
                 <Box mt={2} sx={{ color: "#007a48" }}>
                   {" "}
                   आप इनमें से कौन-कौन से काम कर सकते हैं?*
@@ -279,7 +299,25 @@ function JobsHindi() {
                     </Box>
                   </Box>
                 </Box>
-              </Box>
+              </Box> */}
+
+<Autocomplete
+          multiple
+          disableCloseOnSelect
+          size="medium"
+          color="primary"
+          sx={{ width: "96%", marginTop:"3%" }}
+          options={servicesDatainHindi}
+          getOptionLabel={(option) => option.service}
+          onChange={(event, newValue) => {
+            setSkill([...newValue]);
+          }}
+          renderInput={(params) => (
+            <TextField {...params}
+              placeholder=" आप इनमें से कौन-कौन से काम कर सकते हैं?*"
+            />
+          )}
+        />
 
               <TextField
                 mt={3}
@@ -292,11 +330,14 @@ function JobsHindi() {
                   width: "96%",
                   marginTop: "20px",
                 }}
+                onChange={(e) => setCity(e.target.value)}
+                value={city}
               />
               <Button
                 variant="contained"
                 color="success"
                 sx={{ marginTop: "30px" }}
+                onClick={handleSubmit}
               >
                 फार्म जमा करें
               </Button>

@@ -78,3 +78,21 @@ export const dataDigitalBestSeller = [
     }
 
   ];
+
+  export const servicesData = [
+    {service:"HouseKeeping"},
+    {service:"Child Care"},
+    {service:"Elder Care"},
+    {service:"Cooking"},
+    {service:"Driving"},
+    {service:"Others"}
+]
+
+export const servicesDatainHindi = [
+  {service:"घर की सफाई"},
+  {service:"खाना बनाना"},
+  {service:"बच्चों की देखभाल"},
+  {service:"बड़ों की देखभाल"},
+  {service:"गाड़ी चलाना"},
+  {service:"अन्य"}
+]

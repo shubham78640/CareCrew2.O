@@ -6,13 +6,13 @@ import { useEffect } from "react";
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
   {
-    field: "firstName",
+    field: "name",
     headerName: "Name",
     width: 200,
     editable: true,
   },
   {
-    field: "contactNumber",
+    field: "phoneNumber",
     headerName: "Mobile",
     width: 150,
     editable: true,
@@ -25,25 +25,25 @@ const columns = [
     editable: true,
   },
   {
-    field: "imageUrl",
+    field: "",
     headerName: "Services",
     width: 150,
     editable: true,
   },
   {
-    field: "salary",
+    field: "workingHours",
     headerName: "Working Hr",
     width: 110,
     editable: true,
   },
   {
-    field: "dob",
+    field: "createdAt",
     headerName: "Date",
     width: 110,
     editable: true,
   },
   {
-    field: "lastName",
+    field: "",
     headerName: "City",
     width: 110,
     editable: true,
@@ -59,24 +59,31 @@ const columns = [
 
 function Table() {
   const [tabledata, setTabledata] = useState([]);
+  const [citydata, setCitydata] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
-      let data = await fetch(
-        "https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001"
-      );
-      let table = await data.json();
-      setTabledata(table);
+      let dataTable = await fetch( "http://13.126.160.155:8082/carecrew/get/data/");
+      let table = await dataTable.json();
+
+      // console.log("data sam",table.data);
+       let adminTableData = await table.data;
+       let cityData=  adminTableData;
+      //  setCitydata(cityData)
+      setTabledata(adminTableData);
+      console.log(cityData)
     };
     fetchData();
   }, []);
-  console.log("tabledata", tabledata);
+
+   console.log("tabledata", tabledata);
   return (
     <>
       <Box  sx={{ height: 700, width: "100%" }}>
         <DataGrid
           rows={tabledata}
           columns={columns}
-          pageSize={10}
+          pageSize={20}
           rowsPerPageOptions={[10]}
           checkboxSelection
           disableSelectionOnClick
