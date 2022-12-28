@@ -462,6 +462,13 @@ function Navbaar() {
         {/* registration form */}
       </Box>
 
+
+
+
+
+
+      
+
       {/* Responsive */}
       <Box sx={{ display: { xs: "block", sm: "none" } }}>
         <Box

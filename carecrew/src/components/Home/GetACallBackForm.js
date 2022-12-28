@@ -5,8 +5,8 @@ import axios from 'axios';
 
 function GetACallBackForm() {
   const [services, setServices] = useState([])
-  const [city, setCity] = useState([])
-  const [locality, setLocality] = useState([])
+  const [city, setCity] = useState("")
+  const [locality, setLocality] = useState("")
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [workinghour, setWorkinghour] = useState("")
@@ -24,8 +24,19 @@ function GetACallBackForm() {
   }, [])
   
 
+ 
+
+
+ var names = services.map(function(item) {
+  return item['service'];
+});
+
+
+
+console.log(names)
+
   const handleClick = async ()=>{
-    console.log({services, city, locality, name, email, workinghour, longContent, address, phoneNumber})
+    console.log({ services, city, locality, name, email, workinghour, longContent, address, phoneNumber})
     try {
       let response = await axios.post("http://13.126.160.155:8082/carecrew/save", {
           "address": "Intezar",
@@ -179,15 +190,13 @@ function GetACallBackForm() {
         }}
       />
    <Autocomplete
-          multiple
-          disableCloseOnSelect
           size="small"
           color="primary"
           sx={{ width: "300px" }}
-          options={servicesData}
-          getOptionLabel={(option) => option.service}
+          options={cityData}
+          getOptionLabel={(option) => option.city}
           onChange={(event, newValue) => {
-            setCity([...newValue]);
+            setCity(newValue);
           }}
           renderInput={(params) => (
             <TextField {...params}
@@ -212,16 +221,14 @@ function GetACallBackForm() {
           )}
         />
 
-<Autocomplete
-          multiple
-          disableCloseOnSelect
+    <Autocomplete
           size="small"
           color="primary"
           sx={{ width: "300px" }}
-          options={servicesData}
-          getOptionLabel={(option) => option.service}
+          options={localityData}
+          getOptionLabel={(option) => option.locality}
           onChange={(event, newValue) => {
-            setLocality([...newValue]);
+            setLocality(newValue);
           }}
           renderInput={(params) => (
             <TextField {...params}
@@ -302,4 +309,13 @@ const servicesData = [
     {service:"Cooking"},
     {service:"Driving"},
     {service:"Others"}
+]
+
+const cityData = [
+  {city:"Gudgaon"},
+  {city:"Others"}
+]
+
+const localityData = [
+  {locality:"upcomming"}
 ]
