@@ -59,7 +59,7 @@ function Home() {
                 <VerifiedIcon
                   sx={{
                     fontSize: { sm: "3rem", xs: "2rem" },
-                    color: "#00b1e4",
+                    color: "#73bf43",
                   }}
                 />
                 <div>
@@ -85,7 +85,7 @@ function Home() {
                 <Diversity1Icon
                   sx={{
                     fontSize: { sm: "3rem", xs: "2rem" },
-                    color: "#00b1e4",
+                    color: "#73bf43",
                   }}
                 />
                 <div>

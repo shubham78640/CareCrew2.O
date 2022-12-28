@@ -10,12 +10,12 @@ export const theme = createTheme({
       light: '#f5f5f5',
     },
     neutral: {
-      main: 'red',
-      light: 'black',
+      main: '#73bf43',
+      light: '#73bf43',
      
     },
     otherColor:{
-        main: "black",
+        main: "#73bf43",
     },
     newColor:{
         main: '#fc2779',
