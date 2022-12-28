@@ -14,47 +14,38 @@ function GetACallBackForm() {
   const [address, setAddress] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("")
 
-  useEffect(() => {
-    const getData = async()=>{
-      let response = await fetch("http://13.126.160.155:8082/carecrew/get/data/")
-      let data = await response.json()
-      console.log(data)
-    }
-    getData()
-  }, [])
+  // useEffect(() => {
+  //   const getData = async()=>{
+  //     let response = await fetch("http://13.126.160.155:8082/carecrew/get/data/")
+  //     let data = await response.json()
+  //     console.log(data)
+  //   }
+  //   getData()
+  // }, [])
   
 
- 
-
-
- var names = services.map(function(item) {
-  return item['service'];
-});
-
-
-
-console.log(names)
+let newServices = services.map(function(item) { return item['service']; });
+ let newCity = city?city["city"]:"";
+ let newLocality = locality?locality["locality"]:"";
+const date =Date.now()
 
   const handleClick = async ()=>{
     console.log({ services, city, locality, name, email, workinghour, longContent, address, phoneNumber})
     try {
-      let response = await axios.post("http://13.126.160.155:8082/carecrew/save", {
-          "address": "Intezar",
-          "cities": {
-            "cityName": "Gudgaon",
-            "id": 0
-          },
-          "createdAt": "2022-12-27T09:47:37.266Z",
-          "email": "Intezarkhan@gmail.com",
-          "id": 0,
-          "locality": {
-            "id": 0,
-            "society": "string"
-          },
-          "message": "string",
-          "name": "intezar",
-          "phoneNumber": "00000000000",
-          "workingHours": "string"
+      let response = await axios.post(
+        // "http://13.126.160.155:8082/carecrew/save"
+        
+        "http://localhost:8082/carecrew/carecrew/save", {
+          "address": address,
+          "city": newCity,
+          "createdAt": date,
+          "email": email,
+          "locality": newLocality,
+          "message": longContent,
+          "name": name,
+          "phoneNumber": phoneNumber,
+          "workingHours": workinghour,
+          "service":newServices
         }
       );
       alert("worker save successfully")

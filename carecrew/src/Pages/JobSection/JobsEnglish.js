@@ -59,8 +59,12 @@ function JobsEnglish() {
   //   }
   // }
 
+  const date =Date.now()
+  var names = skill.map(function(item) {
+    return item['service'];
+  });
 
-
+  console.log("skills", names)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -69,17 +73,22 @@ function JobsEnglish() {
       name,
       phone,
       city,
-      skill,
+      names,
+      date,
     );
 
     const data = {
       name: name,
       phoneNumber: phone,
-      cityName: city,
+      city: city,
+      services:names,
+      createdAt:date
+
     };
     axios
       .post(
-        "http://13.126.160.155:8082/candidate/save",
+        // "http://13.126.160.155:8082/candidate/save",
+        "http://localhost:8082/carecrew/candidate/save",
         data
       )
       .then((response) => {
@@ -87,6 +96,7 @@ function JobsEnglish() {
         setCity("");
         setName("");
         setPhone("");
+
       });
 
   }

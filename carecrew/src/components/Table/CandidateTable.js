@@ -18,13 +18,13 @@ const columns = [
     editable: true,
   },
   {
-    field: "abc",
+    field: "services",
     headerName: "Services",
     width: 300,
     editable: true,
   },
   {
-    field: "",
+    field: "city",
     headerName: "City",
     width: 200,
     editable: true,
@@ -43,7 +43,11 @@ function CandidateTable() {
   
     useEffect(() => {
       const fetchData = async () => {
-        let dataTable = await fetch( "http://13.126.160.155:8082/candidate/get/candidates/");
+        let dataTable = await fetch( 
+          // "http://13.126.160.155:8082/candidate/get/candidates/"
+          "http://localhost:8082/carecrew/candidate/get/candidates/"
+
+          );
         let table = await dataTable.json();
         // console.log("data sam",table.data);
          let adminTableData = await table.data;
