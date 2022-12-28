@@ -47,49 +47,49 @@ function JobsEnglish() {
   const [city, setCity] = useState("");
   const [skill,setSkill]=useState([]);
 
-  const handleSubmit = async () => {
-    try {
-      let response = await axios.post("http://13.126.160.155:8082/candidate/save", {
-        name: name,
-            phoneNumber: phone,
-            cityName: city,
+  // const handleSubmit = async () => {
+  //   try {
+  //     let response = await axios.post("http://13.126.160.155:8082/candidate/save", {
+  //       name: name,
+  //           phoneNumber: phone,
+  //           cityName: city,
 
-      });
-    } catch (error) {
-    }
-  }
-
-
-
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(
-  //     "Details=",
-  //     name,
-  //     phone,
-  //     city,
-  //     skill,
-  //   );
-
-  //   const data = {
-  //     name: name,
-  //     phoneNumber: phone,
-  //     cityName: city,
-  //   };
-  //   axios
-  //     .post(
-  //       "http://13.126.160.155:8082/candidate/save",
-  //       data
-  //     )
-  //     .then((response) => {
-  //       console.log(response);
-  //       setCity("");
-  //       setName("");
-  //       setPhone("");
   //     });
-
+  //   } catch (error) {
+  //   }
   // }
+
+
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(
+      "Details=",
+      name,
+      phone,
+      city,
+      skill,
+    );
+
+    const data = {
+      name: name,
+      phoneNumber: phone,
+      cityName: city,
+    };
+    axios
+      .post(
+        "http://13.126.160.155:8082/candidate/save",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+        setCity("");
+        setName("");
+        setPhone("");
+      });
+
+  }
 
   return (
     <>
