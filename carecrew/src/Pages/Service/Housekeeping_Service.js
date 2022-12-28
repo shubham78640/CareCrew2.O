@@ -78,7 +78,7 @@ function Housekeeping_Service() {
             />
             <AccordionComponent
               Accordion_Heading="Do you have people who can work in a 24-hour live-in setting?"
-              Accordion_Content="Yes, we provide full-time house helps in two formats: either for 24 hour live-in jobs, or for 8-12 hour day jobs."
+              Accordion_Content="Yes, we provide full-time house helps in two formats: either for 24 hour live-in jobs, or for 8-12 hour day jobs. We also provide part-time house helps."
             />
             <AccordionComponent
               Accordion_Heading="Do you offer replacements if the house help quits the job?"
