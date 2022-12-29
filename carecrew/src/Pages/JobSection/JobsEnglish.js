@@ -70,7 +70,7 @@ function JobsEnglish() {
     return item['service'];
   });
 
-  console.log("skills", servicesName)
+  // console.log("skills",moment(date).format("MMMM Do YYYY"))
 
   const handleSubmit = (e) => {
     e.preventDefault();

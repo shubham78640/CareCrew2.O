@@ -38,9 +38,7 @@ const columns = [
 ];
 
 function CandidateTable() {
-
     const [tabledata, setTabledata] = useState([]);
-  
     useEffect(() => {
       const fetchData = async () => {
         let dataTable = await fetch( 
@@ -58,11 +56,9 @@ function CandidateTable() {
       };
       fetchData();
     }, []);
-  
      console.log("tabledata", tabledata);
   return (
     <>
-     
      <Box  sx={{ height: 700, width: "100%", }} >
         <DataGrid
           rows={tabledata}
