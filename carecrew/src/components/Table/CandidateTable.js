@@ -4,11 +4,11 @@ import { DataGrid } from "@mui/x-data-grid";
 import { useEffect } from "react";
 
 const columns = [
-  { field: "id", headerName: "ID", width: 150 },
+  { field: "id", headerName: "ID", width: 70 },
   {
     field: "name",
     headerName: "Name",
-    width: 250,
+    width: 300,
     editable: true,
   },
   {
@@ -20,7 +20,7 @@ const columns = [
   {
     field: "services",
     headerName: "Services",
-    width: 300,
+    width: 350,
     editable: true,
   },
   {
