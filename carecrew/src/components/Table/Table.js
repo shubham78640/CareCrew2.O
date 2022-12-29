@@ -8,26 +8,26 @@ const columns = [
   {
     field: "name",
     headerName: "Name",
-    width: 200,
+    width: 100,
     editable: true,
   },
   {
     field: "phoneNumber",
     headerName: "Mobile",
-    width: 150,
+    width: 100,
     editable: true,
   },
   {
     field: "email",
     headerName: "Email",
     type: "text",
-    width: 170,
-    editable: true,
+    width: 100,
+    
   },
   {
-    field: "abc",
+    field: "service",
     headerName: "Services",
-    width: 150,
+    width: 100,
     editable: true,
   },
   {
@@ -43,8 +43,14 @@ const columns = [
     editable: true,
   },
   {
-    field: "",
+    field: "city",
     headerName: "City",
+    width: 110,
+    editable: true,
+  },
+  {
+    field: "locality",
+    headerName: "Locality",
     width: 110,
     editable: true,
   },
@@ -52,7 +58,14 @@ const columns = [
     field: "address",
     headerName: "Address",
     type: "text",
-    width: 300,
+    width: 200,
+    editable: true,
+  },
+  {
+    field: "message",
+    headerName: "Message",
+    type: "text",
+    width: 200,
     editable: true,
   },
 ];
@@ -61,9 +74,14 @@ function Table() {
   const [tabledata, setTabledata] = useState([]);
   const [citydata, setCitydata] = useState([]);
 
+  
   useEffect(() => {
     const fetchData = async () => {
-      let dataTable = await fetch( "http://13.126.160.155:8082/carecrew/get/data/");
+      let dataTable = await fetch( 
+        // "http://13.126.160.155:8082/carecrew/get/data/"
+        "http://localhost:8082/carecrew/carecrew/get/data/"
+        
+        );
       let table = await dataTable.json();
 
       // console.log("data sam",table.data);
@@ -83,7 +101,7 @@ function Table() {
         <DataGrid
           rows={tabledata}
           columns={columns}
-          pageSize={20}
+          pageSize={10}
           rowsPerPageOptions={[10]}
           checkboxSelection
           disableSelectionOnClick

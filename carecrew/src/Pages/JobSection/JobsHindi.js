@@ -10,6 +10,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ScrollToTop from "react-scroll-to-top";
 import { servicesDatainHindi } from "../../AllData";
+import axios from "axios";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const Item = styled(Box)(({ theme }) => ({
@@ -42,6 +43,11 @@ function JobsHindi() {
   const [city, setCity] = useState("");
   const [skill,setSkill]=useState([]);
 
+
+  const date =Date.now()
+  var names = skill.map(function(item) {
+    return item['service'];
+  });
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(
@@ -49,8 +55,31 @@ function JobsHindi() {
       name,
       phone,
       city,
-      skill,
+      names,
+      date,
     );
+
+    const data = {
+      name: name,
+      phoneNumber: phone,
+      city: city,
+      services:names,
+      createdAt:date
+
+    };
+    axios
+      .post(
+        // "http://13.126.160.155:8082/candidate/save",
+        "http://localhost:8082/carecrew/candidate/save",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+        setCity("");
+        setName("");
+        setPhone("");
+
+      });
   }
 
   return (
