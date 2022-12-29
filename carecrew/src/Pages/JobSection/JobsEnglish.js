@@ -66,11 +66,11 @@ function JobsEnglish() {
   // }
 
   const date =Date.now()
-  var names = skill.map(function(item) {
+  const servicesName = skill.map(function(item) {
     return item['service'];
   });
 
-  console.log("skills", names)
+  console.log("skills", servicesName)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -79,7 +79,7 @@ function JobsEnglish() {
       name,
       phone,
       city,
-      names,
+      servicesName,
       date,
     );
 
@@ -87,7 +87,7 @@ function JobsEnglish() {
       name: name,
       phoneNumber: phone,
       city: city,
-      services:names,
+      services:servicesName,
       createdAt:date
 
     };
