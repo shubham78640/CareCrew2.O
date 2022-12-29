@@ -4,7 +4,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { useEffect } from "react";
 
 const columns = [
-  { field: "id", headerName: "ID", width: 70 },
+  { field: "id", headerName: "ID", width: 100 },
   {
     field: "name",
     headerName: "Name",
@@ -20,19 +20,13 @@ const columns = [
   {
     field: "services",
     headerName: "Services",
-    width: 350,
+    width: 450,
     editable: true,
   },
   {
     field: "city",
     headerName: "City",
-    width: 200,
-    editable: true,
-  },
-  {
-    field: "createdAt",
-    headerName: "Date",
-    width: 200,
+    width: 300,
     editable: true,
   },
 ];
@@ -42,15 +36,11 @@ function CandidateTable() {
     useEffect(() => {
       const fetchData = async () => {
         let dataTable = await fetch( 
-          // "http://13.126.160.155:8082/candidate/get/candidates/"
-          "http://localhost:8082/carecrew/candidate/get/candidates/"
-
+          "http://13.126.160.155:8082/carecrew/candidate/get/candidates/"
           );
-        let table = await dataTable.json();
-        // console.log("data sam",table.data);
+         let table = await dataTable.json();
          let adminTableData = await table.data;
          let cityData=  adminTableData;
-        //  setCitydata(cityData)
         setTabledata(adminTableData);
         console.log(cityData)
       };

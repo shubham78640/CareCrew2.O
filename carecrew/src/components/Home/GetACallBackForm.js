@@ -19,8 +19,8 @@ function GetACallBackForm() {
 
   useEffect(() => {
     const getData = async()=>{
-      let response = await fetch("http://13.126.160.155:8082/Society/get/societies/")
-      let response2 = await fetch("http://13.126.160.155:8082/city/get/cities/")
+      let response = await fetch("http://13.126.160.155:8082/carecrew/Society/get/societies/")
+      let response2 = await fetch("http://13.126.160.155:8082/carecrew/city/get/cities/")
       let data = await response.json()
       let data2 = await response2.json()
       setSociety(data.data)
@@ -40,9 +40,7 @@ const date =Date.now()
     console.log({ services, city, locality, name, email, workinghour, longContent, address, phoneNumber})
     try {
       let response = await axios.post(
-        // "http://13.126.160.155:8082/carecrew/save"
-        
-        "http://localhost:8082/carecrew/carecrew/save", {
+        "http://13.126.160.155:8082/carecrew/carecrew/save", {
           "address": address,
           "city": newCity,
           "createdAt": date,

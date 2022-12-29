@@ -8,20 +8,20 @@ const columns = [
   {
     field: "name",
     headerName: "Name",
-    width: 100,
+    width: 150,
     editable: true,
   },
   {
     field: "phoneNumber",
     headerName: "Mobile",
-    width: 100,
+    width: 150,
     editable: true,
   },
   {
     field: "email",
     headerName: "Email",
     type: "text",
-    width: 100,
+    width: 150,
     
   },
   {
@@ -39,7 +39,7 @@ const columns = [
   {
     field: "createdAt",
     headerName: "Date",
-    width: 100,
+    width: 150,
     editable: true,
   },
   {
@@ -61,13 +61,13 @@ const columns = [
     width: 200,
     editable: true,
   },
-  {
-    field: "message",
-    headerName: "Message",
-    type: "text",
-    width: 200,
-    editable: true,
-  },
+  // {
+  //   field: "message",
+  //   headerName: "Message",
+  //   type: "text",
+  //   width: 200,
+  //   editable: true,
+  // },
 ];
 
 function Table() {
@@ -78,8 +78,7 @@ function Table() {
   useEffect(() => {
     const fetchData = async () => {
       let dataTable = await fetch( 
-        // "http://13.126.160.155:8082/carecrew/get/data/"
-        "http://localhost:8082/carecrew/carecrew/get/data/"
+        "http://13.126.160.155:8082/carecrew/carecrew/get/data/"
         
         );
       let table = await dataTable.json();
@@ -89,7 +88,7 @@ function Table() {
        let cityData=  adminTableData;
       //  setCitydata(cityData)
       setTabledata(adminTableData);
-      console.log(cityData)
+      console.log(tabledata)
     };
     fetchData();
   }, []);
@@ -103,8 +102,6 @@ function Table() {
           columns={columns}
           pageSize={10}
           rowsPerPageOptions={[10]}
-          checkboxSelection
-          disableSelectionOnClick
           experimentalFeatures={{ newEditingApi: true }}
         />
       </Box>

@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
-import { Button,Autocomplete } from "@mui/material";
+import { Button, Autocomplete } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 import Footer from "../../components/Footer/Footer";
 import TabsComponent from "../../components/TabComponent/TabsComponent";
@@ -14,6 +14,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import ScrollToTop from "react-scroll-to-top";
 import { servicesData } from "../../AllData";
 import axios from "axios";
+import { MasterApi } from "../../AllData";
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const Item = styled(Box)(({ theme }) => ({
@@ -28,6 +29,7 @@ const SPAN = styled("span")({
   color: "#000000",
   fontWeight: "900",
 });
+
 const Span = styled("span")({
   color: "#72bf44",
   cursor: "pointer",
@@ -45,13 +47,13 @@ function JobsEnglish() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
-  const [skill,setSkill]=useState([]);
+  const [skill, setSkill] = useState([]);
 
- const names = skill.map(function(item) {
-    return item['service'];
+  const names = skill.map(function (item) {
+    return item["service"];
   });
 
-  console.log(names)
+  console.log(names);
 
   // const handleSubmit = async () => {
   //   try {
@@ -65,36 +67,27 @@ function JobsEnglish() {
   //   }
   // }
 
-  const date =Date.now()
-  const servicesName = skill.map(function(item) {
-    return item['service'];
+  const date = Date.now();
+  const servicesName = skill.map(function (item) {
+    return item["service"];
   });
 
   // console.log("skills",moment(date).format("MMMM Do YYYY"))
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(
-      "Details=",
-      name,
-      phone,
-      city,
-      servicesName,
-      date,
-    );
+    console.log("Details=", name, phone, city, servicesName, date);
 
     const data = {
       name: name,
       phoneNumber: phone,
       city: city,
-      services:servicesName,
-      createdAt:date
-
+      services: servicesName,
+      createdAt: date,
     };
     axios
       .post(
-        // "http://13.126.160.155:8082/candidate/save",
-        "http://localhost:8082/carecrew/candidate/save",
+        "http://13.126.160.155:8082/carecrew/candidate/save",
         data
       )
       .then((response) => {
@@ -102,14 +95,12 @@ function JobsEnglish() {
         setCity("");
         setName("");
         setPhone("");
-
       });
-
-  }
+  };
 
   return (
     <>
-     <ScrollToTop smooth color="#007a47" /> 
+      <ScrollToTop smooth color="#007a47" />
       <Grid container>
         <Grid mt="5%" item lg={6} xs={12}>
           <Section>
@@ -121,10 +112,10 @@ function JobsEnglish() {
                 <Box>
                   <Box sx={{ lineHeight: "30px" }} mt={2}>
                     {" "}
-                  At CARE CREW,  we are out on a mission to
-                    transform the domestic help sector for the wellbeing of both
-                    customers & house helps. We want to integrate the domestic
-                    help community into the formal economy & provide them a more
+                    At CARE CREW, we are out on a mission to transform the
+                    domestic help sector for the wellbeing of both customers &
+                    house helps. We want to integrate the domestic help
+                    community into the formal economy & provide them a more
                     secure, sustainable livelihood that also comes with respect
                     & dignity.
                   </Box>
@@ -213,29 +204,36 @@ function JobsEnglish() {
                   <Box>
                     <SPAN>Address: </SPAN>{" "}
                     <a
-                      style={{ textDecoration: "none", color: "#72bf44" }} target="_blank"
+                      style={{ textDecoration: "none", color: "#72bf44" }}
+                      target="_blank"
                       href="https://www.google.com/maps/place/Pinch/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f217d84f5a9:0xdb16d79eda45c82a!8m2!3d28.473333!4d77.091636"
                     >
                       A-55/8, DLF Phase 1, Sector 28 – 122002
                     </a>
                   </Box>
                   <Box sx={{ display: "flex", gap: "20px" }}>
-                    <a href="https://www.facebook.com/carecrew.in" 
-                    target="_blank">
+                    <a
+                      href="https://www.facebook.com/carecrew.in"
+                      target="_blank"
+                    >
                       {" "}
                       <FacebookIcon
                         sx={{ fontSize: "30px", color: "#4267B2" }}
                       />
                     </a>
-                    <a href="https://www.linkedin.com/showcase/care-crew-in/"
-                    target="_blank">
+                    <a
+                      href="https://www.linkedin.com/showcase/care-crew-in/"
+                      target="_blank"
+                    >
                       {" "}
                       <LinkedInIcon
                         sx={{ fontSize: "30px", color: "#0077B7" }}
                       />
                     </a>
-                    <a href="https://www.instagram.com/carecrew.in/"
-                    target="_blank">
+                    <a
+                      href="https://www.instagram.com/carecrew.in/"
+                      target="_blank"
+                    >
                       {" "}
                       <InstagramIcon
                         sx={{ fontSize: "30px", color: "#d84315" }}
@@ -272,7 +270,7 @@ function JobsEnglish() {
                   marginTop: "20px",
                 }}
                 onChange={(e) => setName(e.target.value)}
-                        value={name}
+                value={name}
               />
               <TextField
                 id="outlined-basic"
@@ -338,23 +336,21 @@ function JobsEnglish() {
                 </Box>
               </Box> */}
 
-<Autocomplete
-          multiple
-          disableCloseOnSelect
-          size="medium"
-          color="primary"
-          sx={{ width: "96%", marginTop:"3%" }}
-          options={servicesData}
-          getOptionLabel={(option) => option.service}
-          onChange={(event, newValue) => {
-            setSkill([...newValue]);
-          }}
-          renderInput={(params) => (
-            <TextField {...params}
-              placeholder="Select Your Services"
-            />
-          )}
-        />
+              <Autocomplete
+                multiple
+                disableCloseOnSelect
+                size="medium"
+                color="primary"
+                sx={{ width: "96%", marginTop: "3%" }}
+                options={servicesData}
+                getOptionLabel={(option) => option.service}
+                onChange={(event, newValue) => {
+                  setSkill([...newValue]);
+                }}
+                renderInput={(params) => (
+                  <TextField {...params} placeholder="Select Your Services" />
+                )}
+              />
 
               <TextField
                 mt={3}
@@ -374,7 +370,7 @@ function JobsEnglish() {
               <Button
                 variant="contained"
                 color="success"
-                sx={{ marginTop: "30px" , textTransform:"none"}}
+                sx={{ marginTop: "30px", textTransform: "none" }}
                 onClick={handleSubmit}
               >
                 Submit Your Enquiry

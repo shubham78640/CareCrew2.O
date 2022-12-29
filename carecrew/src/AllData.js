@@ -96,3 +96,5 @@ export const servicesDatainHindi = [
   {service:"गाड़ी चलाना"},
   {service:"अन्य"}
 ]
+
+export const MasterApi ="http://localhost:8082/"
