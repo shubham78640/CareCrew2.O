@@ -5,24 +5,31 @@ import axios from 'axios';
 
 function GetACallBackForm() {
   const [services, setServices] = useState([])
-  const [city, setCity] = useState("")
-  const [locality, setLocality] = useState("")
+  const [city, setCity] = useState({})
+  const [locality, setLocality] = useState({})
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [workinghour, setWorkinghour] = useState("")
   const [longContent, setLongcontent] = useState("")
   const [address, setAddress] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("")
+  const [othersLocality, setOthersLocality] = useState("")
+  const [society, setSociety] = useState([])
+  const [cityDD, setCityDD] = useState([])
 
-  // useEffect(() => {
-  //   const getData = async()=>{
-  //     let response = await fetch("http://13.126.160.155:8082/carecrew/get/data/")
-  //     let data = await response.json()
-  //     console.log(data)
-  //   }
-  //   getData()
-  // }, [])
+  useEffect(() => {
+    const getData = async()=>{
+      let response = await fetch("http://13.126.160.155:8082/Society/get/societies/")
+      let response2 = await fetch("http://13.126.160.155:8082/city/get/cities/")
+      let data = await response.json()
+      let data2 = await response2.json()
+      setSociety(data.data)
+      setCityDD(data2.data)
+    }
+    getData()
+  }, [])
   
+  console.log("Society",cityDD)
 
 let newServices = services.map(function(item) { return item['service']; });
  let newCity = city?city["city"]:"";
@@ -184,8 +191,8 @@ const date =Date.now()
           size="small"
           color="primary"
           sx={{ width: "300px" }}
-          options={cityData}
-          getOptionLabel={(option) => option.city}
+          options={cityDD}
+          getOptionLabel={(option) => option.cityName}
           onChange={(event, newValue) => {
             setCity(newValue);
           }}
@@ -215,9 +222,9 @@ const date =Date.now()
     <Autocomplete
           size="small"
           color="primary"
-          sx={{ width: "300px" }}
-          options={localityData}
-          getOptionLabel={(option) => option.locality}
+          sx={{ width: "300px", display:newCity==="Others"?"none":"block"}}
+          options={society}
+          getOptionLabel={(option) => option.society}
           onChange={(event, newValue) => {
             setLocality(newValue);
           }}
@@ -243,6 +250,30 @@ const date =Date.now()
             />
           )}
         />
+
+   <TextField
+        size="small"
+        placeholder="Others Locality"
+        onChange={(e)=>{setOthersLocality(e.target.value)}}
+        sx={{
+          display:newCity==="Others"?"block":"none",
+          backgroundColor: "#007a48",
+          borderRadius: "5px",
+          color:"white",
+          width: "300px",
+          input: {
+            fontSize:"12px",
+            color:"white",
+            "&::placeholder": {
+              textOverflow: "ellipsis !important",
+              fontWeight: "400",
+              opacity: 0.9,
+              color: "#ebe956",
+              fontSize: "12px",
+            },
+          },
+        }}
+      />
 
       <TextField
         size="small"

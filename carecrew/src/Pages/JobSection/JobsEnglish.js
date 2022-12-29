@@ -47,6 +47,12 @@ function JobsEnglish() {
   const [city, setCity] = useState("");
   const [skill,setSkill]=useState([]);
 
+ const names = skill.map(function(item) {
+    return item['service'];
+  });
+
+  console.log(names)
+
   // const handleSubmit = async () => {
   //   try {
   //     let response = await axios.post("http://13.126.160.155:8082/candidate/save", {
@@ -60,11 +66,11 @@ function JobsEnglish() {
   // }
 
   const date =Date.now()
-  var names = skill.map(function(item) {
+  const servicesName = skill.map(function(item) {
     return item['service'];
   });
 
-  console.log("skills", names)
+  console.log("skills", servicesName)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -73,7 +79,7 @@ function JobsEnglish() {
       name,
       phone,
       city,
-      names,
+      servicesName,
       date,
     );
 
@@ -81,7 +87,7 @@ function JobsEnglish() {
       name: name,
       phoneNumber: phone,
       city: city,
-      services:names,
+      services:servicesName,
       createdAt:date
 
     };
