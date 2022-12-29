@@ -31,7 +31,8 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [address, setAddress] = useState("");
   const [workinghr, setworkingHr] = useState("");
-
+const date =Date.now()
+// let newCity = city?city["city"]:"";
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(
@@ -46,17 +47,29 @@ function Contact() {
     );
 
     const data = {
-      Name: name,
-      Phone: phone,
-      Email: email,
-      City: city,
-      Message: message,
-      Address: address,
-      Working_HR: workinghr,
+      // Name: name,
+      // Phone: phone,
+      // Email: email,
+      // City: city,
+      // Message: message,
+      // Address: address,
+      // Working_HR: workinghr,
+
+         "address": address,
+          "city": city,
+          "createdAt": date,
+          "email": email,
+          "message": message,
+          "name": name,
+          "phoneNumber": phone,
+          "workingHours": workinghr,
+         
     };
     axios
       .post(
-        "https://sheet.best/api/sheets/562c7b35-218c-441b-84ae-f9258f9f0ca7",
+        // "https://sheet.best/api/sheets/562c7b35-218c-441b-84ae-f9258f9f0ca7"
+        "http://localhost:8082/carecrew/carecrew/save"
+        ,
         data
       )
       .then((response) => {
