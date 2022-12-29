@@ -47,6 +47,12 @@ function JobsEnglish() {
   const [city, setCity] = useState("");
   const [skill,setSkill]=useState([]);
 
+ const names = skill.map(function(item) {
+    return item['service'];
+  });
+
+  console.log(names)
+
   // const handleSubmit = async () => {
   //   try {
   //     let response = await axios.post("http://13.126.160.155:8082/candidate/save", {
