@@ -23,6 +23,7 @@ import PrivacyPolicy from './Pages/Privacy Policy/PrivacyPolicy'
 import TermsofUse from './Pages/Privacy Policy/TermsofUse'
 import AgePolicy from './Pages/Privacy Policy/AgePolicy'
 import AdminCandidate from "./Pages/AdminTable/AdminCandidate";
+import { demoData } from "./AllData";
 
 
 function App() {
@@ -56,6 +57,8 @@ function App() {
             </Routes>
          
         </BrowserRouter>
+
+
       </div>
   );
 }

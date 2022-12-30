@@ -96,3 +96,10 @@ export const servicesDatainHindi = [
   {service:"गाड़ी चलाना"},
   {service:"अन्य"}
 ]
+
+
+export const demoData = [
+  {native:"pinch", branch:"CC", data:["a", "b", "c"]},
+  {native:"pinch", branch:"1 to Zee", data:["d", "e", "f"]},
+  {native:"pinch", branch:"wellServed", data:["Roti", "raita", "chicken"]},
+]

@@ -40,9 +40,7 @@ const date =Date.now()
     console.log({ services, city, locality, name, email, workinghour, longContent, address, phoneNumber})
     try {
       let response = await axios.post(
-        // "http://13.126.160.155:8082/carecrew/save"
-        
-        "http://localhost:8082/carecrew/carecrew/save", {
+        "http://13.126.160.155:8082/carecrew/save", {
           "address": address,
           "city": newCity,
           "createdAt": date,
