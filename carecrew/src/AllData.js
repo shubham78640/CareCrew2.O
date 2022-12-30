@@ -97,9 +97,4 @@ export const servicesDatainHindi = [
   {service:"अन्य"}
 ]
 
-
-export const demoData = [
-  {native:"pinch", branch:"CC", data:["a", "b", "c"]},
-  {native:"pinch", branch:"1 to Zee", data:["d", "e", "f"]},
-  {native:"pinch", branch:"wellServed", data:["Roti", "raita", "chicken"]},
-]
+export const MasterApi ="http://localhost:8082/"

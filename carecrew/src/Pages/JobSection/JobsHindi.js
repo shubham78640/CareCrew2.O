@@ -69,8 +69,7 @@ function JobsHindi() {
     };
     axios
       .post(
-        // "http://13.126.160.155:8082/candidate/save",
-        "http://localhost:8082/carecrew/candidate/save",
+        "http://13.126.160.155:8082/carecrew/candidate/save",
         data
       )
       .then((response) => {

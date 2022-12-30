@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -27,11 +27,25 @@ function Contact() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState();
   const [message, setMessage] = useState("");
   const [address, setAddress] = useState("");
   const [workinghr, setworkingHr] = useState("");
 const date =Date.now()
+
+const [cityDD, setCityDD] = useState([])
+
+console.log(cityDD)
+useEffect(() => {
+  const getData = async()=>{
+    let response2 = await fetch("http://13.126.160.155:8082/carecrew/city/get/cities/")
+    let data2 = await response2.json()
+    setCityDD(data2.data)
+  }
+  getData()
+}, [])
+
+console.log("cityji...",city)
 // let newCity = city?city["city"]:"";
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -68,7 +82,7 @@ const date =Date.now()
     axios
       .post(
         // "https://sheet.best/api/sheets/562c7b35-218c-441b-84ae-f9258f9f0ca7"
-        "http://localhost:8082/carecrew/carecrew/save"
+        "http://13.126.160.155:8082/carecrew/carecrew/save"
         ,
         data
       )
@@ -304,10 +318,10 @@ const date =Date.now()
                         size="medium"
                         color="primary"
                         sx={{ width: "300px" }}
-                        options={cityList}
-                        getOptionLabel={(option) => option.city}
+                        options={cityDD}
+                        getOptionLabel={(option) => option.cityName}
                         onChange={(event, newValue) => {
-                          setCity(newValue.city);
+                          setCity(newValue.cityName);
                         }}
                         renderInput={(params) => (
                           <TextField

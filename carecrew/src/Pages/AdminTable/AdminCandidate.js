@@ -4,7 +4,7 @@ import CandidateTable from '../../components/Table/CandidateTable';
 function AdminCandidate() {
   return (
     <>
-     <Box sx={{position:"relative", top:"150px"}}>
+     <Box p="0% 0.2%"sx={{position:"relative", top:"130px"}}>
     <CandidateTable/>
     </Box>
     
