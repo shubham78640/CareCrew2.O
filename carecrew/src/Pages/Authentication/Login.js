@@ -14,6 +14,7 @@ function Login() {
     const handleClick = ()=>{
     if(password.length===4 && password===dummyPassword){
         localStorage.setItem('user', true);
+        window.location.reload(true)
     }
 }
     
