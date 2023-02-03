@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { format } from "timeago.js";
 import "./post.css";
 import sanityClient from "../../libs/client";
@@ -41,6 +41,8 @@ export default function Post() {
 >
   <CircularProgress color="success" />
 </div>
+
+console.log(allPostsData)
 
   return (
     <Box className="allPost" sx={{}}>

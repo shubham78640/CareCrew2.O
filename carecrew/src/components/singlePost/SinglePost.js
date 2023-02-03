@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, useNavigate, Link} from "react-router-dom"
+import { useParams, Link} from "react-router-dom"
 import sanityClient from "../../libs/client"
-import imageUrlBuilder from '@sanity/image-url'
+// import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from '@sanity/block-content-to-react'
 import "./singlePost.css";
 import moment from "moment"
@@ -9,18 +9,18 @@ import { CircularProgress } from '@mui/material'
 
 
 
-const builder = imageUrlBuilder(sanityClient)
+// const builder = imageUrlBuilder(sanityClient)
 
-const urlFor = (source) => {
-    return builder.image(source)
-}
+// const urlFor = (source) => {
+//     return builder.image(source)
+// }
 
 export default function SinglePost() {
   const [postData, setPostData] = useState(null)
   const { slug } = useParams()
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
-  const goBack = () => navigate('/')
+  // const goBack = () => navigate('/')
 
   useEffect(() => {
 
