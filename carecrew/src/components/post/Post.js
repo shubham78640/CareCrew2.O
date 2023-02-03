@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { format } from "timeago.js";
+// import { format } from "timeago.js";
 import "./post.css";
 import sanityClient from "../../libs/client";
 import { Box } from "@mui/system";
@@ -61,7 +61,7 @@ console.log(allPostsData)
                 </NavLink>
               </span>
               <hr />
-              <span className="postDate">{format(item.publishedAt)}</span>
+              {/* <span className="postDate">{format(item.publishedAt)}</span> */}
             </div>
             <p className="postDesc">{item.about}</p>
           </div>
