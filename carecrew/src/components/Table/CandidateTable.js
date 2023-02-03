@@ -49,7 +49,7 @@ function CandidateTable() {
      console.log("tabledata", tabledata);
   return (
     <>
-     <Box  sx={{ height: 700, width: "100%", }} >
+     <Box  sx={{ height: 900, width: "100%", }} >
         <DataGrid
           rows={tabledata}
           columns={columns}
