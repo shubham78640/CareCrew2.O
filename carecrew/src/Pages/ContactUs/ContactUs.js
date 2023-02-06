@@ -1,14 +1,16 @@
-import React from "react";
+import React,{useContext} from "react";
 import Box from "@mui/material/Box";
 import Footer from "../../components/Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
 import Contact from "../../components/Contact/Contact";
+import { multiStepContext } from "../../Context/FormContext";
 
 function ContactUs() {
+  const { closeForm, setCloseForm } = useContext(multiStepContext);
   return (
     <>
       <ScrollToTop smooth color="#007a47" />
-      <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}>
+      <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}  >
         <Contact />
       </Box>
 

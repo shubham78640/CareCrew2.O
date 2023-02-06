@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import Contact from "../../components/Contact/Contact";
 import Box from "@mui/material/Box";
 import DividerComponent from "../../components/DividerComponent/DividerComponent";
@@ -7,12 +7,15 @@ import Footer from "../../components/Footer/Footer";
 import ImageChildCare from "../../Images/CC2.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
+import { multiStepContext } from "../../Context/FormContext";
 
 function ChildCare_Services() {
+  const { closeForm, setCloseForm } = useContext(multiStepContext);
   return (
     <>
       <Box
         mb="5%"
+     
         sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }}
       >
         <Box

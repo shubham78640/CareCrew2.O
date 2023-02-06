@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useContext} from "react";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
@@ -10,6 +10,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import Navbaar from "../../components/Headers/Navbaar";
 import Footer from "../../components/Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
+import { multiStepContext } from "../../Context/FormContext";
 
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -18,10 +19,11 @@ const Item = styled(Box)(({ theme }) => ({
   justifyContent: "center",
 }));
 function AboutUs() {
+  const { closeForm, setCloseForm } = useContext(multiStepContext);
   return (
     <>
       <ScrollToTop smooth color="#007a47" />
-      <Box padding="5% 10%">
+      <Box padding="5% 10%"  >
         <Grid mt={10} container spacing={1}>
           <Grid lg={6} xs={12}>
             <Item sx={{ justifyContent: "flex-end" }}>

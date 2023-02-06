@@ -16,7 +16,7 @@ import { multiStepContext } from "../../Context/FormContext";
 function Home() {
   const { closeForm, setCloseForm } = useContext(multiStepContext)
   return (
-    <Box onClick={()=>{setCloseForm(false)}}>
+    <>
     <ScrollToTop smooth color="green" /> 
       <HomeCrousel />
 
@@ -238,7 +238,7 @@ function Home() {
     <Footer/>
     <ScrollToTop smooth color="green" />  
  
-    </Box>
+    </>
   );
 }
 

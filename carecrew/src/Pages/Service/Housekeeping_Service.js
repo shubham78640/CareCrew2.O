@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext } from "react";
 import Box from "@mui/material/Box";
 import DividerComponent from "../../components/DividerComponent/DividerComponent";
 import Servies from "../../components/Services/Servies";
@@ -7,8 +7,10 @@ import ImageCooking from "../../Images/HK2.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
 import Contact from "../../components/Contact/Contact";
+import { multiStepContext } from "../../Context/FormContext";
 
 function Housekeeping_Service() {
+  const { closeForm, setCloseForm } = useContext(multiStepContext);
   return (
     <>
       <Box

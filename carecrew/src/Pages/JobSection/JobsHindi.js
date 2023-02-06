@@ -1,4 +1,4 @@
-import React, { useState }  from "react";
+import React, { useState ,useContext}  from "react";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import { styled } from "@mui/material/styles";
 import { Button ,Autocomplete,TextField,Box,Grid} from "@mui/material";
@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import TabsComponent from "../../components/TabComponent/TabsComponent";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { multiStepContext } from "../../Context/FormContext";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ScrollToTop from "react-scroll-to-top";
 import { servicesDatainHindi } from "../../AllData";
@@ -42,49 +43,65 @@ function JobsHindi() {
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
   const [skill,setSkill]=useState([]);
-
+  const { closeForm, setCloseForm } = useContext(multiStepContext);
 
   const date =Date.now()
-  var names = skill.map(function(item) {
+  var SkillsName = skill.map(function(item) {
     return item['service'];
   });
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(
-      "Details=",
-      name,
-      phone,
-      city,
-      names,
-      date,
-    );
+    // e.preventDefault();
+    // console.log(
+    //   "Details=",
+    //   name,
+    //   phone,
+    //   city,
+    //   names,
+    //   date,
+    // );
 
-    const data = {
-      name: name,
-      phoneNumber: phone,
-      city: city,
-      services:names,
-      createdAt:date
+    // const data = {
+    //   name: name,
+    //   phoneNumber: phone,
+    //   city: city,
+    //   services:names,
+    //   createdAt:date
 
-    };
-    axios
-      .post(
-        "http://13.126.160.155:8082/carecrew/candidate/save",
-        data
-      )
-      .then((response) => {
-        console.log(response);
-        setCity("");
-        setName("");
-        setPhone("");
+    // };
+    // axios
+    //   .post(
+    //     "http://13.126.160.155:8082/carecrew/candidate/save",
+    //     data
+    //   )
+    //   .then((response) => {
+    //     console.log(response);
+    //     setCity("");
+    //     setName("");
+    //     setPhone("");
 
-      });
+    //   });
+    const config = {
+      SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
+      To : 'shubham@thepinchlife.com',
+      From : "intezar@thepinchlife.com",
+      Subject : "Help Form Lead",
+      Body : `<p>Name:- ${name}</p> 
+      <p>Phone Number:- ${phone}</p> 
+      <p>Skills:- ${SkillsName }</p>
+      <p>City:- ${city}</p> `
+
+      }
+      if(window.Email){
+      window.Email.send(config).then (()=>alert("email sent successfully"))
+      }
+      
+
   }
 
   return (
     <>
       <ScrollToTop smooth color="#007a47" />
-      <Grid container>
+      <Grid container onClick={()=>{setCloseForm(false)}}>
         <Grid mt="5%" item lg={6} xs={12}>
           <Section>
             <TabsComponent

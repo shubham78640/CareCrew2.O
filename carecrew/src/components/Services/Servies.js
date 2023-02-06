@@ -1,10 +1,10 @@
-import React from "react";
+import React,{useContext} from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Button } from "@mui/material";
-
+import { multiStepContext } from "../../Context/FormContext";
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
   display: "flex",
@@ -13,6 +13,9 @@ const Item = styled(Box)(({ theme }) => ({
 }));
 
 function Servies(props) {
+  
+  const { closeForm, setCloseForm } = useContext(multiStepContext);
+  
   const {
     Service_Heading,
     Service_Content,
@@ -71,7 +74,7 @@ function Servies(props) {
                 </Box>
                 <Box ml={2.5}> {Training_Content3} </Box>
 
-               <Box sx={{margin:"5%",marginTop:"8%"}}> <Button sx={{textTransform: "none"}}  variant="contained" color="success" >{SubmitButtonName}</Button> </Box>
+               <Box sx={{margin:"5%",marginTop:"8%"}}> <Button sx={{textTransform: "none"}}      onClick={()=>{setCloseForm(true)}}  variant="contained" color="success" >{SubmitButtonName}</Button> </Box>
               </Item>
             </Grid>
             <Grid lg={6} xs={12}>
