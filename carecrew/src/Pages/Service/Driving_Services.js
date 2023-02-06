@@ -17,12 +17,12 @@ function Driving_Services() {
       >
         <Box
           sx={{
-            width: { sm: "30%", xs: "100%" },
+            width: { sm: "30%", xs: "100%" }, display:{sm:"block", xs:"none"}
           }}
         >
           <DividerComponent sx={{ marginLeft: "20%" }} />
         </Box>
-        <Box mt="12%" sx={{ width: { sm: "62%", xs: "100%" } }}>
+        <Box sx={{ width: { sm: "62%", xs: "100%" } ,marginTop:{sm:"11.5%", xs:"23%"}}}>
           <Servies
             Service_Heading="Drivers for your cars"
             Service_Content="We source licensed drivers for you, who combine good driving skills with proper driving etiquette. Whether it’s to drive your child to school or take your parents for a doctor’s appointment, you can relax with a family driver at your disposal."
@@ -51,13 +51,14 @@ function Driving_Services() {
             Values_Content="We intend to develop a fleet of drivers who are punctual, polite and value your time. They ought to understand boundaries and should not intrude in any manner while driving you around. "
             Stories_Heading="Stories"
             Stories_Content="Be it receiving your guests from the airport, taking your kids to school or picking you up from the office, our drivers are people you can rely upon."
+            SubmitButtonName="Request a Call Back"
           />
           <Box
             p="5%"
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: "30px",
+              gap: "5px",
               mt: { sm: "0%", xs: "5%" },
             }}
           >

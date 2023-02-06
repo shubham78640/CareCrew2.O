@@ -17,12 +17,12 @@ function Housekeeping_Service() {
       >
         <Box
           sx={{
-            width: { sm: "30%", xs: "100%" },
+            width: { sm: "30%", xs: "100%" }, display:{sm:"block", xs:"none"}
           }}
         >
           <DividerComponent sx={{ marginLeft: "20%" }} />
         </Box>
-        <Box mt="12%" sx={{ width: { sm: "62%", xs: "100%" } }}>
+        <Box  sx={{ width: { sm: "62%", xs: "100%" },marginTop:{sm:"11.5%", xs:"23%"} }}>
           <Servies
             Service_Heading="Housekeepers for your home "
             Service_Content="We source housekeepers who can keep your homes in order by performing multiple household chores including sweeping, mopping & dusting. We train them to operate with professionalism and precision. We also teach them how to do the laundry & keep the home equipment in good condition."
@@ -51,13 +51,14 @@ function Housekeeping_Service() {
             Values_Content="We intend to make our housekeepers diligent in their approach & efficient at managing the household chores. We try to inculcate in them an attention to detail that helps keep your home organized at all times. We expect them to be non-intrusive & discrete while at work, in line with our principle of respecting your privacy."
             Stories_Heading="Stories"
             Stories_Content="Let’s say you require somebody to help you reorganize your living area or set up an indoor garden – the housekeepers will help you do it."
+            SubmitButtonName="Request a Call Back"
           />
           <Box
             p="5%"
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: "30px",
+              gap: "5px",
               mt: { sm: "0%", xs: "5%" },
             }}
           >

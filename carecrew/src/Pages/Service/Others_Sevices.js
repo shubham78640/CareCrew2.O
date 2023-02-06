@@ -16,12 +16,12 @@ function Others_Sevices() {
       >
         <Box
           sx={{
-            width: { sm: "30%", xs: "100%" },
+            width: { sm: "30%", xs: "100%" }, display:{sm:"block", xs:"none"}
           }}
         >
           <DividerComponent sx={{ marginLeft: "20%" }} />
         </Box>
-        <Box mt="12%" sx={{ width: { sm: "62%", xs: "100%" } }}>
+        <Box  sx={{ width: { sm: "62%", xs: "100%" },marginTop:{sm:"11.5%", xs:"23%"} }}>
           <Servies
             Service_Heading="Any other household services"
             Service_Content={
@@ -34,34 +34,23 @@ function Others_Sevices() {
                   way possible, we will be happy to take other requirements as
                   well, falling in the realm of household services.
                 </Box>
-                <Box mt={4}>
+                <Box mt={4} mb={-10}>
                   You may reach out to us for gardeners, butlers, caretakers,
                   pet walkers, helpers for pregnancy & mother care, & other such
                   roles.
                 </Box>
               </Box>
             }
-            Service_image=""
-            Training_Heading=""
-            Training_Content=""
-            Training_Heading1=""
-            Training_Content1=""
-            Training_Heading2=""
-            Training_Content2=""
-            Training_Heading3=""
-            Training_Content3=""
-            Values_Heading=""
-            Values_Content=""
-            Stories_Heading=""
-            Stories_Content=""
+            SubmitButtonName="Request a Call Back"
+          
           />
           <Box
             p="5%"
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: "30px",
-              mt: { sm: "-15%", xs: "-26%" },
+              gap: "5px",
+              mt: { sm: "-3%", xs: "-10%" },
             }}
           >
             <Typography
