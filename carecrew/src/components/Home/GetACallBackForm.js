@@ -1,9 +1,10 @@
 import { Autocomplete, Box, Button, TextareaAutosize, TextField } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import axios from 'axios';
+import { multiStepContext } from "../../Context/FormContext";
 
-function GetACallBackForm() {
+function GetACallBackForm({data}) {
   const [services, setServices] = useState([])
   const [city, setCity] = useState({})
   const [locality, setLocality] = useState({})
@@ -17,51 +18,70 @@ function GetACallBackForm() {
   const [society, setSociety] = useState([])
   const [cityDD, setCityDD] = useState([])
 
-  useEffect(() => {
-    const getData = async()=>{
-      let response = await fetch("http://13.126.160.155:8082/carecrew/Society/get/societies/")
-      let response2 = await fetch("http://13.126.160.155:8082/carecrew/city/get/cities/")
-      let data = await response.json()
-      let data2 = await response2.json()
-      setSociety(data.data)
-      setCityDD(data2.data)
-    }
-    getData()
-  }, [])
+  const {  } = useContext(multiStepContext)
+
+  // useEffect(() => {
+  //   const getData = async()=>{
+  //     let response = await fetch("http://13.126.160.155:8082/carecrew/Society/get/societies/")
+  //     let response2 = await fetch("http://13.126.160.155:8082/carecrew/city/get/cities/")
+  //     let data = await response.json()
+  //     let data2 = await response2.json()
+  //     setSociety(data.data)
+  //     setCityDD(data2.data)
+  //   }
+  //   getData()
+  // }, [])
   
-  console.log("Society",cityDD)
+  // console.log("Society",cityDD)
 
 let newServices = services.map(function(item) { return item['service']; });
  let newCity = city?city["city"]:"";
  let newLocality = locality?locality["locality"]:"";
 const date =Date.now()
 
+
+
+
   const handleClick = async ()=>{
-    console.log({ services, city, locality, name, email, workinghour, longContent, address, phoneNumber})
-    try {
-      let response = await axios.post(
-        "http://13.126.160.155:8082/carecrew/carecrew/save", {
-          "address": address,
-          "city": newCity,
-          "createdAt": date,
-          "email": email,
-          "locality": newLocality,
-          "message": longContent,
-          "name": name,
-          "phoneNumber": phoneNumber,
-          "workingHours": workinghour,
-          "service":newServices
-        }
-      );
-      alert("worker save successfully")
-      console.log(response)
+  //   console.log({ services, city, locality, name, email, workinghour, longContent, address, phoneNumber})
+  //   try {
+  //     let response = await axios.post(
+  //       "http://13.126.160.155:8082/carecrew/carecrew/save", {
+  //         "address": address,
+  //         "city": newCity,
+  //         "createdAt": date,
+  //         "email": email,
+  //         "locality": newLocality,
+  //         "message": longContent,
+  //         "name": name,
+  //         "phoneNumber": phoneNumber,
+  //         "workingHours": workinghour,
+  //         "service":newServices
+  //       }
+  //     );
+  //     alert("worker save successfully")
+  //     console.log(response)
        
       
-  } catch (error) {
-      alert(error)
-  }
-  }
+  // } catch (error) {
+  //     alert(error)
+  // }
 
+  const config = {
+    SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
+    To : 'intezar@thepinchlife.com',
+    From : "intezar@thepinchlife.com",
+    Subject : email,
+    Body : `My name is ${name} and you can contect me ${phoneNumber}, I need a ${newServices} for ${workinghour} address: ${newCity} ${newLocality} ${address} remarks:${longContent}`
+  }
+  if(window.Email){
+    window.Email.send(config).then (()=>alert("email sent successfully"))
+
+
+
+  
+  }
+  }
 
   return (
     <Box sx={{ display: "grid", gap: "10px" }}>
@@ -185,7 +205,7 @@ const date =Date.now()
           },
         }}
       />
-   <Autocomplete
+   {/* <Autocomplete
           size="small"
           color="primary"
           sx={{ width: "300px" }}
@@ -215,9 +235,9 @@ const date =Date.now()
             }}
             />
           )}
-        />
+        /> */}
 
-    <Autocomplete
+    {/* <Autocomplete
           size="small"
           color="primary"
           sx={{ width: "300px", display:newCity==="Others"?"none":"block"}}
@@ -247,7 +267,7 @@ const date =Date.now()
             }}
             />
           )}
-        />
+        /> */}
 
    <TextField
         size="small"
@@ -298,7 +318,7 @@ const date =Date.now()
       <TextareaAutosize
         aria-label="minimum height"
         onChange={(e)=>{setLongcontent(e.target.value)}}
-        minRows={2}
+        minRows={data}
         placeholder="Mention your detailed requirement here"
         style={{
             backgroundColor: "#007a48",

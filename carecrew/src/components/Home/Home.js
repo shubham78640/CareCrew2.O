@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import HomeCrousel from "../Crousel/HomeCrousel";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import Diversity1Icon from "@mui/icons-material/Diversity1";
@@ -10,9 +10,11 @@ import AboutUs from "./AboutUs";
 import AskedQuestions from "../HomePageComponents/AskedQuestions";
 import Footer from "../Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
+import { multiStepContext } from "../../Context/FormContext";
 
 
 function Home() {
+  const { closeForm, setCloseForm } = useContext(multiStepContext)
   return (
     <>
     <ScrollToTop smooth color="green" /> 
@@ -212,6 +214,7 @@ function Home() {
             </Box>
 
             <Button
+              onClick={()=>{setCloseForm(true)}}
               variant="contained"
               color="success"
               sx={{

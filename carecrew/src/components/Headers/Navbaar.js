@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Box from "@mui/material/Box";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
@@ -19,6 +19,7 @@ import GetACallBackForm from "../Home/GetACallBackForm";
 import CancelIcon from "@mui/icons-material/Cancel";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import Dropdown from "../Dropdown/Dropdown";
+import { multiStepContext } from "../../Context/FormContext";
 
 const styleDiv = styled("div")({
   position: "absolute",
@@ -33,7 +34,7 @@ function Navbaar() {
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
 
-  const [closeForm, setCloseForm] = useState(true);
+  const { closeForm, setCloseForm } = useContext(multiStepContext)
 
   let user = localStorage.getItem('user')
 
@@ -444,14 +445,14 @@ function Navbaar() {
               width: "23%",
               zIndex: 999,
               borderRadius: "10px",
-              minHeight: "555px",
+              minHeight: "500px",
               top: "80px",
               right: "5px",
               boxShadow:
                 "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;",
             }}
           >
-            <GetACallBackForm />
+            <GetACallBackForm data={5}/>
             <CancelIcon
               onClick={handleCloseForm}
               sx={{
@@ -550,7 +551,7 @@ function Navbaar() {
           <Drawer />
         </Box>
         {/* registration form */}
-        {/* <Box sx={{ display: closeForm ? "block" : "none" }}>
+        <Box sx={{ display: closeForm ? "block" : "none" }}>
           <Box
             className="link"
             pt={4}
@@ -561,17 +562,17 @@ function Navbaar() {
               alignItems: "center",
               justifyContent: "center",
               position: "fixed",
-              width: "85%",
+              width: "82%",
               zIndex: 999,
               borderRadius: "10px",
-              minHeight: "555px",
-              top: "80px",
+              minHeight: "450px",
+              top: "61px",
               right:"1px",
               boxShadow:
                 "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;",
             }}
           >
-            <GetACallBackForm />
+            <GetACallBackForm data={2}/>
             <CancelIcon
               onClick={handleCloseForm}
               sx={{
@@ -604,7 +605,6 @@ function Navbaar() {
 
         <Box
           className="link"
-          padding={1}
           mt={5.4}
           sx={{
             position: "fixed",
@@ -624,9 +624,9 @@ function Navbaar() {
             }}
             startIcon={<ArrowCircleDownIcon />}
           >
-            Get a call back
+            Request
           </Button>
-        </Box> */}
+        </Box>
       </Box>
     </Box>
   );
