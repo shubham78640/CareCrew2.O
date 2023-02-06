@@ -12,9 +12,18 @@ import Footer from "../Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
 import { multiStepContext } from "../../Context/FormContext";
 
-
 function Home() {
-  const { closeForm, setCloseForm } = useContext(multiStepContext)
+  const { closeForm, setCloseForm } = useContext(multiStepContext);
+  
+  const handleOpen = () => {
+    setCloseForm(true)
+  };
+
+  const handleClose = () => {
+    // setCloseForm(false)
+  };
+
+  console.log("data", closeForm);
   return (
     <>
     <ScrollToTop smooth color="green" /> 
@@ -188,7 +197,7 @@ function Home() {
                 />
                 <Box>
                   <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>
-                  Relationship Officer
+                    Relationship Officer
                   </Typography>
                   <Typography variant="p" color={"#3a4268"}>
                     A singe point of contact for all your queries
@@ -204,24 +213,24 @@ function Home() {
                 />
                 <Box>
                   <Typography variant="h6" color={"#3a4268"} fontSize={"19px"}>
-                  On-the-job Online Training
+                    On-the-job Online Training
                   </Typography>
                   <Typography variant="p" color={"#3a4268"}>
-                  Continual training by 5-star hotel executives
+                    Continual training by 5-star hotel executives
                   </Typography>
                 </Box>
               </Box>
             </Box>
 
             <Button
-              onClick={()=>{setCloseForm(true)}}
+              onClick={handleOpen}
               variant="contained"
               color="success"
               sx={{
                 width: { sm: "40%", xs: "80%", p: 1 },
                 ml: "25px",
                 mt: "20px",
-                textTransform:"none"
+                textTransform: "none",
               }}
             >
               Submit Your Enquiry
@@ -230,10 +239,10 @@ function Home() {
         </Box>
       </Box>
 
-      <Flickity/>
-      <StepsToHire/>
-      <AboutUs/>
-      <AskedQuestions/>
+      <Flickity />
+      <StepsToHire />
+      <AboutUs />
+      <AskedQuestions />
 
     <Footer/>
     <ScrollToTop smooth color="green" />  

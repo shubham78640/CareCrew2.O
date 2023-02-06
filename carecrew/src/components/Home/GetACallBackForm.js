@@ -69,10 +69,16 @@ const date =Date.now()
 
   const config = {
     SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
-    To : 'intezar@thepinchlife.com',
-    From : "intezar@thepinchlife.com",
-    Subject : email,
-    Body : `My name is ${name} and you can contect me ${phoneNumber}, I need a ${newServices} for ${workinghour} address: ${newCity} ${newLocality} ${address} remarks:${longContent}`
+    To : 'shubham@thepinchlife.com',
+    From : `intezar@thepinchlife.com`,
+    Subject : "New Lead From CARE CREW Website",
+    Body : `<p>Name:- ${name}</p> 
+            <p>Phone Number:- ${phoneNumber}</p>
+            <p>Email:- ${email}</p>         
+            <p>Service:- ${newServices}</p>        
+            <p>Work Hour:- ${workinghour}</p>        
+            <p>Address:- ${address}</p>  
+            <p>Message:- ${longContent}</p>`
   }
   if(window.Email){
     window.Email.send(config).then (()=>alert("email sent successfully"))
