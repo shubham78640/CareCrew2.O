@@ -16,12 +16,12 @@ function Cooking_Services() {
       >
         <Box
           sx={{
-            width: { sm: "30%", xs: "100%" },
+            width: { sm: "30%", xs: "100%" }, display:{sm:"block", xs:"none"}
           }}
         >
           <DividerComponent sx={{ marginLeft: "20%" }} />
         </Box>
-        <Box mt="12%" sx={{ width: { sm: "62%", xs: "100%" } }}>
+        <Box sx={{ width: { sm: "62%", xs: "100%" } ,marginTop:{sm:"11.5%", xs:"23%"}}}>
           <Servies
             Service_Heading="Cooks for your family"
             Service_Content="We source for you home cooks who know how to prepare wholesome, home-style meals for your families to enjoy every day. Whether you are looking to introduce variety in your everyday meals or want to start eating healthy, we train them to adapt to your needs. We teach them the art of using oils & spices in reasonable quantities, while ensuring that taste is not compromised."
@@ -69,13 +69,14 @@ function Cooking_Services() {
             Values_Content="We intend to make our cooks detail-oriented, who can quickly adapt their style of cooking to suit your likings. They should be able to ensure the appropriate usage of salt, oil & other essential cooking ingredients. We also want them to cook the right quantity so that there’s minimum wastage of food."
             Stories_Heading="Stories"
             Stories_Content="From simple meals on weekdays to special delightful ones over the weekend, our cooks will attempt to bring in variety in your everyday food. Spicy or occasionally spicy; crisp rotis or soft ones – they will be able to customize as per your needs."
+            SubmitButtonName="Request a Call Back"
           />
           <Box
             p="5%"
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: "30px",
+              gap: "5px",
               mt: { sm: "0%", xs: "5%" },
             }}
           >

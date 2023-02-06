@@ -17,12 +17,12 @@ function ElderCare_Servies() {
       >
         <Box
           sx={{
-            width: { sm: "30%", xs: "100%" },
+            width: { sm: "30%", xs: "100%" }, display:{sm:"block", xs:"none"}
           }}
         >
           <DividerComponent sx={{ marginLeft: "20%" }} />
         </Box>
-        <Box mt="12%" sx={{ width: { sm: "62%", xs: "100%" } }}>
+        <Box  sx={{ width: { sm: "62%", xs: "100%" },marginTop:{sm:"11.5%", xs:"23%"} }}>
           <Servies
             Service_Heading="Caregivers for elders"
             Service_Content="Whether it’s for your parents or grandparents, we source experienced caregivers or attendants for taking care of elders at your home. They will assist the seniors in their daily routines and keep them company. This will not only help them live a comfortable life but also relieve your anxiety about taking proper care of the seniors at home."
@@ -65,13 +65,14 @@ function ElderCare_Servies() {
             Values_Content="We intend to build a pool of caregivers who operate with empathy and compassion. While primarily assisting elders with their daily routines, they will also act as companions who are patient listeners. They should be highly reliable, willing to support the senior members of a family at each step of the way."
             Stories_Heading="Stories"
             Stories_Content="Let’s say you’ve moved in to a different city (or a country) and need someone to take care of your parents at home; CARE CREW will help you out. Our caregivers will take care of your elder family members while you’re away with diligence and sincerity."
+            SubmitButtonName="Request a Call Back"
           />
           <Box
             p="5%"
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: "30px",
+              gap: "5px",
               mt: { sm: "0%", xs: "5%" },
             }}
           >

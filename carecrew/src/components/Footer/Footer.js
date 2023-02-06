@@ -22,14 +22,14 @@ function Footer() {
           justifyContent: "center",
         }}
       >
-        <Grid container spacing={0.5} sx={{}}>
+        <Grid container spacing={0} sx={{}}>
           <Grid xs={12} lg={3}>
-            <Box padding={5}>
+            <Box  sx={{padding:{sm:"7% 8%", xs:"2% 9%"}}}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>
                 We are CARE CREW!
               </Box>
               <Box
-                mt={3}
+                mt={2}
                 sx={{ fontSize: "16px", lineHeight: "30px", color: "#BDBDBD" }}
               >
                 <Box>
@@ -49,12 +49,12 @@ function Footer() {
             </Box>
           </Grid>
           <Grid xs={12} lg={3}>
-            <Box padding={5}>
+            <Box  sx={{padding:{sm:"7% 8%", xs:"2% 9%"}}} >
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>
                 Important Links
               </Box>
               <Box
-                mt={3}
+                mt={2}
                 sx={{
                   color: "#72bf44",
                   fontWeight: "900",
@@ -102,9 +102,9 @@ function Footer() {
             </Box>
           </Grid>
           <Grid xs={12} lg={3}>
-            <Box padding={5}>
+            <Box  sx={{padding:{sm:"7% 7%", xs:"2% 9%"}}}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>Contact Us</Box>
-              <Box mt={3} sx={{ fontSize: "14px", lineHeight: "37px" }}>
+              <Box mt={2} sx={{ fontSize: "14px", lineHeight: "37px" }}>
                 <a
                   style={{ textDecoration: "none", color: "#ffffff" }}
                   href="https://www.google.com/maps/place/Pinch/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f217d84f5a9:0xdb16d79eda45c82a!8m2!3d28.473333!4d77.091636"
@@ -184,9 +184,9 @@ function Footer() {
             </Box>
           </Grid>
           <Grid xs={12} lg={3}>
-            <Box padding={5}>
+            <Box  sx={{padding:{sm:"7% 26%", xs:"2% 9%"}}}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>Careers</Box>
-              <Box mt={3} sx={{ lineHeight: "32px" }}>
+              <Box mt={2} sx={{ lineHeight: "32px" }}>
                 <Link to="/jobs/jobsenglish" style={{ textDecoration: "none" }}>
                   <Box
                     sx={{

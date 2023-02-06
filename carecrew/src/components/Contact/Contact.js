@@ -6,13 +6,9 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
-import TextField from "@mui/material/TextField";
-import { Button } from "@mui/material";
-import Navbaar from "../../components/Headers/Navbaar";
-import Footer from "../../components/Footer/Footer";
-import ScrollToTop from "react-scroll-to-top";
+import { Button ,Autocomplete,TextField} from "@mui/material";
 import axios from "axios";
-import Autocomplete from "@mui/material/Autocomplete";
+
 
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -36,16 +32,16 @@ const date =Date.now()
 const [cityDD, setCityDD] = useState([])
 
 console.log(cityDD)
-useEffect(() => {
-  const getData = async()=>{
-    let response2 = await fetch("http://13.126.160.155:8082/carecrew/city/get/cities/")
-    let data2 = await response2.json()
-    setCityDD(data2.data)
-  }
-  getData()
-}, [])
+// useEffect(() => {
+//   const getData = async()=>{
+//     let response2 = await fetch("http://13.126.160.155:8082/carecrew/city/get/cities/")
+//     let data2 = await response2.json()
+//     setCityDD(data2.data)
+//   }
+//   getData()
+// }, [])
 
-console.log("cityji...",city)
+// console.log("cityji...",city)
 // let newCity = city?city["city"]:"";
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -99,8 +95,8 @@ console.log("cityji...",city)
   };
   return (
     <>
-      <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}>
-        <Grid container spacing={0}>
+      <Box   sx={{ backgroundColor: "#F4F8FD", height: "auto" , padding:{sm:"2% 5%", xs:"0%"}}}>
+        <Grid container spacing={0} >
           <Grid paddingBottom="3%" mt={7} item lg={6} xs={12}>
             <Item>
               <Box
@@ -137,11 +133,11 @@ console.log("cityji...",city)
                   href="https://www.google.com/maps/place/Pinch/@28.473333,77.089442,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1f217d84f5a9:0xdb16d79eda45c82a!8m2!3d28.473333!4d77.091636"
                 >
                   <Box
-                    padding="10% 2% 10% 5%"
                     sx={{
                       backgroundColor: "white",
                       display: "flex",
-                      gap: "20px",
+                      gap: "10px",
+                      padding: { sm: "7% 2% 7% 5%", xs: "10% 2% 10% 5%" },
                     }}
                   >
                     <Box>
@@ -165,7 +161,7 @@ console.log("cityji...",city)
                     display: "flex",
                     gap: "20px",
                     cursor: "pointer",
-                    padding: { sm: "10% 2% 10% 5%", xs: "10% 2% 10% 5%" },
+                    padding: { sm: "7% 2% 7% 5%", xs: "10% 2% 10% 5%" },
                   }}
                 >
                   <Box>
@@ -188,11 +184,12 @@ console.log("cityji...",city)
                   target="_blank"
                 >
                   <Box
-                    padding="10% 2% 10% 5%"
+                  
                     sx={{
                       backgroundColor: "white",
                       display: "flex",
                       gap: "20px",
+                      padding: { sm: "7% 2% 7% 5%", xs: "10% 2% 10% 5%" },
                     }}
                   >
                     <Box>
@@ -211,12 +208,12 @@ console.log("cityji...",city)
                   </Box>
                 </a>
                 <Box
-                  padding="10% 2% 10% 5%"
                   sx={{
                     backgroundColor: "white",
                     display: "flex",
                     gap: "20px",
                     cursor: "pointer",
+                    padding: { sm: "7% 2% 7% 5%", xs: "10% 2% 10% 5%" },
                   }}
                 >
                   <Box>
@@ -317,11 +314,11 @@ console.log("cityji...",city)
                         id="combo-box-demo"
                         size="medium"
                         color="primary"
-                        sx={{ width: "300px" }}
-                        options={cityDD}
-                        getOptionLabel={(option) => option.cityName}
+                        // sx={{ width: {sm:"275px", xs:"300px"} }}
+                        options={cityListDD}
+                        getOptionLabel={(option) => option}
                         onChange={(event, newValue) => {
-                          setCity(newValue.cityName);
+                          setCity(newValue);
                         }}
                         renderInput={(params) => (
                           <TextField
@@ -330,7 +327,7 @@ console.log("cityji...",city)
                             sx={{
                               backgroundColor: "white",
                               marginTop: "12px",
-                              width: { sm: "100%", xs: "325px" },
+                              width: { sm: "275px", xs: "347px" },
                             }}
                           />
                         )}
@@ -419,4 +416,4 @@ console.log("cityji...",city)
 
 export default Contact;
 
-const cityList = [{ city: "Gurugram" }, { city: "Others" }];
+const cityListDD = ["Gurugram","Others"];

@@ -17,12 +17,12 @@ function ChildCare_Services() {
       >
         <Box
           sx={{
-            width: { sm: "30%", xs: "100%" },
+            width: { sm: "30%", xs: "100%"  }, display:{sm:"block", xs:"none"}
           }}
         >
-          <DividerComponent sx={{ marginLeft: "20%" }} />
+          <DividerComponent  sx={{ marginLeft: "20%", }} />
         </Box>
-        <Box mt="12%" sx={{ width: { sm: "62%", xs: "100%" } }}>
+        <Box  sx={{ width: { sm: "62%", xs: "100%" },marginTop:{sm:"11.5%", xs:"23%"} }}>
           <Servies
             Service_Heading="Nannies for your little ones "
             Service_Content="We understand that parenting can be a challenging task, and all parents can do with a bit of help. This is why we source nannies & babysitters who are experienced in taking care of young children & who understand their needs. "
@@ -64,13 +64,14 @@ function ChildCare_Services() {
             Values_Content="We intend to make our nannies develop reserves of patience – so whether it is about taking care of an inconsolable child or putting a hyperactive kid to sleep, they have you covered. We expect them to be hugely empathetic and able to put themselves in the parents’ shoes when taking care of the kids. They should be able to engage the child in playful, growth-focused activities while you’re away."
             Stories_Heading="Stories"
             Stories_Content="Whether it’s an office meeting, kid-free gym session or an imperative grocery run – our nannies will make sure you attend to your commitments free of worries."
+            SubmitButtonName="Request a Call Back"
           />
           <Box
             p="5%"
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: "30px",
+              gap: "5px",
               mt: { sm: "0%", xs: "5%" },
             }}
           >
