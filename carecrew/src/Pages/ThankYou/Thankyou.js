@@ -1,6 +1,5 @@
 import { Box, Button } from '@mui/material'
 import React from 'react'
-import thankyou from "../../Images/Thank.png"
 import { useNavigate } from 'react-router-dom'
 
 function Thankyou() {
