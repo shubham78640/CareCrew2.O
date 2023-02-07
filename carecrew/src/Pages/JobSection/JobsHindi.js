@@ -12,7 +12,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import ScrollToTop from "react-scroll-to-top";
 import { servicesDatainHindi } from "../../AllData";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -43,9 +43,9 @@ function JobsHindi() {
   const [city, setCity] = useState("");
   const [skill, setSkill] = useState([]);
   const { closeForm, setCloseForm } = useContext(multiStepContext);
-
   const [expanded, setExpanded] = React.useState(false);
-
+  
+  const navigate = useNavigate();
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
@@ -97,7 +97,7 @@ function JobsHindi() {
       <p>City:- ${city}</p> `,
     };
     if (window.Email) {
-      window.Email.send(config).then(() => alert("email sent successfully"));
+      window.Email.send(config).then (()=>navigate("/thankyou"),setCloseForm(false))
     }
   };
 
