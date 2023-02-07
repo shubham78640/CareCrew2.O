@@ -84,10 +84,6 @@ const date =Date.now()
   }
   if(window.Email){
     window.Email.send(config).then (()=>navigate("/thankyou"),setCloseForm(false))
-
-
-
-  
   }
   }
 

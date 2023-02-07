@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect ,useContext} from "react";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -8,7 +8,8 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import { Button ,Autocomplete,TextField} from "@mui/material";
 import axios from "axios";
-
+import { multiStepContext } from "../../Context/FormContext";
+import { useNavigate } from "react-router-dom";
 
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -28,7 +29,8 @@ function Contact() {
   const [address, setAddress] = useState("");
   const [workinghr, setworkingHr] = useState("");
 const date =Date.now()
-
+const { closeForm, setCloseForm } = useContext(multiStepContext);
+const navigate = useNavigate();
 const [cityDD, setCityDD] = useState([])
 
 console.log(cityDD)
@@ -107,7 +109,7 @@ console.log(cityDD)
       <p>Message:- ${message}</p>`
       }
       if(window.Email){
-      window.Email.send(config).then (()=>alert("email sent successfully"))
+      window.Email.send(config).then (()=>navigate("/thankyou"),setCloseForm(false))
       }
       
   };
