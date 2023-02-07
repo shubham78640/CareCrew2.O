@@ -6,10 +6,14 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function AccordionComponent(props) {
-  const { Accordion_Heading, Accordion_Content, Expend_Value } = props;
+  const { Accordion_Heading, Accordion_Content, Expend_Value,newchnage } = props;
+
+  
   return (
     <>
-      <Accordion
+      <Accordion  
+      expanded={Expend_Value}
+      onChange={newchnage}
         sx={{
           padding: "10px",
           width: { sm: "100%", xs: "100%" },
