@@ -606,6 +606,7 @@ function Navbaar() {
         <Box
           className="link"
           mt={5.4}
+          p={1}
           sx={{
             position: "fixed",
             zIndex: 999,
