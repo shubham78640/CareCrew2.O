@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import axios from 'axios';
 import { multiStepContext } from "../../Context/FormContext";
+import { useNavigate } from "react-router-dom";
 
 function GetACallBackForm({data}) {
   const [services, setServices] = useState([])
@@ -18,7 +19,8 @@ function GetACallBackForm({data}) {
   const [society, setSociety] = useState([])
   const [cityDD, setCityDD] = useState([])
 
-  const {  } = useContext(multiStepContext)
+  const { setCloseForm } = useContext(multiStepContext)
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   const getData = async()=>{
@@ -81,7 +83,7 @@ const date =Date.now()
             <p>Message:- ${longContent}</p>`
   }
   if(window.Email){
-    window.Email.send(config).then (()=>alert("email sent successfully"))
+    window.Email.send(config).then (()=>navigate("/thankyou"),setCloseForm(false))
 
 
 

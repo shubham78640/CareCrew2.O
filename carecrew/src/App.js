@@ -22,6 +22,7 @@ import PrivacyPolicy from './Pages/Privacy Policy/PrivacyPolicy'
 import TermsofUse from './Pages/Privacy Policy/TermsofUse'
 import AgePolicy from './Pages/Privacy Policy/AgePolicy'
 import AdminCandidate from "./Pages/AdminTable/AdminCandidate";
+import Thankyou from "./Pages/ThankYou/Thankyou";
 
 
 
@@ -52,9 +53,8 @@ function App() {
               <Route path="/termsofuse" element={<TermsofUse/> } />
               <Route path="/agepolicy" element={<AgePolicy/> } />
               <Route path="/admincandidate" element={<AdminCandidate/> } />
-
+              <Route path="/thankyou" element = {<Thankyou/>}/>
             </Routes>
-         
         </BrowserRouter>
 
 
