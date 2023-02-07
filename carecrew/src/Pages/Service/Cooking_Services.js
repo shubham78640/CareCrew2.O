@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import Box from "@mui/material/Box";
 import DividerComponent from "../../components/DividerComponent/DividerComponent";
 import Servies from "../../components/Services/Servies";
@@ -6,12 +6,15 @@ import Footer from "../../components/Footer/Footer";
 import ImageCooking from "../../Images/C2.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
+import { multiStepContext } from "../../Context/FormContext";
 
 function Cooking_Services() {
+  const { closeForm, setCloseForm } = useContext(multiStepContext);
   return (
     <>
       <Box
         mb="5%"
+      
         sx={{ display: "flex", flexDirection: { sm: "row", xs: "column" } }}
       >
         <Box

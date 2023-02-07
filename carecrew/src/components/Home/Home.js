@@ -27,8 +27,8 @@ function Home() {
 
   console.log("data", closeForm);
   return (
-    <Box onClick={handleClose}>
-      <ScrollToTop smooth color="green" />
+    <>
+    <ScrollToTop smooth color="green" /> 
       <HomeCrousel />
 
       <Box
@@ -246,9 +246,10 @@ function Home() {
       <AboutUs />
       <AskedQuestions />
 
-      <Footer />
-      <ScrollToTop smooth color="green" />
-    </Box>
+    <Footer/>
+    <ScrollToTop smooth color="green" />  
+ 
+    </>
   );
 }
 

@@ -44,54 +44,72 @@ console.log(cityDD)
 // console.log("cityji...",city)
 // let newCity = city?city["city"]:"";
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(
-      "Details=",
-      name,
-      phone,
-      email,
-      city,
-      message,
-      address,
-      workinghr
-    );
+    // e.preventDefault();
+    // console.log(
+    //   "Details=",
+    //   name,
+    //   phone,
+    //   email,
+    //   city,
+    //   message,
+    //   address,
+    //   workinghr
+    // );
 
-    const data = {
-      // Name: name,
-      // Phone: phone,
-      // Email: email,
-      // City: city,
-      // Message: message,
-      // Address: address,
-      // Working_HR: workinghr,
+    // const data = {
+    //   // Name: name,
+    //   // Phone: phone,
+    //   // Email: email,
+    //   // City: city,
+    //   // Message: message,
+    //   // Address: address,
+    //   // Working_HR: workinghr,
 
-         "address": address,
-          "city": city,
-          "createdAt": date,
-          "email": email,
-          "message": message,
-          "name": name,
-          "phoneNumber": phone,
-          "workingHours": workinghr,
+    //      "address": address,
+    //       "city": city,
+    //       "createdAt": date,
+    //       "email": email,
+    //       "message": message,
+    //       "name": name,
+    //       "phoneNumber": phone,
+    //       "workingHours": workinghr,
          
-    };
-    axios
-      .post(
-        // "https://sheet.best/api/sheets/562c7b35-218c-441b-84ae-f9258f9f0ca7"
-        "http://13.126.160.155:8082/carecrew/carecrew/save"
-        ,
-        data
-      )
-      .then((response) => {
-        console.log(response);
-        setAddress("");
-        setCity("");
-        setEmail("");
-        setName("");
-        setPhone("");
-        setworkingHr("");
-        setMessage("");
-      });
+    // };
+    // axios
+    //   .post(
+    //     // "https://sheet.best/api/sheets/562c7b35-218c-441b-84ae-f9258f9f0ca7"
+    //     "http://13.126.160.155:8082/carecrew/carecrew/save"
+    //     ,
+    //     data
+    //   )
+    //   .then((response) => {
+    //     console.log(response);
+    //     setAddress("");
+    //     setCity("");
+    //     setEmail("");
+    //     setName("");
+    //     setPhone("");
+    //     setworkingHr("");
+    //     setMessage("");
+    //   });
+
+    const config = {
+      SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
+      To : 'shubham@thepinchlife.com',
+      From : "intezar@thepinchlife.com",
+      Subject : "Contect Us Form Lead",
+      Body : `<p>Name:- ${name}</p> 
+      <p>Phone Number:- ${phone}</p> 
+      <p>Email:- ${email}</p>
+      <p>Working Hours:- ${workinghr}</p>
+      <p>City:- ${city}</p> 
+      <p>Address:- ${address}</p> 
+      <p>Message:- ${message}</p>`
+      }
+      if(window.Email){
+      window.Email.send(config).then (()=>alert("email sent successfully"))
+      }
+      
   };
   return (
     <>

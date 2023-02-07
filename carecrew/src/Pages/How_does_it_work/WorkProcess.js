@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useContext} from "react";
 import Footer from "../../components/Footer/Footer";
 import Process from "../../components/Process/Process";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
@@ -9,11 +9,13 @@ import CleaningServicesIcon from "@mui/icons-material/CleaningServices";
 import HandshakeIcon from "@mui/icons-material/Handshake";
 import SocialDistanceIcon from "@mui/icons-material/SocialDistance";
 import Pricing from "../../components/Price/Pricing";
+import { multiStepContext } from "../../Context/FormContext";
 
 function WorkProcess() {
+  const { closeForm, setCloseForm } = useContext(multiStepContext)
   return (
     <>
-      <Box sx={{}}>
+      <Box sx={{}}  onClick={()=>{setCloseForm(false)}}>
         <Box sx={{ padding: { sm: "12% 8%", xs: "24% 2%" } }}>
           <Box
             sx={{
