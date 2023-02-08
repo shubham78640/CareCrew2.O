@@ -71,7 +71,7 @@ const date =Date.now()
 
   const config = {
     SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
-    To : 'shubham@thepinchlife.com',
+    To : 'intezar@thepinchlife.com',
     From : `intezar@thepinchlife.com`,
     Subject : "New Lead From CARE CREW Website",
     Body : `<p>Name:- ${name}</p> 
