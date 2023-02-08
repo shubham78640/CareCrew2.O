@@ -39,8 +39,6 @@ export default function SinglePost() {
       .catch((err) => console.error(err));
   }, [slug]);
 
-  console.log("singlePost data = ", postData);
-
   if (!postData)
     return (
       <div

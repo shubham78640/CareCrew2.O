@@ -23,6 +23,7 @@ import TermsofUse from './Pages/Privacy Policy/TermsofUse'
 import AgePolicy from './Pages/Privacy Policy/AgePolicy'
 import AdminCandidate from "./Pages/AdminTable/AdminCandidate";
 import Thankyou from "./Pages/ThankYou/Thankyou";
+import StepperForm from "./Pages/StepperForm/StepperForm";
 
 
 
@@ -54,6 +55,8 @@ function App() {
               <Route path="/agepolicy" element={<AgePolicy/> } />
               <Route path="/admincandidate" element={<AdminCandidate/> } />
               <Route path="/thankyou" element = {<Thankyou/>}/>
+              <Route path="/step" element = {<StepperForm/>}/>
+
             </Routes>
         </BrowserRouter>
 

@@ -1,5 +1,5 @@
-import { Box, Button, Typography } from "@mui/material";
-import React, { useContext } from "react";
+import { Box, Button, styled, Typography } from "@mui/material";
+import React, { useContext, useState } from "react";
 import HomeCrousel from "../Crousel/HomeCrousel";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import Diversity1Icon from "@mui/icons-material/Diversity1";
@@ -12,11 +12,19 @@ import Footer from "../Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
 import { multiStepContext } from "../../Context/FormContext";
 
+const BOX = styled(Box)({
+  backgroundImage: `url("http://carecrew.in/wp-content/uploads/2022/02/wharwedo.png")`,
+  backgroundSize: "100%",
+  backgroundRepeat:"no-repeat"
+});
+
 function Home() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
-  
+
+  // const [closeForm, setCloseForm] = useState(true)
+
   const handleOpen = () => {
-    setCloseForm(true)
+    setCloseForm(true);
   };
 
   const handleClose = () => {
@@ -26,13 +34,13 @@ function Home() {
   console.log("data", closeForm);
   return (
     <>
-    <ScrollToTop smooth color="green" /> 
+      <ScrollToTop smooth color="green" />
       <HomeCrousel />
 
       <Box
         width={"100%"}
         display={"flex"}
-        justifyContent={"center"}
+        justifyContent={"space-between"}
         gap={2}
         sx={{
           flexDirection: { sm: "row", xs: "column" },
@@ -45,25 +53,29 @@ function Home() {
             height: { sm: "800px", xs: "455px" },
           }}
         >
-          <Box
-            sx={{ width: { sm: "48%", xs: "100%" } }}
-            height={"100%"}
+          <BOX
+            sx={{
+              width: { sm: "48%", xs: "100%" },
+              height: {xs: "455px", sm:"100%"},
+              display: "grid",
+              justifyContent: "right",
+              alignItems: "flex-end",
+              p: { sm: "20px", xs: "10px" },
+            }}
             position={"absolute"}
           >
-            <img
+            {/* <img
               width={"100%"}
               style={{ position: "absolute" }}
               src="http://carecrew.in/wp-content/uploads/2022/02/wharwedo.png"
               alt="no Image"
-            />
+            /> */}
 
             <Box
               sx={{
-                position: "absolute",
-                top: { sm: "85%", xs: "50%" },
-                left: { sm: "30%", xs: "22%" },
                 display: "flex",
                 gap: "30px",
+                // justifyContent:"right",
               }}
             >
               <Box style={{ display: "flex", gap: "20px" }}>
@@ -119,7 +131,7 @@ function Home() {
                 </div>
               </div>
             </Box>
-          </Box>
+          </BOX>
           <Box></Box>
         </Box>
 
@@ -244,9 +256,8 @@ function Home() {
       <AboutUs />
       <AskedQuestions />
 
-    <Footer/>
-    <ScrollToTop smooth color="green" />  
- 
+      <Footer />
+      <ScrollToTop smooth color="green" />
     </>
   );
 }

@@ -16,6 +16,7 @@ export default function Post() {
             title,
             about,
             publishedAt,
+            categories,
             slug,
             mainImage{
                 asset->{
@@ -27,7 +28,7 @@ export default function Post() {
       )
       .then((data) => setAllPostsData(data))
       .catch((err) => console.error(err));
-  }, []);
+        }, []);
 
   if (!allPostsData) return <div
   style={{
@@ -62,6 +63,7 @@ console.log(allPostsData)
               </span>
               <hr />
               {/* <span className="postDate">{format(item.publishedAt)}</span> */}
+              <span className="postDate">{item.categories[0]._key}</span>
             </div>
             <p className="postDesc">{item.about}</p>
           </div>

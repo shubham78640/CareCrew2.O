@@ -1,7 +1,26 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
+import sanityClient from "../../libs/client";
+import { useState } from "react";
 
 export default function Sidebar() {
+  const [data, setData]=useState([])
+  useEffect(() => {
+    
+    sanityClient
+    .fetch(
+      `*[_type == 'category']{
+        title,
+        description
+      }`
+    )
+    .then((data) => setData(data))
+    .catch((err) => console.error(err));
+  }, [])
+
+  console.log("data is =>", data)
+  
   return (
     <div className="sidebar">
       <div className="sidebarItem">
