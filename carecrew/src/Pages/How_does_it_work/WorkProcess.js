@@ -230,7 +230,7 @@ function WorkProcess() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "20px",
+                gap: "5px",
                 flexBasis: "100%",
               }}
             >
@@ -293,7 +293,7 @@ function WorkProcess() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "20px",
+                gap: "5px",
                 flexBasis: "100%",
               }}
             >
