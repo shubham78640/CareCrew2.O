@@ -34,7 +34,7 @@ function Navbaar() {
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
 
-  const { closeForm, setCloseForm } = useContext(multiStepContext)
+  const { closeForm, setCloseForm, closeForm1, setCloseForm1 } = useContext(multiStepContext)
 
   let user = localStorage.getItem('user')
 
@@ -68,6 +68,10 @@ function Navbaar() {
 
   const handleCloseForm = () => {
     setCloseForm(false);
+  };
+
+  const handleCloseForm1 = () => {
+    setCloseForm1(false);
   };
 
   return (
@@ -551,7 +555,7 @@ function Navbaar() {
           <Drawer />
         </Box>
         {/* registration form */}
-        <Box sx={{ display: closeForm ? "block" : "none" }}>
+        <Box sx={{ display: closeForm1 ? "block" : "none" }}>
           <Box
             className="link"
             pt={4}
@@ -574,7 +578,7 @@ function Navbaar() {
           >
             <GetACallBackForm data={2}/>
             <CancelIcon
-              onClick={handleCloseForm}
+              onClick={handleCloseForm1}
               sx={{
                 position: "absolute",
                 top: "5px",
@@ -613,7 +617,7 @@ function Navbaar() {
             borderRadius: "0px 0px 12px 12px",
             top: "17px",
             right: "1px",
-            display: !closeForm ? "block" : "none ",
+            display: !closeForm1 ? "block" : "none ",
             backgroundColor: "#ebe956",
           }}
         >
@@ -621,7 +625,7 @@ function Navbaar() {
             size="small"
             sx={{ color: "#007a48", fontWeight: "900" }}
             onClick={() => {
-              setCloseForm(true);
+              setCloseForm1(true);
             }}
             startIcon={<ArrowCircleDownIcon />}
           >
