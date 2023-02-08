@@ -24,7 +24,7 @@ function Footer() {
       >
         <Grid container spacing={0} sx={{}}>
           <Grid xs={12} lg={3}>
-            <Box  sx={{padding:{sm:"7% 8%", xs:"2% 9%"}}}>
+            <Box sx={{ padding: { sm: "7% 8%", xs: "2% 9%" } }}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>
                 We are CARE CREW!
               </Box>
@@ -49,7 +49,7 @@ function Footer() {
             </Box>
           </Grid>
           <Grid xs={12} lg={3}>
-            <Box  sx={{padding:{sm:"7% 8%", xs:"2% 9%"}}} >
+            <Box sx={{ padding: { sm: "7% 8%", xs: "2% 9%" } }}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>
                 Important Links
               </Box>
@@ -102,7 +102,7 @@ function Footer() {
             </Box>
           </Grid>
           <Grid xs={12} lg={3}>
-            <Box  sx={{padding:{sm:"7% 7%", xs:"2% 9%"}}}>
+            <Box sx={{ padding: { sm: "7% 7%", xs: "2% 9%" } }}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>Contact Us</Box>
               <Box mt={2} sx={{ fontSize: "14px", lineHeight: "37px" }}>
                 <a
@@ -118,13 +118,19 @@ function Footer() {
                     <Box>A-55/8, DLF Phase 1, Sector 28 - 122002</Box>
                   </Box>
                 </a>
-                <Box sx={{ display: "flex", cursor: "pointer" }}>
-                  <Box mt={-0.1} sx={{ color: "#ebe956" }}>
-                    <CallIcon sx={{ fontSize: "16px" }} />
+                <a
+                  href="tel:+91-80-6201-208"
+                  style={{ color: "#ffffff", textDecoration: "none" }}
+                  target="_blank"
+                >
+                  <Box sx={{ display: "flex", cursor: "pointer" }}>
+                    <Box mt={-0.1} sx={{ color: "#ebe956" }}>
+                      <CallIcon sx={{ fontSize: "16px" }} />
+                    </Box>
+                    &nbsp; &nbsp;
+                    <Box> 080-6201-2086</Box>
                   </Box>
-                  &nbsp; &nbsp;
-                  <Box>080-6201-2086</Box>
-                </Box>
+                </a>
                 <a
                   href="https://api.whatsapp.com/send?phone=919643328358"
                   style={{ color: "#ffffff", textDecoration: "none" }}
@@ -138,13 +144,19 @@ function Footer() {
                     <Box>964-332-8358</Box>
                   </Box>
                 </a>
-                <Box sx={{ display: "flex", cursor: "pointer" }}>
-                  <Box mt={-0.1} sx={{ color: "#ebe956" }}>
-                    <EmailIcon sx={{ fontSize: "16px" }} />
+                <a
+                  href="mailto:help@carecrew.in"
+                  style={{ color: "#ffffff", textDecoration: "none" }}
+                  target="_blank"
+                >
+                  <Box sx={{ display: "flex", cursor: "pointer" }}>
+                    <Box mt={-0.1} sx={{ color: "#ebe956" }}>
+                      <EmailIcon sx={{ fontSize: "16px" }} />
+                    </Box>
+                    &nbsp; &nbsp;
+                    <Box>help@carecrew.in</Box>
                   </Box>
-                  &nbsp; &nbsp;
-                  <Box>help@carecrew.in</Box>
-                </Box>
+                </a>
                 <Box ml="2%" sx={{ display: "flex", gap: "10px" }}>
                   <Box>
                     <a
@@ -184,7 +196,7 @@ function Footer() {
             </Box>
           </Grid>
           <Grid xs={12} lg={3}>
-            <Box  sx={{padding:{sm:"7% 26%", xs:"2% 9%"}}}>
+            <Box sx={{ padding: { sm: "7% 26%", xs: "2% 9%" } }}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>Careers</Box>
               <Box mt={2} sx={{ lineHeight: "32px" }}>
                 <Link to="/jobs/jobsenglish" style={{ textDecoration: "none" }}>

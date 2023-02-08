@@ -82,7 +82,7 @@ function Cooking_Services() {
             Values_Content="We intend to make our cooks detail-oriented, who can quickly adapt their style of cooking to suit your likings. They should be able to ensure the appropriate usage of salt, oil & other essential cooking ingredients. We also want them to cook the right quantity so that there’s minimum wastage of food."
             Stories_Heading="Stories"
             Stories_Content="From simple meals on weekdays to special delightful ones over the weekend, our cooks will attempt to bring in variety in your everyday food. Spicy or occasionally spicy; crisp rotis or soft ones – they will be able to customize as per your needs."
-            SubmitButtonName="Request a Call Back"
+            SubmitButtonName="Book a Trial"
           />
           <Box
             p="5%"

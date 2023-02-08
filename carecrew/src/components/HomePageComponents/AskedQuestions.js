@@ -33,7 +33,7 @@ function AskedQuestions() {
             width: { sm: "50%", xs: "100%" },
             ml: { sm: 90 },
             display: "grid",
-            gap: { sm: 5, xs: 1 },
+            gap: { sm: 1, xs: 1 },
           }}
         >
           <AccordionComponent

@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import HomeCrousel from "../Crousel/HomeCrousel";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import Diversity1Icon from "@mui/icons-material/Diversity1";
@@ -14,8 +14,6 @@ import { multiStepContext } from "../../Context/FormContext";
 
 function Home() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
-
-  // const [closeForm, setCloseForm] = useState(true)
   
   const handleOpen = () => {
     setCloseForm(true)
@@ -235,7 +233,7 @@ function Home() {
                 textTransform: "none",
               }}
             >
-              Submit Your Enquiry
+             Request a callback
             </Button>
           </Box>
         </Box>
