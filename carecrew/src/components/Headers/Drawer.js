@@ -93,6 +93,12 @@ export default function Drawer() {
             <NavLink
               className="Navlink"
               to="/"
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               style={({ isActive }) => {
                 return {
                   textDecoration: "none",
@@ -108,6 +114,12 @@ export default function Drawer() {
             <NavLink
               className="Navlink"
               to="/aboutus"
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               style={({ isActive }) => {
                 return {
                   textDecoration: "none",
@@ -134,6 +146,12 @@ export default function Drawer() {
                   <NavLink
                   className="Navlink"
                   to={item.link}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
                   style={({ isActive }) => {
                     return {
                       color: isActive ? "green" : "black",
@@ -150,6 +168,12 @@ export default function Drawer() {
             <NavLink
               className="Navlink"
               to="/process"
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               style={({ isActive }) => {
                 return {
                   textDecoration: "none",
@@ -163,6 +187,12 @@ export default function Drawer() {
             <NavLink
               className="Navlink"
               to="/contactus"
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               style={({ isActive }) => {
                 return {
                   textDecoration: "none",
@@ -221,6 +251,12 @@ export default function Drawer() {
             <NavLink
               className="Navlink"
               to="/blogs"
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               style={({ isActive }) => {
                 return {
                   textDecoration: "none",
@@ -253,6 +289,10 @@ const Data = [
   {
     link:"/services/eldercare",
     name:"Elder Care"
+  },
+  {
+    link:"/services/driver",
+    name:"Driving"
   },
   {
     link:"/services/others",

@@ -65,36 +65,72 @@ function Footer() {
                 <Link
                   to="/"
                   style={{ textDecoration: "none", color: "#72bf44" }}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
                 >
                   <Box>Home</Box>
                 </Link>
                 <Link
                   to="/aboutus"
                   style={{ textDecoration: "none", color: "#72bf44" }}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
                 >
                   <Box>About Us</Box>
                 </Link>
                 <Link
                   to="/privacypolicy"
                   style={{ textDecoration: "none", color: "#72bf44" }}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
                 >
                   <Box>Privacy Policy</Box>
                 </Link>
                 <Link
                   to="/termsofuse"
                   style={{ textDecoration: "none", color: "#72bf44" }}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
                 >
                   <Box>Terms of Use</Box>
                 </Link>
                 <Link
                   to="/agepolicy"
                   style={{ textDecoration: "none", color: "#72bf44" }}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
                 >
                   <Box>Age Policy</Box>
                 </Link>
                 <Link
                   to="/contactus"
                   style={{ textDecoration: "none", color: "#72bf44" }}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
                 >
                   <Box>Contact Us</Box>
                 </Link>
@@ -199,7 +235,16 @@ function Footer() {
             <Box sx={{ padding: { sm: "7% 26%", xs: "2% 9%" } }}>
               <Box sx={{ fontSize: "24px", fontWeight: "600" }}>Careers</Box>
               <Box mt={2} sx={{ lineHeight: "32px" }}>
-                <Link to="/jobs/jobsenglish" style={{ textDecoration: "none" }}>
+                <Link
+                  to="/jobs/jobsenglish"
+                  style={{ textDecoration: "none" }}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
+                >
                   <Box
                     sx={{
                       display: "flex",
@@ -216,7 +261,16 @@ function Footer() {
                     </Box>{" "}
                   </Box>
                 </Link>
-                <Link to="/jobs/jobshindi" style={{ textDecoration: "none" }}>
+                <Link
+                  to="/jobs/jobshindi"
+                  style={{ textDecoration: "none" }}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
+                >
                   <Box
                     sx={{
                       display: "flex",
