@@ -4,8 +4,8 @@ import SavedSearchIcon from '@mui/icons-material/SavedSearch';
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import SocialDistanceIcon from '@mui/icons-material/SocialDistance';
-import React from "react";
-
+import React, {useContext} from "react";
+import { multiStepContext } from "../../Context/FormContext";
 const BOX = styled(Box)({
   display: "flex",
   flexDirection: "column",
@@ -50,6 +50,8 @@ const StyleDiv = styled("div")({
 });
 
 function StepsToHire() {
+
+  const { closeForm, setCloseForm } = useContext(multiStepContext);
   return (
     <Box mt={10} sx={{ background: "#ededed" }}>
       <Box p={4} pt={10}>
@@ -122,8 +124,8 @@ function StepsToHire() {
         </BOX>
       </Box>
       <Box mt={5} pb={5} display={"flex"} justifyContent={"center"}>
-        <Button sx={{textTransform:"none"}} variant="contained" color="success">
-          Submit Your Enquiry
+        <Button sx={{textTransform:"none"}} variant="contained" color="success"  onClick={()=>{setCloseForm(true)}}>
+        Book a Trial
         </Button>
       </Box>
     </Box>

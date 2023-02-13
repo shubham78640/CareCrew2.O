@@ -12,7 +12,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "./Drawer";
 import { NavLink, useParams } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-
 import "./navbaar.css";
 import { Button, styled, TextField } from "@mui/material";
 import GetACallBackForm from "../Home/GetACallBackForm";
@@ -33,15 +32,11 @@ function Navbaar() {
   const [dropdown, setDropdown] = useState(false);
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
-
   const { closeForm, setCloseForm, closeForm1, setCloseForm1 } = useContext(multiStepContext)
-
   let user = localStorage.getItem('user')
-
   console.log(user)
 
   let { jobsenglish } = useParams();
-
   const handleDropdown = () => {
     setDropdown(true);
   };
@@ -115,7 +110,7 @@ function Navbaar() {
               width: "0.5px",
             }}
           />
-          <a href="mailto:help@carecrew.in" target="_blank" rel="noreferrer">
+          <a href="" target="_blank" rel="noreferrer">
             <EmailIcon
               fontSize="10px"
               sx={{ color: "#ebe956", marginLeft: "30px", marginBottom: "3px" }}
@@ -149,9 +144,6 @@ function Navbaar() {
             />
           </a>
         </Box>
-
-        
-
         <Box
           onMouseLeave={() => {
             handleDropdownclose1();
@@ -180,6 +172,12 @@ function Navbaar() {
             }}
             className="Navlink"
             to="/"
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
             style={({ isActive }) => {
               return {
                 // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
@@ -194,6 +192,12 @@ function Navbaar() {
           <NavLink
             className="Navlink"
             to="/aboutus"
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
             style={({ isActive }) => {
               return {
                 color: isActive ? "#ebe956" : "white",
@@ -245,8 +249,14 @@ function Navbaar() {
                 display: dropdown1 ? "block" : "none",
                 boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
               }}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
             >
-              <Dropdown name="Housekeeping" path="/services/housekeeping" />
+              <Dropdown name="Housekeeping" path="/services/housekeeping"  />
               <Dropdown name="Cooking" path="/services/cooking" />
               <Dropdown name="Child Care" path="/services/childcare" />
               <Dropdown name="Elder Care" path="/services/eldercare" />
@@ -259,6 +269,12 @@ function Navbaar() {
           <NavLink
             className="Navlink"
             to="/process"
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
             style={({ isActive }) => {
               return {
                 color: isActive ? "#ebe956" : "white",
@@ -279,6 +295,12 @@ function Navbaar() {
           <NavLink
             className="Navlink"
             to="/contactus"
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
             style={({ isActive }) => {
               return {
                 color: isActive ? "#ebe956" : "white",
@@ -329,6 +351,12 @@ function Navbaar() {
                 display: dropdown ? "block" : "none",
                 boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
               }}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
             >
               <Dropdown
                 name="Join Us"
@@ -349,6 +377,12 @@ function Navbaar() {
           <NavLink
             className="Navlink"
             to="/blogs"
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
             style={({ isActive }) => {
               return {
                 // borderBottom: isActive ? "2px solid #ebe956" : "2px solid #007a48",
@@ -515,12 +549,6 @@ function Navbaar() {
         </Box>
         {/* registration form */}
       </Box>
-
-
-
-
-
-
 
 
       {/* Responsive */}

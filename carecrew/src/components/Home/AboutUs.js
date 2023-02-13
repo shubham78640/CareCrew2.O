@@ -8,8 +8,8 @@ import styled from "@emotion/styled";
 import { Button } from "@mui/material";
 import imgaboutus from "../../Images/bg-tab-section.png";
 import imageAboutUs1 from "../../Images/1-4.jpg";
-import imageAboutUs2 from "../../Images/mission-scaled.jpeg";
-import imageAboutUs3 from "../../Images/values-scaled.jpeg";
+import imageAboutUs2 from "../../Images/mission-scaled.jpg";
+import imageAboutUs3 from "../../Images/values-scaled.jpg";
 import { Link } from "react-router-dom";
 
 const BOX = styled(Box)({

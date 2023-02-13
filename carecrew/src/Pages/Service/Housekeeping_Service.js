@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import DividerComponent from "../../components/DividerComponent/DividerComponent";
 import Servies from "../../components/Services/Servies";
@@ -7,10 +7,8 @@ import ImageCooking from "../../Images/HK2.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
 import Contact from "../../components/Contact/Contact";
-import { multiStepContext } from "../../Context/FormContext";
 
 function Housekeeping_Service() {
-  const { closeForm, setCloseForm } = useContext(multiStepContext);
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -64,7 +62,7 @@ function Housekeeping_Service() {
             Values_Content="We intend to make our housekeepers diligent in their approach & efficient at managing the household chores. We try to inculcate in them an attention to detail that helps keep your home organized at all times. We expect them to be non-intrusive & discrete while at work, in line with our principle of respecting your privacy."
             Stories_Heading="Stories"
             Stories_Content="Let’s say you require somebody to help you reorganize your living area or set up an indoor garden – the housekeepers will help you do it."
-            SubmitButtonName="Request a Call Back"
+            SubmitButtonName="Book a Trial"
           />
           <Box
             p="5%"

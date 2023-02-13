@@ -7,7 +7,6 @@ const P = styled('p')({
   color:"white",
   display:"grid",
   justifyContent:"left"
-
 })
 
 function HomeCrousel() {
@@ -16,7 +15,6 @@ function HomeCrousel() {
       sx={{
         position: "relative",
         top: { sm: "112px", xs: "60px" },
-        
       }}
     >
       <Carousel variant="dark">
@@ -34,7 +32,6 @@ function HomeCrousel() {
               >
                 House Helps for Every Home
               </Typography>
-
               <Box mt={1} sx={{display:"grid", justifyContent:"left",alignItems:"center", lineHeight:{ sm: "20px", xs: "10px" }, marginBottom:{sm:31, xs:0}}} >
                 <P sx={{fontWeight:{ sm: "600", xs: "500" },width:"100%", fontSize:{ sm: "23px", xs: "14px" }}}>&#x2714; Professional Training.</P>
                 <P sx={{fontWeight:{ sm: "600", xs: "500" },width:"100%", fontSize:{ sm: "23px", xs: "14px" }}}>&#x2714; Unlimited Replacements.</P>

@@ -47,6 +47,12 @@ function DividerComponent() {
               style={({ isActive }) => ({
                 color: isActive ? "#007a47" : "#007a48",
               })}
+              onClick={()=>{
+                window.scrollTo({
+                  top: 0, 
+                  behavior: 'smooth'
+                });
+              }}
             >
               <ListItem button divider>
                 <ListItemText primary="Housekeeping" />
@@ -58,6 +64,12 @@ function DividerComponent() {
               style={({ isActive }) => ({
                 color: isActive ? "#007a47" : "#007a48",
               })}
+              onClick={()=>{
+                window.scrollTo({
+                  top: 0, 
+                  behavior: 'smooth'
+                });
+              }}
             >
               <ListItem button divider>
                 <ListItemText primary="Cooking" />
@@ -68,6 +80,12 @@ function DividerComponent() {
               style={({ isActive }) => ({
                 color: isActive ? "#007a47" : "#007a48",
               })}
+              onClick={()=>{
+                window.scrollTo({
+                  top: 0, 
+                  behavior: 'smooth'
+                });
+              }}
             >
               <ListItem button divider>
                 <ListItemText primary="Child Care" />
@@ -79,6 +97,12 @@ function DividerComponent() {
               style={({ isActive }) => ({
                 color: isActive ? "#007a47" : "#007a48",
               })}
+              onClick={()=>{
+                window.scrollTo({
+                  top: 0, 
+                  behavior: 'smooth'
+                });
+              }}
             >
               <ListItem button divider>
                 <ListItemText primary="Elder Care" />
@@ -90,6 +114,12 @@ function DividerComponent() {
               style={({ isActive }) => ({
                 color: isActive ? "#007a47" : "#007a48",
               })}
+              onClick={()=>{
+                window.scrollTo({
+                  top: 0, 
+                  behavior: 'smooth'
+                });
+              }}
             >
               <ListItem button divider>
                 <ListItemText primary="Driving" />
@@ -101,6 +131,12 @@ function DividerComponent() {
               style={({ isActive }) => ({
                 color: isActive ? "#007a47" : "#007a48",
               })}
+              onClick={()=>{
+                window.scrollTo({
+                  top: 0, 
+                  behavior: 'smooth'
+                });
+              }}
             >
               <ListItem button divider>
                 <ListItemText primary="Others" />

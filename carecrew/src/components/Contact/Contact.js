@@ -175,6 +175,11 @@ console.log(cityDD)
                     </Box>
                   </Box>
                 </a>
+                <a
+                  href="tel:+91-80-6201-208"
+                  style={{ color: "#ffffff", textDecoration: "none" }}
+                  target="_blank"
+                >
                 <Box
                   sx={{
                     backgroundColor: "white",
@@ -198,13 +203,13 @@ console.log(cityDD)
                     </Box>
                   </Box>
                 </Box>
+                </a>
                 <a
                   href="https://api.whatsapp.com/send?phone=919643328358"
                   style={{ color: "#ffffff", textDecoration: "none" }}
                   target="_blank"
                 >
                   <Box
-                  
                     sx={{
                       backgroundColor: "white",
                       display: "flex",
@@ -227,6 +232,10 @@ console.log(cityDD)
                     </Box>
                   </Box>
                 </a>
+                <a href="mailto:help@carecrew.in"
+                 style={{ color: "#ffffff", textDecoration: "none" }}
+                 target="_blank"
+                >
                 <Box
                   sx={{
                     backgroundColor: "white",
@@ -250,6 +259,7 @@ console.log(cityDD)
                     </Box>
                   </Box>
                 </Box>
+                </a>
               </Box>
               <Box></Box>
             </Item>
