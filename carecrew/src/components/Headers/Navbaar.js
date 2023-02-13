@@ -110,12 +110,10 @@ function Navbaar() {
               width: "0.5px",
             }}
           />
-          <a href="" target="_blank" rel="noreferrer">
             <EmailIcon
               fontSize="10px"
               sx={{ color: "#ebe956", marginLeft: "30px", marginBottom: "3px" }}
             />
-          </a>{" "}
           &nbsp;
           <Box sx={{ color: "#ebe956", fontSize: "12px", fontWeight: "400" }}>
             <span
