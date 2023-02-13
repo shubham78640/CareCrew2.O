@@ -35,6 +35,7 @@ function GetACallBackForm({ data }) {
   let newLocality = locality ? locality["locality"] : "";
   const currentdate = Date.now();
 
+
   const handleClick = async () => {
     try {
       let response = await axios.post(`${MasterApi}carecrew/carecrew/save`, {
@@ -47,13 +48,13 @@ function GetACallBackForm({ data }) {
         service: newServices,
         workingHours: workinghour,
       });
-      console.log(response);
-      const config = {
-        SecureToken: "64bbee42-d25a-4fff-ad6d-5133e8409c45",
-        To: "intezar@thepinchlife.com",
-        From: `intezar@thepinchlife.com`,
-        Subject: "New Lead From CARE CREW Website",
-        Body: `<p>Name:- ${name}</p> 
+     console.log("data", response)
+  const config = {
+    SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
+    To : 'everyhome@carecrew.in',
+    From : `intezar@thepinchlife.com`,
+    Subject : "New Lead From CARE CREW Website",
+    Body : `<p>Name:- ${name}</p> 
             <p>Phone Number:- ${phoneNumber}</p>
             <p>Email:- ${email}</p>         
             <p>Service:- ${newServices}</p>        
