@@ -97,4 +97,4 @@ export const servicesDatainHindi = [
   {service:"अन्य"}
 ]
 
-export const MasterApi ="http://localhost:8082/"
+export const MasterApi ="http://api.carecrew.in:8082/"

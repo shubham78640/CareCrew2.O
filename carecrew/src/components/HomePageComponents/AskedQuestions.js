@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import React from "react";
+import React, {useState} from "react";
 import image from "../../Images/KM.jpg";
 import { styled } from "@mui/material/styles";
 import AccordionComponent from "../MuiComponents/AccordionComponent";
@@ -13,12 +13,11 @@ const Item = styled(Box)(({ theme }) => ({
 }));
 
 function AskedQuestions() {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState("panel1");
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-
   return (
     <>
       <Item

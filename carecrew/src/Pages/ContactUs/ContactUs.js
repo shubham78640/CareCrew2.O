@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import Box from "@mui/material/Box";
 import Footer from "../../components/Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
@@ -10,7 +10,7 @@ function ContactUs() {
   return (
     <>
       <ScrollToTop smooth color="#007a47" />
-      <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}  >
+      <Box sx={{ backgroundColor: "#F4F8FD", height: "auto" }}>
         <Contact />
       </Box>
 
