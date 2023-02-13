@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 import Contact from "../../components/Contact/Contact";
 
 function Housekeeping_Service() {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);

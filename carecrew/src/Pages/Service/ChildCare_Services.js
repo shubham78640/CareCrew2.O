@@ -11,7 +11,7 @@ import { multiStepContext } from "../../Context/FormContext";
 
 function ChildCare_Services() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
