@@ -1,6 +1,4 @@
 import Login from "./Pages/Authentication/Login";
-
-
 import Navbaar from './components/Headers/Navbaar'
 import Home from './components/Home/Home'
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom"
@@ -24,10 +22,14 @@ import AgePolicy from './Pages/Privacy Policy/AgePolicy'
 import AdminCandidate from "./Pages/AdminTable/AdminCandidate";
 import Thankyou from "./Pages/ThankYou/Thankyou";
 import StepperForm from "./Pages/StepperForm/StepperForm";
+import { useLayoutEffect } from "react";
 
 
 
 function App() {
+  useLayoutEffect(() => {
+    document.getElementById("root").scrollTo(0, 0);
+   })
   let user = localStorage.getItem('user')
   return (
       <div>
@@ -54,13 +56,10 @@ function App() {
               <Route path="/termsofuse" element={<TermsofUse/> } />
               <Route path="/agepolicy" element={<AgePolicy/> } />
               <Route path="/admincandidate" element={<AdminCandidate/> } />
-              <Route path="/thankyou" element = {<Thankyou/>}/>
-              <Route path="/step" element = {<StepperForm/>}/>
-
+              <Route path="/thankyou" element={<Thankyou/>}/>
+              <Route path="/step" element={<StepperForm/>}/>
             </Routes>
         </BrowserRouter>
-
-
       </div>
   );
 }

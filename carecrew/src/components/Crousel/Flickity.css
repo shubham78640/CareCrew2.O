@@ -62,12 +62,36 @@
   .category:hover{
     color:#72bf44;
   }
-  /* .category::before {
+  .category::before {
     content: '';
     position: absolute;
     top: calc(100% + 10px);
     left: 0;
     right: 0;
     height: 2px;
-  } */
+  }
 
+  .App button{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+
+  }
+
+  /* slick-arrow slick-prev slick-disabled */
+  .slick-prev{
+  }
+
+  .slick-next{
+   }
+
+   .slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color:#007a48;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
