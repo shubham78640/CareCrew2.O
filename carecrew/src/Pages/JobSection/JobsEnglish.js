@@ -5,7 +5,6 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import { Button, Autocomplete } from "@mui/material";
-import Checkbox from "@mui/material/Checkbox";
 import Footer from "../../components/Footer/Footer";
 import TabsComponent from "../../components/TabComponent/TabsComponent";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -26,17 +25,14 @@ const Item = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   gap: "20px",
 }));
-
 const SPAN = styled("span")({
   color: "#000000",
   fontWeight: "900",
 });
-
 const Span = styled("span")({
   color: "#72bf44",
   cursor: "pointer",
 });
-
 const Section = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
   display: "flex",
@@ -51,72 +47,43 @@ function JobsEnglish() {
   const [city, setCity] = useState("");
   const [skill, setSkill] = useState([]);
   const { closeForm, setCloseForm } = useContext(multiStepContext);
-
   const [expanded, setExpanded] = React.useState(false);
   const navigate = useNavigate();
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-
   const SkillsName = skill.map(function (item) {
     return item["service"];
   });
-
-  // console.log(names);
-
-  // const handleSubmit = async () => {
-  //   try {
-  //     let response = await axios.post("http://13.126.160.155:8082/candidate/save", {
-  //       name: name,
-  //           phoneNumber: phone,
-  //           cityName: city,
-
-  //     });
-  //   } catch (error) {
-  //   }
-  // }
-
-  const date = Date.now();
-  const servicesName = skill.map(function (item) {
-    return item["service"];
-  });
-
-  // console.log("skills",moment(date).format("MMMM Do YYYY"))
-
-  const handleSubmit = (e) => {
-    // e.preventDefault();
-    // console.log("Details=", name, phone, city, servicesName, date);
-
-    // const data = {
-    //   name: name,
-    //   phoneNumber: phone,
-    //   city: city,
-    //   services: servicesName,
-    //   createdAt: date,
-    // };
-    // axios
-    //   .post(
-    //     "http://13.126.160.155:8082/carecrew/candidate/save",
-    //     data
-    //   )
-    //   .then((response) => {
-    //     console.log(response);
-    //     setCity("");
-    //     setName("");
-    //     setPhone("");
-    //   });
-    const config = {
-      SecureToken: "64bbee42-d25a-4fff-ad6d-5133e8409c45",
-      To: "shubham@thepinchlife.com",
-      From: "intezar@thepinchlife.com",
-      Subject: "Help Form Lead",
-      Body: `<p>Name:- ${name}</p> 
+  const currentdate = Date.now();
+  const handleSubmit = async () => {
+    try {
+      let response = await axios.post(`${MasterApi}carecrew/candidate/save`, {
+        city: city,
+        createdAt: currentdate,
+        name: name,
+        phoneNumber: phone,
+        services: SkillsName,
+      });
+      console.log(response);
+      const config = {
+        SecureToken: "64bbee42-d25a-4fff-ad6d-5133e8409c45",
+        To: "shubham@thepinchlife.com",
+        From: "intezar@thepinchlife.com",
+        Subject: "Help Form Lead",
+        Body: `<p>Name:- ${name}</p> 
       <p>Phone Number:- ${phone}</p> 
       <p>Skills:- ${SkillsName}</p>
       <p>City:- ${city}</p> `,
-    };
-    if (window.Email) {
-      window.Email.send(config).then (()=>navigate("/thankyou"),setCloseForm(false))
+      };
+      if (window.Email) {
+        window.Email.send(config).then(
+          () => navigate("/thankyou"),
+          setCloseForm(false)
+        );
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 

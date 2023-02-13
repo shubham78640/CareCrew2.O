@@ -31,9 +31,6 @@ const BOX = styled(Box)({
 const BOX1 = styled(Box)({
   padding: "15px",
   background: "#f4f4f4",
-
-
-  
 });
 
 const AccordionSummary = styled((props) => (

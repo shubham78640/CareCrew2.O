@@ -10,6 +10,7 @@ import { Button ,Autocomplete,TextField} from "@mui/material";
 import axios from "axios";
 import { multiStepContext } from "../../Context/FormContext";
 import { useNavigate } from "react-router-dom";
+import { MasterApi } from "../../AllData";
 
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
@@ -28,12 +29,12 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [address, setAddress] = useState("");
   const [workinghr, setworkingHr] = useState("");
-const date =Date.now()
+const Currentdate =Date.now()
 const { closeForm, setCloseForm } = useContext(multiStepContext);
 const navigate = useNavigate();
 const [cityDD, setCityDD] = useState([])
 
-console.log(cityDD)
+// console.log(cityDD)
 // useEffect(() => {
 //   const getData = async()=>{
 //     let response2 = await fetch("http://13.126.160.155:8082/carecrew/city/get/cities/")
@@ -45,56 +46,21 @@ console.log(cityDD)
 
 // console.log("cityji...",city)
 // let newCity = city?city["city"]:"";
-  const handleSubmit = (e) => {
-    // e.preventDefault();
-    // console.log(
-    //   "Details=",
-    //   name,
-    //   phone,
-    //   email,
-    //   city,
-    //   message,
-    //   address,
-    //   workinghr
-    // );
-
-    // const data = {
-    //   // Name: name,
-    //   // Phone: phone,
-    //   // Email: email,
-    //   // City: city,
-    //   // Message: message,
-    //   // Address: address,
-    //   // Working_HR: workinghr,
-
-    //      "address": address,
-    //       "city": city,
-    //       "createdAt": date,
-    //       "email": email,
-    //       "message": message,
-    //       "name": name,
-    //       "phoneNumber": phone,
-    //       "workingHours": workinghr,
-         
-    // };
-    // axios
-    //   .post(
-    //     // "https://sheet.best/api/sheets/562c7b35-218c-441b-84ae-f9258f9f0ca7"
-    //     "http://13.126.160.155:8082/carecrew/carecrew/save"
-    //     ,
-    //     data
-    //   )
-    //   .then((response) => {
-    //     console.log(response);
-    //     setAddress("");
-    //     setCity("");
-    //     setEmail("");
-    //     setName("");
-    //     setPhone("");
-    //     setworkingHr("");
-    //     setMessage("");
-    //   });
-
+  const handleSubmit = async () => {
+   try{
+ let response = await axios.post(`${MasterApi}carecrew/contactUs/save`,
+     {
+      address: address,
+      city: city,
+      createdAt:Currentdate,
+      email: email,
+      message: message,
+      name: name,
+      phoneNumber: phone,
+      workingHours: workinghr
+     }
+      );
+        console.log(response);
     const config = {
       SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
       To : 'shubham@thepinchlife.com',
@@ -111,8 +77,12 @@ console.log(cityDD)
       if(window.Email){
       window.Email.send(config).then (()=>navigate("/thankyou"),setCloseForm(false))
       }
-      
+    }
+    catch(error){
+      console.log(error);
+    }
   };
+// }, [])
   return (
     <>
       <Box   sx={{ backgroundColor: "#F4F8FD", height: "auto" , padding:{sm:"2% 5%", xs:"0%"}}}>

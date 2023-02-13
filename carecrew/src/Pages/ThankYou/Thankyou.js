@@ -1,7 +1,9 @@
-import { Box, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 function Thankyou() {
   let nevigate = useNavigate();
   useEffect(() => {
@@ -13,34 +15,32 @@ function Thankyou() {
     <>
       <Box
         sx={{
-          width: { sm: "50%", xs: "100%" },
-          height: "100vh",
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
-          margin: "auto",
+          padding: { sm: "0px", xs: "20px" },
         }}
       >
-        <img
-          width="100%"
-          src="https://astrixinc.com/wp-content/uploads/2017/05/thank-you.png"
-          alt=""
-        />
+        <Card
+          sx={{
+            padding: { sm: "8%", xs: "10%" },
+            marginTop: { sm: "10%", xs: "30%" },
+          }}
+        >
+          <CardContent sx={{}}>
+            <Typography
+              variant="h1"
+              gutterBottom
+              sx={{
+                color: "#007a47",
+                fontSize: { sm: "40px", xs: "17px" },
+                fontWeight: { sm: "500", xs: "600" },
+              }}
+            >
+              ꧁꧅ ᴛʜᴀɴᴋ ʏᴏᴜ ꧅꧂
+            </Typography>
+          </CardContent>
+        </Card>
       </Box>
-      <Button
-        onClick={() => {
-          nevigate("/");
-        }}
-        color="success"
-        sx={{
-          position: "relative",
-          left: { sm: "45%", xs: "32%" },
-          bottom: { sm: "200px", xs: "200px" },
-        }}
-        variant="contained"
-      >
-        Go to homepage
-      </Button>
     </>
   );
 }

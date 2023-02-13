@@ -18,7 +18,6 @@ function AskedQuestions() {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-
   return (
     <>
       <Item
