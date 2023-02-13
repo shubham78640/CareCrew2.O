@@ -9,6 +9,7 @@ const Item = styled(Box)(({ theme }) => ({
   backgroundImage: `url(${image})`,
   marginTop: "70px",
   objectFit: "cover",
+  
   backgroundRepeat: "no-repeat",
 }));
 
@@ -22,6 +23,7 @@ function AskedQuestions() {
     <>
       <Item
         sx={{
+          backgroundSize:{sm:"100%"},
           p: { sm: "100px", xs: "10px" },
           justifyContent: { xs: "center" },
           gap: "30px",
