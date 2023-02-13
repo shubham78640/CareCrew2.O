@@ -67,7 +67,7 @@ function JobsHindi() {
       console.log(response);
       const config = {
         SecureToken: "64bbee42-d25a-4fff-ad6d-5133e8409c45",
-        To: "shubham@thepinchlife.com",
+        To: "everyhome@carecrew.in",
         From: "intezar@thepinchlife.com",
         Subject: "Help Form Lead",
         Body: `<p>Name:- ${name}</p> 
