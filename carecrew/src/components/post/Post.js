@@ -5,6 +5,7 @@ import "./post.css";
 import sanityClient from "../../libs/client";
 import { Box } from "@mui/system";
 import { CircularProgress } from "@mui/material";
+import moment from "moment";
 
 export default function Post() {
   const [allPostsData, setAllPostsData] = useState(null);
@@ -63,7 +64,7 @@ console.log(allPostsData)
               </span>
               <hr />
               {/* <span className="postDate">{format(item.publishedAt)}</span> */}
-              <span className="postDate">{item.categories[0]._key}</span>
+              <span className="postDate">{moment(item.publishedAt).format("MMMM Do YYYY")}</span>
             </div>
             <p className="postDesc">{item.about}</p>
           </div>

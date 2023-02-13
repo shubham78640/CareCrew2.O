@@ -402,7 +402,7 @@ function Navbaar() {
           </NavLink>
 
 {/* Dropdown menu3 */}
-         {user &&
+         {/* {user &&
           <div
             onMouseEnter={handleDropdown2}
             className="link"
@@ -439,7 +439,7 @@ function Navbaar() {
               <Dropdown name="Customer" path="/admin" />
               <Dropdown name="Candidate" path="/admincandidate" />
             </div>
-          </div>}
+          </div>} */}
           {/* Dropdown menu3 */}
         </Box>
 
