@@ -19,7 +19,6 @@ import TermsofUse from "./Pages/Privacy Policy/TermsofUse";
 import AgePolicy from "./Pages/Privacy Policy/AgePolicy";
 import Thankyou from "./Pages/ThankYou/Thankyou";
 import StepperForm from "./Pages/StepperForm/StepperForm";
-import { useLayoutEffect } from "react";
 
 function App() {
   let user = localStorage.getItem("user");

@@ -371,7 +371,7 @@ function Navbaar() {
             </div>
           </div>
           {/* Dropdown menu2 */}
-
+{/* 
           <NavLink
             className="Navlink"
             to="/blogs"
@@ -397,7 +397,7 @@ function Navbaar() {
             >
               Blogs
             </li>
-          </NavLink>
+          </NavLink> */}
 
 {/* Dropdown menu3 */}
          {/* {user &&
