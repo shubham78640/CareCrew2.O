@@ -117,7 +117,12 @@ export default function AboutUs() {
 
             <Box display={"flex"} justifyContent={"left"}>
             <Link to="/aboutus">
-              <Button sx={{textTransform:"none"}} color="success" variant="contained">
+              <Button sx={{textTransform:"none"}} color="success" variant="contained"  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}>
                 {" "}
                 Read More{" "}
               </Button>
@@ -145,7 +150,13 @@ export default function AboutUs() {
 
             <Box display={"flex"} justifyContent={"left"}>
             <Link to="/aboutus">
-              <Button sx={{textTransform:"none"}} color="success" variant="contained">
+              <Button sx={{textTransform:"none"}} color="success" variant="contained" 
+               onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}>
                 {" "}
                 Read More{" "}
               </Button>
@@ -179,7 +190,12 @@ export default function AboutUs() {
 
             <Box display={"flex"} justifyContent={"left"}>
             <Link to="/aboutus">
-              <Button sx={{textTransform:"none"}} color="success" variant="contained">
+              <Button sx={{textTransform:"none"}} color="success" variant="contained"  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}>
                 {" "}
                 Read More{" "}
               </Button>

@@ -78,7 +78,12 @@ function Flickity() {
             </div>
             <div className="card-bottom">
               <p>{item.paragraph}</p>
-              <NavLink style={{textDecoration:"none"}} to={item.link}>
+              <NavLink style={{textDecoration:"none"}} to={item.link}  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}>
               <span className="category">
                 <span
                   style={{
@@ -94,7 +99,7 @@ function Flickity() {
                     fontWeight: "999",
                   }}
                 >
-                  <ArrowForwardIosIcon fontSize="6px"/>
+                  <ArrowForwardIosIcon fontSize="6px"  />
                 </span>
                 {item.category}
               </span>
