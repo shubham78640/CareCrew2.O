@@ -29,11 +29,13 @@ function Weprovide() {
         <Box
           sx={{
             width: { sm: "48%", xs: "100%" },
-            height: { sm: "600px", xs: "455px" },
           }}
         >
-          <Box sx={{ width: "95%" }}>
+          <Box sx={{ width: "%" }}>
+            <Box>
             <img width={"100%"} src={CCWebSiteImage} alt="no Image" />
+            </Box>
+           
           </Box>
         </Box>
 

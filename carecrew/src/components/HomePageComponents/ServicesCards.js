@@ -5,6 +5,7 @@ import {CardsData} from "../../AllData";
 function ServicesCards() {
   return (
     <>
+
     <Box sx={{display:"flex",gap:"20px", flexWrap:"wrap" , padding:"2%", justifyContent:"center",marginTop:4}}>
       {CardsData.map((value) => (
         <CradComponent
@@ -15,6 +16,7 @@ function ServicesCards() {
         />
       ))}
       </Box>
+      
     </>
   );
 }
