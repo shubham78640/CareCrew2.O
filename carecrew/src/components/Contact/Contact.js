@@ -65,7 +65,7 @@ const [cityDD, setCityDD] = useState([])
       SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
       To : 'rituja@thepinchlife.com',
       From : "intezar@thepinchlife.com",
-      Subject : "Contect Us Form Lead",
+      Subject : "Contact Us Form Lead",
       Body : `<p>Name:- ${name}</p> 
       <p>Phone Number:- ${phone}</p> 
       <p>Email:- ${email}</p>
