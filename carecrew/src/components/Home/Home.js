@@ -39,7 +39,9 @@ function Home() {
 
 
       {/* <Flickity /> */}
-      <ServicesCards/>
+    <Box mt={5}>
+    <ServicesCards/>
+    </Box>
       <StepsToHire />
       <AboutUs />
       <AskedQuestions />

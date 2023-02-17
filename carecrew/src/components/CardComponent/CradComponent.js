@@ -25,6 +25,7 @@ function CradComponent(props) {
             height: 300,
             ":hover": {
               boxShadow: 20,
+             
             },
           }}
         >
