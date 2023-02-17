@@ -29,6 +29,7 @@ function Weprovide() {
         <Box
           sx={{
             width: { sm: "48%", xs: "100%" },
+           
           }}
         >
            <Box>
