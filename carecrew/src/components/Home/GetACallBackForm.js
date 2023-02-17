@@ -74,7 +74,7 @@ function GetACallBackForm({ data }) {
   };
 
   return (
-    <Box sx={{ display: "grid", gap: "10px" }}>
+    <Box sx={{ display: "grid", gap: "10px", position:"relative"}}>
       <TextField
         size="small"
         placeholder="Name"
@@ -84,7 +84,7 @@ function GetACallBackForm({ data }) {
         sx={{
           backgroundColor: "#007a48",
           borderRadius: "5px",
-          width: "300px",
+          width: "100%",
           input: {
             fontSize: "12px",
             color: "white",
