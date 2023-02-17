@@ -63,7 +63,7 @@ function StepsToHire() {
         display={"flex"}
         justifyContent={"center"}
         gap={3}
-        flexWrap={"nowrap"}
+        sx={{flexWrap:{sm:"nowrap", xs:"wrap"}}}
         rowGap={7}
       >
         <BOX>
