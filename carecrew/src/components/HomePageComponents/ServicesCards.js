@@ -5,7 +5,7 @@ import {CardsData} from "../../AllData";
 function ServicesCards() {
   return (
     <>
-    <Box sx={{display:"flex",gap:"20px", flexWrap:"wrap" , padding:"2%", justifyContent:"center"}}>
+    <Box sx={{display:"flex",gap:"20px", flexWrap:"wrap" , padding:"2%", justifyContent:"center",}}>
       {CardsData.map((value) => (
         <CradComponent
           link={value.link}
