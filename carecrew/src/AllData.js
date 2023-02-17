@@ -97,4 +97,44 @@ export const servicesDatainHindi = [
   {service:"अन्य"}
 ]
 
+export let CardsData = [
+{
+  Cardimage:`${imgHK}`,
+  CardHeading:"Housekeeping",
+  CardContentLines:"Our housekeepers are trained to keep your homes in order by performing multiple household chores with...",
+  link:"/services/housekeeping"
+},
+{
+  Cardimage:`${imgcooking}`,
+  CardHeading:"Cooking",
+  CardContentLines:"Our home cooks are professionally trained to prepare wholesome home-style meals for the families to enjoy",
+  link:"/services/cooking"
+},
+{
+  Cardimage:`${imgCC}`,
+  CardHeading:"Child Care",
+  CardContentLines:"We provide reliable child caregivers who assure the safety and growth of you child.",
+  link:"/services/childcare"
+},
+{
+  Cardimage:`${imgEC}`,
+  CardHeading:"Elder Care",
+  CardContentLines:"Whether it's for your parents or grandparents, you can hire trained professionals for taking care of...",
+  link:"/services/eldercare"
+},
+{
+  Cardimage:`${imgDriver}`,
+  CardHeading:"Driving",
+  CardContentLines:"We provide licensed drivers with in-depth knowledge about cars and driving etiquette.",
+  link:"/services/driver"
+},
+{
+  Cardimage:`${imgOthers}`,
+  CardHeading:"Others",
+  CardContentLines:"Did we miss out on the service you are looking for? Submit your inquiry to us.",
+  link:"/services/others"
+},
+
+]
+
 export const MasterApi ="http://api.carecrew.in:8082/"

@@ -338,11 +338,11 @@ const [cityDD, setCityDD] = useState([])
               </Box>
               <Grid item lg={12} xs={12} mt={2}>
                 <Box p="0% 4%">
-                  <Box sx={{ fontWeight: 500 }}>Your message*</Box>
+                  <Box sx={{ fontWeight: 500 }}>Your message</Box>
                   <TextField
                     id="outlined-textarea"
-                    label="Mention your detailed requirment here...*"
-                    placeholder="Mention your detailed requirment here...*"
+                    label="Mention your detailed requirment here..."
+                    placeholder="Mention your detailed requirment here..."
                     multiline
                     color="success"
                     rows={7}
@@ -360,10 +360,10 @@ const [cityDD, setCityDD] = useState([])
                 <Grid container mt={2}>
                   <Grid item lg={6} xs={12}>
                     <Box>
-                      <Box sx={{ fontWeight: 500 }}>Working hours*</Box>
+                      <Box sx={{ fontWeight: 500 }}>Working hours</Box>
                       <TextField
                         id="outlined-basic"
-                        label="Working hours*"
+                        label="Working hours"
                         variant="outlined"
                         color="success"
                         sx={{
@@ -378,10 +378,10 @@ const [cityDD, setCityDD] = useState([])
                   </Grid>
                   <Grid item lg={6} xs={12}>
                     <Box sx={{ mt: { sm: "0%", xs: "20px" } }}>
-                      <Box sx={{ fontWeight: 500 }}>Address*</Box>
+                      <Box sx={{ fontWeight: 500 }}>Address</Box>
                       <TextField
                         id="outlined-basic"
-                        label="Address*"
+                        label="Address"
                         variant="outlined"
                         color="success"
                         sx={{
@@ -401,6 +401,7 @@ const [cityDD, setCityDD] = useState([])
                   sx={{ marginTop: "0px", textTransform: "none" }}
                   variant="contained"
                   color="success"
+                  disabled={name&&phone&&city?false:true}
                   onClick={handleSubmit}
                 >
                   Submit Your Request

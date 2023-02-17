@@ -283,57 +283,6 @@ function JobsHindi() {
                 onChange={(e) => setPhone(e.target.value)}
                 value={phone}
               />
-              {/* <Box>
-                <Box mt={2} sx={{ color: "#007a48" }}>
-                  {" "}
-                  आप इनमें से कौन-कौन से काम कर सकते हैं?*
-                </Box>
-                <Box sx={{}}>
-                  <Box mt={2} sx={{ display: "flex", gap: "32px" }}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "12px",
-                      }}
-                    >
-                      <Box sx={{ display: "flex" }}>
-                        <Checkbox {...label} color="success" />
-                        <Box mt={1.1}>घर की सफाई</Box>
-                      </Box>{" "}
-                      <Box sx={{ display: "flex" }}>
-                        <Checkbox {...label} color="success" />
-                        <Box mt={1.1}> खाना बनाना</Box>
-                      </Box>
-                      <Box sx={{ display: "flex" }}>
-                        <Checkbox {...label} color="success" />
-                        <Box mt={1.1}>बच्चों की देखभाल</Box>
-                      </Box>
-                    </Box>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "12px",
-                      }}
-                    >
-                      <Box sx={{ display: "flex" }}>
-                        <Checkbox {...label} color="success" />
-                        <Box mt={1.1}> बड़ों की देखभाल</Box>
-                      </Box>{" "}
-                      <Box sx={{ display: "flex" }}>
-                        <Checkbox {...label} color="success" />
-                        <Box mt={1.1}> गाड़ी चलाना</Box>
-                      </Box>{" "}
-                      <Box sx={{ display: "flex" }}>
-                        <Checkbox {...label} color="success" />
-                        <Box mt={1.1}> अन्य</Box>
-                      </Box>
-                    </Box>
-                  </Box>
-                </Box>
-              </Box> */}
-
               <Autocomplete
                 multiple
                 disableCloseOnSelect
@@ -370,6 +319,7 @@ function JobsHindi() {
               <Button
                 variant="contained"
                 color="success"
+                disabled={name && phone && city ? false : true}
                 sx={{ marginTop: "30px" }}
                 onClick={handleSubmit}
               >

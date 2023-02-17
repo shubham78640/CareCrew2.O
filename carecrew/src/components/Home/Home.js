@@ -11,6 +11,7 @@ import AskedQuestions from "../HomePageComponents/AskedQuestions";
 import Footer from "../Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
 import { multiStepContext } from "../../Context/FormContext";
+import ServicesCards from "../HomePageComponents/ServicesCards";
 
 const BOX = styled(Box)({
   backgroundImage: `url("http://carecrew.in/wp-content/uploads/2022/02/wharwedo.png")`,
@@ -251,7 +252,8 @@ function Home() {
         </Box>
       </Box>
 
-      <Flickity />
+      {/* <Flickity /> */}
+      <ServicesCards/>
       <StepsToHire />
       <AboutUs />
       <AskedQuestions />

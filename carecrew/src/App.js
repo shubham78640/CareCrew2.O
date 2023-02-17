@@ -19,6 +19,7 @@ import TermsofUse from "./Pages/Privacy Policy/TermsofUse";
 import AgePolicy from "./Pages/Privacy Policy/AgePolicy";
 import Thankyou from "./Pages/ThankYou/Thankyou";
 import StepperForm from "./Pages/StepperForm/StepperForm";
+// import Test from "./components/Test/Test";
 
 function App() {
   let user = localStorage.getItem("user");
@@ -49,6 +50,7 @@ function App() {
           <Route path="/agepolicy" element={<AgePolicy />} />
           <Route path="/thankyou" element={<Thankyou />} />
           <Route path="/step" element={<StepperForm />} />
+          {/* <Route path="/test" element={<Test />} /> */}
         </Routes>
       </BrowserRouter>
     </div>

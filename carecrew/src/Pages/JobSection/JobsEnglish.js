@@ -308,8 +308,10 @@ function JobsEnglish() {
               <Button
                 variant="contained"
                 color="success"
+                disabled={name&&phone&&city?false:true}
                 sx={{ marginTop: "30px", textTransform: "none" }}
                 onClick={handleSubmit}
+
               >
                 Submit Your Enquiry
               </Button>
