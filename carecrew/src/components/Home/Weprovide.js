@@ -21,7 +21,7 @@ function Weprovide() {
       setCloseForm(true);
     };
   return (
-    <Box mb={4}>
+    <Box>
 <Box
     width={"100%"}
     display={"flex"}
@@ -40,14 +40,13 @@ function Weprovide() {
     >
       <BOX
         sx={{
-          width: { sm: "48%", xs: "100%" },
+          width: { sm: "100%", xs: "100%" },
           height: {xs: "455px", sm:"100%"},
           display: "grid",
           justifyContent: "right",
           alignItems: "flex-end",
-          p: { sm: "20px", xs: "10px" },
+          p: { sm: "10px", xs: "5px" },
         }}
-        position={"absolute"}
       >
         {/* <img
           width={"100%"}
