@@ -23,7 +23,6 @@ function Weprovide() {
   return (
     <Box>
 <Box
-    border={1}
     width={"100%"}
     display={"flex"}
     justifyContent={"space-between"}

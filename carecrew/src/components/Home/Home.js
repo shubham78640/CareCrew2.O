@@ -35,13 +35,8 @@ function Home() {
       <ScrollToTop smooth color="green" />
       <HomeCrousel />
       <Weprovide/>
-
-
-
       {/* <Flickity /> */}
-    <Box mt={5}>
-    <ServicesCards/>
-    </Box>
+      <ServicesCards/>
       <StepsToHire />
       <AboutUs />
       <AskedQuestions />
