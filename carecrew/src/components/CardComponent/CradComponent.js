@@ -5,10 +5,12 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import Box from "@mui/material/Box";
 function CradComponent(props) {
   const { Cardimage, CardHeading, CardContentLines, link } = props;
   return (
     <>
+    <div>
       <NavLink
         style={{ textDecoration: "none" }}
         to={link}
@@ -53,6 +55,7 @@ function CradComponent(props) {
           </CardActionArea>
         </Card>
       </NavLink>
+      </div>
     </>
   );
 }
