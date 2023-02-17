@@ -48,19 +48,19 @@ const [cityDD, setCityDD] = useState([])
 // let newCity = city?city["city"]:"";
   const handleSubmit = async () => {
    try{
- let response = await axios.post(`${MasterApi}carecrew/contactUs/save`,
-     {
-      address: address,
-      city: city,
-      createdAt:Currentdate,
-      email: email,
-      message: message,
-      name: name,
-      phoneNumber: phone,
-      workingHours: workinghr
-     }
-      );
-        console.log(response);
+//  let response = await axios.post(`${MasterApi}carecrew/contactUs/save`,
+//      {
+//       address: address,
+//       city: city,
+//       createdAt:Currentdate,
+//       email: email,
+//       message: message,
+//       name: name,
+//       phoneNumber: phone,
+//       workingHours: workinghr
+//      }
+//       );
+//         console.log(response);
     const config = {
       SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
       To : 'rituja@thepinchlife.com',
