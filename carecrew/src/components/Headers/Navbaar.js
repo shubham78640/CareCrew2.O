@@ -77,7 +77,6 @@ function Navbaar() {
             handleDropdownclose1();
             handleDropdownclose();
             handleDropdownclose2()
-            
           }}
           sx={{
             backgroundColor: "#72bf44",
@@ -478,7 +477,7 @@ function Navbaar() {
               alignItems: "center",
               justifyContent: "center",
               position: "fixed",
-              width: "23%",
+              width: "24%",
               zIndex: 999,
               borderRadius: "10px",
               minHeight: "500px",
@@ -488,7 +487,18 @@ function Navbaar() {
                 "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;",
             }}
           >
+            <Box 
+                sx={{
+                position: "relative",
+             
+                // left: "10px",
+                // right: "10px",
+             
+                
+              }}
+            >
             <GetACallBackForm data={5}/>
+            </Box>
             <CancelIcon
               onClick={handleCloseForm}
               sx={{
