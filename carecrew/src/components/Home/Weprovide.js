@@ -21,7 +21,7 @@ function Weprovide() {
       setCloseForm(true);
     };
   return (
-    <Box>
+    <Box mb={4}>
 <Box
     width={"100%"}
     display={"flex"}

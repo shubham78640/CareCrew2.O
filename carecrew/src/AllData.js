@@ -6,6 +6,9 @@ import imgCC from "../../carecrew/src/Images/Childcare.jpg"
 import imgEC from "../../carecrew/src/Images/eldercare_service.jpg"
 import imgDriver from "../../carecrew/src/Images/driving_service.jpg"
 import imgOthers from "../../carecrew/src/Images/Question.jpg"
+
+export const TOMAILE = "rituja@thepinchlife.com";
+
 export const crouselData = [
 
     {

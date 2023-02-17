@@ -40,7 +40,6 @@ function Home() {
       <StepsToHire />
       <AboutUs />
       <AskedQuestions />
-
       <Footer />
       <ScrollToTop smooth color="green" />
     </>

@@ -63,7 +63,7 @@ const [cityDD, setCityDD] = useState([])
         console.log(response);
     const config = {
       SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
-      To : 'everyhome@carecrew.in',
+      To : 'rituja@thepinchlife.com',
       From : "intezar@thepinchlife.com",
       Subject : "Contect Us Form Lead",
       Body : `<p>Name:- ${name}</p> 
