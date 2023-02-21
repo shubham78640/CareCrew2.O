@@ -57,14 +57,14 @@ function JobsHindi() {
 
   const handleSubmit = async () => {
     try {
-      // let response = await axios.post(`${MasterApi}carecrew/candidate/save`, {
-      //   city: city,
-      //   createdAt: currentdate,
-      //   name: name,
-      //   phoneNumber: phone,
-      //   services: SkillsName,
-      // });
-      // console.log(response);
+      let response = await axios.post(`${MasterApi}carecrew/candidate/save`, {
+        city: city,
+        createdAt: currentdate,
+        name: name,
+        phoneNumber: phone,
+        services: SkillsName,
+      });
+      console.log(response);
       const config = {
         SecureToken: "64bbee42-d25a-4fff-ad6d-5133e8409c45",
         To: 'rituja@thepinchlife.com',

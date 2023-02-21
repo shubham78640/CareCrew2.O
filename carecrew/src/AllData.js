@@ -140,4 +140,4 @@ export let CardsData = [
 
 ]
 
-export const MasterApi ="http://api.carecrew.in:8082/"
+export const MasterApi ="https://api.carecrew.in/"

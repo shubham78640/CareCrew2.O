@@ -21,39 +21,56 @@ function Test() {
                   hii this is for test{" "}
                 </Box>
                 <Box>
-                  lorem NewsSportsCricketWoman arrested after being accused of
-                  attacking Prithvi Shaw's car Woman arrested after being
-                  accused of attacking India cricketer Prithvi Shaw's car Sapna
-                  Gill, one of the 8 people who were detained by Oshiwada Police
-                  in Mumbai for attacking the car of Prithvi Shaw's friend, was
-                  arrested on Thursday, February 16. Prithvi Shaw had denied
-                  selfies to the group while having dinner at a hotel before a
-                  scuffle broke out. India Today Web Desk India Today Web Desk
-                  UPDATED: Feb 16, 2023 18:57 IST NewsSportsCricketWoman
-                  arrested after being accused of attacking Prithvi Shaw's car
-                  Woman arrested after being accused of attacking India
+                 	&#9830;  arrested after being accused of
+                  
+    
                 </Box>
-                <Box m={2} border={2} sx={{ flex: 2 }}>
-                <Box sx={{ marginTop: "", fontSize: "20px", fontWeight: 900 }}>
+                <Box>
+                 	&#9830; NewsSportsCricketWoman arrested after bein
+                  
+    
+                </Box>
+                <Box>
+                 	&#9830; NewsSportsCricketWoman arrested after being accused of
+                  
+    
+                </Box>
+                <Box>
+                 	&#9830; NewsSportsCricketWoman 
+                   abcd
+    
+                </Box>
+               
+                <Box sx={{ marginTop: "19px", fontSize: "20px", fontWeight: 900 }}>
                   hii this is for test{" "}
                 </Box>
                 <Box>
-                  lorem NewsSportsCricketWoman arrested after being accused of
-                  attacking Prithvi Shaw's car Woman arrested after being
-                  accused of attacking India cricketer Prithvi Shaw's car Sapna
-                  Gill, one of the 8 people who were detained by Oshiwada Police
-                  in Mumbai for attacking the car of Prithvi Shaw's friend, was
-                  arrested on Thursday, February 16. Prithvi Shaw had denied
-                  selfies to the group while having dinner at a hotel before a
-                  scuffle broke out. India Today Web Desk India Today Web Desk
-                  UPDATED: Feb 16, 2023 18:57 IST NewsSportsCricketWoman
-                  arrested after being accused of attacking Prithvi Shaw's car
-                  Woman arrested after being accused of attacking India
+                 	&#9830; NewsSportsCricketWoman arrested after being 
+               
+                </Box>
+             
+                <Box>
+                 	&#9830; NewsSportsCricketWoman arrested after
+               
+                </Box>
+                <Box>
+                 	&#9830; NewsSpord after b
+               
+                </Box>
+                <Box>
+                 	&#9830; NewsS arrested after being accused of
+               
+                </Box>
+                 <Box>
+                 	&#9830; NewsSportsCricketWoman  being accused of
+               
                 </Box>
               </Box>
-              </Box>
-              <Box m={2} border={2} sx={{ flex: 1 }}>
-                <img width="300" height="300" src={testimg} />
+              <Box m={2} border={2} sx={{ flex: 1,  }}>
+                <Box border={2} p={2} sx={{display:"flex", flexDirection:"column", gap:"20px", justifyContent:"center", alignItems:"center"}}>
+                <img width="150" height="150" src={testimg} />
+                <img width="150" height="150" src={testimg} />
+                </Box>
               </Box>
              </Box>
             </Box>

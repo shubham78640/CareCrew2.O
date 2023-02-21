@@ -34,33 +34,21 @@ const { closeForm, setCloseForm } = useContext(multiStepContext);
 const navigate = useNavigate();
 const [cityDD, setCityDD] = useState([])
 
-// console.log(cityDD)
-// useEffect(() => {
-//   const getData = async()=>{
-//     let response2 = await fetch("http://13.126.160.155:8082/carecrew/city/get/cities/")
-//     let data2 = await response2.json()
-//     setCityDD(data2.data)
-//   }
-//   getData()
-// }, [])
-
-// console.log("cityji...",city)
-// let newCity = city?city["city"]:"";
   const handleSubmit = async () => {
    try{
-//  let response = await axios.post(`${MasterApi}carecrew/contactUs/save`,
-//      {
-//       address: address,
-//       city: city,
-//       createdAt:Currentdate,
-//       email: email,
-//       message: message,
-//       name: name,
-//       phoneNumber: phone,
-//       workingHours: workinghr
-//      }
-//       );
-//         console.log(response);
+ let response = await axios.post(`${MasterApi}carecrew/contactUs/save`,
+     {
+      address: address,
+      city: city,
+      createdAt:Currentdate,
+      email: email,
+      message: message,
+      name: name,
+      phoneNumber: phone,
+      workingHours: workinghr
+     }
+      );
+        console.log(response);
     const config = {
       SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
       To : 'rituja@thepinchlife.com',
