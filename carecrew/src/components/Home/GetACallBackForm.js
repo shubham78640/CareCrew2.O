@@ -76,7 +76,7 @@ function GetACallBackForm({ data }) {
     <Box sx={{ display: "grid", gap: "10px", position:"relative"}}>
       <TextField
         size="small"
-        placeholder="Name"
+        placeholder="Name*"
         onChange={(e) => {
           setName(e.target.value);
         }}
@@ -99,7 +99,7 @@ function GetACallBackForm({ data }) {
       />
       <TextField
         size="small"
-        placeholder="Mobile Number"
+        placeholder="Mobile Number*"
         onChange={(e) => {
           setPhoneNumber(e.target.value);
         }}
@@ -122,7 +122,7 @@ function GetACallBackForm({ data }) {
       />
       <TextField
         size="small"
-        placeholder="Email"
+        placeholder="Email*"
         onChange={(e) => {
           setEmail(e.target.value);
         }}
@@ -229,7 +229,7 @@ function GetACallBackForm({ data }) {
       />
       <TextField
         size="small"
-        placeholder="Address"
+        placeholder="Address*"
         onChange={(e) => {
           setAddress(e.target.value);
         }}
