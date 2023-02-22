@@ -164,7 +164,7 @@ function GetACallBackForm({ data }) {
               borderRadius: "5px",
               input: {
                 fontSize: "12px",
-                color: "white",
+                color:  "#ebe956",
                 "&::placeholder": {
                   textOverflow: "ellipsis !important",
                   fontWeight: "400",
