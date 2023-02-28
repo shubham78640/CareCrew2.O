@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
-import imgaboutus from "../../Images/bg-tab-section.png";
 import imageAboutUs1 from "../../Images/1-4.jpg";
 import imageAboutUs2 from "../../Images/mission-scaled.jpg";
 import imageAboutUs3 from "../../Images/values-scaled.jpg";
@@ -17,7 +16,6 @@ const BOX = styled(Box)({
   gap: "20px",
   justifyContent: "center",
   textAlign: "justify",
-  backgroundImage: `url(${imgaboutus})`,
   objectFit: "cover",
   padding: "40px",
 });
@@ -105,7 +103,7 @@ export default function AboutUs() {
         <BOX1 sx={{ flexDirection: { sm: "row", xs: "column-reverse" } }}>
           <BOX
             flexDirection={"column"}
-            sx={{ width: { sm: "48%", xs: "100%" } }}
+            sx={{ width: { sm: "45%", xs: "100%" } }}
           >
             <H2>Enhance well-being</H2>
             <P>
@@ -130,7 +128,7 @@ export default function AboutUs() {
             </Box>
           </BOX>
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
-            <img width={"100%"} style={{maxHeight:"360px"}} src={imageAboutUs1} alt="Dinner" />
+            <img width={"90%"} style={{maxHeight:"360px"}} src={imageAboutUs1} alt="Dinner" />
           </Box>
         </BOX1>
       </TabPanel>
@@ -139,7 +137,7 @@ export default function AboutUs() {
         <BOX1 sx={{ flexDirection: { sm: "row", xs: "column-reverse" } }}>
           <BOX
             flexDirection={"column"}
-            sx={{ width: { sm: "48%", xs: "100%" } }}
+            sx={{ width: { sm: "45%", xs: "100%" } }}
           >
             <H2>Be the most trusted</H2>
             <P>
@@ -166,7 +164,7 @@ export default function AboutUs() {
 
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
             <img
-              width={"100%"}
+              width={"90%"}
               src={imageAboutUs2}
               alt="Dinner"
             />
@@ -178,7 +176,7 @@ export default function AboutUs() {
         <BOX1 sx={{ flexDirection: { sm: "row", xs: "column-reverse" } }}>
           <BOX
             flexDirection={"column"}
-            sx={{ width: { sm: "48%", xs: "100%" } }}
+            sx={{ width: { sm: "45%", xs: "100%" } }}
           >
             <H2>Underpinned by equality</H2>
             <P>
@@ -204,7 +202,7 @@ export default function AboutUs() {
           </BOX>
 
           <Box sx={{ width: { sm: "48%", xs: "100%" } }}>
-            <img width={"100%"} src={imageAboutUs3} alt="Dinner" />
+            <img width={"90%"} src={imageAboutUs3} alt="Dinner"/>
           </Box>
         </BOX1>
       </TabPanel>

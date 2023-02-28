@@ -88,8 +88,8 @@ function WorkProcess() {
                 }}
               />
             }
-            Process_Heading="Interview"
-            Process_Content="Do a video call with the candidates we shortlist for you after understanding your requirements thoroughly."
+            Process_Heading="Interview & Trial"
+            Process_Content="Take an interview and a 3-day on-the-job paid trial of the candidate to assure yourself that you have the right person for your home."
           />
           <Process
             Process_Icons={
@@ -103,8 +103,8 @@ function WorkProcess() {
                 }}
               />
             }
-            Process_Heading="Trial"
-            Process_Content="Take a 3-day on-the-job paid trial of the candidate to assure yourself that you have the right person for your home."
+            Process_Heading="Hire & Train"
+            Process_Content="Sign the contract digitally & commit yourself to a hassle-free service. Get your Associate trained by our trainers post deployment"
           />
           <Process
             Process_Icons={
@@ -118,8 +118,8 @@ function WorkProcess() {
                 }}
               />
             }
-            Process_Heading="Hire"
-            Process_Content="Sign the contract digitally & commit yourself to a hassle-free service with continual training of your hired house help."
+            Process_Heading="Replacement"
+            Process_Content="Get unlimited replacements for up to a period 6 months from the first deployment"
           />
           <Process
             Process_Icons={
@@ -134,7 +134,7 @@ function WorkProcess() {
               />
             }
             Process_Heading="Engage"
-            Process_Content="Continue to engage with your Relationship Officer for any grievances or replacement needs, even after deployment."
+            Process_Content="Engage with our Relationship Officer for any grievances/ training/ replacement requests"
           />
         </Box>
         <Box
@@ -153,54 +153,39 @@ function WorkProcess() {
             {" "}
             Pricing
           </Box>
-          <Pricing
-            price="0"
-            pricing_Heading={
-              <Box sx={{ marginLeft: { sm: "19%", xs: "25%" } }}>
-                Registration Fee
-              </Box>
-            }
-            pricing_Content={
-              <Box sx={{ marginLeft: { sm: "19%", xs: "0%" }, width: "100%" }}>
-                No charges for registration. Submit your request for a Help
-                without paying any fee upfront.
-              </Box>
-            }
-          />
-          <Pricing
-            price="1999"
-            pricing_Heading={
-              <Box
-                ml={0}
-                sx={{ marginLeft: { sm: "0%", xs: "16%" }, width: "100%" }}
-              >
-                Contract Signing Fee
-              </Box>
-            }
-            pricing_Content=" One-time fee applicable on signing the contract to deploy a preferred Help after interview and trial."
-          />
-          <Pricing
-            price="999"
-            pricing_Heading={
-              <Box sx={{ marginLeft: { sm: "7%", xs: "9%" } }}>
-                Monthly Subscription Fee
-              </Box>
-            }
-            pricing_Content={
-              <Box sx={{ marginLeft: { sm: "7%", xs: "0%" }, width: "100%" }}>
-                {" "}
-                Recurring fee to be paid at the end of each month over the
-                tenure of the Associate's deployment.{" "}
-              </Box>
-            }
-          />
+          <Box
+            width="65%"
+            sx={{
+              display: "flex",
+              gap: { sm: "6%", xs: "30%" },
+              flexDirection: { sm: "row", xs: "column" },
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "auto",
+              padding: { sm: "2% 3%", xs: "10%" },
+            }}
+          >
+            <Box>
+              <Pricing
+                pricing_Heading="No Registration Fee"
+             pricing_Content="No charges for registration. Submit your request for a Help without paying any fee upfront."
+              />
+            </Box>
+            <Box sx={{marginTop:{sm:"0px", xs:"10%"}}}> 
+              <Pricing
+                pricing_Heading="One-time Signing fee"
+                pricing_Content="One time fee equivalent to your Associate’s one month salary applicable on signing the contract to deploy a preferred Help after trial."
+              />
+            </Box>
+          </Box>
         </Box>
         <Box
-          mt={-4}
           sx={{
             color: "#007a47",
-            margin: { sm: "0% 6%", xs: "0% 6%" },
+            marginLeft: { sm: "22%", xs: "6%" },
             fontSize: "15px",
+            marginTop: { sm: "0%", xs: "-15%"},
+            marginBottom: { sm: "2%",xs:"15%"}
           }}
         >
           GST of 18% will be applicable on the above charges.
@@ -237,20 +222,26 @@ function WorkProcess() {
               <AccordionComponent
                 Expend_Value={expanded === "panel1"}
                 newchnage={handleChange("panel1")}
-                Accordion_Heading="Do I need to pay any upfront charges?"
-                Accordion_Content="No, we don’t charge any registration fee or commission upfront. Once we find a candidate for you, you can take a 3 day trial. Post the trial, you pay a non-refundable one-time fee of Rs.1999 + GST to sign a contract with us & get the candidate deployed. Subsequent monthly billing shall comprise of the help's salary & our monthly subscription fee of Rs.999 + GST."
+                Accordion_Heading="Do I need to pay any upfront charges before hiring somebody from CARE CREW?"
+                Accordion_Content="No, we don’t charge any registration fee or commission before deployment of your Associate at your place. Once we find a candidate for you, you can take a 3 day trial. Post the trial, you pay us the Associate’s one month salary + 18% GST upfront to sign a contract with us and get your Associate deployed. Of this amount, 30% is non-refundable and non-returnable. The remaining 70% is eligible for refund in special cases."
               />
               <AccordionComponent
                 Expend_Value={expanded === "panel2"}
                 newchnage={handleChange("panel2")}
                 Accordion_Heading="When does the service fee have to be paid?"
-                Accordion_Content="The service fee has to be paid at the end of each calendar month over the tenure of the Associate at your home."
+                Accordion_Content="The service fee needs to be paid after the trial and before deployment."
               />
               <AccordionComponent
                 Expend_Value={expanded === "panel3"}
                 newchnage={handleChange("panel3")}
-                Accordion_Heading="How many candidates does one get to interview before finalizing one?"
-                Accordion_Content="Once we get an inquiry, we do our own homework in bringing to you candidates that closely match your stated requirements. However, with customer satisfaction being a top priority for us, we haven’t placed any restriction on the number of candidates that you can interview."
+                Accordion_Heading="Do you have any refund policy?"
+                Accordion_Content="In any case where you choose to discontinue our services, we shall provide you with a refund on a pro rata basis from the refundable component of the service fee. You need to inform us 7 days in advance of when you wish to discontinue our services. "
+              />
+              <AccordionComponent
+                Expend_Value={expanded === "panel6"}
+                newchnage={handleChange("panel6")}
+                Accordion_Heading="How many candidates does one get to interview before finalising one?"
+                Accordion_Content="Once we get an inquiry, we do our own homework in bringing to you candidates that closely match your stated requirements. With customer satisfaction being a top priority for us, we haven’t placed any restriction on the number of candidates that you can interview for the first candidate being deployed. However, post deployment whenever you raise a replacement request we share a maximum of three profiles for interviewing per replacement request placed.Whenever you raise a replacement request, we shall take up to 5 days to share a candidate’s profile. If you are not happy with the candidate shared, we shall source further profiles up to a maximum of 3 profiles. We will need up to 5 days to share any new profile. "
               />
               <AccordionComponent
                 Expend_Value={expanded === "panel4"}
@@ -261,32 +252,15 @@ function WorkProcess() {
               <AccordionComponent
                 Expend_Value={expanded === "panel5"}
                 newchnage={handleChange("panel5")}
-                Accordion_Heading="Do you offer replacements if the house help quits the job?"
-                Accordion_Content="Yes, we do. While we wish for everything to be frictionless & train our Associates continually in a manner that they serve you professionally, we do offer replacements should such situations arise."
+                Accordion_Heading="How do you train my Associate?"
+                Accordion_Content="We have our own training centres - cloud kitchen for culinary, daycare for childcare and home-like office space setup for housekeeping training and designated trainers to train the Associates. You can send your Associate for training after deployment at any point. The cost of conveyance shall be borne by you and there shall be no deductions in the salary of the Associate from your end for those days."
               />
-              <AccordionComponent
-                Expend_Value={expanded === "panel6"}
-                newchnage={handleChange("panel6")}
-                Accordion_Heading="Do you have people who can work in a 24-hour live-in setting?"
-                Accordion_Content="Yes, we do provide house helps for 24 hour live-in jobs. We also provide full-time house helps who can come to work for 8-12 hours during the day."
-              />
+
               <AccordionComponent
                 Expend_Value={expanded === "panel7"}
                 newchnage={handleChange("panel7")}
-                Accordion_Heading="I need four helpers at once for my family. Would I be able to get a discounted rate than the Rs.999 mentioned here?"
-                Accordion_Content="Our monthly fee for individual households remains the same at Rs.999 + GST in all cases. Households have higher attrition rates among house helps & hence the higher cost of servicing a household doesn’t allow us to offer a discounted rate irrespective of the number of helpers. However, you can rest assured that our pricing is highly competitive & reasonable compared to other market players."
-              />
-              <AccordionComponent
-                Expend_Value={expanded === "panel8"}
-                newchnage={handleChange("panel8")}
-                Accordion_Heading="What are the modalities of the 10% discount on yearly pricing?"
-                Accordion_Content="You could either go for a monthly pricing model whereby you pay for our services at the end of each month, or you could go for the yearly pricing model whereby you pay the complete dues for the next one year at the end of the first month of service."
-              />
-              <AccordionComponent
-                Expend_Value={expanded === "panel9"}
-                newchnage={handleChange("panel9")}
-                Accordion_Heading="How does one qualify as an institution to avail of the institutional pricing?"
-                Accordion_Content="We would need your company’s PAN card & GST registration number to verify your institutional status."
+                Accordion_Heading="Do you offer replacements if the help quits?"
+                Accordion_Content="Yes, we do. While we wish for everything to be frictionless & train our Associates continually in a manner that they serve you professionally, we do offer replacements for up to a period of 6 months should such situations arise. Whenever you raise a replacement request, we shall take up to 5 days to share a candidate’s profile. If you are not happy with the candidate shared, we shall source further profiles up to a maximum of 3 profiles. We will need up to 5 days to share any new profile."
               />
             </Box>
             <Box
@@ -298,10 +272,22 @@ function WorkProcess() {
               }}
             >
               <AccordionComponent
+                Expend_Value={expanded === "panel8"}
+                newchnage={handleChange("panel8")}
+                Accordion_Heading="What happens if I don’t get the right candidate within the 3 profiles you shared?"
+                Accordion_Content="We assess and verify skills of our Associates before sharing them with you and choose the best fit for your requirement. However, as every household has their own set of patterns and preferences, the Associate might require some assistance from you as well in this process of becoming the perfect match for you. In case you don’t find the right match for your home even after our 3 shortlisted profiles, you can ask us to get your chosen Associate trained as per your requirements or opt to discontinue our services."
+              />
+              <AccordionComponent
+                Expend_Value={expanded === "panel9"}
+                newchnage={handleChange("panel9")}
+                Accordion_Heading="Can I claim for a refund in case I am not satisfied with the profiles shared as a replacement?"
+                Accordion_Content="We assess our Associates on their skills and work experience before sharing them with you and try to source the perfect match for your requirement. In case you want to train or groom your Associate on any specific aspect which is essential to match your preferred style of working, you can ask us to assist in training your Associate. We have designated trainers who shall help to upskill your chosen Associate. If you are still not satisfied with the Associate’s skill level and want to discontinue our services, you can claim for a refund. In that case we shall refund the refundable component of the service fee on a pro rata basis. "
+              />
+              <AccordionComponent
                 Expend_Value={expanded === "panel10"}
                 newchnage={handleChange("panel10")}
-                Accordion_Heading="Who do I pay the monthly salary of the house help to?"
-                Accordion_Content="You need to pay the monthly salary of the Associate along with CARE CREW's monthly subscription fee to us at the end of each month."
+                Accordion_Heading="Who do I pay monthly salaries to?"
+                Accordion_Content="You can directly pay your Associate’s salary to him/her at the end of every month."
               />
               <AccordionComponent
                 Expend_Value={expanded === "panel11"}
@@ -326,18 +312,6 @@ function WorkProcess() {
                 newchnage={handleChange("panel14")}
                 Accordion_Heading="Are the house helps deployed by CARE CREW verified?"
                 Accordion_Content="Yes, CARE CREW does a background check for its Associates based on the documents submitted by them. This includes verification of their identity such as Aadhaar, their address & criminal court records."
-              />
-              <AccordionComponent
-                Expend_Value={expanded === "panel15"}
-                newchnage={handleChange("panel15")}
-                Accordion_Heading="How does one qualify as a large institution to avail of the pricing for large institutions?"
-                Accordion_Content="We would need your company’s PAN card, GST registration number & PF registration number to verify that you have 20 or more employees at your institution."
-              />
-              <AccordionComponent
-                Expend_Value={expanded === "panel16"}
-                newchnage={handleChange("panel16")}
-                Accordion_Heading="If I go for yearly pricing, but wish to cease services before the end of 1 year, am I eligible for any refund?"
-                Accordion_Content="In this case, we would recalculate all the dues on a monthly pricing model over the period of the services availed, and if that comes out to be lower than the yearly payment that you have already made, we will pass the difference back to you as a refund."
               />
             </Box>
           </Box>

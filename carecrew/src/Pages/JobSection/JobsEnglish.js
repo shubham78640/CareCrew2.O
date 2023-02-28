@@ -23,7 +23,7 @@ const Item = styled(Box)(({ theme }) => ({
   display: "flex",
   padding: "10px",
   justifyContent: "center",
-  gap: "20px",
+  gap: "5px",
 }));
 const SPAN = styled("span")({
   color: "#000000",
@@ -350,8 +350,8 @@ function JobsEnglish() {
             <AccordionComponent
               Expend_Value={expanded === "panel5"}
               newchnage={handleChange("panel5")}
-              Accordion_Heading="Who will pay my monthly salary - the company or the customer?"
-              Accordion_Content="Your monthly salary will be paid directly by CARE CREW to you at the end of each month. In case there is any unreasonable delay, you can reach out to your CARE CREW Relationship Officer to help you out."
+              Accordion_Heading="Who will pay my monthly salary-the company or the candidate?"
+              Accordion_Content="Your monthly salary will be paid directly by the customer at the end of every month. In case there is an unreasonable delay, you can reach out to your CARE CREW Relationship Officer to help you out."
             />
             <AccordionComponent
               Expend_Value={expanded === "panel6"}
@@ -366,15 +366,15 @@ function JobsEnglish() {
             <AccordionComponent
               Expend_Value={expanded === "panel7"}
               newchnage={handleChange("panel7")}
-              Accordion_Heading="How does CARE CREW make money if you do not charge any commission to the candidates?"
-              Accordion_Content="Our business model is not based on charging commission to our helps. Instead, we levy a small subscription fee of Rs.999 per month to the customer for our services."
+              Accordion_Heading="How does CARE CREW make money if you do not charge any commission to the candidates? "
+              Accordion_Content="Our business model is not based on charging commission to our helps. Instead, we charge a nominal fee from our customers for the service we provide."
             />
             <AccordionComponent
               Expend_Value={expanded === "panel8"}
               newchnage={handleChange("panel8")}
               Accordion_Heading="Do I need to give a notice period if I want to quit a job where CARE CREW has placed me?"
-              Accordion_Content="Yes, we expect you to inform us at least 15 days in advance, in the unfortunate event where you want to quit the job for any reason."
-            />
+              Accordion_Content="Yes, we expect you to inform us at least 07 days in advance, in the unfortunate event where you want to quit the job for any reason."
+                          />
             <AccordionComponent
               Expend_Value={expanded === "panel9"}
               newchnage={handleChange("panel9")}

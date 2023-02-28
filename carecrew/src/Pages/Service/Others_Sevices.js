@@ -82,7 +82,7 @@ function Others_Sevices() {
               Expend_Value={expanded === "panel2"}
               newchnage={handleChange("panel2")}
               Accordion_Heading="Do you offer replacements if the house help quits the job?"
-              Accordion_Content="Yes, we do. While we wish for everything to be frictionless & continually train our Associates in a manner that they serve you professionally, we do offer replacements should such situations arise."
+              Accordion_Content="Yes, we do. While we wish for everything to be frictionless & train our helps in a manner that they serve you professionally, we do offer replacements up to a period of 6 months should such situations arise."
             />
             <AccordionComponent
               Expend_Value={expanded === "panel3"}

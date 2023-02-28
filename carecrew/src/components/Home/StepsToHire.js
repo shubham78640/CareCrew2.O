@@ -82,11 +82,11 @@ function StepsToHire() {
           <BOX2>
             <SavedSearchIcon sx={{ color: "rgba(0,122,72)", fontSize: "38px" }} />
           </BOX2>
-          <H3>Interview</H3>
+          <H3>Interview & Trial</H3>
           <StyleDiv />
           <P>
-            Do a video call with the candidates we shortlist for you after
-            understanding your requirements thoroughly.
+          Take an interview and a 3-day on-the-job paid trial of the candidate to assure yourself that you have the right person for your home.
+
           </P>
         </BOX>
 
@@ -94,10 +94,12 @@ function StepsToHire() {
           <BOX2>
             <CleaningServicesIcon sx={{ color: "rgba(0,122,72)", fontSize: "38px" }} />
           </BOX2>
-          <H3>Trial</H3>
+          <H3>Hire & Train</H3>
           <StyleDiv />
           <P>
-          Take a 3-day on-the-job paid trial of the candidate to assure yourself that you have the right person for your home.
+          Sign the contract digitally & commit yourself to a hassle-free service. Get your Associate trained by our trainers post deployment 
+
+
           </P>
         </BOX>
 
@@ -105,10 +107,10 @@ function StepsToHire() {
           <BOX2>
             <HandshakeIcon sx={{ color: "rgba(0,122,72)", fontSize: "38px" }} />
           </BOX2>
-          <H3>Hire</H3>
+          <H3>Replacement</H3>
           <StyleDiv />
           <P>
-          Sign the contract digitally & commit yourself to a hassle-free service with continual online training of the house help.
+          Get unlimited replacements for up to a period 6 months from the first deployment
           </P>
         </BOX>
 
@@ -119,7 +121,8 @@ function StepsToHire() {
           <H3>Engage</H3>
           <StyleDiv />
           <P>
-           Engage with our Relationship Officers for any grievances & replacements post deployment.
+          Engage with our Relationship Officer for any grievances / training / replacement requests
+
           </P>
         </BOX>
       </Box>

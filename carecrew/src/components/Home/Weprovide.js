@@ -33,12 +33,13 @@ function Weprovide() {
           }}
         >
            <Box>
-            <img width={"100%"} src={CCWebSiteImage} alt="no Image" />
+            <img width={"90%"} height="630px" src=
+            "https://carecrew.in/wp-content/uploads/2022/02/wharwedo.png" alt="no Image" />
             </Box> 
        
         </Box>
 
-        <Box sx={{ width: { sm: "48%", xs: "100%" } }} padding={4}>
+        <Box sx={{ width: { sm: "48%", xs: "100%" } }} >
           <Box
             display={"flex"}
             flexDirection={"column"}

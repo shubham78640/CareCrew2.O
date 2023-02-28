@@ -264,6 +264,7 @@ function GetACallBackForm({ data }) {
           width: "300px",
           color: "#fff",
           padding: "9px",
+          height: "80px",
           boxSizing: "border-box",
           fontSize: "12px",
         }}

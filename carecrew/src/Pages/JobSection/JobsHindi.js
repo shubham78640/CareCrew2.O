@@ -19,7 +19,7 @@ const Item = styled(Box)(({ theme }) => ({
   display: "flex",
   padding: "10px",
   justifyContent: "center",
-  gap: "20px",
+  gap: "5px",
 }));
 const Span = styled("span")({
   color: "#72bf44",
@@ -383,13 +383,13 @@ function JobsHindi() {
               Expend_Value={expanded === "panel8"}
               newchnage={handleChange("panel8")}
               Accordion_Heading="अगर आप कार्यकर्ताओं से कोई शुल्क नहीं लेते हैं, तो कंपनी पैसे कैसे कमाती है?"
-              Accordion_Content="हमारी कंपनी का संचालन हमारे कर्मचारियों से शुल्क लेने पर निर्भर नहीं है। हम अपनी सेवाओं के लिए ग्राहक से प्रति माह 999 रुपये की एक छोटी राशि लेते हैं।"
+              Accordion_Content="हमारी कंपनी का संचालन हमारे कर्मचारियों से शुल्क लेने पर निर्भर नहीं है। हम अपनी सेवाओं के लिए सिर्फ ग्राहक से एक छोटी राशि लेते हैं।"
             />
             <AccordionComponent
               Expend_Value={expanded === "panel9"}
               newchnage={handleChange("panel9")}
               Accordion_Heading="यदि मुझे केयर क्रू द्वारा प्रदान की गई नौकरी को छोड़ना है, तो क्या मुझे पहले से खबर करने की आवश्यकता है?"
-              Accordion_Content="हां, जब आप किसी कारणवश नौकरी छोड़ना चाहते हैं, तो हम उम्मीद करते हैं कि आप हमें कम से कम 15 दिन पहले सूचित करें।"
+              Accordion_Content="हां, जब आप किसी कारणवश नौकरी छोड़ना चाहते हैं, तो हम उम्मीद करते हैं कि आप हमें कम से कम 07 दिन पहले सूचित करें। "
             />
           </Item>
         </Grid>
