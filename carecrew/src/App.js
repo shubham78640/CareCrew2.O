@@ -19,6 +19,12 @@ import TermsofUse from "./Pages/Privacy Policy/TermsofUse";
 import AgePolicy from "./Pages/Privacy Policy/AgePolicy";
 import Thankyou from "./Pages/ThankYou/Thankyou";
 import StepperForm from "./Pages/StepperForm/StepperForm";
+import ReactGA from 'react-ga';
+import Test from "./components/Test/Test";
+
+const TRACKING_ID = "G-FXVM0F993M";
+
+ReactGA.initialize(TRACKING_ID);
 
 
 function App() {
@@ -50,6 +56,7 @@ function App() {
           <Route path="/agepolicy" element={<AgePolicy />} />
           <Route path="/thankyou" element={<Thankyou />} />
           <Route path="/step" element={<StepperForm />} />
+          <Route path="/test" element={<Test />} />
         </Routes>
       </BrowserRouter>
     </div>
