@@ -19,13 +19,7 @@ import TermsofUse from "./Pages/Privacy Policy/TermsofUse";
 import AgePolicy from "./Pages/Privacy Policy/AgePolicy";
 import Thankyou from "./Pages/ThankYou/Thankyou";
 import StepperForm from "./Pages/StepperForm/StepperForm";
-import ReactGA from 'react-ga';
 import Test from "./components/Test/Test";
-
-const TRACKING_ID = "G-FXVM0F993M";
-
-ReactGA.initialize(TRACKING_ID);
-
 
 function App() {
   let user = localStorage.getItem("user");

@@ -9,7 +9,7 @@ function Thankyou() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       nevigate("/");
-    }, 3000);
+    }, 5000);
   }, []);
   return (
     <>
