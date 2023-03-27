@@ -50,7 +50,6 @@ function App() {
           <Route path="/agepolicy" element={<AgePolicy />} />
           <Route path="/thankyou" element={<Thankyou />} />
           <Route path="/step" element={<StepperForm />} />
-          <Route path="/test" element={<Test />} />
         </Routes>
       </BrowserRouter>
     </div>
