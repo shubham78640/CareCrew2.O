@@ -22,7 +22,7 @@ function TermsofUse() {
           TERMS & CONDITIONS
         </Box>
         <Box sx={{ fontWeight: "600", fontSize: "18px" }}>
-          Updated on: 21-Sep-2022
+          Updated on: 27-March-2023
         </Box>
         <Box>
           To govern the access and use of this website and Services by you, we
@@ -161,33 +161,24 @@ function TermsofUse() {
         </Box>
         <Box sx={{ fontWeight: "600", fontSize: "18px" }}>Payment Terms</Box>
         <Box>
-          Once you visit our website and request Services and a successful
-          deployment is made, Clients will be required to pay the following:{" "}
+        Once you visit our website and request Services and a successful deployment is made, Clients will be required to pay the following:{" "}
         </Box>
         <Box pl={2} sx={{ lineHeight: "38px" }}>
           <Box>
             {" "}
-            ● &nbsp; At the time of signing this Agreement, a one time signing
-            fee to be paid to the Company which shall be non-refundable,
-            non-transferable and non-adjustable.
+            ● &nbsp; A registration fee of Rs. 999+GST at the time of submitting the enquiry which has be adjusted in the final amount due during deployment.
           </Box>
           <Box>
             {" "}
-            ● &nbsp;A recurring monthly fee to be paid to the Company. Since
-            CARE CREW acts as an intermediary on behalf of the Client for
-            facilitating payments to the Associate, this fee is charged towards
-            collection and transfer of payments to the Associate for the
-            services they render to you.
+            ● &nbsp;Upon successful deployment, the Client agrees to pay the monthly due of the Associate+18% GST and the registration fee charged shall be  adjusted in this   amount. This is a one-time payment, 30% of which shall be non refundable while the remaining 70% can be refunded on pro-rata basis in special cases.
           </Box>
           <Box>
             {" "}
-            ● &nbsp; The dues payable by the Client to the Associate, which
-            shall be transferred by the Company on behalf of the Client to the
-            Associate without any deductions or delays.
+            ● &nbsp; At the end of every month, the Client shall pay the monthly dues directly to the Associate without any deduction or delays.
           </Box>
         </Box>
         <Box>
-          The one time fee, recurring monthly fee and the terms of payment shall
+          The one time fee and the terms of payment shall
           be informed to you through the customer contract that you will be
           signing during your onboarding process.
         </Box>

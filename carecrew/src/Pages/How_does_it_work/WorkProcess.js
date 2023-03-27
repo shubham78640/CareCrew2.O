@@ -167,8 +167,10 @@ function WorkProcess() {
           >
             <Box>
               <Pricing
-                pricing_Heading="No Registration Fee"
-             pricing_Content="No charges for registration. Submit your request for a Help without paying any fee upfront."
+                pricing_Heading="Registration Fee"
+             pricing_Content="Rs.999+GST | While submitting your enquiry. 
+             The full amount shall be adjusted in the final sourcing fee during deployment.
+             "
               />
             </Box>
             <Box sx={{marginTop:{sm:"0px", xs:"10%"}}}> 
@@ -223,7 +225,7 @@ function WorkProcess() {
                 Expend_Value={expanded === "panel1"}
                 newchnage={handleChange("panel1")}
                 Accordion_Heading="Do I need to pay any upfront charges before hiring somebody from CARE CREW?"
-                Accordion_Content="No, we don’t charge any registration fee or commission before deployment of your Associate at your place. Once we find a candidate for you, you can take a 3 day trial. Post the trial, you pay us the Associate’s one month salary + 18% GST upfront to sign a contract with us and get your Associate deployed. Of this amount, 30% is non-refundable and non-returnable. The remaining 70% is eligible for refund in special cases."
+                Accordion_Content="We charge a nominal registration fee of Rs. 999+GST while submitting the enquiry which shall be adjusted fully in our service charge while deployment. Once we find a candidate for you, you can take a 3 day trial. Post the trial, you pay us the Associate’s one month salary + 18% GST upfront to sign a contract with us and get your Associate deployed."
               />
               <AccordionComponent
                 Expend_Value={expanded === "panel2"}
@@ -262,6 +264,13 @@ function WorkProcess() {
                 Accordion_Heading="Do you offer replacements if the help quits?"
                 Accordion_Content="Yes, we do. While we wish for everything to be frictionless & train our Associates continually in a manner that they serve you professionally, we do offer replacements for up to a period of 6 months should such situations arise. Whenever you raise a replacement request, we shall take up to 5 days to share a candidate’s profile. If you are not happy with the candidate shared, we shall source further profiles up to a maximum of 3 profiles. We will need up to 5 days to share any new profile."
               />
+
+               <AccordionComponent
+                Expend_Value={expanded === "panel15"}
+                newchnage={handleChange("panel15")}
+                Accordion_Heading="What do I get in the registration fee that I am paying?"
+                Accordion_Content="We will share up to 3 profiles with you matching your requirement. The first profile shall be shared with you within the first 24-72 hours. Once you find your right Associate, this amount shall be adjusted in our service fee. In case we fail to provide you with a profile within the first 72 hours, you shall get the entire registration fee refunded. "
+              /> 
             </Box>
             <Box
               sx={{

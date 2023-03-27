@@ -90,7 +90,7 @@ function Weprovide() {
               </Box>
             </Box>
 
-            <Box>
+            {/* <Box>
               <Box display={"flex"} gap={1}>
                 <DoneOutlineIcon
                   sx={{ color: "#72bf44", fontSize: "18px", mt: "7px" }}
@@ -104,7 +104,7 @@ function Weprovide() {
                   </Typography>
                 </Box>
               </Box>
-            </Box>
+            </Box> */}
 
             <Box>
               <Box display={"flex"} gap={1}>

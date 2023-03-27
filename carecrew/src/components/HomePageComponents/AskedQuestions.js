@@ -60,7 +60,7 @@ function AskedQuestions() {
             Expend_Value={expanded === "panel3"}
             newchnage={handleChange("panel3")}
             Accordion_Heading=" Do I need to pay any upfront charges before hiring somebody from CARE CREW?"
-            Accordion_Content="No, we don’t charge any registration fee or commission before deployment of your Associate at your place. Once we find a candidate for you, you can take a 3 day trial. Post the trial, you pay us the Associate’s one month salary + 18% GST upfront to sign a contract with us and get your Associate deployed."
+            Accordion_Content="We charge a nominal registration fee of Rs. 999+GST while submitting the enquiry which shall be adjusted fully in our service charge while deployment. Once we find a candidate for you, you can take a 3 day trial. Post the trial, you pay us the Associate’s one month salary + 18% GST upfront to sign a contract with us and get your Associate deployed."
           />
           <AccordionComponent
             Expend_Value={expanded === "panel4"}
