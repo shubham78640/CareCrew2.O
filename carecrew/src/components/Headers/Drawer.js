@@ -245,7 +245,7 @@ export default function Drawer() {
               </AccordionDetails>
             </Accordion>
 
-            {/* <NavLink
+            <NavLink
               className="Navlink"
               to="/blogs"
               onClick={() => {
@@ -262,7 +262,7 @@ export default function Drawer() {
               }}
             >
               <BOX1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><li style={{marginLeft:"25px"}}>Blogs</li></BOX1>
-            </NavLink> */}
+            </NavLink>
           </div>
         </div>
       </div>

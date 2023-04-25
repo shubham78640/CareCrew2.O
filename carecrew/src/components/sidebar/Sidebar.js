@@ -22,19 +22,18 @@ export default function Sidebar() {
   console.log("data is =>", data)
   
   return (
-    <div className="sidebar">
+    <div className="sidebar" style={{marginTop:"60px"}}>
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://media.licdn.com/dms/image/C4D0BAQFLfwyhVhoTow/company-logo_200_200/0/1667996664233?e=1678924800&v=beta&t=45r3-39fVU5rmGzZEf0ozbtcfJbY4f4mlvtAUpeuVug"
+          src="https://nqwebdesign.com/wp-content/uploads/2020/01/blog-icon-300x300.png"
           alt=""
         />
         <p>
-          Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
-          amet ex esse.Sunt eu ut nostrud id quis proident.
+        We source & deploy house helps skilled in any one or more types of household chores. From basic tasks like sweeping, mopping, cooking to more complex tasks like laundry, child care and driving, we have them all covered.
         </p>
       </div>
-      <div className="sidebarItem">
+      {/* <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
           <li className="sidebarListItem">
@@ -77,7 +76,7 @@ export default function Sidebar() {
           <i className="sidebarIcon fab fa-pinterest-square"></i>
           <i className="sidebarIcon fab fa-twitter-square"></i>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
