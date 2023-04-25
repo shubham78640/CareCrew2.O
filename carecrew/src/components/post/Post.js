@@ -51,22 +51,22 @@ console.log(allPostsData)
       {allPostsData &&
         allPostsData.map((item, index) => (
           <div className="post" key={index}>
-            <img className="postImg" src={item.mainImage.asset.url} alt="" />
+            <img className="postImg" src={item?.mainImage?.asset?.url} alt="" />
             <div className="postInfo">
               <span className="postTitle">
                 <NavLink
-                  to={"/blogs/" + item.slug.current}
-                  key={item.slug.current}
+                  to={"/blogs/" + item?.slug?.current}
+                  key={item?.slug?.current}
                   className="link"
                 >
-                  {item.title}
+                  {item?.title}
                 </NavLink>
               </span>
               <hr />
               {/* <span className="postDate">{format(item.publishedAt)}</span> */}
-              <span className="postDate">{moment(item.publishedAt).format("MMMM Do YYYY")}</span>
+              <span className="postDate">{moment(item?.publishedAt).format("MMMM Do YYYY")}</span>
             </div>
-            <p className="postDesc">{item.about}</p>
+            <p className="postDesc">{item?.about}</p>
           </div>
         ))}
     </Box>
