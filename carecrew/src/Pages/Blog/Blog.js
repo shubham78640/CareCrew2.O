@@ -10,7 +10,7 @@ function Blog() {
     <div>
      <Box className="home" sx={{flexDirection:{sm:"row", xs:"column"}}}>
         <Post/>
-        <Sidebar/>
+        {/* <Sidebar/> */}
      </Box>
     </div>
   )

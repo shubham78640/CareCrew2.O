@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     gap: 40px;
     padding: 20px;
+    justify-content: space-around;
 
 }
 .post {

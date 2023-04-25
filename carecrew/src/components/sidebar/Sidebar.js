@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./sidebar.css";
 import sanityClient from "../../libs/client";
 import { useState } from "react";
+import { Box } from "@mui/material";
+import image from "../../Images/s1.jpg"
 
 export default function Sidebar() {
   const [data, setData]=useState([])
@@ -22,17 +24,17 @@ export default function Sidebar() {
   console.log("data is =>", data)
   
   return (
-    <div className="sidebar" style={{marginTop:"60px"}}>
-      <div className="sidebarItem">
-        <span className="sidebarTitle">ABOUT ME</span>
+    <div className="sidebar" style={{marginTop:"70px"}}>
+      <Box sx={{position:{sm:"fixed", xs:"initial"}}} className="sidebarItem">
+        <span className="sidebarTitle">Blogs</span>
         <img
-          src="https://nqwebdesign.com/wp-content/uploads/2020/01/blog-icon-300x300.png"
+          src={image}
           alt=""
         />
-        <p>
-        We source & deploy house helps skilled in any one or more types of household chores. From basic tasks like sweeping, mopping, cooking to more complex tasks like laundry, child care and driving, we have them all covered.
+        <p style={{textAlign:"justify", lineHeight:"28px"}}>
+        Discover a wealth of practical tips and insights on Home Improvement, Food & Nutrition, Child Care, Elder Care and more to enhance your home and everyday life.
         </p>
-      </div>
+      </Box>
       {/* <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
