@@ -11,7 +11,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import ScrollToTop from "react-scroll-to-top";
 import { servicesDatainHindi } from "../../AllData";
 import axios from "axios";
-import { MasterApi } from "../../AllData";
+import { MasterApi1 } from "../../AllData";
 import { useNavigate } from "react-router-dom";
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const Item = styled(Box)(({ theme }) => ({
@@ -57,7 +57,7 @@ function JobsHindi() {
 
   const handleSubmit = async () => {
     try {
-      let response = await axios.post(`${MasterApi}carecrew/candidate/save`, {
+      let response = await axios.post(`${MasterApi1}`, {
         city: city,
         createdAt: currentdate,
         name: name,

@@ -15,7 +15,7 @@ import { multiStepContext } from "../../Context/FormContext";
 import { servicesData } from "../../AllData";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { MasterApi } from "../../AllData";
+import { MasterApi1 } from "../../AllData";
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const Item = styled(Box)(({ theme }) => ({
@@ -58,7 +58,7 @@ function JobsEnglish() {
   const currentdate = Date.now();
   const handleSubmit = async () => {
     try {
-      let response = await axios.post(`${MasterApi}carecrew/candidate/save`, {
+      let response = await axios.post(`${MasterApi1}`, {
         city: city,
         createdAt: currentdate,
         name: name,

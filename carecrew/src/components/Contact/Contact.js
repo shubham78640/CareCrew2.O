@@ -29,26 +29,42 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [address, setAddress] = useState("");
   const [workinghr, setworkingHr] = useState("");
-const Currentdate =Date.now()
+const Currentdate =Date.now();
 const { closeForm, setCloseForm } = useContext(multiStepContext);
 const navigate = useNavigate();
 const [cityDD, setCityDD] = useState([])
 
   const handleSubmit = async () => {
    try{
- let response = await axios.post(`${MasterApi}carecrew/contactUs/save`,
-     {
-      address: address,
-      city: city,
-      createdAt:Currentdate,
-      email: email,
-      message: message,
-      name: name,
-      phoneNumber: phone,
-      workingHours: workinghr
-     }
-      );
-        console.log(response);
+//  let response = await axios.post(`${MasterApi}carecrew/contactUs/save`,
+//      {
+//       address: address,
+//       city: city,
+//       createdAt:Currentdate,
+//       email: email,
+//       message: message,
+//       name: name,
+//       phoneNumber: phone,
+//       workingHours: workinghr
+//      }
+//       );
+
+
+
+
+
+  let res= await axios.post(`${MasterApi}`, {
+                  "address": address,
+                  "city": city,
+                 "createdAt":Currentdate,
+                 "email": email,
+                 "message": message,
+                 "name": name,
+                 "phoneNumber": phone,
+                "workingHours": workinghr
+ 
+     })
+        console.log(res);
     const config = {
       SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
       To : 'rituja@thepinchlife.com',

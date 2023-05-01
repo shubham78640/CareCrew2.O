@@ -140,4 +140,6 @@ export let CardsData = [
 
 ]
 
-export const MasterApi ="https://api.carecrew.in/"
+export const MasterApi ="https://sheetdb.io/api/v1/htskf8c4cu3gx"
+
+export const MasterApi1 ="https://sheetdb.io/api/v1/qk6b271zq8g0z"
