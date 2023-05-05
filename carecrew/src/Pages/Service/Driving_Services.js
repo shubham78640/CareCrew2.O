@@ -8,6 +8,7 @@ import Imagedriving from "../../Images/driving2.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
 import { multiStepContext } from "../../Context/FormContext";
+import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
 
 function Driving_Services() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
@@ -66,6 +67,27 @@ function Driving_Services() {
             Stories_Content="Be it receiving your guests from the airport, taking your kids to school or picking you up from the office, our drivers are people you can rely upon."
             SubmitButtonName="Book a Trial"
           />
+           <Box
+            p="5%"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "5px",
+              mt: { sm: "0%", xs: "0%" },
+            }}
+          >
+          <Typography
+              variant="h4"
+              gutterBottom
+              sx={{ color: "#007a48", fontWeight: 600 }}
+            >
+              How does it work?
+
+            </Typography>
+
+          <HowitWorksComponents/>
+
+          </Box>
           <Box
             p="5%"
             sx={{

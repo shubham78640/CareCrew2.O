@@ -653,7 +653,7 @@ function Navbaar() {
             borderRadius: "0px 0px 12px 12px",
             top: "17px",
             right: "1px",
-            display: !closeForm1 ? "block" : "none ",
+            display: !closeForm1 ? "block" : "none",
             backgroundColor: "#ebe956",
           }}
         >

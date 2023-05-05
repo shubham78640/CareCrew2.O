@@ -1,10 +1,10 @@
 import { Box, Button, styled } from "@mui/material";
 import CallIcon from "@mui/icons-material/Call";
-import SavedSearchIcon from '@mui/icons-material/SavedSearch';
-import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
-import HandshakeIcon from '@mui/icons-material/Handshake';
-import SocialDistanceIcon from '@mui/icons-material/SocialDistance';
-import React, {useContext} from "react";
+import SavedSearchIcon from "@mui/icons-material/SavedSearch";
+import CleaningServicesIcon from "@mui/icons-material/CleaningServices";
+import HandshakeIcon from "@mui/icons-material/Handshake";
+import SocialDistanceIcon from "@mui/icons-material/SocialDistance";
+import React, { useContext } from "react";
 import { multiStepContext } from "../../Context/FormContext";
 const BOX = styled(Box)({
   display: "flex",
@@ -50,8 +50,13 @@ const StyleDiv = styled("div")({
 });
 
 function StepsToHire() {
+  const handleSubmitform = () => {
+    setCloseForm1(true);
+    setCloseForm(true);
+  };
 
-  const { closeForm, setCloseForm } = useContext(multiStepContext);
+  const { closeForm, setCloseForm, closeForm1, setCloseForm1 } =
+    useContext(multiStepContext);
   return (
     <Box mt={10} sx={{ background: "#ededed" }}>
       <Box p={4} pt={10}>
@@ -63,7 +68,7 @@ function StepsToHire() {
         display={"flex"}
         justifyContent={"center"}
         gap={3}
-        sx={{flexWrap:{sm:"nowrap", xs:"wrap"}}}
+        sx={{ flexWrap: { sm: "nowrap", xs: "wrap" } }}
         rowGap={7}
       >
         <BOX>
@@ -80,26 +85,29 @@ function StepsToHire() {
 
         <BOX>
           <BOX2>
-            <SavedSearchIcon sx={{ color: "rgba(0,122,72)", fontSize: "38px" }} />
+            <SavedSearchIcon
+              sx={{ color: "rgba(0,122,72)", fontSize: "38px" }}
+            />
           </BOX2>
           <H3>Interview & Trial</H3>
           <StyleDiv />
           <P>
-          Take an interview and a 3-day on-the-job paid trial of the candidate to assure yourself that you have the right person for your home.
-
+            Take an interview and a 3-day on-the-job paid trial of the candidate
+            to assure yourself that you have the right person for your home.
           </P>
         </BOX>
 
         <BOX>
           <BOX2>
-            <CleaningServicesIcon sx={{ color: "rgba(0,122,72)", fontSize: "38px" }} />
+            <CleaningServicesIcon
+              sx={{ color: "rgba(0,122,72)", fontSize: "38px" }}
+            />
           </BOX2>
           <H3>Hire & Train</H3>
           <StyleDiv />
           <P>
-          Sign the contract digitally & commit yourself to a hassle-free service. Get your Associate trained by our trainers post deployment 
-
-
+            Sign the contract digitally & commit yourself to a hassle-free
+            service. Get your Associate trained by our trainers post deployment
           </P>
         </BOX>
 
@@ -110,25 +118,33 @@ function StepsToHire() {
           <H3>Replacement</H3>
           <StyleDiv />
           <P>
-          Get unlimited replacements for up to a period 6 months from the first deployment
+            Get unlimited replacements for up to a period 6 months from the
+            first deployment
           </P>
         </BOX>
 
         <BOX>
           <BOX2>
-            <SocialDistanceIcon sx={{ color: "rgba(0,122,72)", fontSize: "38px" }} />
+            <SocialDistanceIcon
+              sx={{ color: "rgba(0,122,72)", fontSize: "38px" }}
+            />
           </BOX2>
           <H3>Engage</H3>
           <StyleDiv />
           <P>
-          Engage with our Relationship Officer for any grievances / training / replacement requests
-
+            Engage with our Relationship Officer for any grievances / training /
+            replacement requests
           </P>
         </BOX>
       </Box>
       <Box mt={5} pb={5} display={"flex"} justifyContent={"center"}>
-        <Button sx={{textTransform:"none"}} variant="contained" color="success"  onClick={()=>{setCloseForm(true)}}>
-        Book a Trial
+        <Button
+          sx={{ textTransform: "none" }}
+          variant="contained"
+          color="success"
+          onClick={handleSubmitform}
+        >
+          Book a Trial
         </Button>
       </Box>
     </Box>

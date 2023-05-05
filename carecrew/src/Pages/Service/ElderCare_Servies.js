@@ -8,6 +8,7 @@ import ImageElderCare from "../../Images/eldercare_service.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
 import { multiStepContext } from "../../Context/FormContext";
+import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
 
 function ElderCare_Servies() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
@@ -80,6 +81,28 @@ function ElderCare_Servies() {
             Stories_Content="Let’s say you’ve moved in to a different city (or a country) and need someone to take care of your parents at home; CARE CREW will help you out. Our caregivers will take care of your elder family members while you’re away with diligence and sincerity."
             SubmitButtonName="Schedule an Interview"
           />
+
+<Box
+            p="5%"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "5px",
+              mt: { sm: "0%", xs: "0%" },
+            }}
+          >
+          <Typography
+              variant="h4"
+              gutterBottom
+              sx={{ color: "#007a48", fontWeight: 600 }}
+            >
+              How does it work?
+
+            </Typography>
+
+          <HowitWorksComponents/>
+
+          </Box>
           <Box
             p="5%"
             sx={{

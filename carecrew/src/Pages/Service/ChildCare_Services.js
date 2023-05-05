@@ -8,6 +8,7 @@ import ImageChildCare from "../../Images/CC2.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
 import { multiStepContext } from "../../Context/FormContext";
+import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
 
 function ChildCare_Services() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
@@ -79,6 +80,27 @@ function ChildCare_Services() {
             Stories_Content="Whether it’s an office meeting, kid-free gym session or an imperative grocery run – our nannies will make sure you attend to your commitments free of worries."
             SubmitButtonName="Schedule an Interview"
           />
+          <Box
+            p="5%"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "5px",
+              mt: { sm: "0%", xs: "0%" },
+            }}
+          >
+          <Typography
+              variant="h4"
+              gutterBottom
+              sx={{ color: "#007a48", fontWeight: 600 }}
+            >
+              How does it work?
+
+            </Typography>
+
+          <HowitWorksComponents/>
+
+          </Box>
           <Box
             p="5%"
             sx={{

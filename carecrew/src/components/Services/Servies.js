@@ -13,8 +13,13 @@ const Item = styled(Box)(({ theme }) => ({
 }));
 
 function Servies(props) {
-  const { closeForm, setCloseForm } = useContext(multiStepContext);
+  const { closeForm, setCloseForm, closeForm1, setCloseForm1 } =
+    useContext(multiStepContext);
 
+  const handleSubmitform = () => {
+    setCloseForm1(true);
+    setCloseForm(true);
+  };
   const {
     Service_Heading,
     Service_Content,
@@ -77,9 +82,7 @@ function Servies(props) {
                   {" "}
                   <Button
                     sx={{ textTransform: "none" }}
-                    onClick={() => {
-                      setCloseForm(true);
-                    }}
+                    onClick={handleSubmitform}
                     variant="contained"
                     color="success"
                   >

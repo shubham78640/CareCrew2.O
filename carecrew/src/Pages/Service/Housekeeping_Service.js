@@ -7,6 +7,7 @@ import ImageCooking from "../../Images/HK2.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
 import Contact from "../../components/Contact/Contact";
+import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
 
 function Housekeeping_Service() {
   const [expanded, setExpanded] = React.useState("panel1");
@@ -64,6 +65,28 @@ function Housekeeping_Service() {
             Stories_Content="Let’s say you require somebody to help you reorganize your living area or set up an indoor garden – the housekeepers will help you do it."
             SubmitButtonName="Book a Trial"
           />
+
+<Box
+            p="5%"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "5px",
+              mt: { sm: "0%", xs: "0%" },
+            }}
+          >
+          <Typography
+              variant="h4"
+              gutterBottom
+              sx={{ color: "#007a48", fontWeight: 600 }}
+            >
+              How does it work?
+
+            </Typography>
+
+          <HowitWorksComponents/>
+
+          </Box>
           <Box
             p="5%"
             sx={{

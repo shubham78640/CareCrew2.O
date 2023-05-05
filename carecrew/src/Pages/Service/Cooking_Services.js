@@ -7,7 +7,7 @@ import ImageCooking from "../../Images/C2.jpg";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
 import { multiStepContext } from "../../Context/FormContext";
-
+import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
 function Cooking_Services() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
   const [expanded, setExpanded] = React.useState("panel1");
@@ -84,6 +84,28 @@ function Cooking_Services() {
             Stories_Content="From simple meals on weekdays to special delightful ones over the weekend, our cooks will attempt to bring in variety in your everyday food. Spicy or occasionally spicy; crisp rotis or soft ones – they will be able to customize as per your needs."
             SubmitButtonName="Book a Trial"
           />
+           <Box
+            p="5%"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "5px",
+              mt: { sm: "0%", xs: "0%" },
+             
+            }}
+          >
+          <Typography
+              variant="h4"
+              gutterBottom
+              sx={{ color: "#007a48", fontWeight: 600 }}
+            >
+              How does it work?
+
+            </Typography>
+
+          <HowitWorksComponents/>
+
+          </Box>
           <Box
             p="5%"
             sx={{

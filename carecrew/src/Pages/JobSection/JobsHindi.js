@@ -37,6 +37,9 @@ const SPAN = styled("span")({
   color: "#000000",
   fontWeight: "900",
 });
+
+
+
 function JobsHindi() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -44,7 +47,7 @@ function JobsHindi() {
   const [skill, setSkill] = useState([]);
   const { closeForm, setCloseForm } = useContext(multiStepContext);
   const [expanded, setExpanded] = React.useState(false);
-
+ const [throtlingHandler, setThrotlingHandler] = useState(0);
   const navigate = useNavigate();
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -54,6 +57,16 @@ function JobsHindi() {
   var SkillsName = skill.map(function (item) {
     return item["service"];
   });
+
+
+  const optimizeHandleSubmit = () => {
+
+if(!throtlingHandler){
+  setTimeout(handleSubmit,5000);
+  setThrotlingHandler(1)
+
+}
+  };
 
   const handleSubmit = async () => {
     try {
@@ -75,11 +88,13 @@ function JobsHindi() {
       <p>Skills:- ${SkillsName}</p>
       <p>City:- ${city}</p> `,
       };
+     
       if (window.Email) {
         window.Email.send(config).then(
           () => navigate("/thankyou"),
           setCloseForm(false)
         );
+        setThrotlingHandler(0)
       }
     } catch (error) {
       console.log(error);
@@ -321,7 +336,7 @@ function JobsHindi() {
                 color="success"
                 disabled={name && phone && city ? false : true}
                 sx={{ marginTop: "30px" }}
-                onClick={handleSubmit}
+                onClick={optimizeHandleSubmit}
               >
                 फार्म जमा करें
               </Button>

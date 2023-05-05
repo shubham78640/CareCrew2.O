@@ -4,15 +4,16 @@ import VerifiedIcon from "@mui/icons-material/Verified";
 import Diversity1Icon from "@mui/icons-material/Diversity1";
 import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 import { multiStepContext } from "../../Context/FormContext";
-import CCWebSiteImage from "../../Images/CCWEBSITE.jpg";
+import CCWebSiteImage from "../../Images/CCHomePage.png";
 
 function Weprovide() {
-  const { closeForm, setCloseForm } = useContext(multiStepContext);
+  const { closeForm, setCloseForm,closeForm1, setCloseForm1 } = useContext(multiStepContext);
 
   // const [closeForm, setCloseForm] = useState(true)
 
   const handleOpen = () => {
     setCloseForm(true);
+    setCloseForm1(true);
   };
   return (
     <Box mb={4}>
@@ -22,19 +23,26 @@ function Weprovide() {
         justifyContent={"space-between"}
         gap={2}
         sx={{
+          
           flexDirection: { sm: "row", xs: "column" },
           mt: { sm: "15%", xs: "25%" },
+
         }}
       >
         <Box
           sx={{
-            width: { sm: "48%", xs: "100%" },
+            width: { sm: "43%", xs: "100%" },
            
           }}
         >
-           <Box>
-            <img width={"90%"} height="630px" src=
-            "https://carecrew.in/wp-content/uploads/2022/02/wharwedo.png" alt="no Image" />
+           <Box 
+           >
+            <img
+           width="100%"
+            height="630px" src=
+            {CCWebSiteImage}
+           // "https://carecrew.in/wp-content/uploads/2022/02/wharwedo.png"
+             alt="no Image" />
             </Box> 
        
         </Box>

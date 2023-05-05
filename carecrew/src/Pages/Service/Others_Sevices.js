@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Typography from "@mui/material/Typography";
 import { multiStepContext } from "../../Context/FormContext";
+import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
 
 function Others_Sevices() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
@@ -56,6 +57,27 @@ function Others_Sevices() {
             }
             SubmitButtonName="Request a Call Back"
           />
+           <Box
+            p="5%"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "5px",
+              mt: { sm: "0%", xs: "0%" },
+            }}
+          >
+          <Typography
+              variant="h4"
+              gutterBottom
+              sx={{ color: "#007a48", fontWeight: 600 }}
+            >
+              How does it work?
+
+            </Typography>
+
+          <HowitWorksComponents/>
+
+          </Box>
           <Box
             p="5%"
             sx={{
