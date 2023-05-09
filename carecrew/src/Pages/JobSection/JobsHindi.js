@@ -62,7 +62,7 @@ function JobsHindi() {
   const optimizeHandleSubmit = () => {
 
 if(!throtlingHandler){
-  setTimeout(handleSubmit,5000);
+  setTimeout(handleSubmit,3000);
   setThrotlingHandler(1)
 
 }

@@ -40,7 +40,7 @@ function GetACallBackForm({ data }) {
   const optimizeHandleSubmit = () => {
 
     if(!throtlingHandler){
-      setTimeout(handleClick,5000);
+      setTimeout(handleClick,3000);
       setThrotlingHandler(1)
     
     }
