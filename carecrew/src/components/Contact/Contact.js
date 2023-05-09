@@ -30,9 +30,23 @@ function Contact() {
   const [address, setAddress] = useState("");
   const [workinghr, setworkingHr] = useState("");
 const Currentdate =Date.now();
+const [throtlingHandler, setThrotlingHandler] = useState(0);
 const { closeForm, setCloseForm } = useContext(multiStepContext);
 const navigate = useNavigate();
 const [cityDD, setCityDD] = useState([])
+
+
+
+
+const optimizeHandleSubmit = () => {
+
+  if(!throtlingHandler){
+    setTimeout(handleSubmit,5000);
+    setThrotlingHandler(1)
+  
+  }
+    };
+
 
   const handleSubmit = async () => {
    try{
@@ -80,6 +94,7 @@ const [cityDD, setCityDD] = useState([])
       }
       if(window.Email){
       window.Email.send(config).then (()=>navigate("/thankyou"),setCloseForm(false))
+      setThrotlingHandler(0)
       }
     }
     catch(error){
@@ -406,7 +421,7 @@ const [cityDD, setCityDD] = useState([])
                   variant="contained"
                   color="success"
                   disabled={name&&phone&&city?false:true}
-                  onClick={handleSubmit}
+                  onClick={optimizeHandleSubmit}
                 >
                   Submit Your Request
                 </Button>

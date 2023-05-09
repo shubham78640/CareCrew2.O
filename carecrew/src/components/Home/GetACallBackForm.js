@@ -26,6 +26,7 @@ function GetACallBackForm({ data }) {
   const [society, setSociety] = useState([]);
   const [cityDD, setCityDD] = useState([]);
   const { setCloseForm } = useContext(multiStepContext);
+  const [throtlingHandler, setThrotlingHandler] = useState(0);
   const navigate = useNavigate();
 
   let newServices = services.map(function (item) {
@@ -34,6 +35,16 @@ function GetACallBackForm({ data }) {
   let newCity = city ? city["city"] : "";
   let newLocality = locality ? locality["locality"] : "";
   const currentdate = Date.now();
+
+
+  const optimizeHandleSubmit = () => {
+
+    if(!throtlingHandler){
+      setTimeout(handleClick,5000);
+      setThrotlingHandler(1)
+    
+    }
+      };
 
 
   const handleClick = async () => {
@@ -66,6 +77,7 @@ function GetACallBackForm({ data }) {
           () => navigate("/thankyou"),
           setCloseForm(false)
         );
+        setThrotlingHandler(0)
       }
     } catch (error) {
       alert(error);
@@ -273,7 +285,7 @@ function GetACallBackForm({ data }) {
         style={{ marginTop: "20px", display: "flex", justifyContent: "center" }}
       >
         <Button
-          onClick={handleClick}
+          onClick={optimizeHandleSubmit}
           disabled={name&&email&&phoneNumber&&address&&workinghour?false:true}
           sx={{ fontSize: "14px", textTransform: "none" }}
           variant="contained"

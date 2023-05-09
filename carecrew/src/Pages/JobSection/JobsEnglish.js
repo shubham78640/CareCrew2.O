@@ -48,6 +48,7 @@ function JobsEnglish() {
   const [skill, setSkill] = useState([]);
   const { closeForm, setCloseForm } = useContext(multiStepContext);
   const [expanded, setExpanded] = React.useState(false);
+  const [throtlingHandler, setThrotlingHandler] = useState(0);
   const navigate = useNavigate();
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -56,6 +57,18 @@ function JobsEnglish() {
     return item["service"];
   });
   const currentdate = Date.now();
+
+  const optimizeHandleSubmit = () => {
+
+    if(!throtlingHandler){
+      setTimeout(handleSubmit,5000);
+      setThrotlingHandler(1)
+    
+    }
+      };
+
+
+
   const handleSubmit = async () => {
     try {
       let response = await axios.post(`${MasterApi1}`, {
@@ -81,6 +94,7 @@ function JobsEnglish() {
           () => navigate("/thankyou"),
           setCloseForm(false)
         );
+        setThrotlingHandler(0)
       }
     } catch (error) {
       console.log(error);
@@ -310,7 +324,7 @@ function JobsEnglish() {
                 color="success"
                 disabled={name&&phone&&city?false:true}
                 sx={{ marginTop: "30px", textTransform: "none" }}
-                onClick={handleSubmit}
+                onClick={optimizeHandleSubmit}
 
               >
                 Submit Your Enquiry
