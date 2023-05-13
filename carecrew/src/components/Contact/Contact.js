@@ -11,7 +11,7 @@ import axios from "axios";
 import { multiStepContext } from "../../Context/FormContext";
 import { useNavigate } from "react-router-dom";
 import { MasterApi } from "../../AllData";
-
+import moment from "moment";
 const Item = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
   display: "flex",
@@ -30,6 +30,7 @@ function Contact() {
   const [address, setAddress] = useState("");
   const [workinghr, setworkingHr] = useState("");
 const Currentdate =Date.now();
+const Newdatetime= moment(Currentdate).format('MMMM Do YYYY, h:mm:ss a');
 const [throtlingHandler, setThrotlingHandler] = useState(0);
 const { closeForm, setCloseForm } = useContext(multiStepContext);
 const navigate = useNavigate();
@@ -70,7 +71,7 @@ const optimizeHandleSubmit = () => {
   let res= await axios.post(`${MasterApi}`, {
                   "address": address,
                   "city": city,
-                 "createdAt":Currentdate,
+                 "createdAt":Newdatetime,
                  "email": email,
                  "message": message,
                  "name": name,

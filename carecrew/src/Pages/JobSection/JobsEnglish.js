@@ -15,6 +15,7 @@ import { multiStepContext } from "../../Context/FormContext";
 import { servicesData } from "../../AllData";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import moment from "moment";
 import { MasterApi1 } from "../../AllData";
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -50,6 +51,7 @@ function JobsEnglish() {
   const [expanded, setExpanded] = React.useState(false);
   const [throtlingHandler, setThrotlingHandler] = useState(0);
   const navigate = useNavigate();
+
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
@@ -57,7 +59,7 @@ function JobsEnglish() {
     return item["service"];
   });
   const currentdate = Date.now();
-
+  const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
   const optimizeHandleSubmit = () => {
 
     if(!throtlingHandler){
@@ -73,7 +75,7 @@ function JobsEnglish() {
     try {
       let response = await axios.post(`${MasterApi1}`, {
         city: city,
-        createdAt: currentdate,
+        createdAt: Newdatetime,
         name: name,
         phoneNumber: phone,
         services: SkillsName,

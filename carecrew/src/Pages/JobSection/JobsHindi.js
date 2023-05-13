@@ -11,6 +11,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import ScrollToTop from "react-scroll-to-top";
 import { servicesDatainHindi } from "../../AllData";
 import axios from "axios";
+import moment from "moment";
 import { MasterApi1 } from "../../AllData";
 import { useNavigate } from "react-router-dom";
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
@@ -54,6 +55,7 @@ function JobsHindi() {
   };
 
   const currentdate = Date.now();
+  const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
   var SkillsName = skill.map(function (item) {
     return item["service"];
   });
@@ -62,7 +64,7 @@ function JobsHindi() {
   const optimizeHandleSubmit = () => {
 
 if(!throtlingHandler){
-  setTimeout(handleSubmit,3000);
+  setTimeout(handleSubmit,9000);
   setThrotlingHandler(1)
 
 }
@@ -72,7 +74,7 @@ if(!throtlingHandler){
     try {
       let response = await axios.post(`${MasterApi1}`, {
         city: city,
-        createdAt: currentdate,
+        createdAt: Newdatetime,
         name: name,
         phoneNumber: phone,
         services: SkillsName,

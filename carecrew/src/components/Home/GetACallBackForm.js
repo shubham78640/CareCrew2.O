@@ -11,6 +11,8 @@ import axios from "axios";
 import { multiStepContext } from "../../Context/FormContext";
 import { useNavigate } from "react-router-dom";
 import { MasterApi } from "../../AllData";
+import moment from "moment";
+
 
 function GetACallBackForm({ data }) {
   const [services, setServices] = useState([]);
@@ -35,14 +37,14 @@ function GetACallBackForm({ data }) {
   let newCity = city ? city["city"] : "";
   let newLocality = locality ? locality["locality"] : "";
   const currentdate = Date.now();
-
+const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
 
   const optimizeHandleSubmit = () => {
 
+    console.log("time",Newdatetime)
     if(!throtlingHandler){
-      setTimeout(handleClick,3000);
+      setTimeout(handleClick,9000);
       setThrotlingHandler(1)
-    
     }
       };
 
@@ -51,7 +53,7 @@ function GetACallBackForm({ data }) {
     try {
       let response = await axios.post(`${MasterApi}`, {
         address: address,
-        createdAt: currentdate,
+        createdAt: Newdatetime,
         email: email,
         message: longContent,
         name: name,
@@ -59,6 +61,7 @@ function GetACallBackForm({ data }) {
         service: newServices,
         workingHours: workinghour,
       });
+      console.log(response);
   const config = {
     SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
     To : 'rituja@thepinchlife.com',
