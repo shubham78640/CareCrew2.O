@@ -63,7 +63,7 @@ function JobsEnglish() {
   const optimizeHandleSubmit = () => {
 
     if(!throtlingHandler){
-      setTimeout(handleSubmit,3000);
+      setTimeout(handleSubmit,6000);
       setThrotlingHandler(1)
     
     }

@@ -1,4 +1,5 @@
 import {
+  Alert,
   Autocomplete,
   Box,
   Button,
@@ -12,7 +13,6 @@ import { multiStepContext } from "../../Context/FormContext";
 import { useNavigate } from "react-router-dom";
 import { MasterApi } from "../../AllData";
 import moment from "moment";
-
 
 function GetACallBackForm({ data }) {
   const [services, setServices] = useState([]);
@@ -29,69 +29,80 @@ function GetACallBackForm({ data }) {
   const [cityDD, setCityDD] = useState([]);
   const { setCloseForm } = useContext(multiStepContext);
   const [throtlingHandler, setThrotlingHandler] = useState(0);
+  const [buttonText, setButtonText] = useState("Submit Your Request");
   const navigate = useNavigate();
 
   let newServices = services.map(function (item) {
     return item["service"];
   });
+
   let newCity = city ? city["city"] : "";
   let newLocality = locality ? locality["locality"] : "";
   const currentdate = Date.now();
-const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
+  const Newdatetime = moment(currentdate).format("MMMM Do YYYY, h:mm:ss a");
 
-  const optimizeHandleSubmit = () => {
+  const onError = (err) => {
+    alert(err.message);
+  };
+  const onSuccess = (success) => {
+    setButtonText(success);
+  };
 
-    console.log("time",Newdatetime)
-    if(!throtlingHandler){
-      setTimeout(handleClick,9000);
-      setThrotlingHandler(1)
-    }
-      };
+  const handleClick = async (onSuccess, onError) => {
+    const postData = {
+      address: address,
+      createdAt: Newdatetime,
+      email: email,
+      message: longContent,
+      name: name,
+      phoneNumber: phoneNumber,
+      service: newServices,
+      workingHours: workinghour,
+    };
+    setAddress("");
+    setEmail("");
+    setName("");
+    setWorkinghour("");
+    setServices([]);
+    setPhoneNumber("");
+    setLongcontent("");
+    setButtonText("Submitiing...");
 
-
-  const handleClick = async () => {
     try {
-      let response = await axios.post(`${MasterApi}`, {
-        address: address,
-        createdAt: Newdatetime,
-        email: email,
-        message: longContent,
-        name: name,
-        phoneNumber: phoneNumber,
-        service: newServices,
-        workingHours: workinghour,
-      });
+      let response = await axios.post(`${MasterApi}`, postData);
       console.log(response);
-  const config = {
-    SecureToken:"64bbee42-d25a-4fff-ad6d-5133e8409c45",
-    To : 'rituja@thepinchlife.com',
-    From : `intezar@thepinchlife.com`,
-    Subject : "New Lead From CARE CREW Website",
-    Body : `<p>Name:- ${name}</p> 
-            <p>Phone Number:- ${phoneNumber}</p>
-            <p>Email:- ${email}</p>         
-            <p>Service:- ${newServices}</p>        
-            <p>Work Hour:- ${workinghour}</p>        
-            <p>Address:- ${address}</p>  
-            <p>Message:- ${longContent}</p>`,
+      const config = {
+        SecureToken: "64bbee42-d25a-4fff-ad6d-5133e8409c45",
+        To: "rituja@thepinchlife.com",
+        From: `intezar@thepinchlife.com`,
+        Subject: "New Lead From CARE CREW Website",
+        Body: `<p>Name:- ${postData.name}</p> 
+            <p>Phone Number:- ${postData.phoneNumber}</p>
+            <p>Email:- ${postData.email}</p>         
+            <p>Service:- ${postData.service}</p>        
+            <p>Work Hour:- ${postData.workingHours}</p>        
+            <p>Address:- ${postData.address}</p>  
+            <p>Message:- ${postData.message}</p>`,
       };
+
       if (window.Email) {
+        onSuccess("Submit Your Request");
         window.Email.send(config).then(
           () => navigate("/thankyou"),
           setCloseForm(false)
         );
-        setThrotlingHandler(0)
       }
     } catch (error) {
-      alert(error);
+      onError(error);
     }
   };
 
   return (
-    <Box sx={{ display: "grid", gap: "10px", position:"relative"}}>
+    <Box sx={{ display: "grid", gap: "10px", position: "relative" }}>
       <TextField
         size="small"
         placeholder="Name*"
+        value={name}
         onChange={(e) => {
           setName(e.target.value);
         }}
@@ -115,6 +126,7 @@ const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
       <TextField
         size="small"
         placeholder="Mobile Number*"
+        value={phoneNumber}
         onChange={(e) => {
           setPhoneNumber(e.target.value);
         }}
@@ -138,6 +150,7 @@ const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
       <TextField
         size="small"
         placeholder="Email*"
+        value={email}
         onChange={(e) => {
           setEmail(e.target.value);
         }}
@@ -167,6 +180,7 @@ const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
         sx={{ width: "300px" }}
         options={servicesData}
         getOptionLabel={(option) => option.service}
+        value={services}
         onChange={(event, newValue) => {
           setServices([...newValue]);
         }}
@@ -179,7 +193,7 @@ const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
               borderRadius: "5px",
               input: {
                 fontSize: "12px",
-                color:  "#ebe956",
+                color: "#ebe956",
                 "&::placeholder": {
                   textOverflow: "ellipsis !important",
                   fontWeight: "400",
@@ -196,6 +210,7 @@ const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
       <TextField
         size="small"
         placeholder="Working hours*"
+        value={workinghour}
         onChange={(e) => {
           setWorkinghour(e.target.value);
         }}
@@ -245,6 +260,7 @@ const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
       <TextField
         size="small"
         placeholder="Address*"
+        value={address}
         onChange={(e) => {
           setAddress(e.target.value);
         }}
@@ -268,6 +284,7 @@ const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
       />
       <TextareaAutosize
         aria-label="minimum height"
+        value={longContent}
         onChange={(e) => {
           setLongcontent(e.target.value);
         }}
@@ -288,13 +305,19 @@ const Newdatetime= moment(currentdate).format('MMMM Do YYYY, h:mm:ss a');
         style={{ marginTop: "20px", display: "flex", justifyContent: "center" }}
       >
         <Button
-          onClick={optimizeHandleSubmit}
-          disabled={name&&email&&phoneNumber&&address&&workinghour?false:true}
+          onClick={() => {
+            handleClick(onSuccess, onError);
+          }}
+          disabled={
+            name && email && phoneNumber && address && workinghour
+              ? false
+              : true
+          }
           sx={{ fontSize: "14px", textTransform: "none" }}
           variant="contained"
           color="success"
         >
-          Submit Your Request
+          {buttonText}
         </Button>
       </div>
     </Box>
