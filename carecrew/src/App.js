@@ -20,6 +20,7 @@ import AgePolicy from "./Pages/Privacy Policy/AgePolicy";
 import Thankyou from "./Pages/ThankYou/Thankyou";
 import StepperForm from "./Pages/StepperForm/StepperForm";
 import Test from "./components/Test/Test";
+import On_Demand_Services from "./Pages/Service/On_Demand_Services";
 
 function App() {
   let user = localStorage.getItem("user");
@@ -44,6 +45,7 @@ function App() {
           <Route path="/services/childcare" element={<ChildCare_Services />} />
           <Route path="/services/eldercare" element={<ElderCare_Servies />} />
           <Route path="/services/others" element={<Others_Sevices />} />
+          <Route path="/services/ondemand" element={<On_Demand_Services />} />
           <Route path="/process" element={<WorkProcess />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route path="/termsofuse" element={<TermsofUse />} />

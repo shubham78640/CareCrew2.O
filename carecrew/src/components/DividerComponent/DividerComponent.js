@@ -143,6 +143,23 @@ function DividerComponent() {
               </ListItem>
             </NavLink>
             <Divider />
+            <NavLink
+              to="/services/others"
+              style={({ isActive }) => ({
+                color: isActive ? "#007a47" : "#007a48",
+              })}
+              onClick={()=>{
+                window.scrollTo({
+                  top: 0, 
+                  behavior: 'smooth'
+                });
+              }}
+            >
+              <ListItem button divider>
+                <ListItemText primary="Others" />
+              </ListItem>
+            </NavLink>
+            <Divider />
           </List>
         </Box>
       </Box>

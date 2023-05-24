@@ -289,7 +289,7 @@ function GetACallBackForm({ data }) {
           setLongcontent(e.target.value);
         }}
         minRows={data}
-        placeholder="Mention your detailed requirement here"
+        placeholder="Your Specific Requirements/Scope of Work*"
         style={{
           backgroundColor: "#007a48",
           borderRadius: "5px",
@@ -309,7 +309,7 @@ function GetACallBackForm({ data }) {
             handleClick(onSuccess, onError);
           }}
           disabled={
-            name && email && phoneNumber && address && workinghour
+            name && email && phoneNumber && address && workinghour&&longContent
               ? false
               : true
           }
