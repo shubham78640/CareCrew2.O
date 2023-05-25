@@ -116,6 +116,7 @@ function On_Demand_Services() {
               How does it work?
 
             </Typography>
+            <Box>Booking our on-demand service is easy and can be done in 3 simple steps. </Box>
 
             <Box
         mt={5}
