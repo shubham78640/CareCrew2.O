@@ -289,7 +289,7 @@ function GetACallBackForm({ data }) {
           setLongcontent(e.target.value);
         }}
         minRows={data}
-        placeholder="Your Specific Requirements/Scope of Work*"
+        placeholder="Your Specific Requirements / Scope of Work*"
         style={{
           backgroundColor: "#007a48",
           borderRadius: "5px",
