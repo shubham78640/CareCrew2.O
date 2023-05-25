@@ -127,7 +127,7 @@ function DividerComponent() {
             </NavLink>
             <Divider />
             <NavLink
-              to="/services/others"
+              to="/services/ondemand"
               style={({ isActive }) => ({
                 color: isActive ? "#007a47" : "#007a48",
               })}
@@ -139,7 +139,7 @@ function DividerComponent() {
               }}
             >
               <ListItem button divider>
-                <ListItemText primary="Others" />
+                <ListItemText primary="On-Demand" />
               </ListItem>
             </NavLink>
             <Divider />

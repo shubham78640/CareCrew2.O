@@ -164,7 +164,7 @@ function Footer() {
                       <CallIcon sx={{ fontSize: "16px" }} />
                     </Box>
                     &nbsp; &nbsp;
-                    <Box> 080-6201-2086</Box>
+                    <Box> 964-332-8358</Box>
                   </Box>
                 </a>
                 <a

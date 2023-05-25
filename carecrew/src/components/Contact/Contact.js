@@ -184,7 +184,7 @@ function Contact() {
                         Phone number
                       </Box>
                       <Box sx={{ fontSize: "16px", color: "#72BF44" }}>
-                        080-6201-2086
+                      964-332-8358
                       </Box>
                     </Box>
                   </Box>
