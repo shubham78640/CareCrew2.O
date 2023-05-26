@@ -309,7 +309,7 @@ function GetACallBackForm({ data }) {
             handleClick(onSuccess, onError);
           }}
           disabled={
-            name && email && phoneNumber && address && workinghour&&longContent
+            name && email && phoneNumber && address && workinghour&&longContent&&services.length
               ? false
               : true
           }

@@ -10,7 +10,7 @@ import { multiStepContext } from "../../Context/FormContext";
 import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
 import HandshakeIcon from "@mui/icons-material/Handshake";
 import SocialDistanceIcon from "@mui/icons-material/SocialDistance";
-import CallIcon from "@mui/icons-material/Call";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const BOX = styled(Box)({
     display: "flex",
     flexDirection: "column",
@@ -129,7 +129,7 @@ function On_Demand_Services() {
                 >
         <BOX>
           <BOX2>
-            <CallIcon sx={{ color: "rgba(0,122,72)", fontSize: "28px" }} />
+            <WhatsAppIcon sx={{ color: "rgba(0,122,72)", fontSize: "28px" }} />
           </BOX2>
           <H3>Send us a message on WhatsApp</H3>
         </BOX>
