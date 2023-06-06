@@ -340,7 +340,7 @@ function Contact() {
                         renderInput={(params) => (
                           <TextField
                             {...params}
-                            placeholder="City"
+                            placeholder="City*"
                             sx={{
                               backgroundColor: "white",
                               marginTop: "12px",
@@ -355,7 +355,7 @@ function Contact() {
               </Box>
               <Grid item lg={12} xs={12} mt={2}>
                 <Box p="0% 4%">
-                  <Box sx={{ fontWeight: 500 }}>Your message</Box>
+                  <Box sx={{ fontWeight: 500 }}>Detailed Scope of Work</Box>
                   <TextField
                     id="outlined-textarea"
                     label="Mention your detailed requirment here..."
@@ -377,10 +377,10 @@ function Contact() {
                 <Grid container mt={2}>
                   <Grid item lg={6} xs={12}>
                     <Box>
-                      <Box sx={{ fontWeight: 500 }}>Working hours</Box>
+                      <Box sx={{ fontWeight: 500 }}>Required Duration of Services*</Box>
                       <TextField
                         id="outlined-basic"
-                        label="Working hours"
+                        label="Required Duration of Services*"
                         variant="outlined"
                         color="success"
                         sx={{
@@ -419,7 +419,7 @@ function Contact() {
                   variant="contained"
                   color="success"
                   disabled={
-                    name && phone && address && email && workinghr
+                    name && phone && address && workinghr
                       ? false
                       : true
                   }

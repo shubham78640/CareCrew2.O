@@ -21,10 +21,13 @@
 
       .Class_Services_Navbar{
        color:#007a48;
-
       }
       
-  
+      .custom-autocomplete .MuiAutocomplete-tag {
+        background-color: #0a5938; /* Customize the background color */
+        color: white; /* Customize the text color */
+        font-size: 12px;
+      }
 
 
 

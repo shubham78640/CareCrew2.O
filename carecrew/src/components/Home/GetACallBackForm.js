@@ -13,6 +13,7 @@ import { multiStepContext } from "../../Context/FormContext";
 import { useNavigate } from "react-router-dom";
 import { MasterApi } from "../../AllData";
 import moment from "moment";
+import "../Headers/navbaar.css";
 
 function GetACallBackForm({ data }) {
   const [services, setServices] = useState([]);
@@ -25,6 +26,7 @@ function GetACallBackForm({ data }) {
   const [address, setAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [othersLocality, setOthersLocality] = useState("");
+  const [yourRequirement,setYourRequirement]= useState("");
   const [society, setSociety] = useState([]);
   const [cityDD, setCityDD] = useState([]);
   const { setCloseForm } = useContext(multiStepContext);
@@ -58,6 +60,7 @@ function GetACallBackForm({ data }) {
       phoneNumber: phoneNumber,
       service: newServices,
       workingHours: workinghour,
+      yourRequirement:yourRequirement
     };
     setAddress("");
     setEmail("");
@@ -66,6 +69,7 @@ function GetACallBackForm({ data }) {
     setServices([]);
     setPhoneNumber("");
     setLongcontent("");
+    setYourRequirement("");
     setButtonText("Submitiing...");
 
     try {
@@ -82,6 +86,7 @@ function GetACallBackForm({ data }) {
             <p>Service:- ${postData.service}</p>        
             <p>Work Hour:- ${postData.workingHours}</p>        
             <p>Address:- ${postData.address}</p>  
+            <p>Your Requirement:- ${postData.yourRequirement}</p> 
             <p>Message:- ${postData.message}</p>`,
       };
 
@@ -172,12 +177,48 @@ function GetACallBackForm({ data }) {
           },
         }}
       />
+
+<Autocomplete
+        size="small"
+        color="primary"
+        sx={{ width: "300px" }}
+        // className="custom-autocomplete"
+        options={yourRequirementsDD}
+        getOptionLabel={(option) => option}
+        value={yourRequirement}
+        onChange={(event, newValue) => {
+          setYourRequirement(newValue);
+        }}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            placeholder="Your Requirements*"
+            sx={{
+              backgroundColor: "#007a48",
+              borderRadius: "5px",
+              input: {
+                fontSize: "12px",
+                color: "white",
+                "&::placeholder": {
+                  textOverflow: "ellipsis !important",
+                  fontWeight: "400",
+                  opacity: 0.9,
+                  color: "#ebe956",
+                  fontSize: "12px",
+                },
+              },
+            }}
+          />
+        )}
+      />
+
       <Autocomplete
         multiple
         disableCloseOnSelect
         size="small"
         color="primary"
         sx={{ width: "300px" }}
+        className="custom-autocomplete"
         options={servicesData}
         getOptionLabel={(option) => option.service}
         value={services}
@@ -209,7 +250,7 @@ function GetACallBackForm({ data }) {
 
       <TextField
         size="small"
-        placeholder="Working hours*"
+        placeholder="Required Duration of Services*"
         value={workinghour}
         onChange={(e) => {
           setWorkinghour(e.target.value);
@@ -289,7 +330,7 @@ function GetACallBackForm({ data }) {
           setLongcontent(e.target.value);
         }}
         minRows={data}
-        placeholder="Your Specific Requirements / Scope of Work*"
+        placeholder="Detailed Scope of Work*"
         style={{
           backgroundColor: "#007a48",
           borderRadius: "5px",
@@ -309,7 +350,7 @@ function GetACallBackForm({ data }) {
             handleClick(onSuccess, onError);
           }}
           disabled={
-            name && email && phoneNumber && address && workinghour&&longContent&&services.length
+            name && email && phoneNumber && address && workinghour&&yourRequirement&&longContent&&services.length
               ? false
               : true
           }
@@ -327,7 +368,7 @@ function GetACallBackForm({ data }) {
 export default GetACallBackForm;
 
 const servicesData = [
-  { service: "HouseKeeping" },
+  { service: "Housekeeping" },
   { service: "Child Care" },
   { service: "Elder Care" },
   { service: "Cooking" },
@@ -338,3 +379,5 @@ const servicesData = [
 const cityData = [{ city: "Gudgaon" }, { city: "Others" }];
 
 const localityData = [{ locality: "upcomming" }];
+
+const yourRequirementsDD = ["Regular Help for Daily Service", "On-demand Help for One-time Service"];
