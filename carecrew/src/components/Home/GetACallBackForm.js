@@ -73,30 +73,33 @@ function GetACallBackForm({ data }) {
     setButtonText("Submitiing...");
 
     try {
-      let response = await axios.post(`${MasterApi}`, postData);
+      let response = axios.post(`${MasterApi}`, postData);
+      navigate("/thankyou")
+      onSuccess("Submit Your Request");
+      setCloseForm(false);
       console.log(response);
-      const config = {
-        SecureToken: "64bbee42-d25a-4fff-ad6d-5133e8409c45",
-        To: "rituja@thepinchlife.com",
-        From: `intezar@thepinchlife.com`,
-        Subject: "New Lead From CARE CREW Website",
-        Body: `<p>Name:- ${postData.name}</p> 
-            <p>Phone Number:- ${postData.phoneNumber}</p>
-            <p>Email:- ${postData.email}</p>         
-            <p>Service:- ${postData.service}</p>        
-            <p>Work Hour:- ${postData.workingHours}</p>        
-            <p>Address:- ${postData.address}</p>  
-            <p>Your Requirement:- ${postData.yourRequirement}</p> 
-            <p>Message:- ${postData.message}</p>`,
-      };
+      // const config = {
+      //   SecureToken: "64bbee42-d25a-4fff-ad6d-5133e8409c45",
+      //   To: "rituja@thepinchlife.com",
+      //   From: `intezar@thepinchlife.com`,
+      //   Subject: "New Lead From CARE CREW Website",
+      //   Body: `<p>Name:- ${postData.name}</p> 
+      //       <p>Phone Number:- ${postData.phoneNumber}</p>
+      //       <p>Email:- ${postData.email}</p>         
+      //       <p>Service:- ${postData.service}</p>        
+      //       <p>Work Hour:- ${postData.workingHours}</p>        
+      //       <p>Address:- ${postData.address}</p>  
+      //       <p>Your Requirement:- ${postData.yourRequirement}</p> 
+      //       <p>Message:- ${postData.message}</p>`,
+      // };
 
-      if (window.Email) {
-        onSuccess("Submit Your Request");
-        window.Email.send(config).then(
-          () => navigate("/thankyou"),
-          setCloseForm(false)
-        );
-      }
+      // if (window.Email) {
+      //   onSuccess("Submit Your Request");
+      //   window.Email.send(config).then(
+      //     () => navigate("/thankyou"),
+      //     setCloseForm(false)
+      //   );
+      // }
     } catch (error) {
       onError(error);
     }
