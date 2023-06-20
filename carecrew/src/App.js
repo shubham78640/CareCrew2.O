@@ -21,6 +21,8 @@ import Thankyou from "./Pages/ThankYou/Thankyou";
 import StepperForm from "./Pages/StepperForm/StepperForm";
 import Test from "./components/Test/Test";
 import On_Demand_Services from "./Pages/Service/On_Demand_Services";
+import Candidatepage from "./components/Test/Candidatepage";
+import HireHelp from "./Pages/HireHelp/HireHelp";
 
 function App() {
   let user = localStorage.getItem("user");
@@ -51,6 +53,7 @@ function App() {
           <Route path="/termsofuse" element={<TermsofUse />} />
           <Route path="/agepolicy" element={<AgePolicy />} />
           <Route path="/thankyou" element={<Thankyou />} />
+          <Route path="/hirehelp" element={<HireHelp />} />
           <Route path="/step" element={<StepperForm />} />
         </Routes>
       </BrowserRouter>

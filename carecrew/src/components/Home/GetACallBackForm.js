@@ -182,10 +182,11 @@ function GetACallBackForm({ data }) {
       />
 
 <Autocomplete
+disablePortal
+id="combo-box-demo"
         size="small"
         color="primary"
         sx={{ width: "300px" }}
-        // className="custom-autocomplete"
         options={yourRequirementsDD}
         getOptionLabel={(option) => option}
         value={yourRequirement}
