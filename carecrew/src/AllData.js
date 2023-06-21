@@ -156,7 +156,7 @@ export let CardsData1 = [
     CardHeading:"Shubham Mishra",
     CardContentLines:"Our housekeepers.",
     link:"/services/housekeeping",
-    HelpImage:"https://cdn.w600.comps.canstockphoto.com/gardener-stock-image_csp8804156.jpg",
+    HelpImage:imgHK,
     HelpName:"Rajiv Sharma",
     Age:"26",
     Gender:"Male",
@@ -175,7 +175,7 @@ export let CardsData1 = [
     CardHeading:"Pratik Ji",
     CardContentLines:"Our home cooks ",
     link:"/services/cooking",
-    HelpImage:"https://img.freepik.com/premium-photo/asian-driver-smiling_8595-5573.jpg",
+    HelpImage:imgHK,
     HelpName:"Mohit Sharma",
     Age:"25",
     Gender:"Male",
@@ -191,7 +191,7 @@ export let CardsData1 = [
     CardHeading:"Hitesh Ji",
     CardContentLines:"We provide .",
     link:"/services/childcare",
-    HelpImage:"https://content.jdmagicbox.com/comp/navsari/f8/9999p2637.2637.190614164820.a1f8/catalogue/driver-service-khadsupa-boarding-navsari-cpe5uycftq-250.jpg",
+    HelpImage:imgHK,
     HelpName:"Raju gupta",
     Age:"22",
     Gender:"Male",
@@ -207,7 +207,7 @@ export let CardsData1 = [
     CardHeading:"Rahul Roy",
     CardContentLines:"Whether it's ",
     link:"/services/eldercare",
-    HelpImage:"https://c8.alamy.com/comp/G37D9R/portrait-of-female-chef-cutting-vegetables-G37D9R.jpg",
+    HelpImage:imgHK,
     HelpName:"Seema",
     Age:"26",
     Gender:"Female",
@@ -223,7 +223,7 @@ export let CardsData1 = [
     CardHeading:"Intezar Khan",
     CardContentLines:"We provide.",
     link:"/services/driver",
-    HelpImage:"https://media.gettyimages.com/id/1332870770/photo/clean-the-house.jpg?s=612x612&w=gi&k=20&c=CCPl_Ox4dwX6KFf8K3wK5PqhsUSDhgmas_3McNrZ4dE=",
+    HelpImage:imgHK,
     HelpName:"poonam",
     Age:"26",
     Gender:"Female",
@@ -240,7 +240,7 @@ export let CardsData1 = [
     CardHeading:"Parth Mishra",
     CardContentLines:"Did we.",
     link:"/services/others",
-    HelpImage:"https://media.istockphoto.com/id/1421757751/photo/young-beautiful-woman-with-apron-and-rubber-glove-ready-for-cleaning-home-on-isolated-white.jpg?s=612x612&w=0&k=20&c=BBWSc2vZx-BdrTnpK9jd_SuBuerbwyvCCmYBTr5mePs=",
+    HelpImage:imgHK,
     HelpName:"Pinki",
     Age:"27",
     Gender:"Female",
@@ -256,7 +256,7 @@ export let CardsData1 = [
   CardHeading:"Rahul Roy",
   CardContentLines:"Whether it's",
   link:"/services/eldercare",
-  HelpImage:"https://i0.wp.com/hoppingin.com/wp-content/uploads/2017/07/bigstock-Construction-worker-in-new-ho-80842568.jpg?ssl=1",
+  HelpImage:imgHK,
   HelpName:"Rohit",
   Age:"26",
   Gender:"Male",
@@ -272,7 +272,7 @@ export let CardsData1 = [
   CardHeading:"Intezar Khan",
   CardContentLines:"We provide.",
   link:"/services/driver",
-  HelpImage:"https://cdn.thinglink.me/api/image/790329878552510464/1024/10/scaletowidth/0/0/1/1/false/true?wait=true",
+  HelpImage:imgHK,
   HelpName:"Rajesh",
   Age:"27",
   Gender:"Male",
@@ -288,7 +288,7 @@ export let CardsData1 = [
   CardHeading:"Parth Mishra",
   CardContentLines:"Did we.",
   link:"/services/others",
-  HelpImage:"https://st.focusedcollection.com/16485780/i/1800/focused_202435536-stock-photo-portrait-confident-male-construction-worker.jpg",
+  HelpImage:imgHK,
   HelpName:"Raj Kumar",
   Age:"28",
   Gender:"Male",
@@ -311,7 +311,7 @@ export const dataDigitalBestSeller1 = [
     title: 'Ramesh',
     paragraph: 'Our housekeepers are trained to keep your homes in order by performing multiple household chores with...',
     category: 'Know More',
-    linkImg:"https://tse3.mm.bing.net/th?id=OIP.QnKqhd0aH6c7Wz9-4uONrgHaJS&pid=Api&P=0&h=180",
+    linkImg:imgHK,
     link:"/services/housekeeping"
   },
   {
@@ -320,7 +320,7 @@ export const dataDigitalBestSeller1 = [
     title: 'Suresh',
     paragraph: 'Our home cooks are professionally trained to prepare wholesome home-style meals for the families to enjoy',
     category: 'Know More',
-    linkImg:"https://i.pinimg.com/736x/28/a4/70/28a470426182529c6a58593f69eb1117--handsome-boys.jpg",
+    linkImg:imgHK,
     link:"/services/cooking"
   },
   {
@@ -329,7 +329,7 @@ export const dataDigitalBestSeller1 = [
     title: 'Dinesh',
     paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
     category: 'Know More',
-    linkImg:"http://1.bp.blogspot.com/-_Ojoc6nWdf4/UcwxsI1IriI/AAAAAAAAC0Q/X-Y5znNRpbM/s960/Boys-Style-Tips.jpg",
+    linkImg:imgHK,
     link:"/services/childcare"
   },
   {
@@ -338,7 +338,7 @@ export const dataDigitalBestSeller1 = [
     title: 'Kalu',
     paragraph: 'Our housekeepers are trained to keep your homes in order by performing multiple household chores with...',
     category: 'Know More',
-    linkImg:"https://tse3.mm.bing.net/th?id=OIP.QnKqhd0aH6c7Wz9-4uONrgHaJS&pid=Api&P=0&h=180",
+    linkImg:imgHK,
     link:"/services/housekeeping"
   },
   {
@@ -347,7 +347,7 @@ export const dataDigitalBestSeller1 = [
     title: 'Silu',
     paragraph: 'Our home cooks are professionally trained to prepare wholesome home-style meals for the families to enjoy',
     category: 'Know More',
-    linkImg:"https://i.pinimg.com/736x/28/a4/70/28a470426182529c6a58593f69eb1117--handsome-boys.jpg",
+    linkImg:imgHK,
     link:"/services/cooking"
   },
   {
@@ -356,7 +356,7 @@ export const dataDigitalBestSeller1 = [
     title: 'ram Praksh',
     paragraph: 'We provide reliable child caregivers who assure the safety and growth of you child.',
     category: 'Know More',
-    linkImg:"http://1.bp.blogspot.com/-_Ojoc6nWdf4/UcwxsI1IriI/AAAAAAAAC0Q/X-Y5znNRpbM/s960/Boys-Style-Tips.jpg",
+    linkImg:imgHK,
     link:"/services/childcare"
   },
   {
@@ -365,7 +365,7 @@ export const dataDigitalBestSeller1 = [
     title: 'Mayank',
     paragraph: "Whether it's for your parents or grandparents, you can hire trained professionals for taking care of...",
     category: 'Know More',
-    linkImg:"https://tse1.explicit.bing.net/th?id=OIP.K9GVmB65Y3joIcv2yhC_6QHaJQ&pid=Api&P=0&h=180",
+    linkImg:imgHK,
     link:"/services/eldercare"
   },
   {
@@ -374,7 +374,7 @@ export const dataDigitalBestSeller1 = [
     title: 'Intezar',
     paragraph: 'We provide licensed drivers with in-depth knowledge about cars and driving etiquette.',
     category: 'Know More',
-    linkImg:"https://thumbs.dreamstime.com/z/portrait-teenage-boy-outdoors-21404356.jpg",
+    linkImg:imgHK,
     link:"/services/driver"
   },
   {
@@ -383,7 +383,7 @@ export const dataDigitalBestSeller1 = [
     title: 'Parth',
     paragraph: 'Did we miss out on the service you are looking for? Submit your inquiry to us.',
     category: 'Know More',
-    linkImg:"https://tse1.mm.bing.net/th?id=OIP.ToFot6rK6Ov2nD3WdDIoywHaIZ&pid=Api&P=0&h=180",
+    linkImg:imgHK,
     link:"/services/others"
   }
 

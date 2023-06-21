@@ -158,7 +158,7 @@ Profile Details
            <TextField
             autoFocus
             margin="dense"
-            value={data?.CardHeading}
+            value={data?.HelpName}
             disabled ={true}
             id="name"
             label="Candidate Name"
