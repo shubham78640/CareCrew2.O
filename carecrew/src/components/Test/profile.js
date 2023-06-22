@@ -20,8 +20,9 @@ function Profile() {
     <Box mt={2}sx={{textAlign:"center", color:"#007a48", fontSize:"16px", }}>Reliable house helps for housekeeping, cooking and childcare needs at home</Box>
     </Box>
 <Box sx={{display:"flex",gap:"20px", flexWrap:"wrap" , padding:"2% 12%", justifyContent:"center",marginTop:7}}>
-      {CardsData1.map((value) => (
+      {CardsData1.map((value, key) => (
         <Cardabcd
+           key={key}
             data ={value}
           link={value.link}
           Cardimage={value.HelpImage}
