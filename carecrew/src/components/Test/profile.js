@@ -16,7 +16,7 @@ function Profile() {
 
     <Box sx={{paddingTop:{sm:"10%", xs:"25%"}}}>
 
-    <Box sx={{textAlign:"center", color:"#007a48", fontSize:"28px", fontWeight:"500"}}>Trained and Trustworthy Helps For Your Home</Box>
+    <Box sx={{textAlign:"center", color:"#007a48", fontSize:"28px", fontWeight:"500"}}>Trained and trustworthy helps for your home</Box>
     <Box mt={2}sx={{textAlign:"center", color:"#007a48", fontSize:"16px", }}>Reliable house helps for housekeeping, cooking and childcare needs at home</Box>
     </Box>
 <Box sx={{display:"flex",gap:"20px", flexWrap:"wrap" , padding:"2% 12%", justifyContent:"center",marginTop:7}}>

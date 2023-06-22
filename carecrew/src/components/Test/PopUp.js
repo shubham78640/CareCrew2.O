@@ -26,11 +26,10 @@ function PopUp(props) {
   return (
     <>
       <Dialog
-        
         open={open}
         onClose={handleClickOpen}
-        // fullWidth="xl"
-        maxWidth={"xl"}
+        fullWidth="xl"
+        maxWidth={"md"}
         // sx={{width:{sm:"800px", xs:"400px"}}}
         // aria-labelledby="alert-dialog-title"
         // aria-describedby="alert-dialog-description"
@@ -39,7 +38,16 @@ function PopUp(props) {
         //    id="alert-dialog-title"
         >
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Box>Profile Details</Box>
+            <Box
+              sx={{
+                textAlign: "center",
+                color: "#007a48",
+                fontSize: "25px",
+                fontWeight: "500",
+              }}
+            >
+              Profile Details
+            </Box>
             <Button onClick={handleClickOpen}>
               <CancelIcon />
             </Button>
@@ -56,7 +64,7 @@ function PopUp(props) {
             <Box>
               <img src={data?.HelpImage} height="400px" width="100%" />
             </Box>
-            <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+            <Box sx={{ display: "flex", flexDirection: "column", gap: "8px", color: "#007a48", }}>
               <h1> {data?.HelpName}</h1>
 
               <Box mt={-1}>Age: {data?.Age}</Box>
