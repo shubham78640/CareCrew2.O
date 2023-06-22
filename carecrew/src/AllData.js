@@ -6,6 +6,7 @@ import imgCC from "../../carecrew/src/Images/Childcare.jpg"
 import imgEC from "../../carecrew/src/Images/eldercare_service.jpg"
 import imgDriver from "../../carecrew/src/Images/driving_service.jpg"
 import imgOthers from "../../carecrew/src/Images/Question.jpg"
+import imgHelp from "../../carecrew/src/Images/CChelp.png"
 
 export const TOMAILE = "rituja@thepinchlife.com";
 
@@ -156,7 +157,7 @@ export let CardsData1 = [
     CardHeading:"Shubham Mishra",
     CardContentLines:"Our housekeepers.",
     link:"/services/housekeeping",
-    HelpImage:imgHK,
+    HelpImage:imgHelp,
     HelpName:"Rajiv Sharma",
     Age:"26",
     Gender:"Male",
@@ -175,7 +176,7 @@ export let CardsData1 = [
     CardHeading:"Pratik Ji",
     CardContentLines:"Our home cooks ",
     link:"/services/cooking",
-    HelpImage:imgHK,
+    HelpImage:imgHelp,
     HelpName:"Mohit Sharma",
     Age:"25",
     Gender:"Male",
@@ -191,7 +192,7 @@ export let CardsData1 = [
     CardHeading:"Hitesh Ji",
     CardContentLines:"We provide .",
     link:"/services/childcare",
-    HelpImage:imgHK,
+    HelpImage:imgHelp,
     HelpName:"Raju gupta",
     Age:"22",
     Gender:"Male",
@@ -207,7 +208,7 @@ export let CardsData1 = [
     CardHeading:"Rahul Roy",
     CardContentLines:"Whether it's ",
     link:"/services/eldercare",
-    HelpImage:imgHK,
+    HelpImage:imgHelp,
     HelpName:"Seema",
     Age:"26",
     Gender:"Female",
@@ -223,7 +224,7 @@ export let CardsData1 = [
     CardHeading:"Intezar Khan",
     CardContentLines:"We provide.",
     link:"/services/driver",
-    HelpImage:imgHK,
+    HelpImage:imgHelp,
     HelpName:"poonam",
     Age:"26",
     Gender:"Female",
@@ -240,7 +241,7 @@ export let CardsData1 = [
     CardHeading:"Parth Mishra",
     CardContentLines:"Did we.",
     link:"/services/others",
-    HelpImage:imgHK,
+    HelpImage:imgHelp,
     HelpName:"Pinki",
     Age:"27",
     Gender:"Female",
@@ -256,7 +257,7 @@ export let CardsData1 = [
   CardHeading:"Rahul Roy",
   CardContentLines:"Whether it's",
   link:"/services/eldercare",
-  HelpImage:imgHK,
+  HelpImage:imgHelp,
   HelpName:"Rohit",
   Age:"26",
   Gender:"Male",
@@ -272,7 +273,7 @@ export let CardsData1 = [
   CardHeading:"Intezar Khan",
   CardContentLines:"We provide.",
   link:"/services/driver",
-  HelpImage:imgHK,
+  HelpImage:imgHelp,
   HelpName:"Rajesh",
   Age:"27",
   Gender:"Male",
@@ -288,7 +289,7 @@ export let CardsData1 = [
   CardHeading:"Parth Mishra",
   CardContentLines:"Did we.",
   link:"/services/others",
-  HelpImage:imgHK,
+  HelpImage:imgHelp,
   HelpName:"Raj Kumar",
   Age:"28",
   Gender:"Male",

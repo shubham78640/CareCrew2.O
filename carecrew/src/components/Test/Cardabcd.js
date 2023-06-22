@@ -31,9 +31,9 @@ function Cardabcd(props) {
           <CardActionArea height="328">
             <CardMedia
               component="img"
-          //    sx={{width:"200px", height:"200px", justifyContent:"center", margin:"auto"}}
-               height="200px"
-              width="170px"
+             sx={{width:"227px", height:"200px", justifyContent:"center", margin:"auto"}}
+              //  height="200px"
+              // width="170px"
               image={Cardimage}
               alt="CARECREW Candidate Profile"
             />
