@@ -46,11 +46,10 @@ function Cardabcd(props) {
               >
                 {CardHeading}
               </Typography>
-              <Typography variant="body2" color="text.secondary">Skillset : 
-                {SkillSet}
+              <Typography variant="body2" color="text.secondary">Skillset: {SkillSet}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-              Expected Salary : {ExpectedSalary}
+              Work Hours: {ExpectedSalary}
               </Typography>
               {/* <Typography variant="body2" color="text.secondary">
                 {CardContentLines}

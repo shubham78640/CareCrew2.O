@@ -166,7 +166,7 @@ export let CardsData1 = [
     Languages:"Hindi",
     Experience:"2 years",
     TraningDetails:"NA",
-    ExpectedSalary:"20000",
+    ExpectedSalary:"12 Hours",
 
 
 
@@ -185,7 +185,7 @@ export let CardsData1 = [
     Languages:"Hindi",
     Experience:"2 years",
     TraningDetails:"NA",
-    ExpectedSalary:"2000",
+    ExpectedSalary:"12 Hours"
   },
   {
     Cardimage:`https://thumbs.dreamstime.com/b/man-4286631.jpg`,
@@ -201,7 +201,7 @@ export let CardsData1 = [
     Languages:"Hindi",
     Experience:"2 years",
     TraningDetails:"NA",
-    ExpectedSalary:"15000",
+    ExpectedSalary:"12 Hours",
   },
   {
     Cardimage:`https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?cs=srgb&dl=adult-beach-beard-736716.jpg&fm=jpg`,
@@ -217,7 +217,7 @@ export let CardsData1 = [
     Languages:"Hindi",
     Experience:"2 years",
     TraningDetails:"NA",
-    ExpectedSalary:"11000",
+    ExpectedSalary:"12 Hours",
   },
   {
     Cardimage:`https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/rZJIMvhmliwmde8a6/videoblocks-happy-black-african-man-in-suit-portrait-of-excited-cheerful-man-indoor-against-window-background_sh2ahadmq_thumbnail-1080_01.png`,
@@ -233,7 +233,7 @@ export let CardsData1 = [
     Languages:"Hindi",
     Experience:"2 years",
     TraningDetails:"NA",
-    ExpectedSalary:"83000",
+    ExpectedSalary:"12 Hours",
     
   },
   {
@@ -250,7 +250,7 @@ export let CardsData1 = [
     Languages:"Hindi",
     Experience:"2 years",
     TraningDetails:"NA",
-    ExpectedSalary:"7000",
+    ExpectedSalary:"12 Hours"
   },
   {
   Cardimage:`https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?cs=srgb&dl=adult-beach-beard-736716.jpg&fm=jpg`,
@@ -266,7 +266,7 @@ export let CardsData1 = [
   Languages:"Hindi",
     Experience:"2 years",
     TraningDetails:"NA",
-    ExpectedSalary:"3000",
+    ExpectedSalary:"12 Hours"
 },
 {
   Cardimage:`https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/rZJIMvhmliwmde8a6/videoblocks-happy-black-african-man-in-suit-portrait-of-excited-cheerful-man-indoor-against-window-background_sh2ahadmq_thumbnail-1080_01.png`,
@@ -282,7 +282,7 @@ export let CardsData1 = [
   Languages:"Hindi",
     Experience:"2 years",
     TraningDetails:"NA",
-    ExpectedSalary:"13000",
+    ExpectedSalary:"12 Hours",
 },
 {
   Cardimage:`http://missmalini.files.wordpress.com/2009/04/att1066791.jpg`,
@@ -298,7 +298,7 @@ export let CardsData1 = [
   Languages:"Hindi",
   Experience:"2 years",
   TraningDetails:"NA",
-  ExpectedSalary:"25000",
+  ExpectedSalary:"12 Hours",
 },
 
 ]

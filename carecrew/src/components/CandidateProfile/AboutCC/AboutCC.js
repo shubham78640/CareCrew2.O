@@ -14,11 +14,11 @@ function AboutCC() {
             fontWeight: "500",
           }}
         >
-          About CARECREW
+          Why CARE CREW
         </Box>
 
         <Box
-          mt={10}
+          mt={4}
           sx={{
             display: "flex",
             flexDirection: { sm: "row", xs: "column" },
