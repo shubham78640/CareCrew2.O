@@ -82,7 +82,7 @@ function HireSteps() {
             <H3>Select a Profile</H3>
             <StyleDiv />
             <P>
-              Choose any of the five profiles of our trained house helps that
+              Choose any of the profiles of our trained Home Associates that
               best match your current household requirements.
             </P>
           </BOX>
@@ -96,8 +96,8 @@ function HireSteps() {
             <H3>Book a Free Trial</H3>
             <StyleDiv />
             <P>
-              Reserve a trial day with your preferred house help to experience
-              and assess their services firsthand.
+              Reserve a trial day with your preferred Home Associate to
+              experience and assess their services firsthand.
             </P>
           </BOX>
 
@@ -110,9 +110,10 @@ function HireSteps() {
             <H3>Evaluate & Hire</H3>
             <StyleDiv />
             <P>
-              After checking the performance and compatibility, hire the house
-              help either for a full-time shift (12 hours) or a live-in (24
-              hours) role to suit your needs.
+              After assessing the performance and compatibility, hire the Home
+              Associate either for a full-time shift (12 hours) or a live-in (24
+              hours) role based on their availability as mentioned in their
+              profile.
             </P>
           </BOX>
           <BOX>
@@ -124,8 +125,7 @@ function HireSteps() {
             <H3>Engage</H3>
             <StyleDiv />
             <P>
-              Connect with our relationship officer for any grievances, concerns
-              or requests.
+            Connect with our Relationship Officer for any grievances, concerns or requests.
             </P>
           </BOX>
         </Box>
@@ -136,13 +136,13 @@ function HireSteps() {
             color="success"
             // onClick={handleSubmitform}
             onClick={() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
-                });
-              }}
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
           >
-          Find a Help
+            Find a Help
           </Button>
         </Box>
       </Box>

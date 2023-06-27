@@ -23,6 +23,7 @@ import Test from "./components/Test/Test";
 import On_Demand_Services from "./Pages/Service/On_Demand_Services";
 import Candidatepage from "./components/Test/Candidatepage";
 import HireHelp from "./Pages/HireHelp/HireHelp";
+import HirePage from "./Pages/HiringPage/HirePage";
 
 function App() {
   let user = localStorage.getItem("user");
@@ -55,6 +56,7 @@ function App() {
           <Route path="/thankyou" element={<Thankyou />} />
           <Route path="/hirehelp" element={<HireHelp />} />
           <Route path="/step" element={<StepperForm />} />
+          <Route path="/hire" element={<HirePage/>} />
         </Routes>
       </BrowserRouter>
     </div>

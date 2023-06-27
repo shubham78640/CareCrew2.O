@@ -24,7 +24,7 @@ function AboutCC() {
             flexDirection: { sm: "row", xs: "column" },
             gap: "8%",
             justifyContent: "canter",
-            padding:{sm:"2% 11%", xs:"1% 5%"} ,
+            padding: { sm: "2% 11%", xs: "1% 5%" },
           }}
         >
           <Box
@@ -34,11 +34,7 @@ function AboutCC() {
               alignItems: "center",
             }}
           >
-            <img
-              src={ImageCooking}
-              height={500}
-              width={350}
-            />
+            <img src={ImageCooking} height={500} width={350} />
           </Box>
 
           <Box
@@ -51,14 +47,15 @@ function AboutCC() {
             }}
           >
             <Box>
-             
-              <Box  sx={{ color: "#007a48" , fontSize:"17px", lineHeight:"27px"}}>
+              <Box
+                sx={{ color: "#007a48", fontSize: "17px", lineHeight: "27px" }}
+              >
                 At CARE CREW we are on a mission to transform the domestic help
-                sector by sourcing, training and deploying verified helps
-                including housekeepers, home cooks, nannies and more. We strive
-                to build a community of dependable and efficient house helps
-                dedicated to providing a worry-free environment to a customer’s
-                home.
+                sector by sourcing, training and deploying verified Home
+                Associates including housekeepers, home cooks, nannies and more.
+                We strive to build a community of dependable and efficient house
+                helps dedicated to providing a worry-free environment to a
+                customer’s home.
               </Box>
             </Box>
             <Box mt={3} sx={{ display: "flex", gap: "30px" }}>
@@ -99,7 +96,7 @@ function AboutCC() {
                   Easy Replacements{" "}
                 </Box>
                 <Box>
-                  Unlimited replacements for 6 months from the first deployment.
+                  Replacements for up to 6 months from the first deployment.
                 </Box>
               </Box>
             </Box>

@@ -64,7 +64,7 @@ function PopUp(props) {
             <Box>
               <img src={data?.HelpImage} height="400px" width="100%" />
             </Box>
-            <Box sx={{ display: "flex", flexDirection: "column", gap: "8px", color: "#007a48", }}>
+            <Box sx={{ display: "flex", flexDirection: "column", gap: "8px", color: "#007a48"}}>
               <h1> {data?.HelpName}</h1>
 
               <Box mt={-1}>Age: {data?.Age}</Box>
