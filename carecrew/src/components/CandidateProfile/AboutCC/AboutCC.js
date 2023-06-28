@@ -12,10 +12,16 @@ function AboutCC() {
             color: "#007a48",
             fontSize: "25px",
             fontWeight: "500",
+            fontSize:"35px",
+            marginLeft:{sm:"20px", xs:"0"}
+            
           }}
         >
           Why CARE CREW
         </Box>
+          {/* <Box p={4} pt={0}>
+          <h1 style={{ color: "rgba(0,122,72)" }}>Why CARE CREW</h1>
+        </Box> */}
 
         <Box
           mt={4}
@@ -48,13 +54,13 @@ function AboutCC() {
           >
             <Box>
               <Box
-                sx={{ color: "#007a48", fontSize: "17px", lineHeight: "27px" }}
+                sx={{ fontSize: "17px", lineHeight: "27px" }}
               >
                 At CARE CREW we are on a mission to transform the domestic help
-                sector by sourcing, training and deploying verified Home
+                sector by recruiting, training and deploying verified Home
                 Associates including housekeepers, home cooks, nannies and more.
                 We strive to build a community of dependable and efficient house
-                helps dedicated to providing a worry-free environment to a
+                associates dedicated to providing a worry-free environment to a
                 customer’s home.
               </Box>
             </Box>
@@ -64,11 +70,11 @@ function AboutCC() {
                 <Box
                   sx={{ color: "#007a48", fontSize: "16px", fontWeight: 500 }}
                 >
-                  Verified and Trained Helps{" "}
+                  Trained Associates{" "}
                 </Box>
 
                 <Box>
-                  Verified and trained for reliability and professionalism.
+                  Reliable, Professional & Skilled at household chores.
                 </Box>
               </Box>
             </Box>
@@ -78,7 +84,7 @@ function AboutCC() {
                 <Box
                   sx={{ color: "#007a48", fontSize: "16px", fontWeight: 500 }}
                 >
-                  Free Trial{" "}
+                  1-Day FREE Trial{" "}
                 </Box>
 
                 <Box>
@@ -106,11 +112,11 @@ function AboutCC() {
                 <Box
                   sx={{ color: "#007a48", fontSize: "16px", fontWeight: 500 }}
                 >
-                  Transparent Process{" "}
+                  Background Verified{" "}
                 </Box>
 
                 <Box>
-                  Complete visibility on the skills and experience of the helps.
+                  Verified for identity and criminal court records.
                 </Box>
               </Box>
             </Box>

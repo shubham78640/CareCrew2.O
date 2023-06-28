@@ -67,7 +67,7 @@ function HirePage() {
           Expend_Value={expanded === "panel5"}
           newchnage={handleChange("panel5")}
           Accordion_Heading="Can I request a replacement after deployment? "
-          Accordion_Content="Yes, we do. While we wish for everything to be frictionless & train our Home Associates in a manner that they serve you professionally, we do offer replacements for up to a period of 6 months should such situations arise."
+          Accordion_Content="Yes, you can. While we wish for everything to be frictionless & train our Home Associates in a manner that they serve you professionally, we do offer replacements for up to a period of 6 months should such situations arise."
         />
         <AccordionComponent
           Expend_Value={expanded === "panel6"}

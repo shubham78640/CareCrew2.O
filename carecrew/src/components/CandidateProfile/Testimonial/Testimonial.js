@@ -59,9 +59,10 @@ function Testimonial() {
         sx={{
           display: "flex",
           flexDirection: "Column",
+          bgcolor:"#ededed",
           gap: "50px",
-          padding: { sm: "10%", xs: "7%" },
-          marginTop: { sm: "25%", xs: "1200px", justifyContent: "center" },
+          padding: { sm: "3%", xs: "7%" },
+          marginTop: { sm: "35%", xs: "1200px", justifyContent: "center" },
         }}
       >
         <Box sx={{
@@ -70,7 +71,7 @@ function Testimonial() {
             fontSize: "25px",
             fontWeight: "500",
         }}>
-          Testimonial
+          Testimonials
         </Box>
         <Slider {...settings}>
           {dataDigitalBestSeller1.map((item) => (
@@ -103,12 +104,12 @@ function Testimonial() {
                 >
                   <p>{item.paragraph}</p>
                   <Stack spacing={1}>
-                    <Rating
+                    {/* <Rating
                       name="read-only"
                       defaultValue={item.id}
                       precision={0.5}
                       readOnly
-                    />
+                    /> */}
                   </Stack>
                 </NavLink>
               </div>

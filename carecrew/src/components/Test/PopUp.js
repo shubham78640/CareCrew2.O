@@ -62,21 +62,21 @@ function PopUp(props) {
             }}
           >
             <Box>
-              <img src={data?.HelpImage} height="400px" width="100%" />
+              <img src={data?.HelpImage} height="350px" width="100%" />
             </Box>
-            <Box sx={{ display: "flex", flexDirection: "column", gap: "8px", color: "#007a48"}}>
-              <h1> {data?.HelpName}</h1>
+            <Box sx={{ display: "flex", flexDirection: "column", gap: "8px"}}>
+              <h1 style={{color: "#007a48"}}> {data?.HelpName}</h1>
 
               <Box mt={-1}>Age: {data?.Age}</Box>
               <Box>Gender: {data?.Gender}</Box>
               <Box>Location: {data?.Location}</Box>
-              <Box>Skill-sets: {data?.SkillSet}</Box>
+              <Box>Skills: {data?.SkillSet}</Box>
+              <Box>Work Time: {data?.ExpectedSalary}</Box>
               <Box>Language: {data?.Languages}</Box>
-
               <Box>Experience: {data?.Experience}</Box>
               <Box>Training Details: {data?.TraningDetails}</Box>
 
-              <Box>Work Hours: {data?.ExpectedSalary}</Box>
+              
               <Button
                 sx={{
                   marginTop: "10px",

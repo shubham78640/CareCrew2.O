@@ -560,6 +560,12 @@ function Navbaar() {
       </Box>
 
 
+
+
+
+
+
+
       {/* Responsive */}
       <Box sx={{ display: { xs: "block", sm: "none" } }}>
         <Box

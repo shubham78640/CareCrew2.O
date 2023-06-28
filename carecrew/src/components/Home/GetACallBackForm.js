@@ -196,7 +196,7 @@ id="combo-box-demo"
         renderInput={(params) => (
           <TextField
             {...params}
-            placeholder="Your Requirements*"
+            placeholder="Type of Requirements*"
             sx={{
               backgroundColor: "#007a48",
               borderRadius: "5px",
@@ -254,7 +254,7 @@ id="combo-box-demo"
 
       <TextField
         size="small"
-        placeholder="Required Duration of Services*"
+        placeholder="Desired hours of work*"
         value={workinghour}
         onChange={(e) => {
           setWorkinghour(e.target.value);
@@ -384,4 +384,4 @@ const cityData = [{ city: "Gudgaon" }, { city: "Others" }];
 
 const localityData = [{ locality: "upcomming" }];
 
-const yourRequirementsDD = ["Regular Help for Daily Service", "On-demand Help for One-time Service"];
+const yourRequirementsDD = ["Daily Service", "As and when required"];

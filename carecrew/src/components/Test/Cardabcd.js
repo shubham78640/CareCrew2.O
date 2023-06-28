@@ -31,7 +31,7 @@ function Cardabcd(props) {
           <CardActionArea height="328">
             <CardMedia
               component="img"
-             sx={{width:"227px", height:"200px", justifyContent:"center", margin:"auto"}}
+             sx={{width:"227px", height:"100%", justifyContent:"center", margin:"auto"}}
               //  height="200px"
               // width="170px"
               image={Cardimage}
@@ -46,10 +46,10 @@ function Cardabcd(props) {
               >
                 {CardHeading}
               </Typography>
-              <Typography variant="body2" color="text.secondary">Skillset: {SkillSet}
+              <Typography variant="body2" color="text.secondary">Skills: {SkillSet}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-              Work Hours: {ExpectedSalary}
+              Work Time: {ExpectedSalary}
               </Typography>
               {/* <Typography variant="body2" color="text.secondary">
                 {CardContentLines}
