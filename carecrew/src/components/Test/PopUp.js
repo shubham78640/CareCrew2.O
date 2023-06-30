@@ -61,8 +61,8 @@ function PopUp(props) {
               gap: "4%",
             }}
           >
-            <Box>
-              <img src={data?.HelpImage} height="350px" width="100%" />
+            <Box sx={{height:{sm:"350px", xs:"100%"}}}>
+              <img src={data?.HelpImage} height="100%" width="100%" />
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column", gap: "8px"}}>
               <h1 style={{color: "#007a48"}}> {data?.HelpName}</h1>
