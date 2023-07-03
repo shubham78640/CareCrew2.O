@@ -15,6 +15,10 @@ function HirePage() {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
+// setCloseForm(false);
+
+
   return (
     <>
       <Profile />
