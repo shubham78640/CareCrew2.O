@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import Contact from "../../components/Contact/Contact";
 import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function Housekeeping_Service() {
   const [expanded, setExpanded] = React.useState("panel1");
@@ -16,6 +17,7 @@ function Housekeeping_Service() {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+  const navigation = useNavigate()
   return (
     <>
       <Box
@@ -113,7 +115,8 @@ function Housekeeping_Service() {
               dusting to washroom and window cleaning, our skilled professionals
               will ensure that every task is completed to perfection.
             </p>
-            <Button  sx={{width:"150px", bgcolor:"#2e7d32", textTransform:"none"}} variant="contained">Book</Button>
+            <Button onClick={()=>{navigation("/services/ondemand")}}  sx={{width:"150px", bgcolor:"#2e7d32", textTransform:"none"}} variant="contained">Book Now</Button>
+
 
           </Box>
 

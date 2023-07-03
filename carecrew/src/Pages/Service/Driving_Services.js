@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import { multiStepContext } from "../../Context/FormContext";
 import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
 import { Button } from "@mui/material";
+import { useNavigate, useNavigation } from "react-router-dom";
 
 function Driving_Services() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
@@ -18,6 +19,8 @@ function Driving_Services() {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
+  const navigation = useNavigate()
   return (
     <>
       <Box
@@ -115,7 +118,7 @@ function Driving_Services() {
               Whether it's grocery shopping, appointments, or any other errands,
               they are ready to assist you at an affordable hourly rate.
             </p>
-            <Button  sx={{width:"150px", bgcolor:"#2e7d32", textTransform:"none"}} variant="contained">Book</Button>
+            <Button onClick={()=>{navigation("/services/ondemand")}}  sx={{width:"150px", bgcolor:"#2e7d32", textTransform:"none"}} variant="contained">Book Now</Button>
 
           </Box>
 

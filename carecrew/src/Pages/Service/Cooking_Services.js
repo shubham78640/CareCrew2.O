@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import { multiStepContext } from "../../Context/FormContext";
 import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 function Cooking_Services() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
   const [expanded, setExpanded] = React.useState("panel1");
@@ -16,6 +17,7 @@ function Cooking_Services() {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+  const navigation = useNavigate()
   return (
     <>
       <Box
@@ -130,7 +132,8 @@ function Cooking_Services() {
               home-style North and South Indian dishes prepared with love and
               care by our talented cooks anytime you want.
             </p>
-            <Button  sx={{width:"150px", bgcolor:"#2e7d32", textTransform:"none"}} variant="contained">Book</Button>
+            <Button onClick={()=>{navigation("/services/ondemand")}}  sx={{width:"150px", bgcolor:"#2e7d32", textTransform:"none"}} variant="contained">Book Now</Button>
+
           </Box>
 
           <Box
