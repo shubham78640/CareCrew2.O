@@ -8,6 +8,7 @@ import AccordionComponent from "../../components/MuiComponents/AccordionComponen
 import Typography from "@mui/material/Typography";
 import { multiStepContext } from "../../Context/FormContext";
 import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
+import { Button } from "@mui/material";
 function Cooking_Services() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
   const [expanded, setExpanded] = React.useState("panel1");
@@ -84,28 +85,54 @@ function Cooking_Services() {
             Stories_Content="From simple meals on weekdays to special delightful ones over the weekend, our cooks will attempt to bring in variety in your everyday food. Spicy or occasionally spicy; crisp rotis or soft ones – they will be able to customize as per your needs."
             SubmitButtonName="Book a Trial"
           />
-           <Box
+          <Box
             p="5%"
             sx={{
               display: "flex",
               flexDirection: "column",
               gap: "5px",
               mt: { sm: "0%", xs: "0%" },
-             
             }}
           >
-          <Typography
+            <Typography
               variant="h4"
               gutterBottom
               sx={{ color: "#007a48", fontWeight: 600 }}
             >
               How does it work?
-
             </Typography>
 
-          <HowitWorksComponents/>
-
+            <HowitWorksComponents />
           </Box>
+
+          {/* paragraph and content */}
+          <Box
+            p="5%"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              mt: { sm: "0%", xs: "0%" },
+            }}
+          >
+            <Typography
+              variant="h5"
+              gutterBottom
+              sx={{ color: "#007a48", fontWeight: 500 }}
+            >
+              Need someone to prepare food for a day?
+            </Typography>
+            <p style={{ color: "#72bf44", fontWeight: "500" }}>
+              Hire our skilled Home Cooks whenever you want at INR 149 per hour.
+            </p>
+            <p style={{ textAlign: "justify" }}>
+              Our on-demand cooking service is tailored to meet your everyday
+              culinary needs when your cook is on leave. Enjoy delicious,
+              home-style North and South Indian dishes prepared with love and
+              care by our talented cooks anytime you want.
+            </p>
+            <Button  sx={{width:"150px", bgcolor:"#2e7d32", textTransform:"none"}} variant="contained">Book</Button>
+          </Box>
+
           <Box
             p="5%"
             sx={{

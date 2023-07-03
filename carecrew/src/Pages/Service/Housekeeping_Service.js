@@ -8,6 +8,7 @@ import AccordionComponent from "../../components/MuiComponents/AccordionComponen
 import Typography from "@mui/material/Typography";
 import Contact from "../../components/Contact/Contact";
 import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
+import { Button } from "@mui/material";
 
 function Housekeeping_Service() {
   const [expanded, setExpanded] = React.useState("panel1");
@@ -66,7 +67,7 @@ function Housekeeping_Service() {
             SubmitButtonName="Book a Trial"
           />
 
-<Box
+          <Box
             p="5%"
             sx={{
               display: "flex",
@@ -75,18 +76,47 @@ function Housekeeping_Service() {
               mt: { sm: "0%", xs: "0%" },
             }}
           >
-          <Typography
+            <Typography
               variant="h4"
               gutterBottom
               sx={{ color: "#007a48", fontWeight: 600 }}
             >
               How does it work?
-
             </Typography>
 
-          <HowitWorksComponents/>
+            <HowitWorksComponents />
+          </Box>
+
+          {/* paragraph and content */}
+          <Box
+            p="5%"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              mt: { sm: "0%", xs: "0%" },
+            }}
+          >
+            <Typography
+              variant="h5"
+              gutterBottom
+              sx={{ color: "#007a48", fontWeight: 500 }}
+            >
+              Need housekeeping assistance just for the day?
+            </Typography>
+            <p style={{ color: "#72bf44", fontWeight: "500" }}>
+              Hire our meticulous Housekeepers at INR 149 per hour.
+            </p>
+            <p style={{textAlign:"justify"}}>
+              We have trained housekeepers available on an hourly basis,
+              providing you with the flexibility to hire help based on your
+              needs. From regular cleaning tasks like sweeping, mopping and
+              dusting to washroom and window cleaning, our skilled professionals
+              will ensure that every task is completed to perfection.
+            </p>
+            <Button  sx={{width:"150px", bgcolor:"#2e7d32", textTransform:"none"}} variant="contained">Book</Button>
 
           </Box>
+
           <Box
             p="5%"
             sx={{

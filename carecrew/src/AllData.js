@@ -134,9 +134,9 @@ export let CardsData = [
 },
 {
   Cardimage:`${imgOthers}`,
-  CardHeading:"Others",
-  CardContentLines:"Did we miss out on the service you are looking for? Submit your inquiry to us.",
-  link:"/services/others"
+  CardHeading:"As per requirement",
+  CardContentLines:"We provide on-demand services to solve for the challenges you face when your House Help is on leave.",
+  link:"/services/ondemand"
 },
 
 ]

@@ -9,6 +9,7 @@ import AccordionComponent from "../../components/MuiComponents/AccordionComponen
 import Typography from "@mui/material/Typography";
 import { multiStepContext } from "../../Context/FormContext";
 import HowitWorksComponents from "../../components/HowItWorksComponents/HowitWorksComponents";
+import { Button } from "@mui/material";
 
 function Driving_Services() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
@@ -67,7 +68,7 @@ function Driving_Services() {
             Stories_Content="Be it receiving your guests from the airport, taking your kids to school or picking you up from the office, our drivers are people you can rely upon."
             SubmitButtonName="Book a Trial"
           />
-           <Box
+          <Box
             p="5%"
             sx={{
               display: "flex",
@@ -76,18 +77,48 @@ function Driving_Services() {
               mt: { sm: "0%", xs: "0%" },
             }}
           >
-          <Typography
+            <Typography
               variant="h4"
               gutterBottom
               sx={{ color: "#007a48", fontWeight: 600 }}
             >
               How does it work?
-
             </Typography>
 
-          <HowitWorksComponents/>
+            <HowitWorksComponents />
+          </Box>
+
+          {/* paragraph and content */}
+          <Box
+            p="5%"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              mt: { sm: "0%", xs: "0%" },
+            }}
+          >
+            <Typography
+              variant="h5"
+              gutterBottom
+              sx={{ color: "#007a48", fontWeight: 500 }}
+            >
+              Need someone to drive you around for the day?
+            </Typography>
+            <p style={{ color: "#72bf44", fontWeight: "500" }}>
+              Book our licensed Drivers anytime at INR 149 per hour.
+            </p>
+            <p style={{ textAlign: "justify" }}>
+              We provide an on-demand driving service to provide you with
+              dependable transportation on an hourly basis. Our experienced
+              Drivers will ensure that you reach your destinations safely and
+              efficiently, allowing you to focus on your daily tasks at hand.
+              Whether it's grocery shopping, appointments, or any other errands,
+              they are ready to assist you at an affordable hourly rate.
+            </p>
+            <Button  sx={{width:"150px", bgcolor:"#2e7d32", textTransform:"none"}} variant="contained">Book</Button>
 
           </Box>
+
           <Box
             p="5%"
             sx={{
