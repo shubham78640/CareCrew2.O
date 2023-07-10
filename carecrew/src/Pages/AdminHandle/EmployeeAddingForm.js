@@ -7,6 +7,7 @@ import { languageData, genderData, skillData } from "../../AllData";
 
 function EmployeeAddingForm(props) {
   const [age, setAge] = useState("");
+  const [name, setName] = useState("")
   const [gender, setGender] = useState("");
   const [location, setLocation] = useState("");
   const [skills, setSkill] = useState("");
@@ -58,6 +59,13 @@ function EmployeeAddingForm(props) {
           paddingBottom: "20px",
         }}
       >
+          <TextFields
+          name="Name"
+        //   selected={true}
+          setInput={setName}
+          // data={stateData}
+        />
+
         <TextFields
           name="Age"
         //   selected={true}

@@ -6,6 +6,8 @@ import Testimonial from "../../components/CandidateProfile/Testimonial/Testimoni
 import { Box, Button, CardContent, styled, Typography } from "@mui/material";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import Footer from "../../components/Footer/Footer";
+import HomeCrousel from "../../components/Crousel/HomeCrousel";
+import Profile from "../../components/Test/profile";
 function HireHelp() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
   const [expanded, setExpanded] = React.useState("panel1");
@@ -16,9 +18,11 @@ function HireHelp() {
   
   return (
     <>
+      <Profile/>
       <HireSteps />
       <AboutCC />
       <Testimonial />
+    
       <Box
         p="5%"
         sx={{
