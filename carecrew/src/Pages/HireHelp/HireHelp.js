@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { multiStepContext } from "../../Context/FormContext";
-import Profile from "../../components/Test/profile";
 import HireSteps from "../../components/CandidateProfile/HireSteps/HireSteps";
 import AboutCC from "../../components/CandidateProfile/AboutCC/AboutCC";
 import Testimonial from "../../components/CandidateProfile/Testimonial/Testimonial";
@@ -17,7 +16,6 @@ function HireHelp() {
   
   return (
     <>
-      <Profile />
       <HireSteps />
       <AboutCC />
       <Testimonial />

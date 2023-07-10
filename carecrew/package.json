@@ -15,6 +15,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.2",
+    "firebase": "^9.23.0",
     "framer-motion": "^7.6.9",
     "moment": "^2.29.4",
     "nodemon": "^2.0.20",
