@@ -22,6 +22,7 @@ function EmployeeAddingForm(props) {
       const mealCollection = collection(db, "CandidateList");
 
       await addDoc(mealCollection, {
+        name,
         age,
         gender,
         location,
@@ -86,7 +87,7 @@ function EmployeeAddingForm(props) {
         />
         <TextFields
           name="Skills"
-          selected={true}
+          // selected={true}
           setInput={setSkill}
           data={skillData}
         />

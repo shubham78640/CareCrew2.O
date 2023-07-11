@@ -62,7 +62,7 @@ function Testimonial() {
           bgcolor:"#ededed",
           gap: "50px",
           padding: { sm: "3%", xs: "7%" },
-          marginTop: { sm: "35%", xs: "1200px", justifyContent: "center" },
+          marginTop: { sm: "7%", xs: "100px", justifyContent: "center" },
         }}
       >
         <Box sx={{

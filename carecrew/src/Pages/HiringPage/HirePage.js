@@ -7,6 +7,7 @@ import { multiStepContext } from "../../Context/FormContext";
 import Footer from "../../components/Footer/Footer";
 import AccordionComponent from "../../components/MuiComponents/AccordionComponent";
 import { Box, Typography } from "@mui/material";
+import AssociateInfo from "../../components/Test/AssociateInfo";
 
 function HirePage() {
   const { closeForm, setCloseForm } = useContext(multiStepContext);
@@ -24,6 +25,7 @@ function HirePage() {
       <Profile />
       <HireSteps />
       <AboutCC />
+      <AssociateInfo/>
       <Testimonial />
       <Box
         p="5%"

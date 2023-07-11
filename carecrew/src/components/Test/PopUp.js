@@ -62,20 +62,32 @@ function PopUp(props) {
             }}
           >
             <Box sx={{height:{sm:"350px", xs:"100%"}}}>
-              <img src={data?.HelpImage} height="100%" width="100%" />
+              <img src={data?.image?data?.image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3rzr5yCjWIMDSeo2uKEkNUIx3yOSwwBZP8w&usqp=CAU"} height="100%" width="100%" />
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column", gap: "8px"}}>
-              <h1 style={{color: "#007a48"}}> {data?.HelpName}</h1>
+              <h1 style={{color: "#007a48"}}> {data?.name}</h1>
 
-              <Box mt={-1}>Age: {data?.Age}</Box>
-              <Box>Gender: {data?.Gender}</Box>
-              <Box>Location: {data?.Location}</Box>
-              <Box>Skills: {data?.SkillSet}</Box>
-              <Box>Work Time: {data?.ExpectedSalary}</Box>
-              <Box>Language: {data?.Languages}</Box>
+              <Box mt={-1}>Age: {data?.age}</Box>
+              <Box>Gender: {data?.gender}</Box>
+              <Box>Location: {data?.location}</Box>
+              <Box>Skills: {data?.skills}</Box>
+              <Box>Work Time: {data?.worktime}</Box>
+              <Box>Language: {data?.language}</Box>
               <Box>Experience: {data?.Experience}</Box>
-              <Box>Training Details: {data?.TraningDetails}</Box>
+              <Box>Training Details: {data?.trainingDetails}</Box>
 
+
+              {/* {
+    "gender": "Female",
+    "skills": "Cooking",
+    "experience": "6 years",
+    "worktime": "",
+    "age": "",
+    "language": "",
+    "image": "",
+    "location": "Chakkarpur, Gurugram",
+    "trainingDetails": "Home Cook available on demand, whenever you need"
+} */}
               
               <Button
                 sx={{
