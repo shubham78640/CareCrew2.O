@@ -51,7 +51,7 @@ function Profile() {
             data ={value}
           link={value.link}
           // Cardimage={value.HelpImage}
-          Cardimage={"https://www.chaudharyhousemaidservices.com/images/service/housemaid-services.jpg"}
+          Cardimage={value.image}
           CardHeading={value.name}
           SkillSet={value.skills}
           ExpectedSalary={value.worktime}
