@@ -67,12 +67,12 @@ function PopUp(props) {
             <Box sx={{ display: "flex", flexDirection: "column", gap: "8px"}}>
               <h1 style={{color: "#007a48"}}> {data?.name}</h1>
 
-              <Box mt={-1}>Age: {data?.age}</Box>
-              <Box>Gender: {data?.gender}</Box>
+              {/* <Box mt={-1}>Age: {data?.age}</Box> */}
+              <Box mt={-1}>Gender: {data?.gender}</Box>
               <Box>Location: {data?.location}</Box>
               <Box>Skills: {data?.skills}</Box>
               <Box>Work Time: {data?.worktime}</Box>
-              <Box>Language: {data?.language}</Box>
+              <Box>Language: {data?.language?data?.language:"Hindi"}</Box>
               <Box>Experience: {data?.Experience}</Box>
               <Box>Training Details: {data?.trainingDetails}</Box>
 
@@ -152,7 +152,7 @@ function PopUp(props) {
           <TextField
             autoFocus
             margin="dense"
-            value={data?.HelpName}
+            value={data?.name}
             disabled={true}
             id="name"
             label="Candidate Name"

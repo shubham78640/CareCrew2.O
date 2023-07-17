@@ -99,7 +99,7 @@ function EmployeeAddingForm(props) {
         />
         <TextFields
           name="Language"
-          selected={true}
+          // selected={true}
           setInput={setLanguage}
           data={languageData}
         />
@@ -138,7 +138,7 @@ function EmployeeAddingForm(props) {
         }}
         onClick={handleSubmit}
       >
-        Add Condidate
+        Add Candidate
       </button>
     </Box>
   );
